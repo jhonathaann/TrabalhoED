@@ -100,6 +100,9 @@ public class Main {
 
         if (opc.equals("divisao")) {
 
+            // pegando o tempo de inicio
+            long inicioFunc1 = System.nanoTime();
+
             // realizando a indexacao dos aquivos com a hash divisao
             for (int j = 0; j < i; j++) {
                 System.out.println("\nVARIAVEL DO ARQUIVO INDIVIDUAL: " + arquivoIndividual[j]);
@@ -152,6 +155,14 @@ public class Main {
                     
                 }
 
+                // pegando o tempo de finalizacao
+                long fimFunc1 = System.nanoTime();
+
+                // calculando o tempo
+                long tempoExecucaoFunc1 = fimFunc1 - inicioFunc1;
+
+                System.out.println("Tempo de execução da função hash DIVISAO: " + tempoExecucaoFunc1 + " nanosegundos");
+
             } else {
                 System.out.println("Palavra nao encontrada em nenhum arquivo!");
             }
@@ -159,6 +170,9 @@ public class Main {
 
 
         } else if (opc.equals("djb2")) {
+            
+            // pegando o tempo de inicio
+            long inicioFunc1 = System.nanoTime();
 
             // realizando a indexaçao dos arquivos com a hash DJB2
             for (int j = 0; j < i; j++) {
@@ -210,6 +224,14 @@ public class Main {
                     }
                     
                 }
+
+                // pegando o tempo de finalizacao
+                long fimFunc1 = System.nanoTime();
+
+                // calculando o tempo
+                long tempoExecucaoFunc1 = fimFunc1 - inicioFunc1;
+
+                System.out.println("Tempo de execução da função hash DJB2: " + tempoExecucaoFunc1 + " nanosegundos");
 
             } else {
                 System.out.println("Palavra nao encontrada!");
