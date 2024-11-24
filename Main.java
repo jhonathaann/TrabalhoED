@@ -25,8 +25,8 @@ public class Main {
 
         // leitura dos documentos para serem comprimidos
         System.out.println("Inserir documentos: "); // o usuario informa o caminho onde se encontra os arquivos
-        // documentos = input.nextLine();
-        documentos = "C:/Users/jhona/OneDrive/Faculdade/TrabalhoED/conveterArquivos";
+        documentos = input.nextLine();
+        //documentos = "C:/Users/jhona/OneDrive/Faculdade/TrabalhoED/conveterArquivos";
         pasta = new File(documentos);
         
         leituraInicio = System.currentTimeMillis(); // pegando o tempo de inicio de leitura
@@ -173,7 +173,7 @@ public class Main {
                 System.out.println("Tempo gastos para ler todos os arquivos: "  + (leituraTermino-leituraInicio) + " ms");
                 System.out.println("Tempo gasto para criar a arvore de Huffman com todos os arquivos lidos: " + (huffmanTermino-huffmanInicio) + " ms");
                 System.out.println("Tempo gasto para buscar uma palavra na Trie: " + (trieTermino-trieInicio) + " ns");
-                System.out.println("Tempo gasto para indexar todos os ducumentos na HASH: " + (hashTermino-hashInicio) + " ms");
+                System.out.println("Tempo gasto para indexar todos os ducumentos na HASH: " + (hashTermino-hashInicio) + " ms\n");
 
                 System.out.println("Memoria utilizada pela Huffman: " + Math.abs(memoriaHuffmanDepois-memoriaAntesHuffman) + " bytes");
                 System.out.println("Memoria utilizada pela Trie: " + (memoriaTrieDepois-memoriaAntesTrie) + " bytes");
@@ -260,13 +260,39 @@ public class Main {
              System.out.println("Tempo gastos para ler todos os arquivos: "  + (leituraTermino-leituraInicio) + " ms");
              System.out.println("Tempo gasto para criar a arvore de Huffman com todos os arquivos lidos: " + (huffmanTermino-huffmanInicio) + " ms");
              System.out.println("Tempo gasto para buscar uma palavra na Trie: " + (trieTermino-trieInicio) + " ns");
-             System.out.println("Tempo gasto para indexar todos os ducumentos na HASH: " + (hashTermino-hashInicio) + " ms");
+             System.out.println("Tempo gasto para indexar todos os ducumentos na HASH: " + (hashTermino-hashInicio) + " ms\n");
 
              System.out.println("Memoria utilizada pela Huffman: " + Math.abs(memoriaHuffmanDepois-memoriaAntesHuffman) + " bytes");
              System.out.println("Memoria utilizada pela Trie: " + (memoriaTrieDepois-memoriaAntesTrie) + " bytes");
              System.out.println("Memoria utilizada pela Hash: " + (memoriaHahsDepois-memoriaHahsAntes) + " bytes");
 
             input.close();
+        }
+        else if (opc.equals("expressoes")) {
+            List<String> expressoesTeste = ArquivosExpressoes.carregarExpressoes("expressoes.txt");
+            if (expressoesTeste == null) {
+                System.out.println("Erro ao carregar expressões de teste.");
+                return;
+            }
+
+            System.out.println("Expressões carregadas: " + expressoesTeste.size());
+            for (String palavra : expressoesTeste) {
+                long inicioBusca = System.nanoTime();
+                List<String> arquivosEncontrados = trie.search(palavra);
+                long fimBusca = System.nanoTime();
+                long tempoBusca = fimBusca - inicioBusca;
+
+                if (arquivosEncontrados != null && !arquivosEncontrados.isEmpty()) {
+                    System.out.println("\nA palavra \"" + palavra + "\" foi encontrada nos seguintes arquivos:");
+                    for (String arquivo : arquivosEncontrados) {
+                        System.out.println(arquivo);
+                    }
+                    System.out.println("Tempo de busca: " + tempoBusca + " ns");
+                } else {
+                    System.out.println("\nA palavra \"" + palavra + "\" não foi encontrada. Tempo de busca: " + tempoBusca + " ns");
+                }
+            }
+
         }
 
     }
