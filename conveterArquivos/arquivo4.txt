@@ -1,0 +1,1339 @@
+Type Ia supernovae
+St´ephane Blondin,a,b
+aAix Marseille Univ, CNRS, CNES, LAM, Marseille, France
+bEuropean Southern Observatory, Karl-Schwarzschild-Straße 2, Garching, D-85748, Germany
+© 20xx Elsevier Ltd. All rights reserved.
+Chapter Article tagline: update of previous edition,, reprint..
+Glossary
+Chandrasekhar mass (MCh) maximum mass for a white dwarf (WD) star; MCh ≈1.4 M⊙for a cold, non-rotating, non-magnetic C-O WD.
+Compton scattering in the context of SNe Ia, the scattering of γ-rays by electrons.
+Deflagration-to-detonation transition (DDT) transition of the combustion mode from a subsonic deflagration to a supersonic detonation.
+Double degenerate (DD) scenario progenitor channel for SNe Ia in which a WD merges or collides with another WD.
+Electron degeneracy quantum-mechanical effect whereby a confined electron gas will exert a pressure even at zero temperature.
+Electron fraction (Ye) ratio of the number of electrons to nucleons (protons + neutrons) in a given chemical mixture.
+Forbidden line spectral line resulting from the emission of a photon in an atomic transition with a very low transition probability.
+Homologous expansion holds when the velocity of a fluid element is directly proportional to its radius, v(r) ∝r.
+Iron-group elements (IGE) elements with atomic numbers in the range Z = 21−28 (i.e. scandium to nickel).
+Intermediate-mass elements (IME) elements with atomic numbers in the range Z = 11−20 (i.e. sodium to calcium).
+Local thermodynamic equilibrium (LTE) state of equilibrium between matter and radiation at the local temperature.
+Metallicity abundance of all elements heavier than hydrogen and helium.
+Nebular phase phase in the SN Ia evolution when the ejecta are transparent and the deposited energy is instantaneously re-emitted.
+Nuclear statistical equilibrium (NSE) state of balance in nuclear reactions reached in explosive burning at high temperatures.
+Opacity mass extinction coefficient specifying the energy fraction taken from a beam of photons due to absorption and scattering processes.
+Optical depth measure of the level of transparency of a medium. Optically thick (thin) refers to an opaque (transparent) medium.
+Radiative transfer generic term used to describe the theory of photon-matter interactions as radiation is transported through a medium.
+Single degenerate (SD) scenario progenitor channel for SNe Ia in which a WD accretes material from a non-degenerate star.
+Supernova (SN) energetic stellar explosion marking the end of the life of some stars.
+Thermalization in SNe Ia, process by which γ-ray photons deposit their energy in the ejecta and are reprocessed into thermal radiation.
+Type Ia supernova (SN Ia) supernova resulting from the thermonuclear disruption of a carbon-oxygen (C-O) white dwarf (WD) star.
+UVOIR luminosity luminosity integrated over the full ultraviolet-optical-infrared range (i.e., excluding escaping high-energy radiation).
+White dwarf (WD) star Compact and dense star marking the endpoint of the evolution of stars with initial masses M ≲8 M⊙.
+Nomenclature
+CE
+common envelope
+CSM
+circumstellar material
+DD
+double degenerate
+DDT
+deflagration-to-detonation transition
+DTD
+delay-time distribution
+EC
+electron capture
+HV
+hypervelocity
+HVF
+high-velocity feature
+IGE
+iron-group elements
+IME
+intermediate-mass elements
+LTE
+local thermodynamic equilibrium
+MS
+main sequence
+NSE
+nuclear statistical equilibrium
+SD
+single degenerate
+SN Ia
+Type Ia supernova
+UVOIR
+ultraviolet(UV)-optical-infrared(IR)
+WD
+white dwarf
+Abstract
+Type Ia supernovae (SNe Ia) correspond to the thermonuclear explosion of a carbon-oxygen white dwarf (C-O WD) star in a binary
+system, triggered by the accretion of material from another star, or the merger/collision with a secondary WD. Their phenomenal
+luminosity — several billion times that of the sun — has motivated their use as cosmological distance indicators and led to the
+1
+arXiv:2411.09740v1  [astro-ph.HE]  14 Nov 2024
+
+2
+Type Ia supernovae
+discovery of the accelerated expansion of the universe. SNe Ia are also the main producers of iron and hence play a fundamental role
+in the chemical evolution of galaxies. While recent observations have confirmed the basic theoretical picture of an exploding C-O
+WD star whose luminosity is powered by the radioactive decay of 56Ni, a number of uncertainties remain concerning the nature of
+the binary companion and the explosion mechanism. Several lines of evidence point towards the existence of multiple progenitor
+channels in order to explain the full range of the observed diversity. A complete physical understanding of these energetic stellar
+explosions remains a long-lasting goal of modern astrophysics.
+Key points
+•
+Almost all progenitor scenarios for SNe Ia involve a carbon-oxygen white dwarf star in a binary system, but vary in the nature of the binary companion
+(non-degenerate star vs. another WD) and the explosion mechanism or combustion mode.
+•
+The energy input from the radioactive decay of 56Ni synthesized in the explosion largely determines the luminosity evolution during the first 2–3 years.
+The spectroscopic evolution provides a time-dependent scan of the chemically-stratified ejecta, and provides important clues related to its composition and
+expansion dynamics.
+•
+Most SNe Ia form a relatively homogeneous class, albeit with variations in their peak luminosity and spectroscopic properties. There are however events
+displaying peculiar light curves and spectra, and this observed diversity could indicate the existence of multiple progenitor channels.
+•
+While explosion models have different ejecta structures and levels of asymmetry, the predicted observational signatures are often similar and the modeling
+uncertainties still too large to make firm associations between individual SNe Ia and specific progenitor scenarios, except in a few rare cases. Long considered
+to be the most likely scenario, the explosion of near-Chandrasekhar-mass WDs still faces fundamental challenges and currently favored models involve pairs
+of sub-MCh WDs.
+•
+Future surveys will discover several hundreds of SNe Ia each night, mostly for cosmological studies. However, detailed observations of individual events,
+from the pre-explosion phases to several years after, and covering the full electromagnetic spectrum (and soon gravitational waves), remain invaluable to
+constrain the mechanism(s) by which WD stars explode.
+1 Introduction
+Stars with initial masses M ≲8 M⊙evolve to become compact and dense objects known as white dwarfs (WD). Isolated WDs slowly cool
+by radiating away their residual thermal energy on timescales that can exceed the present age of the universe. However, a carbon-oxygen
+(C-O) WD in a close binary system can accrete mass from a non-WD star, or merge/collide with another WD, resulting in a runaway
+thermonuclear fusion reaction chain that can unbind the entire star.
+Such stellar explosions, known as Type Ia supernovae (hereafter SNe Ia), are among the most energetic in the universe, with typical
+explosion energies of the order of 1044 J. Their luminosity reaches a typical peak value of Lpeak ≈1036 J s−1 (or ∼3 × 109 L⊙), which is
+equivalent to a sizable 20-30% of the total luminosity of our own galaxy. For this reason, SNe Ia are visible out to very large distances,
+corresponding to a time when the universe was less than one fifth of its present age, only ∼2 Gyr after the Big Bang (Pierel et al., 2024).
+Moreover, the realization that the light curves of SNe Ia could be used to accurately calibrate their peak brightness motivated the use of
+these events as distance indicators on cosmological scales. This unique property allowed astronomers to use SNe Ia as direct probes of the
+dynamical history of the universe, and led to the discovery of its accelerated expansion.
+Type Ia SNe are also of great astrophysical interest in their own right. As the main producers of iron in the universe (∼2/3 of the iron
+content in our galaxy today; Dwek 2016), SNe Ia are key players in the chemical evolution of galaxies. They inject a significant amount
+of kinetic energy and turbulence into the interstellar medium, serving as a trigger for star formation and driving galaxy-scale winds. As
+an endpoint of binary stellar evolution for low-mass stars, SNe Ia require an understanding of mass transfer and accretion onto compact
+objects, and double-WD systems are predicted to be the dominating source of background gravitational-wave radiation for the future Laser
+Interferometer Space Antenna (LISA). As is the case for other types of SNe, their long-lived remnants, some of which are visible in our
+own galaxy (SN 1006, Tycho’s SN 1572, Kepler’s SN 1604), are thought to be sites for cosmic-ray acceleration. Last, their explosion
+mechanism involves all the complexity and richness of turbulent and shock-driven combustion, and is therefore of interest beyond the
+astrophysical community. Yet, despite decades of observational and theoretical efforts, the exact nature of the progenitors and explosion
+mechanisms of SNe Ia remains an unsolved question to date.
+In this chapter, we will first review the basic underlying physical model for SNe Ia and characterize their observational properties
+(Section 2). In Section 3 we give an overview of the main progenitor and explosion scenarios invoked to explain the diversity of the SN Ia
+class. In Section 4, we discuss paths for future progress in the understanding of the SN Ia phenomenon, both from an observational and
+theoretical perspective. Concluding remarks follow in Section 5.
+2 Basic physical picture and observational properties
+2.1 A carbon-oxygen white dwarf progenitor
+Unlike other types of supernovae resulting from the core collapse in massive stars, there are no direct detections of the exploding star in
+an SN Ia event, and only limited evidence related to the nature of the binary companion (with firm non detections of a giant companion in
+some cases). One therefore has to rely on indirect clues. One such clue is the absence of lines due to hydrogen or helium — the two most
+
+Type Ia supernovae
+3
+abundant elements in the universe — in their spectra around maximum light. This, combined with the occurrence of SNe Ia in early-type
+galaxies dominated by old stellar populations, suggests SNe Ia are associated with an evolved progenitor. Last, the rapid evolution of the
+light curve (≲20 days from explosion to peak luminosity, followed by a rapid decline on a similar timescale), provides indirect evidence
+for a relatively compact progenitor (further evidence is discussed in Section 2.3.1). Put together, a carbon-oxygen WD star emerges as the
+only viable progenitor for SNe Ia.
+Carbon-oxygen white dwarfs are the endpoint of the evolution of stars with initial masses 2 ≲M ≲8 M⊙1. Such stars reach core
+temperatures for the fusion of helium into carbon and oxygen as they evolve off the main sequence (MS) to become red giant stars. As the
+C-O core contracts, the gravitational potential energy released is sufficient to eject the star’s envelope, and its density is such (∼109 kg m−3
+on average) that the electrons are degenerate and can be relativistic: It is this degeneracy pressure of the electrons that counteracts the
+inward pull of gravity, maintaining the star in hydrostatic equilibrium, before the temperature threshold for carbon fusion is reached in the
+core. Under these conditions, a WD star has a maximum mass it can sustain, known as the Chandrasekhar mass (Chandrasekhar, 1931),
+whose value depends only on composition, and is approximately MCh ≈1.44 M⊙for a cold, non-rotating, non-magnetic C-O WD star in
+the ultra-relativistic limit:
+MCh = 0.197
+ hc
+G
+! 3
+2
+1
+(µemH) ≈1.44 M⊙
+for
+µe = 2,
+(1)
+where µe is the average molecular weight per electron (µe = 2 for a fully ionized C-O mixture) and mH is the mass of the hydrogen atom
+(the other fundamental constants have their usual meaning).
+The existence of a maximum mass for WDs could explain why the majority of SNe Ia appear to constitute a relatively homogeneous
+class, at least by astronomical standards. Since the majority of C-O WDs are born with an initial mass well below 1 M⊙(Kepler et al.,
+2007), this implies that they must accrete mass from a binary companion, or merge with another WD in order to reach ∼1.4 M⊙2. However,
+the SN Ia class is significantly more diverse than was originally thought, and currently-favored models for the explosion involve WDs well
+below the Chandrasekhar mass (sub-MCh).
+2.2 Basic explosion physics
+In the classical model of Hoyle and Fowler (1960), as the WD approaches MCh, the core temperature (a few times 108 K) and density
+(≳2 × 1012 kg m−3) is sufficient to initiate carbon fusion. Each subsequent increase in the WD mass via accretion leads to a contraction of
+the core and an increase in temperature via compressional heating, which in turn results in a rapid increase in the nuclear reaction rate and
+a further rise in temperature. In a normal (non-degenerate) star, this feedback process is self-regulated via an increase in the gas thermal
+pressure which leads to an expansion of the star and a drop of the core temperature. Under purely degenerate conditions, however, the
+pressure is independent of temperature. The above cycle is then self-sustained and the nuclear fusion reactions may undergo a runaway
+process.
+The increase in temperature is in part compensated via various cooling mechanisms (neutrino emission, thermal conduction, and con-
+vection). The WD will eventually expand when the thermal pressure becomes comparable to the electron degeneracy pressure. Convective
+motions can initially evacuate the surplus nuclear energy and regulate nuclear reactions3, but it is not efficient enough to prevent the for-
+mation of a large temperature gradient and the initiation of a deflagration via thermal conduction. The flame is born, and a thermonuclear
+runaway follows. Although this basic physical picture differs somewhat in lower-mass (sub-MCh) WDs, the explosion as a SN Ia always
+proceeds via a runaway thermonuclear C-O fusion.
+The fusion of ∼1.4 M⊙of an equal mixture of 12C and 16O into iron-group elements (IGEs) releases enough nuclear energy (Enuc ≈
+2 × 1044 J)4, which is enough to unbind the WD and accelerate the ejecta to typical expansion velocities of the order of 107 m s−1, as inferred
+from the blueshifted absorption in spectral lines:
+Enuc ≈−Eb + Ekin,
+(2)
+where the gravitational binding energy (negative by convention) Eb ≈−5 × 1043 J for a non-rotating MCh WD, and the total kinetic energy
+Ekin ≲1.5 × 1044 J.
+A few seconds after the onset of the explosion, the expansion follows a self-similar regime referred to as homologous expansion (see
+glossary). The expansion is such that adiabatic losses cause the WD to cool very quickly: within one day after explosion, the WD has
+expanded from a Earth-sized object (R ≈106 m) to an ejecta whose size is similar to that of the solar system (R ≈1012 m). This would
+normally cause the maximum temperature in the ejecta to drop from ∼109 K at a few seconds post explosion (at which point all nuclear
+reactions have ceased) to a few 1000 K at one day, and to room temperature (∼300 K) by 10 days in the absence of an additional source of
+energy. SNe Ia would thus escape detection were it not for the abundant production of a radioactive isotope of nickel, 56Ni (Colgate and
+McKee, 1969). This isotope decays to 56Co via electron capture (EC) and finally to 56Fe via EC or positron decay (β+), emitting γ-rays and
+1The lower limit of ∼2 M⊙corresponds to the maximum initial mass of a star that can lead to the formation of a helium WD in a close binary system. For single stars this
+lower limit is slightly below 1 M⊙(i.e. our sun will eventually evolve to become a C-O WD).
+2There are however models for SNe Ia resulting from isolated WDs, such as the fission-based model of Horowitz and Caplan (2021).
+3This is known as the simmering phase and can last for several thousands of years.
+4In cgs units this is equal to 2 × 1051 erg, where 1051 erg is sometimes referred to as one Bethe (in honor of Hans Bethe), or one foe (fifty-one ergs).
+
+4
+Type Ia supernovae
+Fig. 1:
+Detection
+of
+the
+847 keV
+and
+1238 keV (1 keV ≈1.6 × 10−16 J) γ-ray decay
+lines of 56Co in INTEGRAL/SPI observations
+of the nearby Type Ia SN 2014J (data from
+Churazov et al. 2014). This is the only direct
+detection to date of γ-rays in a SN Ia event.
+600
+800
+1000
+1200
+Energy (keV)
+0
+5 × 10−6
+10−5
+Flux (photons s−1 cm−2 keV−1)
+56Co
+847 keV
+56Co
+1238 keV
+SN 2014J (INTEGRAL/SPI)
+model
+positrons whose energy is deposited in the ejecta on timescales where adiabatic losses (proportional to the differential change in volume,
+dV) become less important:
+56Ni
+Qγ=1.7 MeV
+−−−−−−−−−→
+t1/2=6.1 days
+56Co + γ + νe (EC)
+Qγ=3.6 MeV;Qe+ =0.1 MeV
+−−−−−−−−−−−−−−−−−−−→
+t1/2=77.2 days
+56Fe + γ + νe (EC)
+or
+56Fe + e+ + γ + νe (β+)
+where Qγ,e+ corresponds to the average energy per decay (1 MeV ≈1.6 × 10−13 J) emitted in γ-rays and positrons, respectively, and t1/2 is
+the isotope’s half-life. Only relatively recently has there been direct observational evidence of this decay-powered luminosity in SNe Ia,
+through the detection of γ-ray lines from 56Co in the nearest SN Ia observed in the last 50 years, SN 2014J (Fig. 1).
+The products of nuclear burning largely depend on the local fuel density. At sufficiently high densities, carbon fusion proceeds all the
+way to the iron peak, and nuclear statistical equilibrium (NSE) is established for temperatures ≳5 × 109 K. These conditions ensure that the
+nucleosynthesis products do not depend on individual reaction rates, but only depend on the peak temperature, density, and electron fraction
+Ye. This latter quantity is set by the initial metallicity of the WD (Ye is lower for higher metallicity) and further modified by electron
+captures during the high-density pre-explosion simmering phase and during the explosion itself in MCh events. The final abundances in
+regions where NSE is reached are determined during the freeze-out phase, during which free particles reassemble into nuclei on timescales
+inversely proportional to the density. In lower-density regions, carbon fusion does not proceed to the iron peak as the silicon-burning process
+is incomplete. These are the regions where most of the intermediate-mass elements (IMEs) are synthesized.
+The dependence of the nuclear burning products on density implies that the mass of the exploding WD also affects the integrated
+yields, as MCh WDs have larger central densities (ρc ≳1012 kg m−3) compared to lower-mass, sub-MCh WDs (ρc ≲1011 kg m−3). As a
+result, burning in NSE produces more heavier neutron-rich stable isotopes (e.g. 54Fe and 58Ni) in MCh explosions compared to sub-MCh
+explosions for a given initial metallicity. The stable nickel abundance can thus be used in principle to distinguish MCh from sub-MCh
+explosions (e.g. Fl¨ors et al., 2020). This also applies to manganese, whose solar abundance can only be explained if a significant fraction of
+SNe Ia achieve the high-density burning conditions met in MCh progenitors (Seitenzahl et al., 2013a).
+Together with the chemical stratification inferred from the time evolution of SN Ia spectra (see next section), we can already highlight
+three basic ingredients for a successful SN Ia model (see box below). The final ingredient of course is to allow for some diversity to match
+what is seen in nature. One possible model that satisfies these requirements is illustrated in Fig. 2.
+Three basic ingredients for a successful SN Ia model
+1.
+Explosion energy: of the order of 1044 J to unbind the WD and accelerate the ejecta to characteristic velocities of the order of 107 m s−1. This implies the
+WD must be (almost) entirely burnt to release sufficient nuclear energy from fusion of C-O into heavier elements.
+Note: some explosion models (e.g. pure deflagrations) result in too low an explosion energy to completely unbind the WD, in which case a bound remnant
+is left behind. Such models have been found to be a good candidate for low-luminosity Type Iax events.
+2.
+Nucleosynthesis: A 56Ni yield in the range 0.1–1.0 M⊙(to power the light curve) + several 0.1 M⊙of IMEs (to match the spectra) + some stable IGE isotopes
+(58Ni, 54Fe) + possible traces of unburnt C-O. This requires thermonuclear burning at a large range of densities.
+3.
+Chemical stratification: stable IGEs + 56Ni near the center and IMEs in the outer layers. This requires a large (exponentially decreasing) density gradient
+and weak large-scale mixing during the explosive phase.
+Note: the inner ejecta of violent merger models are dominated by the ashes of the incompletely burned secondary WD (O, Ne, Mg), and pure deflagration
+models predict significant amounts of unburnt C-O material as a result of large-scale mixing during the explosion.
+
+Type Ia supernovae
+5
+(a) t = 1 s
+0
+5
+10
+15
+20
+25
+Velocity (106 m s−1)
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Mass Fraction
+Stable IGEs
+56Ni
+28Si
+16O
+12C
+−1
+0
+1
+2
+3
+Log10 Density (kg m−3)
+Density
+(t = 100 s)
+(b) t = 100 s
+(c) Stable IGEs
+(d) 56Ni
+(e) 28Si
+(f) 16O
+(g) 12C
+Mass Fraction
+Fig. 2: Example of a 3D MCh delayed-detonation model (N100; Seitenzahl et al. 2013b). (a) Density (in g cm−3 = 103 kg m−3; orange color
+scale), deflagration plumes (white), and detonation front (blue) at t = 1 s post explosion. (b) Spherically averaged density (dashed line) and
+composition profiles for representative isotopes (solid lines) at t = 100 s post explosion. The 2D-projected distribution of each isotope is
+shown in the bottom row in panels (c)–(g). The graphics shown in panels (a) and (c)–(g) are reproduced with permission from Seitenzahl et
+al. (2013b, their Figs. 2 and 4).
+2.3 Luminosity and spectroscopic evolution
+We illustrate the evolution of the UVOIR luminosity for a SN Ia model in Fig. 3. As the ejecta expands, the radiation emerges from deeper
+ejecta layers5, offering a time-dependent scan of its chemical structure (Fig. 4). In what follows we will discuss four main phases of the
+evolution over the first few months post explosion, focusing on normal SN Ia events.
+2.3.1 Early evolution
+Although 56Ni decay is the main driver for the luminosity evolution, the early luminosity of SNe Ia can be affected by other factors. Most
+SN Ia explosion models involve combustion driven by a strong supersonic shock (i.e. a detonation). A predicted observational consequence
+is a UV-optical flash of radiation resulting from the shock-heated stellar envelope and lasting ≲1 h, whose luminosity Lshock ≈1032 J s−1
+(i.e. four orders of magnitude lower than the peak luminosity; Rabinak et al. 2012) has never been observed6. This early-time flash can in
+principle be followed by a dark phase during which 56Ni decay photons are still trapped within the ejecta (estimated to last ∼1 day in the
+case of SN 2011fe; Mazzali et al. 2014).
+During the first few days that follow, the γ-ray photons emitted in the 56Ni decay chain are completely thermalized by Compton scattering
+5At least in a Lagrangian sense, as these deeper layers are expanding at several 106 m s−1.
+6However, it is the non-detection of this signature in the nearby Type Ia SN 2011fe that enabled to place a strong constraint on the progenitor radius R⋆≲0.02 R⊙(Bloom
+et al., 2012). Also note that an even earlier, shorter-lived signature is expected in X-rays, when the shock breaks out from the stellar envelope.
+
+6
+Type Ia supernovae
+0
+20
+40
+60
+80
+Days from UVOIR Maximum
+33.0
+33.5
+34.0
+34.5
+35.0
+35.5
+36.0
+36.5
+Log10 LUVOIR [J s−1]
+56Ni −→56Co
+56Co −→56Fe
+1
+Early (L ≪Ldeposited; Ldeposited = Ldecay)
+2
+Maximum light (L ∼Ldeposited ∼Ldecay)
+3
+Post-maximum (L > Ldeposited)
+4
+Nebular (L = Ldeposited)
+γ-ray escape (Ldeposited < Ldecay)
+Lγ = Ldecay −Ldeposited
+LUVOIR
+Ldecay
+Ldeposited
+0
+20
+40
+60
+80
+100
+Days since Explosion
+−18
+−16
+−14
+0.0
+0.1
+0.2
+L/Lmax
+ﬂux excess
+↓
+Early ﬂux excess
+(SN 2018oh)
+L ∼t2.2
+0
+20
+40
+−19
+−18
+−17
+Mabs
+2nd IR maximum
+(SN 2011fe)
+J
+H
+K
+1000
+1500
+2000
+2500
+29
+30
+Log10 LUVOIR
+56Co
+57Co
+55Fe
+Very late LUVOIR
+(SN 2011fe)
+Ldeposited
+Fig. 3: Luminosity evolution for a SN Ia model with ∼0.5 M⊙of 56Ni (black solid line; DDC15 model of Blondin et al. 2015). The dashed
+and dotted lines show the decay luminosity and the deposited decay power, respectively. The hatched area highlights the increasing γ-ray
+escape past maximum light. The insets give examples of early flux excess (left; data from Dimitriadis et al. 2019), the secondary near-IR
+maximum (middle; data from Matheson et al. 2012), and the contribution of additional decay chains to the luminosity at very late times
+(right; data from Tucker et al. 2022). The axis in each case corresponds to days from maximum light.
+off free electrons. Due to the high initial optical depth, this thermal radiation diffuses over a time scale significantly larger than the time
+elapsed since the explosion, such that the initial luminosity is very low. As the ejecta expands, the photon escape time becomes less than the
+characteristic expansion time, and the luminosity increases. This initial increase is often modeled as a power law in time, L(t) ∝tα, where
+α = 2 matches well the early light curve of SN 2011fe (Nugent et al., 2011). However, both theoretical predictions and observations find
+significant deviations from α = 2 (Piro and Nakar, 2014; Firth et al., 2015). Moreover, an early flux excess has been observed in several
+SNe Ia (left inset in Fig. 3), which could result from the interaction with a binary companion or circumstellar material (CSM), or from the
+presence of 56Ni in the outer regions of the ejecta.
+The optical spectra at these times are dominated by Doppler-broadened lines of ions from IMEs synthesized in the explosion (e.g. Si ii,
+S ii, Ca ii etc.), as well as lines from unburnt carbon (first spectrum in Fig. 4). The characteristic P-Cygni profile shape of these lines displays
+a prominent blueshifted absorption that is used to infer the expansion velocity of the corresponding ion. In particular, high-velocity features
+(HVFs) are routinely found in lines of Ca ii and Si ii (see insets in Fig. 4) These HVFs are sometimes associated with a spectropolarimetric
+signature, indicating an asymmetric distribution of the emitting material (e.g. Kasen et al., 2003).
+2.3.2 Peak luminosity (maximum light)
+The initial increase in luminosity is counterbalanced by the exponentially decreasing decay power, which causes a maximum in the light
+curve. At this time, the UVOIR luminosity is comparable (but not physically equivalent) to the decay power injected in the inner ejecta
+layers: this is known as Arnett’s rule (Arnett, 1979), and can be formally expressed as LUVOIR(tpeak) ≈αLdecay(tpeak), with α ≈1. Several
+studies have found this rule to be accurate to within 10–20 % (e.g. Blondin et al., 2013). The maximum-light spectra are still dominated by
+lines from IMEs, and early-time signatures of unburnt carbon have usually disappeared by then.
+
+Type Ia supernovae
+7
+3000
+4000
+5000
+6000
+7000
+8000
+9000
+10000
+Rest Wavelength (˚A)
+Scaled Flux (Fλ) + Constant
+Si ii
+Ca ii
+Velocity (106 m s−1)
+Ca ii
+S ii Si ii
+[Co iii]
+∆t(d) =
+−16
++0
++21
++73
+1
+2
+3
+4
+SN 2011fe
+−20
+0
+C ii
+Si ii
+−20
+0
+Ca ii
+Fig. 4: Spectroscopic evolution of the Type Ia
+SN 2011fe over the first ∼100 days post explo-
+sion (data from Pereira et al. 2013).
+The right
+labels give the spectral phase in days from max-
+imum light, and the circled numbers on the left
+correspond to the phases highlighted in Fig. 3. The
+tickmarks on the Y-axis give the zero-flux level of
+each spectrum. A few key spectroscopic features
+are highlighted in gray. The insets show exam-
+ples of high-velocity features at early times in the
+Si ii 6355 Å and Ca ii near-IR triplet line profiles.
+A small absorption due to C ii 6580 Å (i.e. unburnt
+carbon) can also be seen in the left inset.
+2.3.3 Post-maximum evolution
+Two notable phenomena occur after the peak in luminosity. First, the rate of energy actually deposited in the ejecta (dotted curve in Fig. 3)
+becomes an increasingly smaller fraction of the radioactive decay power (mainly from 56Co decay at this time; dashed curve). This is due
+to the increase in the mean free path of γ-ray photons, an ever-increasing fraction of which manages to escape directly from the ejecta
+without interaction7. Second, the luminosity exceeds the energy deposition rate during ∼30 days, which corresponds to the time needed to
+radiate the energy stored at previous times. Around 40 days post explosion, we even observe a slight inflection in the light curve: radiative
+processes lead to a cooling of the ejecta, including emission by forbidden lines (such as [Co iii] 5888 Å; Dessart et al. 2014). This releases
+a significant amount of radiative energy (∆Erad ≈aR∆T 4∆V, where aR is the radiation constant), of the order of 1035 J s−1. To this inflection
+in the evolution of the UVOIR luminosity corresponds a second peak in the light curves in the near-IR bands (JHK; see middle inset in
+Fig. 3).
+More luminous SNe Ia decline more slowly past maximum light in several photometric bands (i.e. their light curves are broader)
+compared to lower-luminosity events: this is known as the width-luminosity relation (Phillips, 1993). It results from the faster evolution to
+redder colors in lower-luminosity events around maximum light, which causes a more rapid decline in the blue optical bands (Kasen and
+Woosley, 2007).
+2.3.4 Late-time evolution: the nebular phase
+Finally, from ∼50 days after the explosion onward, the ejecta becomes almost completely transparent, and the luminosity equals (and is
+physically equivalent to) the rate of decay energy deposition in the ejecta, an increasing fraction of which comes from positrons from 56Co
+decay8: this is known as the nebular phase. One can further show that the time-weighted integral of the UVOIR luminosity is equal to that
+of the deposited decay power by this time (Katz et al., 2013), a property that can be used to infer the 56Ni mass from observations without
+relying on the less accurate Arnett rule:
+Z t
+0
+t′LUVOIR(t′) dt′ =
+Z t
+0
+t′Ldep(t′) dt′
+for t ≫tpeak.
+(3)
+The nebular spectra now probe the innermost ejecta and reflect the iron-group dominated composition there (Fig. 5). The most prominent
+lines are due to forbidden transitions of Fe and Co, with some evidence of weak lines from nickel. The overlying IMEs, visible at earlier
+phases, also contribute to the cooling. Since all of the 56Ni synthesized in the explosion has long decayed by this time, all the nickel left in
+the ejecta is made up of stable isotopes (mainly 58Ni). As noted in Section 2.2, the abundance of these stable isotopes can in principle be
+7The characteristic γ-ray escape time scales with the square root of the total ejecta mass (Jeffery, 1999), and has led several authors to conclude that a significant fraction
+of SNe Ia result from sub-MCh progenitors (Stritzinger et al., 2006; Scalzo et al., 2014; Wygoda et al., 2019).
+8Other radioactive decay chains become important at even later times, such as 57Co (t1/2 ≈272 days) and 55Fe (t1/2 ≈1000 days), both confirmed observationally in the
+nearby SN 2011fe (see right inset in Fig. 3).
+
+8
+Type Ia supernovae
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+1.2
+1.4
+1.6
+1.8
+2
+2.2 2.4
+Rest Wavelength [µm]
+Scaled Fν + oﬀset
+[Fe iii]
+[Co iii]
+[Ar iii]
+[Fe ii]
+[Ca ii]
+[Ni ii]
+[Ni iii]
+Ca ii
+[S iii]
+[Co ii]
+[Fe ii]
+[Co ii]
+[Fe ii]
+[Ni ii]
+[Fe iii]
+[O i]
+2021aefx
+texp =
+270 d
+SALT+RSS
+JWST+NIRSpec
+2022pul
+texp =
+338 d
+MMT+
+Binospec
+Keck+NIRES
+MERGER
+model
+[O i] 6300 ˚
+A
+5
+6
+7
+8
+9
+10
+11
+12 13 14
+Scaled Fν
+5–14 µm
+(JWST
++MIRI)
+[Ar ii]
+[Ni iii]
+[Ni iv]
+[Ar iii]
+[S iv]
+[Ni iii]
+[Co iii]
+[Ne ii]
+−10 0
+10
+[Ca iv]
+3.21 µm
+−10 0
+10
+[Ar iii]
+8.99 µm
+-10
+0
+10
+[Co iii]
+11.89 µm
+-10
+0
+10
+[Ne ii]
+12.81 µm
+Velocity [106 m s−1]
+Fig. 5: Left panel: Nebular spectra of SN 2021aefx at 270 days post explosion (top) and of SN 2022pul at 338 days post explosion (bottom).
+The SN 2022pul spectrum is compared to a violent merger model, which correctly predicts a narrow [O i] 6300 Å doublet (solid line; see
+also left inset). Right panels: Comparison of mid-IR line profiles in both spectra, normalized to their peak intensity. Lines in this range
+are more isolated and reveal variations in morphology (boxy vs. peaked), as well as kinematic offsets of several 106 m s−1. The mid-IR
+spectrum of SN 2022pul shows a prominent line due to [Ne ii] 12.81 µm, which is characteristic of the violent merger of two WDs (Kwok
+et al., 2024).
+used to constrain the mass of the exploding WD.
+The forbidden lines in nebular SN Ia spectra are optically thin and hence only visible in emission. The morphology of their profiles can
+be used to constrain the chemical distribution and ejecta geometry (right panels in Fig. 5). For instance, several SNe Ia display velocity
+shifts in their nebular line profiles (i.e. the lines are not centered on their rest wavelength), that could result from an off-center explosion
+(Maeda et al., 2010). Other events display a horn-like double-peaked morphology, consistent with predictions of WD-WD collision models
+(Dong et al., 2015). More recently, the James Webb Space Telescope (JWST) has paved the way for systematic studies of SNe Ia in the
+mid-IR spectral range. Observations of one event, SN 2022pul, have revealed the presence of a strong line due to [Ne ii] 12.8 µm, presented
+as a smoking-gun signature of the violent merger of two WDs (see MERGER model spectrum in Fig. 5).
+2.4 Observational diversity
+The basic physical picture outlined above applies to the bulk of the SN Ia population, and can accommodate part of the observed diversity
+(in rise time, peak luminosity, post-maximum decline rate, color evolution, and spectroscopic properties; see Fig. 6), some of which could
+be simply due to viewing-angle effects in an asymmetric explosion. At the high-luminosity end are the 91T-like SNe Ia that resemble the
+prototypical SN 1991T, characterized by a higher ionization and abundance of IGEs in the outer layers, and sometimes associated with
+CSM interaction (see Phillips et al. 2024 for a recent review). At the low-luminosity end, 91bg-like SNe Ia (resembling the prototypical
+SN 1991bg) are characterized by a deep Ti ii/Cr ii absorption trough in their early-time optical spectra, redder colors at early times, and
+the absence of a secondary maximum in their near-IR light curves. Some authors have explained this diversity as a continuous sequence in
+temperature/ionization related to the 56Ni yield (e.g. Nugent et al., 1995).
+There are however peculiar events that possibly constitute distinct sub-classes, and these are sometimes collectively referred to as
+“thermonuclear supernovae” or “white dwarf supernovae” (see Taubenberger 2017 for a review). Of these, we highlight super-luminous
+SNe Ia (e.g. SN 2009dc) sometimes associated with the explosion of rapidly-rotating super-massive WDs (Yoon and Langer, 2005)9, which
+could also form via the merger of a sub-MCh WD and the C-O core of an asymptotic giant branch star inside a common envelope (core-
+degenerate scenario; Kashi and Soker 2011); SNe Ia that display strong narrow hydrogen lines resulting from interaction with a dense CSM
+(Ia-CSM; e.g. SN 2002ic); low-luminosity events with low ejecta velocities that resemble SN 2002cx (referred to as Type Iax SNe; see Jha
+2017 for a review); and low-luminosity events similar to SN 2002es with a slow post-maximum decline in luminosity (i.e. contrary to the
+width-luminosity relation). Example light curves and maximum-light spectra of these events are shown in Fig. 6.
+9Often referred to as “super-MCh” SNe Ia since their mass exceeds ∼1.4 M⊙, although this canonical value only applies to a non-rotating WD, which is not the case here.
+
+Type Ia supernovae
+9
+−20
+0
+20
+40
+60
+Days since Maximum
+−20
+−19
+−18
+−17
+−16
+−15
+−14
+Absolute V -band Magnitude
+2009dc
+2002ic
+1991T
+2011fe
+2002es
+1991bg
+2002cx
+3000
+4000
+5000
+6000
+7000
+8000
+9000
+10000
+Rest Wavelength (˚A)
+Scaled Flux (Fλ) + Constant
+SN 2009dc
+(Ia-Super)
+SN 2002ic
+(Ia-CSM)
+SN 1991T
+(Ia-91T)
+SN 2011fe
+(Ia-norm)
+SN 2002es
+(Ia-02es)
+SN 1991bg
+(Ia-91bg)
+SN 2002cx
+(Ia-02cx)
+C ii
+Hα
+Fe iii
+Fe iii
+Si ii
+Cr ii
+Ti ii
+Fe iii
+Fe iii
+Maximum-light spectra
+Fig. 6: The observational diversity of SNe Ia, both in terms of their peak luminosity and light-curve shape (here in the V band; left) and their
+spectroscopic properties (here around maximum light; right). Data sources: SN 2009dc (Taubenberger et al., 2011), SN 2002ic (Hamuy
+et al., 2003; Wood-Vasey et al., 2004), SN 1991T (Phillips et al., 1992; Lira et al., 1998; Altavilla et al., 2004), SN 2011fe (Richmond
+and Smith, 2012; Pereira et al., 2013), SN 2002es (Hicken et al., 2009; Ganeshalingam et al., 2012), SN 1991bg (Filippenko et al., 1992;
+Leibundgut et al., 1993; Turatto et al., 1996), SN 2002cx (Li et al., 2003).
+2.5 Modeling challenges
+Before presenting possible progenitor scenarios and explosion mechanisms in Section 3, we first comment on some of the theoretical and
+numerical challenges associated with modeling SNe Ia.
+2.5.1 Thermonuclear burning fronts
+The first of these concerns modeling thermonuclear burning fronts (see R¨opke 2017 for a review). Combustion fronts can propagate via two
+modes: subsonic deflagrations (which propagate via thermal conduction and are accelerated via interaction with turbulence) and supersonic
+detonations (which propagate via a strong shock). A deflagration can also transition to a detonation via a deflagration-to-detonation transi-
+tion (DDT), relevant for MCh SN Ia models (see Section 3.1), but which poses a major challenge even in terrestrial combustion experiments
+(Poludnenko et al., 2019).
+Because of the steep dependence of nuclear reaction rates on temperature, combustion fronts are confined to a thin layer that can be
+well below 10−3 m, which is more than nine orders of magnitude smaller than the WD radius (≳106 m). The modeling of deflagrations
+requires knowledge of microphysical processes that cannot be resolved in multi-dimensional simulations, even with advanced numerical
+methods such as adaptive mesh refinement. While such knowledge is not necessary when modeling detonation fronts, these display a multi-
+dimensional cellular pattern whose inner structure is also left unresolved. In both cases, the combustion front must either be artificially
+broadened to match the resolution of the numerical grid, or treated as a sharp discontinuity (level-set approach; as seen in Fig. 2) whose
+propagation speed is determined a priori as opposed to computed self consistently.
+2.5.2 Explosive nucleosynthesis
+Computing accurate yields in SN Ia explosion simulations is also faced with a resolution problem, as the reaction length scales vary by
+several orders of magnitude (see Seitenzahl and Townsley 2017 for a review). The number of isotopes involved in the nuclear reactions
+relevant to carbon burning is also prohibitively large to be included in multi-dimensional hydrodynamical simulations of the explosion
+(200–300 isotopes in typical SN Ia reaction networks). The strategy is then to consider smaller networks coupled to the hydrodynamics that
+match the nuclear energy release – which serves for instance to propagate the detonation front – predicted using larger networks, and then
+compute the accurate nucleosynthesis as part of a post-processing step (using Lagrangian tracer particles; e.g. Travaglio et al. 2004).
+
+10
+Type Ia supernovae
+2.5.3 Radiative transfer
+To predict the observable signatures from a given explosion model, one needs to model the interaction of the radiation with the rapidly-
+expanding ejecta, i.e. solve a radiative-transfer (RT) problem. There are various approaches to this, from solving the RT equation along
+rays to following photon packets in a Monte Carlo experiment. Most RT simulations are initiated at ∼1 day after the explosion, at which
+point the ejecta are in homologous expansion and one can choose to ignore the hydrodynamical part of the problem. Up until the nebular
+phase, however, time-dependent effects should be taken into account since there is a delay between the injection of energy from the 56Ni
+decay chain and the resulting escape of thermalized photons from the SN ejecta. Non-local energy deposition by γ-rays and non-thermal
+effects resulting from fast electrons generated in Compton scatterings of these γ-rays also need to be treated self consistently.
+Furthermore, RT simulations in the context of SNe Ia are complicated due to the nature of the opacity (e.g. Pinto and Eastman, 2000).
+The dominance of atomic lines (bound-bound transitions), which both absorb and scatter incoming photons, has the effect of decoupling the
+radiation field from the local thermodynamical conditions of the gas (temperature and electron density). One then needs to solve numerous
+rate equations to compute the populations ni (number density, m−3) of each atomic level i for each ion considered in the solution. The IGEs
+that dominate the composition of SN Ia ejecta have several thousands of individual levels and millions of bound-bound transitions between
+them. Solving the complete set of rate equations comes at a huge computational cost, even in 1D, which becomes prohibitively large in 3D.
+One strategy is to treat the entire problem assuming spherical symmetry (1D), but this overlooks the inversion of the chemical stratifica-
+tion between the stable IGEs and 56Ni-rich layers as predicted in 3D models of the explosion (for MCh DDT models). Another approach is to
+start with spherical averages of a 3D explosion model, but this then artificially mixes together regions burnt at a wide range of densities and
+hence leads to chemical inconsistencies (e.g. Pakmor et al., 2024). Last, treating the entire problem (hydrodynamics + RT) in 3D requires
+the sacrifice of physical consistency (e.g. in the treatment of ionization) to save computational costs. Even in 1D, starting with the same
+initial ejecta model does not guarantee that different codes will yield the same results (Blondin et al., 2022a).
+3 Progenitor scenarios and explosion mechanisms
+There are several viable progenitor scenarios for SNe Ia, with specific explosion mechanisms associated with each. For a long time,
+the explosion of a near-MCh WD was considered the most likely candidate, at least from a theoretical standpoint, but recent years have
+witnessed a regained interest in models involving sub-MCh WD pairs, in particular violent mergers and double-detonation models. Different
+models, however, can yield similar observable signatures, as the outcome of the explosion in terms of ejecta dynamics and composition are
+sometimes weakly sensitive to the initial state of the WD or the details of the nuclear burning10. That said, a few observed SNe Ia have
+displayed smoking-gun signatures associated with a particular scenario. In what follows we review the main explosion models considered
+by the community today. The different progenitor channels associated with each model are schematically illustrated in Fig. 7, and Table 1
+summarizes some of their most salient features.
+3.1 The classical Chandrasekhar-mass model, or single-degenerate (SD) scenario
+Long considered the standard model for SNe Ia, this model involves a WD that accretes material from a non-degenerate binary companion
+until its mass approaches MCh. Here, the combustion must first proceed as a deflagration and then transition to a detonation via the DDT
+mechanism (Khokhlov, 1991). Indeed, pure deflagrations result in weak explosions that sometimes fail to completely unbind the WD (such
+models have been proposed for Type Iax events), while pure detonations are ruled out as they burn the entire WD to IGEs, with too little
+IMEs needed to reproduce the early-time spectra11. Various flavors of this delayed-detonation model exist, such as gravitationally-confined
+detonations or pulsationally-reversed detonations. The key requirement is that the WD is pre-expanded during the deflagration phase before
+the detonation burns the remainder of the WD at lower densities, producing IMEs in sufficient amounts.
+The advantages of the SD scenario is that it naturally provides the correct conditions to ignite carbon fusion in the WD core, in addition
+to a physical basis (namely the MCh limit) for the observed homogeneity of a large fraction of the SN Ia sample. Some nucleosynthesis
+arguments (such as the abundance of manganese in the solar neighborhood; see Section 2.2) point towards the need for a significant
+contribution of MCh progenitors to the SN Ia population. Chandrasekhar-mass delayed-detonation models have also been successful at
+reproducing the observed light curves and spectra of normal SNe Ia, although the range in 56Ni yield needed to reproduce the observed
+range in peak luminosity requires a somewhat artificial tuning of the density at which the DDT occurs.
+But this long favored model has several essential shortcomings. Starting with stellar evolution, growing a WD via accretion to MCh
+requires a fine tuning of the accretion rate to values of the order of 10−7 M⊙yr−1 (Nomoto et al., 1984), and the predicted rates for the
+SD channel are too low by at least one order of magnitude compared to the observed SN Ia rate – although these results are subject to
+uncertainties related for instance to the common envelope (CE) phase of the evolution, critical to forming close interacting binary systems.
+The SD scenario is also difficult to reconcile with the long delay times of a few Gyrs between WD formation and explosion as inferred from
+delay-time distributions (DTD; see Maoz et al. 2014). Last, some nucleosynthesis constraints instead impose an upper limit on the fraction
+of SNe Ia resulting from MCh progenitors (e.g. Bravo et al., 2022).
+The lack of a direct and unambiguous detection of the companion, even in the favorable case of the nearby SN 2011fe (e.g. Tucker and
+Shappee, 2024), as well as in SN Ia remnants in our galaxy or in the Large Magellanic Cloud (e.g. Kerzendorf et al., 2018), is problematic.
+10P. Hoeflich coined the term “stellar amnesia” to describe this lack of sensitivity to the initial conditions (e.g. H¨oflich, 2006).
+11Pure detonations of sub-MCh WDs however do produce the correct mix of IGEs and IMEs since their initial density is lower compared to MCh WDs.
+
+Type Ia supernovae
+11
+MS+MS
+Giant + MS
+CE phase
+C-O WD + star
+H/He transfer
+M ~ MCh
+M < MCh
+Deflagration*
+or DDT
+Double 
+detonation
+Slow
+merger
+Violent
+merger
+Collision
+D6
+CE phase
+C-O WD + Giant
+(after initial phase 
+of mass transfer)
+H/He star
+C-O core 
+or WD
+He shell 
+(     detonation)
+Common 
+Envelope (CE)
+SN Ia
+C-O WD + WD
+(both M < MCh)
+or
++ stellar companion
+(possibly hypervelocity, HV)
++ HV WD
+no surviving 
+companion
+C-O transfer
+C-O/He transfer
+* + low-mass C-O core 
+     (weak deflagration)
+or
+NS
+Neutron
+star (NS)
+No transfer
+Fig. 7: Schematic view of the six SN Ia progenitor channels presented in this chapter, starting with a main sequence (MS) binary system
+and proceeding through different evolutionary stages and final outcomes (each separated by a dashed vertical line).
+Indirect detections include interaction of the rapidly-expanding ejecta with the companion12, leading to an early-time signature at UV-
+blue wavelengths (Kasen, 2010). Such signatures have been seen in several SNe Ia but none have been unambiguously associated with
+interaction with a companion. Likewise, H-rich material stripped from the companion as it is overtaken by the SN ejecta should result in
+narrow hydrogen lines in the nebular spectra, with only one firm detection so far (Prieto et al., 2020). Pre-SN mass loss via winds from the
+companion, in addition to left-over material from the accretion phase, should lead to a complex CSM with which the SN ejecta interacts,
+resulting in radio signatures only detected in one event so far (SN 2020eyj; Kool et al. 2023). This event also displayed spectroscopic
+signatures of interaction with a He-rich CSM from a helium star companion. An X-ray signature is also expected in the SD scenario, either
+during the pre-explosion phase as a supersoft X-ray source, or resulting from CSM interaction. This has only been detected in one event
+at nebular times (Bochenek et al., 2018), and no detection has been reported even in the case of Ia-CSM events (Dwarkadas, 2024). The
+pre-SN wind is also expected to carve out a low-density cavity in the surrounding CSM, which has not been convincingly detected in SN Ia
+remnants; these instead appear to be expanding into a uniform medium (Badenes et al., 2007).
+3.2 Double-detonations in sub-Chandrasekhar-mass WDs with stable mass transfer
+Pure detonations of sub-MCh WDs provide a viable alternative to the aforementioned MCh SD scenario. One immediate advantage is the
+abundance of lower-mass WDs which could account for the observed SN Ia rate. Second, the range of typical WD masses considered in such
+models (0.8–1.1 M⊙) results in a range of density profiles and hence a range in 56Ni yields which naturally explains the observed diversity
+in peak luminosity. In particular, the rapidly-evolving light curves of low-luminosity 91bg-like SNe Ia seemingly require a sub-MCh ejecta
+(Blondin et al., 2017).
+12Except in the “spin up-spin down” scenario, where the WD must first rid itself of the excess angular momentum gained via accretion before exploding, during which
+time the companion continues to shed its envelope, shrinking considerably in size (Justham, 2011).
+
+12
+Type Ia supernovae
+Table 1: Basic characteristics of progenitor scenarios for SNe Ia.
+Scenario
+Combustion
+MWD
+Companion
+Surviving
+Early
+Nebular
+Mode a
+(primary)
+Companion b
+Interaction
+Lines c
+Single WD progenitor systems
+Single degenerate
+delayed-DET
+∼MCh
+MS/Giant
+or He star
+HV star
+or slow stripped Giant d
+(+ low-mass C/O core e)
+companion
+and CSM
+narrow Hα
++ velocity shifts f
+DEF
+narrow [O i]
+Double detonation
+DET
+sub-MCh
+He star
+HV star
+companion
+and CSM
+· · ·
+(He+C)
+Double WD progenitor systems
+Slow WD merger
+DET
+sub-MCh
+sub-MCh WD
+none
+C-O envelope
+· · ·
+(Double-degenerate)
+or ∼MCh
+or NS g
+Violent WD merger
+DET
+sub-MCh
+sub-MCh WD
+none
+· · ·
+[Ne ii]
++ narrow [O i]
+D6 (one explosion)
+DET
+(He+C)
+sub-MCh
+sub-MCh WD
+(C-O or He)
+HV WD
+· · ·
+velocity shifts
+D6 (two explosions)
+none
+· · ·
+velocity shifts
++ double-peaked
+WD collision
+DET
+sub-MCh
+sub-MCh WD
+none
+· · ·
+double-peaked
+or HV 3rd star h
+a delayed-DET = delayed detonation; DEF = pure deflagration; DET = pure detonation.
+b HV = hypervelocity.
+c we only report on peculiar spectroscopic signatures.
+d a giant donor would survive the explosion partially stripped of its outer H/He-rich envelope, and be ejected from the system at a
+lower velocity compared to less massive companions.
+e for weak deflagrations that fail to completely unbind the WD.
+f nebular line shifts are expected in an explosion ignited off-center.
+g such slow mergers can lead to an accretion-induced collapse to a neutron star and hence no SN Ia event.
+h for triple systems consisting of a double-WD binary and a third low-mass star.
+In order to explode, sub-MCh WDs require the formation of a helium shell around the C-O core, via accretion of H-rich material (which
+burns to helium on the WD surface) or He-rich material from a donor star. Here we consider cases where the mass transfer is stable. This
+helium shell must somehow detonate near its base, driving a powerful shock wave into the WD, leading to a secondary detonation of the
+C-O core. Initial models considered a relatively massive helium shell (≲0.2 M⊙), whose detonation produces copious amounts of 56Ni and
+other IGEs that are in conflict with the early-time spectra. Subsequent theoretical investigations showed that less massive helium shells (a
+few 0.01 M⊙) were able to detonate and produce a successful secondary explosion while leaving little IGE-rich material in the outer ejecta
+(e.g. Fink et al., 2010).
+There is a common misconception that the explosion of sub-MCh WDs produces no stable isotopes of nickel. Despite the lower densities
+involved in the burning (≲1011 kg m−3), stable 58Ni is produced in NSE in sub-MCh explosions, albeit at a lower abundance compared to
+MCh models at a given metallicity. The strength of the nebular forbidden lines of nickel is highly sensitive to the ionization state of the Ni-
+rich layers, such that abundance determinations are uncertain (Blondin et al., 2022b). Moreover, there is no unambiguous correspondence
+between the stable nickel mass and the mass of the exploding WD, since some MCh models (e.g. gravitationally-confined detonations)
+predict similar stable IGE yields as sub-MCh models. Nonetheless, Fl¨ors et al. (2020) attempted to estimate the stable Ni/Fe ratio from
+late-time spectra, and concluded that the majority of the SNe Ia in their sample were not only consistent with sub-MCh explosions, but also
+inconsistent with the predictions from standard MCh DDT models.
+3.3 Slow mergers or the classical double-degenerate (DD) scenario
+In this scenario, two unequal-mass sub-MCh C-O WDs in a close binary system (whose total mass exceeds MCh) slowly spiral in via emission
+of gravitational waves (Webbink, 1984; Iben and Tutukov, 1984). The less massive (secondary) WD is disrupted and forms a hot envelope
+surrounded by an accretion disk around the more massive (primary) WD. The rapid accretion of C-O-rich material onto the primary WD
+ensures an efficient increase in mass (possibly approaching MCh), at which point the conditions for carbon ignition are reached in the core —
+as in the classical MCh scenario. The explosion will thus occur within a massive C-O envelope, resulting in an interaction at early times that
+
+Type Ia supernovae
+13
+could explain some super-luminous SNe Ia (e.g. Taubenberger et al., 2013). However, the spectroscopic properties of such an interaction
+have not yet been thoroughly investigated.
+This scenario naturally explains the absence of hydrogen and helium lines in the spectra of SNe Ia, as well as the lack of any firm
+detection of a non-degenerate companion star13. Moreover, the loss of angular momentum via gravitational-wave radiation results in a
+power-law DTD ∝t−1 consistent with observations (Maoz and Mannucci, 2012). The predicted rates of DD systems are also closer to the
+observed SN Ia rate, although it has been argued that mergers of sub-MCh WDs whose combined mass is less than MCh must also contribute
+(van Kerkwijk et al., 2010). However, surveys devoted to the discovery of close double-WD systems have only discovered a handful of
+candidates that will merge within a Hubble time, and only two systems with a combined mass either consistent with MCh (Geier et al., 2007)
+or slightly exceeding MCh (Pelisoli et al., 2021).
+One major drawback of the DD scenario is a result of the predicted high accretion rate onto the primary WD. It is thought to lead to an
+off-center ignition of carbon and the formation of a high-mass O-Ne WD, with a subsequent accretion-induced collapse to a neutron star
+and hence no SN Ia event (e.g. Shen et al., 2012).
+3.4 Violent mergers
+In contrast to the slow WD mergers discussed above, carbon ignition in violent WD mergers occurs in the immediate precursor phase
+or during the merger event itself. The first simulations showed that merging two near-equal-mass ∼0.9 M⊙WDs would lead to violent
+accretion of the less massive WD onto the primary, and a hotspot would form at the interface between the direct accretion stream and
+the C-O core of the more massive WD, possibly resulting in carbon ignition and a thermonuclear runaway (Pakmor et al., 2010). Since
+the exploding WD is significantly sub-MCh, the amount of 56Ni synthesized in the explosion is rather small and only consistent with low-
+luminosity SNe Ia. However, the larger ejecta mass results in longer diffusion timescales, hence the predicted light curves are broader than
+for classical 91bg-like events, although possibly compatible with peculiar low-luminosity events such as SN 2010lp (Kromer et al., 2013).
+The secondary WD is only partially burned shortly after the explosion, and its oxygen-dominated ejecta expands inside that of the primary
+WD, which could explain the presence of narrow [O i] lines in nebular spectra of these sub-luminous events (Kromer et al., 2016).
+Later studies considered unequal-mass WD systems with a more massive primary WD (∼1.1 M⊙), resulting in 56Ni yields compatible
+with a normal SN Ia event (Pakmor et al., 2012). As in the low-luminosity case above, the inner ejecta is dominated by the ashes of the
+partially-burnt secondary WD, which consist mostly of oxygen but also some neon. A strong forbidden line in the mid-IR range due to
+[Ne ii] 12.8 µm was indeed predicted to emerge in nebular spectra of this violent merger model (Blondin et al., 2023), which was detected
+soon after and for the first time in a JWST spectrum of the Type Ia SN 2022pul (Kwok et al. 2024; see Fig. 5).
+While a promising scenario for SNe Ia, it is unclear whether the hotspot resulting from the direct-impact accretion stream actually leads
+to a detonation, although longer-term spiral instabilities may provide the necessary ignition conditions (Kashyap et al., 2015). Also, the
+predicted level of asymmetry in the ejecta can be fairly high, in contradiction with the low polarization levels commonly observed in SNe Ia
+(Bulla et al., 2016) and with the spherical morphology of SN Ia remnants.
+3.5 Double detonations in double-WD systems with dynamically unstable mass transfer (D6 scenario)
+The initial configuration for this explosion scenario is similar to that for the violent mergers discussed above, and both result from a
+dynamically unstable mass transfer. However, the explosion here is triggered by the detonation of a thin helium layer on the primary WD
+(either present initially or accreted from the secondary WD) – as opposed to direct carbon ignition in its core. This initial detonation then
+leads to a secondary detonation of the C-O core, as in the classical double-detonation scenario (Section 3.2). Such explosions are referred
+to as helium-ignited violent mergers (Pakmor et al., 2013) or more poetically as dynamically driven double degenerate double detonations
+(D6; Shen et al. 2018b).
+One important observational consequence compared to violent mergers is that the secondary WD can survive the explosion and be
+ejected from the system as a hypervelocity (HV) WD with peculiar chemical composition. Several HV WDs have in fact been detected
+by the Gaia satellite, confirming the viability of this scenario, although in too low numbers to explain the majority of SNe Ia (Shen et al.,
+2018a). However, if a thin helium shell is also present on the secondary WD, the impact of the rapidly-expanding ejecta from the primary
+can lead to its detonation and a subsequent double-detonation explosion of the secondary, i.e. a quadruple-detonation event (Pakmor et al.,
+2022). The predicted delay of a few seconds between both explosions leads to the expansion of the secondary WD’s ejecta inside that of
+the primary, leading to possible late-time signatures of asymmetries and peculiar chemical profiles that could help distinguish quadruple
+detonations from cases where the secondary WD survives the explosion.
+3.6 Collisions
+There is a non-negligible probability for two WDs in dense stellar environments (such as globular clusters or galactic nuclei) to collide
+head-on with one another (Benz et al., 1989). Such collisions are however expected to be rare, even when taking into account Kozai-Lidov
+resonances induced by a third low-mass star orbiting the inner WD binary (e.g. Katz and Dong, 2012). Numerical simulations of head-on
+collisions of WD pairs with varying masses and impact parameters have been able to produce successful explosions with 56Ni yields that
+match the observed range in peak luminosity. A bimodal 56Ni distribution is often expected in such models, resulting in double-peaked
+emission lines of cobalt and iron at late times that have been detected in a few nebular SN Ia spectra (Dong et al., 2015). It is still unclear
+13This statement also applies to all the other double-WD scenarios discussed in the following sections (3.4–3.6).
+
+14
+Type Ia supernovae
+however whether these features are a smoking-gun signature for this scenario, as double-peaked profiles could also result from quadruple
+detonations in the D6 scenario discussed above.
+4 Ongoing and future developments
+Here we mention a few ongoing and future efforts to better understand the nature of SNe Ia, both from observational and theoreti-
+cal/modeling perspectives.
+4.1 Observations
+There already exists a plethora of high-quality photometric and spectroscopic data for SNe Ia collected over several decades. That said,
+more recent high-cadence surveys – such as the Asteroid Terrestrial-impact Last Alert System (ATLAS; Tonry et al. 2018) or the Zwicky
+Transient Facility (ZTF; Bellm et al. 2019) – have enabled the systematic discovery of SNe Ia within a few days from the explosion. Studies
+of the earliest phases of the evolution places important constraints on the presence of a (massive) binary companion or CSM, or on the
+presence of 56Ni in the outer ejecta (see Section 2.3.1).
+The upcoming Vera Rubin Observatory, with its ten-year Legacy Survey of Space and Time (LSST), will discover and monitor over a
+million SNe Ia starting in 2025. The observing cadence, however, will result in relatively sparsely-sampled light curves, and spectroscopic
+follow-up is not included in the survey design and will be limited to a small fraction of the total sample. Rubin/LSST will also discover over
+a hundred strongly-lensed SNe Ia out to redshifts z ≲1 that are strongly lensed by a foreground galaxy (Arendse et al., 2024), producing
+multiple images of the SN that appear at different times. By detecting the first appearing SN image, one can use the predicted time delays
+between the multiple images to catch the SN right at the moment of its next appearance, and hence access the first hours/days of its evolution
+(Suyu et al., 2020). Moreover, the rest-frame UV radiation of these high-redshift events can be observed with ground-based facilities at
+optical wavelengths, providing complementary diagnostics to high-cadence surveys targeting nearby events.
+The recent launch of JWST has enabled the systematic study of SNe Ia at mid-IR wavelengths – such data only existed for a handful of
+events before then. The first late-time spectra of SNe Ia obtained with JWST revealed for the first time the 2.5–5 µm range for these events,
+as well as the detection of the [Ne ii] 12.8 µm line in one event, as predicted by violent merger models (see Fig. 5). The Euclid satellite,
+although not designed for transient surveys, could be used to complement the high-redshift SN Ia sample of Rubin/LSST for cosmological
+studies at near-IR wavelengths (Bailey et al., 2023). The future Nancy Grace Roman Space Telescope (NGRST), on the other hand, will
+carry out a dedicated near-IR survey of a few thousand SNe Ia (Hounsell et al., 2018)14.
+At higher frequencies, the X-ray satellite XRISM (launched in September 2023), and hopefully succeeded by ESA’s NewAthena mission
+in the late 2030’s, will carry out spatially-resolved spectroscopic studies of SN Ia remnants, thereby directly constraining the explosion
+energetics and ejecta chemical stratification. In the γ-ray regime, the Compton Spectrometer and Imager (COSI; planned launch in 2025)
+should be able to detect energetic photons resulting from the 44Ti decay chain, whose abundance can be used to discriminate between
+different SN Ia explosion mechanisms (e.g. Kosakowski et al., 2023).
+Last, the revolution wrought by the direct detection of gravitational waves has opened up a new channel for studying astronomical
+events, including SNe Ia. Double WD systems are expected to largely dominate over all other compact binaries detected by LISA in our
+galaxy (Amaro-Seoane et al., 2023), with an expected ≳2000 WD+WD systems with a primary mass exceeding 0.8 M⊙that could explode
+as SNe Ia (Korol et al. 2024 and private communication). LISA will also be able to detect WD+black hole binaries and test the scenario in
+which a WD is tidally stripped by an intermediate-mass (< 105 M⊙) black hole (Rosswog et al., 2009).
+4.2 Theory and Modeling
+On the theoretical and modeling fronts, ongoing efforts are focused on stellar evolution, the hydrodynamics of the explosion and its coupling
+to the nucleosynthesis, and the radiative-transfer post-processing.
+Concerning stellar evolution, 3D modeling of the common envelope phase of evolution is currently being undertaken to better understand
+how close binary systems can form. More accurate rate estimates for the MCh channel require a better understanding of accretion processes
+onto WDs that can result in a near-MCh progenitor, as well as of the pre-explosion simmering phase.
+Numerical modeling of the explosion still suffers from insufficient resolution to properly model the combustion fronts in SNe Ia, although
+recent simulations have been able to resolve the detonation of a thin helium layer atop a C-O WD, with a grid-cell resolution of a few tens
+of meters only (F. R¨opke, private communication). However, nucleosynthesis calculations still largely rely on post processing explosion
+simulations via tracer particles, where one would prefer a direct coupling of nuclear reaction networks to the hydrodynamics (Bravo, 2020).
+The predicted abundances of various isotopes are however only weakly sensitive to uncertainties in nuclear reaction rates (Bravo and
+Mart´ınez-Pinedo, 2012). Last, terrestrial combustion experiments, in particular related to the DDT mechanism in unconfined media, can
+provide useful insights into the treatment of combustion fronts in simulations of the explosion (Thomas et al., 2022).
+Radiative-transfer simulations still represent a major hurdle in connecting explosion models with observations (light curves and spectra).
+While a 3D treatment of the problem seems warranted, there is a trade-off to be made between the dimensionality and physical consistency
+or resolution of the simulation, and full time-dependent non-LTE simulations are currently lacking. One related major limitation concerns
+the availability of atomic data, whose accuracy can have a significant impact on spectroscopically determined abundances (Blondin et al.,
+14This paper refers to the WFIRST project, since then rebaptized NGRST.
+
+Type Ia supernovae
+15
+2023). Sophisticated numerical calculations are required to compute cross-sections for important atomic processes (e.g. photoionization,
+collisional excitation) as these cannot all be measured in the laboratory.
+5 Concluding remarks
+Much progress has been made in recent years towards a better understanding of the progenitors and explosion mechanisms of SNe Ia.
+High-cadence surveys have enabled to systematically discover new SNe Ia shortly after explosion and hence enable the study of their
+earliest phases, and JWST has given the community access to high-quality spectroscopic diagnostics in the mid-IR range. While future
+observational efforts will concentrate on gathering large samples of SNe Ia in the optical and near-IR ranges for cosmological studies,
+detailed studies of individual events (including radio, X-ray and γ-ray observations when possible) remain paramount for constraining key
+parameters of the explosion.
+For a long time the single most-favored contender for explaining the bulk of SNe Ia, the MCh model is now invoked to explain more
+peculiar events, such as Type Iax SNe which are thought to result from pure deflagrations of MCh WDs. The recent emergence of double
+sub-MCh WD systems as the leading model for SNe Ia is an interesting reversal of the general consensus up to a decade ago, and testifies to
+the dynamism of this field of research. However, a word of caution is in order, as future observational findings and modeling efforts might
+be able to address some of the limitations of the MCh model. Likewise, future gravitational-wave detections of double-WD systems with
+LISA will be able to confirm or disprove the double-degenerate scenario as the dominant channel for SNe Ia. The jury is still out, and new
+ideas on how white dwarf stars explode will no doubt emerge in the coming years.
+Acknowledgments
+This chapter is dedicated to Tom Marsh (1961-2022), who introduced SB to the topic of Type Ia supernovae during his studies at the
+University of Southampton. We thank Eduardo Bravo, Robert Fisher, Bruno Leibundgut, and Ken Shen for carefully reading and
+providing detailed comments on a first draft of this chapter. We further acknowledge useful discussions with Luc Dessart, Roland
+Diehl, Valeriya Korol, Friedrich (Fritz) R¨opke, Ivo Seitenzahl, with a special mention to Frank Timmes for inspiring the “Three basic
+ingredients for a successful SN Ia model” box in Section 2. We thank Stefano Benetti for providing the light-curve data for SN 2002ic
+used in Fig. 6 and Eugene Churazov for providing the SN 2014J data and model shown in Fig. 1. This work was supported by the
+Alexander von Humboldt foundation, and by the ‘Programme National de Physique Stellaire’ (PNPS) of CNRS/INSU co-funded by
+CEA and CNES.
+See Also: Several chapters of the “Handbook of Supernovae” (Eds. A. W. Alsabti and P. Murdin), four of which are
+referenced in the present chapter, cover many aspects of SNe Ia in more depth, including their cosmological appli-
+cations. Many explosion models for SNe Ia are publicly available online at the Heidelberg Supernova Model Archive
+(HESMA; https://hesma.h-its.org). The results of radiative-transfer simulations for supernova ejecta with the CMF-
+GEN code are accessible on Zenodo (https://zenodo.org/communities/snrt), and the results of a radiative-transfer
+code-comparison study are available on github (https://github.com/sn-rad-trans/data1; see Blondin et al. 2022a).
+References
+Altavilla G, Fiorentino G, Marconi M, Musella I, Cappellaro E and et al. (2004), Apr. Cepheid calibration of Type Ia supernovae and the Hubble
+constant. MNRAS 349: 1344–1352. doi:10.1111/j.1365-2966.2004.07616.x. arXiv:astro-ph/0401273.
+Amaro-Seoane P, Andrews J, Arca Sedda M, Askar A, Baghi Q and et al. (2023), Mar. Astrophysics with the Laser Interferometer Space Antenna.
+Living Reviews in Relativity 26 (1), 2. doi:10.1007/s41114-022-00041-y. 2203.06016.
+Arendse N, Dhawan S, Sagu´es Carracedo A, Peiris HV, Goobar A and et al. (2024), Jul. Detecting strongly lensed type Ia supernovae with
+LSST. MNRAS 531 (3): 3509–3523. doi:10.1093/mnras/stae1356. 2312.04621.
+Arnett WD (1979), May. On the theory of Type I supernovae. ApJL 230: L37–L40. doi:10.1086/182957.
+Badenes C, Hughes JP, Bravo E and Langer N (2007), Jun. Are the Models for Type Ia Supernova Progenitors Consistent with the Properties of
+Supernova Remnants? ApJ 662 (1): 472–486. doi:10.1086/518022. astro-ph/0703321.
+Bailey AC, Vincenzi M, Scolnic D, Cuillandre JC, Rhodes J, Hook I, Peterson ER and Popovic B (2023), Oct. Type Ia supernova observa-
+tions combining data from the Euclid mission and the Vera C. Rubin Observatory. MNRAS 524 (4): 5432–5441. doi:10.1093/mnras/stad2179.
+2211.01206.
+Bellm EC, Kulkarni SR, Graham MJ, Dekany R, Smith RM and et al. (2019), Jan. The Zwicky Transient Facility: System Overview, Performance,
+and First Results. PASP 131 (995): 018002. doi:10.1088/1538-3873/aaecbe. 1902.01932.
+Benz W, Hills JG and Thielemann FK (1989), Jul. Three-dimensional Hydrodynamical Simulations of Stellar Collision. II. White Dwarfs. ApJ 342:
+986. doi:10.1086/167656.
+Blondin S, Dessart L, Hillier DJ and Khokhlov AM (2013), Mar. One-dimensional delayed-detonation models of Type Ia supernovae: confrontation
+to observations at bolometric maximum. MNRAS 429: 2127–2142. doi:10.1093/mnras/sts484. 1211.5892.
+Blondin S, Dessart L and Hillier DJ (2015), Apr. A one-dimensional Chandrasekhar-mass delayed-detonation model for the broad-lined Type Ia
+supernova 2002bo. MNRAS 448: 2766–2797. doi:10.1093/mnras/stv188. 1501.06583.
+Blondin S, Dessart L, Hillier DJ and Khokhlov AM (2017), Sep. Evidence for sub-Chandrasekhar-mass progenitors of Type Ia supernovae at the
+faint end of the width-luminosity relation. MNRAS 470: 157–165. doi:10.1093/mnras/stw2492. 1706.01901.
+
+16
+Type Ia supernovae
+Blondin S, Blinnikov S, Callan FP, Collins CE, Dessart L and et al. (2022a), Dec. StaNdaRT: a repository of standardised test models and outputs
+for supernova radiative transfer. A&A 668, A163. doi:10.1051/0004-6361/202244134. 2209.11671.
+Blondin S, Bravo E, Timmes FX, Dessart L and Hillier DJ (2022b), Apr. Stable nickel production in type Ia supernovae: A smoking gun for the
+progenitor mass? A&A 660, A96. doi:10.1051/0004-6361/202142323. 2109.13840.
+Blondin S, Dessart L, Hillier DJ, Ramsbottom CA and Storey PJ (2023), Jun. Nebular spectra from Type Ia supernova explosion models compared
+to JWST observations of SN 2021aefx. arXiv e-prints , arXiv:2306.07116doi:10.48550/arXiv.2306.07116. 2306.07116.
+Bloom JS, Kasen D, Shen KJ, Nugent PE, Butler NR and et al. (2012), Jan. A Compact Degenerate Primary-star Progenitor of SN 2011fe. ApJL
+744, L17. doi:10.1088/2041-8205/744/2/L17. 1111.0966.
+Bochenek CD, Dwarkadas VV, Silverman JM, Fox OD, Chevalier RA, Smith N and Filippenko AV (2018), Jan. X-ray emission from SN 2012ca:
+A Type Ia-CSM supernova explosion in a dense surrounding medium. MNRAS 473 (1): 336–344. doi:10.1093/mnras/stx2029. 1708.07181.
+Bravo E (2020), May. The accuracy of post-processed nucleosynthesis. MNRAS 494 (2): 3037–3047. doi:10.1093/mnras/staa910. 2002.08486.
+Bravo E and Mart´ınez-Pinedo G (2012), May. Sensitivity study of explosive nucleosynthesis in type Ia supernovae: Modification of individual
+thermonuclear reaction rates. Phys. Rev. C 85 (5), 055805. doi:10.1103/PhysRevC.85.055805. 1204.1981.
+Bravo E, Piersanti L, Blondin S, Dom´ınguez I, Straniero O and Cristallo S (2022), Nov. Chandrasekhar-mass white dwarfs are the progenitors
+of a small fraction of Type Ia supernovae according to nucleosythesis constraints. MNRAS 517 (1): L31–L35. doi:10.1093/mnrasl/slac103.
+2209.04020.
+Bulla M, Sim SA, Pakmor R, Kromer M, Taubenberger S, R¨opke FK, Hillebrandt W and Seitenzahl IR (2016), Jan. Type Ia supernovae from
+violent mergers of carbon-oxygen white dwarfs: polarization signatures. MNRAS 455 (1): 1060–1070. doi:10.1093/mnras/stv2402. 1510.04128.
+Chandrasekhar S (1931), Jul. The Maximum Mass of Ideal White Dwarfs. ApJ 74: 81–+.
+Churazov E, Sunyaev R, Isern J, Kn¨odlseder J, Jean P and et al. (2014), Aug. Cobalt-56 γ-ray emission lines from the type Ia supernova 2014J.
+Nature 512 (7515): 406–408. doi:10.1038/nature13672. 1405.3332.
+Colgate SA and McKee C (1969), Aug. Early Supernova Luminosity. ApJ 157: 623. doi:10.1086/150102.
+Dessart L, Hillier DJ, Blondin S and Khokhlov A (2014), Apr. [Co III] versus Na I D in Type Ia supernova spectra. MNRAS 439: 3114–3120.
+doi:10.1093/mnras/stu174. 1310.7750.
+Dimitriadis G, Foley RJ, Rest A, Kasen D, Piro AL and et al. (2019), Jan. K2 Observations of SN 2018oh Reveal a Two-component Rising Light
+Curve for a Type Ia Supernova. ApJL 870 (1), L1. doi:10.3847/2041-8213/aaedb0. 1811.10061.
+Dong S, Katz B, Kushnir D and Prieto JL (2015), Nov. Type Ia supernovae with bimodal explosions are common - possible smoking gun for direct
+collisions of white dwarfs. MNRAS 454: L61–L65. doi:10.1093/mnrasl/slv129. 1401.3347.
+Dwarkadas VV (2024), Jul. X-ray Observations of Two Type Ia Supernovae with an Hα Line in their Optical Spectrum. MNRAS doi:10.1093/mnras/
+stae1628. 2407.00279.
+Dwek E (2016), Jul. Iron: A Key Element for Understanding the Origin and Evolution of Interstellar Dust. ApJ 825 (2), 136. doi:10.3847/0004-637X/
+825/2/136. 1605.01957.
+Filippenko AV, Richmond MW, Branch D, Gaskell M, Herbst W and et al. (1992), Oct. The subluminous, spectroscopically peculiar type IA
+supernova 1991bg in the elliptical galaxy NGC 4374. AJ 104: 1543–1556. doi:10.1086/116339.
+Fink M, R¨opke FK, Hillebrandt W, Seitenzahl IR, Sim SA and Kromer M (2010), May. Double-detonation sub-Chandrasekhar supernovae: can
+minimum helium shell masses detonate the core? A&A 514, A53. doi:10.1051/0004-6361/200913892. 1002.2173.
+Firth RE, Sullivan M, Gal-Yam A, Howell DA, Maguire K and et al. (2015), Feb. The rising light curves of Type Ia supernovae. MNRAS 446 (4):
+3895–3910. doi:10.1093/mnras/stu2314. 1411.1064.
+Fl¨ors A, Spyromilio J, Taubenberger S, Blondin S, Cartier R, Leibundgut B, Dessart L, Dhawan S and Hillebrandt W (2020), Jan. Sub-
+Chandrasekhar progenitors favoured for Type Ia supernovae: evidence from late-time spectroscopy. MNRAS 491 (2): 2902–2918. doi:
+10.1093/mnras/stz3013. 1909.11055.
+Ganeshalingam M, Li W, Filippenko AV, Silverman JM, Chornock R and et al. (2012), Feb. The Low-Velocity, Rapidly Fading Type Ia Supernova
+2002es. ArXiv:1202.3140 [astro-ph.CO] 1202.3140.
+Geier S, Nesslinger S, Heber U, Przybilla N, Napiwotzki R and Kudritzki RP (2007), Mar. The hot subdwarf B + white dwarf binary KPD
+1930+2752. A supernova type Ia progenitor candidate. A&A 464 (1): 299–307. doi:10.1051/0004-6361:20066098. astro-ph/0609742.
+Hamuy M, Phillips MM, Suntzeff NB, Maza J, Gonz´alez LE and et al. (2003), Aug. An asymptotic-giant-branch star in the progenitor system of a
+type Ia supernova. Nature 424: 651–654. arXiv:astro-ph/0306270.
+Hicken M, Challis P, Jha S, Kirshner RP, Matheson T and et al. (2009), Jul. CfA3: 185 Type Ia Supernova Light Curves from the CfA. ApJ 700:
+331–357. doi:10.1088/0004-637X/700/1/331. 0901.4787.
+H¨oflich P (2006), Oct. Physics of type Ia supernovae. Nucl. Phys. A 777: 579–600. doi:10.1016/j.nuclphysa.2004.12.038.
+Horowitz CJ and Caplan ME (2021), Apr. Actinide Crystallization and Fission Reactions in Cooling White Dwarf Stars. Phys. Rev. Lett. 126 (13),
+131101. doi:10.1103/PhysRevLett.126.131101. 2103.02122.
+Hounsell R, Scolnic D, Foley RJ, Kessler R, Miranda V and et al. (2018), Nov. Simulations of the WFIRST Supernova Survey and Forecasts of
+Cosmological Constraints. ApJ 867 (1), 23. doi:10.3847/1538-4357/aac08b. 1702.01747.
+Hoyle F and Fowler WA (1960), Nov. Nucleosynthesis in Supernovae. ApJ 132: 565–+.
+Iben Jr. I and Tutukov AV (1984), Feb. Supernovae of type I as end products of the evolution of binaries with components of moderate initial
+mass (M not greater than about 9 solar masses). ApJS 54: 335–372. doi:10.1086/190932.
+Jeffery DJ (1999), Jul. Radioactive Decay Energy Deposition in Supernovae and the Exponential/Quasi-Exponential Behavior of Late-Time
+Supernova Light Curves. ArXiv:9907015 astro-ph/9907015.
+Jha SW (2017), Type Iax Supernovae, Alsabti AW and Murdin P, (Eds.), Handbook of Supernovae, pp. 375.
+Justham S (2011), Apr. Single-degenerate Type Ia Supernovae Without Hydrogen Contamination. ApJL 730, L34. doi:10.1088/2041-8205/730/2/
+L34. 1102.4913.
+Kasen D (2010), Jan. Seeing the Collision of a Supernova with Its Companion Star. ApJ 708: 1025–1031. doi:10.1088/0004-637X/708/2/1025.
+0909.0275.
+Kasen D and Woosley SE (2007), Feb. On the Origin of the Type Ia Supernova Width-Luminosity Relation. ApJ 656: 661–665. doi:10.1086/510375.
+arXiv:astro-ph/0609540.
+Kasen D, Nugent P, Wang L, Howell DA, Wheeler JC and et al. (2003), Aug. Analysis of the Flux and Polarization Spectra of the Type Ia Supernova
+SN 2001el: Exploring the Geometry of the High-Velocity Ejecta. ApJ 593: 788–808. doi:10.1086/376601. arXiv:astro-ph/0301312.
+Kashi A and Soker N (2011), Oct. A circumbinary disc in the final stages of common envelope and the core-degenerate scenario for Type Ia
+supernovae. MNRAS 417 (2): 1466–1479. doi:10.1111/j.1365-2966.2011.19361.x. 1105.5698.
+Kashyap R, Fisher R, Garc´ıa-Berro E, Aznar-Sigu´an G, Ji S and Lor´en-Aguilar P (2015), Feb. Spiral Instability Can Drive Thermonuclear
+Explosions in Binary White Dwarf Mergers. ApJL 800 (1), L7. doi:10.1088/2041-8205/800/1/L7. 1501.05645.
+Katz B and Dong S (2012), Nov. The rate of WD-WD head-on collisions may be as high as the SNe Ia rate. arXiv e-prints ,
+
+Type Ia supernovae
+17
+arXiv:1211.45841211.4584.
+Katz B, Kushnir D and Dong S (2013), Jan. An exact integral relation between the Ni56 mass and the bolometric light curve of a type Ia
+supernova. arXiv:1301.6766 [astro-ph] ArXiv: 1301.6766, http://arxiv.org/abs/1301.6766.
+Kepler SO, Kleinman SJ, Nitta A, Koester D, Castanheira BG, Giovannini O, Costa AFM and Althaus L (2007), Mar. White dwarf mass distribution
+in the SDSS. MNRAS 375: 1315–1324. doi:10.1111/j.1365-2966.2006.11388.x. astro-ph/0612277.
+Kerzendorf WE, Strampelli G, Shen KJ, Schwab J, Pakmor R, Do T, Buchner J and Rest A (2018), Sep. A search for a surviving companion in
+SN 1006. MNRAS 479 (1): 192–199. doi:10.1093/mnras/sty1357. 1709.06566.
+Khokhlov AM (1991), May. Delayed detonation model for type IA supernovae. A&A 245: 114–128.
+Kool EC, Johansson J, Sollerman J, Mold´on J, Moriya TJ and et al. (2023), May. A radio-detected type Ia supernova with helium-rich circumstellar
+material. Nature 617 (7961): 477–482. doi:10.1038/s41586-023-05916-w. 2210.07725.
+Korol V, Buscicchio R, Pakmor R, Mor´an-Fraile J, Moore CJ and de Mink SE (2024), Jul. Expected insights on type Ia supernovae from LISA’s
+gravitational wave observations. arXiv e-prints , arXiv:2407.03935doi:10.48550/arXiv.2407.03935. 2407.03935.
+Kosakowski D, Ugalino MI, Fisher R, Graur O, Bobrick A and Perets HB (2023), Feb. Using 44Ti emission to differentiate between thermonuclear
+supernova progenitors. MNRAS 519 (1): L74–L78. doi:10.1093/mnrasl/slac152. 2210.10804.
+Kromer M, Pakmor R, Taubenberger S, Pignata G, Fink M and et al. (2013), Nov. SN 2010lp—a Type Ia Supernova from a Violent Merger of
+Two Carbon-Oxygen White Dwarfs. ApJL 778 (1), L18. doi:10.1088/2041-8205/778/1/L18. 1311.0310.
+Kromer M, Fremling C, Pakmor R, Taubenberger S, Amanullah R and et al. (2016), Jul. The peculiar Type Ia supernova iPTF14atg:
+Chandrasekhar-mass explosion or violent merger? MNRAS 459 (4): 4428–4439. doi:10.1093/mnras/stw962. 1604.05730.
+Kwok LA, Siebert MR, Johansson J, Jha SW, Blondin S and et al. (2024), May. Ground-based and JWST Observations of SN 2022pul. II.
+Evidence from Nebular Spectroscopy for a Violent Merger in a Peculiar Type Ia Supernova. ApJ 966 (1), 135. doi:10.3847/1538-4357/ad2c0d.
+2308.12450.
+Leibundgut B, Kirshner RP, Phillips MM, Wells LA, Suntzeff NB and et al. (1993), Jan. SN 1991bg - A type IA supernova with a difference. AJ
+105: 301–313. doi:10.1086/116427.
+Li W, Filippenko AV, Chornock R, Berger E, Berlind P and et al. (2003), Apr. SN 2002cx: The Most Peculiar Known Type Ia Supernova. PASP
+115: 453–473. arXiv:astro-ph/0301428.
+Lira P, Suntzeff NB, Phillips MM, Hamuy M, Maza J and et al. (1998), Jan. Optical Light Curves of the Type IA Supernovae SN 1990N and SN
+1991T. AJ 115 (1): 234–246. doi:10.1086/300175. astro-ph/9709262.
+Maeda K, Taubenberger S, Sollerman J, Mazzali PA, Leloudas G, Nomoto K and Motohara K (2010), Jan. Nebular Spectra and Explosion
+Asymmetry of Type Ia Supernovae. ApJ 708: 1703–1715. doi:10.1088/0004-637X/708/2/1703. 0911.5484.
+Maoz D and Mannucci F (2012), Jan. Type-Ia Supernova Rates and the Progenitor Problem: A Review. PASA 29: 447–465. doi:10.1071/AS11052.
+1111.4492.
+Maoz D, Mannucci F and Nelemans G (2014), Aug. Observational Clues to the Progenitors of Type Ia Supernovae. ARA&A 52: 107–170.
+doi:10.1146/annurev-astro-082812-141031. 1312.0628.
+Matheson T, Joyce RR, Allen LE, Saha A, Silva DR and et al. (2012), Jul. The Infrared Light Curve of SN 2011fe in M101 and the Distance to
+M101. ApJ 754 (1), 19. doi:10.1088/0004-637X/754/1/19. 1205.3828.
+Mazzali PA, Sullivan M, Hachinger S, Ellis RS, Nugent PE and et al. (2014), Apr. Hubble Space Telescope spectra of the Type Ia supernova SN
+2011fe: a tail of low-density, high-velocity material with Z ¡ Z⊙. MNRAS 439 (2): 1959–1979. doi:10.1093/mnras/stu077. 1305.2356.
+Nomoto K, Thielemann FK and Yokoi K (1984), Nov. Accreting white dwarf models of Type I supernovae. III - Carbon deflagration supernovae.
+ApJ 286: 644–658. doi:10.1086/162639.
+Nugent P, Phillips M, Baron E, Branch D and Hauschildt P (1995), Dec. Evidence for a Spectroscopic Sequence among Type 1a Supernovae.
+ApJL 455: L147+. doi:10.1086/309846. arXiv:astro-ph/9510004.
+Nugent PE, Sullivan M, Cenko SB, Thomas RC, Kasen D and et al. (2011), Dec. Supernova SN 2011fe from an exploding carbon-oxygen white
+dwarf star. Nature 480: 344–347. doi:10.1038/nature10644. 1110.6201.
+Pakmor R, Kromer M, R¨opke FK, Sim SA, Ruiter AJ and Hillebrandt W (2010), Jan. Sub-luminous type Ia supernovae from the mergers of
+equal-mass white dwarfs with mass ∼0.9 M⊙. Nature 463: 61–64. doi:10.1038/nature08642. 0911.0926.
+Pakmor R, Kromer M, Taubenberger S, Sim SA, R¨opke FK and Hillebrandt W (2012), Mar. Normal Type Ia Supernovae from Violent Mergers of
+White Dwarf Binaries. ApJL 747, L10. doi:10.1088/2041-8205/747/1/L10. 1201.5123.
+Pakmor R, Kromer M, Taubenberger S and Springel V (2013), Jun. Helium-ignited Violent Mergers as a Unified Model for Normal and Rapidly
+Declining Type Ia Supernovae. ApJL 770, L8. doi:10.1088/2041-8205/770/1/L8. 1302.2913.
+Pakmor R, Callan FP, Collins CE, de Mink SE, Holas A, Kerzendorf WE, Kromer M, Neunteufel PG, O’Brien JT, R¨opke FK, Ruiter AJ, Seitenzahl
+IR, Shingles LJ, Sim SA and Taubenberger S (2022), Dec. On the fate of the secondary white dwarf in double-degenerate double-detonation
+Type Ia supernovae. MNRAS 517 (4): 5260–5271. doi:10.1093/mnras/stac3107. 2203.14990.
+Pakmor R, Seitenzahl IR, Ruiter AJ, Sim SA, R¨opke FK, Taubenberger S, Bieri R and Blondin S (2024), Jun. Type Ia supernova explosion models
+are inherently multidimensional. A&A 686, A227. doi:10.1051/0004-6361/202449637. 2402.11010.
+Pelisoli I, Neunteufel P, Geier S, Kupfer T, Heber U and et al. (2021), Jul. A hot subdwarf-white dwarf super-Chandrasekhar candidate supernova
+Ia progenitor. Nature Astronomy 5: 1052–1061. doi:10.1038/s41550-021-01413-0. 2107.09074.
+Pereira R, Thomas RC, Aldering G, Antilogus P, Baltay C and et al. (2013), Jun. Spectrophotometric time series of SN 2011fe from the Nearby
+Supernova Factory. A&A 554, A27. doi:10.1051/0004-6361/201221008. 1302.1292.
+Phillips MM (1993), Aug. The absolute magnitudes of Type IA supernovae. ApJL 413: L105–L108. doi:10.1086/186970.
+Phillips MM, Wells LA, Suntzeff NB, Hamuy M, Leibundgut B, Kirshner RP and Foltz CB (1992), May. SN 1991T: Further Evidence of the
+Heterogeneous Nature of Type IA Supernovae. AJ 103: 1632. doi:10.1086/116177.
+Phillips MM, Ashall C, Brown PJ, Galbany L, Tucker MA and et al. (2024), Jul. 1991T-like Supernovae. ApJS 273 (1), 16. doi:10.3847/1538-4365/
+ad4f7e. 2405.15027.
+Pierel JDR, Engesser M, Coulter DA, DeCoursey C, Siebert MR and et al. (2024), Aug. Discovery of an Apparent Red, High-velocity Type Ia
+Supernova at z = 2.9 with JWST. ApJL 971 (2), L32. doi:10.3847/2041-8213/ad6908. 2406.05089.
+Pinto PA and Eastman RG (2000), Feb. The Physics of Type IA Supernova Light Curves. II. Opacity and Diffusion. ApJ 530: 757–776. doi:
+10.1086/308380.
+Piro AL and Nakar E (2014), Mar. Constraints on Shallow 56Ni from the Early Light Curves of Type Ia Supernovae. ApJ 784, 85. doi:10.1088/
+0004-637X/784/1/85. 1211.6438.
+Poludnenko AY, Chambers J, Ahmed K, Gamezo VN and Taylor BD (2019), Nov. A unified mechanism for unconfined deflagration-to-detonation
+transition in terrestrial chemical systems and type Ia supernovae. Science 366 (6465), aau7365. doi:10.1126/science.aau7365. 1911.00050.
+Prieto JL, Chen P, Dong S, Bose S, Gal-Yam A, Holoien TWS, Kollmeier JA, Phillips MM and Shappee BJ (2020), Feb. Variable Hα Emission in
+the Nebular Spectra of the Low-luminosity Type Ia SN2018cqj/ATLAS18qtd. ApJ 889 (2), 100. doi:10.3847/1538-4357/ab6323. 1909.05267.
+
+18
+Type Ia supernovae
+Rabinak I, Livne E and Waxman E (2012), Sep. Early Emission from Type Ia Supernovae. ApJ 757 (1), 35. doi:10.1088/0004-637X/757/1/35.
+1108.5548.
+Richmond MW and Smith HA (2012), Apr. BVRI Photometry of SN 2011fe in M101. JAAVSO 40 (2): 872. doi:10.48550/arXiv.1203.4013.
+1203.4013.
+R¨opke FK (2017), Combustion in Thermonuclear Supernova Explosions, Alsabti AW and Murdin P, (Eds.), Handbook of Supernovae, pp. 1185.
+Rosswog S, Ramirez-Ruiz E and Hix WR (2009), Apr. Tidal Disruption and Ignition of White Dwarfs by Moderately Massive Black Holes. ApJ
+695 (1): 404–419. doi:10.1088/0004-637X/695/1/404. 0808.2143.
+Scalzo RA, Ruiter AJ and Sim SA (2014), Dec. The ejected mass distribution of Type Ia supernovae: a significant rate of non-Chandrasekhar-
+mass progenitors. MNRAS 445: 2535–2544. doi:10.1093/mnras/stu1808. 1408.6601.
+Seitenzahl IR and Townsley DM (2017), Nucleosynthesis in Thermonuclear Supernovae, Alsabti AW and Murdin P, (Eds.), Handbook of Super-
+novae, pp. 1955.
+Seitenzahl IR, Cescutti G, R¨opke FK, Ruiter AJ and Pakmor R (2013a), Nov. Solar abundance of manganese: a case for near Chandrasekhar-
+mass Type Ia supernova progenitors. A&A 559, L5. doi:10.1051/0004-6361/201322599. 1309.2397.
+Seitenzahl IR, Ciaraldi-Schoolmann F, R¨opke FK, Fink M, Hillebrandt W and et al. (2013b), Feb. Three-dimensional delayed-detonation models
+with nucleosynthesis for Type Ia supernovae. MNRAS 429: 1156–1172. doi:10.1093/mnras/sts402. 1211.3015.
+Shen KJ, Bildsten L, Kasen D and Quataert E (2012), Mar. The Long-term Evolution of Double White Dwarf Mergers. ApJ 748 (1), 35. doi:
+10.1088/0004-637X/748/1/35. 1108.4036.
+Shen KJ, Boubert D, G¨ansicke BT, Jha SW, Andrews JE and et al. (2018a), Sep. Three Hypervelocity White Dwarfs in Gaia DR2: Evidence for
+Dynamically Driven Double-degenerate Double-detonation Type Ia Supernovae. ApJ 865 (1), 15. doi:10.3847/1538-4357/aad55b. 1804.11163.
+Shen KJ, Kasen D, Miles BJ and Townsley DM (2018b), Feb. Sub-Chandrasekhar-mass White Dwarf Detonations Revisited. ApJ 854, 52.
+doi:10.3847/1538-4357/aaa8de. 1706.01898.
+Stritzinger M, Leibundgut B, Walch S and Contardo G (2006), Apr. Constraints on the progenitor systems of type Ia supernovae. A&A 450:
+241–251. doi:10.1051/0004-6361:20053652. arXiv:astro-ph/0506415.
+Suyu SH, Huber S, Ca˜nameras R, Kromer M, Schuldt S and et al. (2020), Dec. HOLISMOKES. I. Highly Optimised Lensing Investigations of
+Supernovae, Microlensing Objects, and Kinematics of Ellipticals and Spirals. A&A 644, A162. doi:10.1051/0004-6361/202037757. 2002.08378.
+Taubenberger S (2017), The Extremes of Thermonuclear Supernovae, Alsabti AW and Murdin P, (Eds.), Handbook of Supernovae, pp. 317.
+Taubenberger S, Benetti S, Childress M, Pakmor R, Hachinger S and et al. (2011), Apr. High luminosity, slow ejecta and persistent carbon lines:
+SN 2009dc challenges thermonuclear explosion scenarios. MNRAS 412: 2735–2762. doi:10.1111/j.1365-2966.2010.18107.x. 1011.5665.
+Taubenberger S, Kromer M, Hachinger S, Mazzali PA, Benetti S and et al. (2013), Jul. ‘Super-Chandrasekhar’ Type Ia Supernovae at nebular
+epochs. MNRAS 432 (4): 3117–3130. doi:10.1093/mnras/stt668. 1304.4952.
+Thomas JC, Rodriguez FA, Teitge DS, Kunka LN, Gaddis GN and et al. (2022), Jul. An experimental study of shock transmission from a
+detonation tube. Shock Waves 32 (5): 427–436. doi:10.1007/s00193-022-01086-2.
+Tonry JL, Denneau L, Heinze AN, Stalder B, Smith KW, Smartt SJ, Stubbs CW, Weiland HJ and Rest A (2018), Jun. ATLAS: A High-cadence
+All-sky Survey System. PASP 130 (988): 064505. doi:10.1088/1538-3873/aabadf. 1802.00879.
+Travaglio C, Hillebrandt W, Reinecke M and Thielemann F (2004), Oct. Nucleosynthesis in multi-dimensional SN Ia explosions. A&A 425: 1029–
+1040. doi:10.1051/0004-6361:20041108. arXiv:astro-ph/0406281.
+Tucker MA and Shappee BJ (2024), Feb. The HST Nondetection of SN Ia 2011fe 11.5 yr after Explosion Further Restricts Single-degenerate
+Progenitor Systems. ApJ 962 (1), 74. doi:10.3847/1538-4357/ad1b4e. 2308.08599.
+Tucker MA, Shappee BJ, Kochanek CS, Stanek KZ, Ashall C, Anand GS and Garnavich P (2022), Dec. The whisper of a whimper of a bang:
+2400 d of the Type Ia SN 2011fe reveals the decay of 55Fe. MNRAS 517 (3): 4119–4131. doi:10.1093/mnras/stac2873. 2111.01144.
+Turatto M, Benetti S, Cappellaro E, Danziger IJ, Della Valle M, Gouiffes C, Mazzali PA and Patat F (1996), Nov. The properties of the peculiar
+type Ia supernova 1991bg. I. Analysis and discussion of two years of observations. MNRAS 283: 1–17. arXiv:astro-ph/9605178.
+van Kerkwijk MH, Chang P and Justham S (2010), Oct. Sub-Chandrasekhar White Dwarf Mergers as the Progenitors of Type Ia Supernovae.
+ApJL 722: L157–L161. doi:10.1088/2041-8205/722/2/L157. 1006.4391.
+Webbink RF (1984), Feb. Double white dwarfs as progenitors of R Coronae Borealis stars and Type I supernovae. ApJ 277: 355–360. doi:
+10.1086/161701.
+Wood-Vasey WM, Wang L and Aldering G (2004), Nov. Photometry of SN 2002ic and Implications for the Progenitor Mass-Loss History. ApJ
+616 (1): 339–345. doi:10.1086/424826. astro-ph/0406191.
+Wygoda N, Elbaz Y and Katz B (2019), Apr. Type Ia supernovae have two physical width-luminosity relations and they favour sub-Chandrasekhar
+and direct collision models - I. Bolometric. MNRAS 484 (3): 3941–3950. doi:10.1093/mnras/stz145. 1711.00969.
+Yoon SC and Langer N (2005), Jun. On the evolution of rapidly rotating massive white dwarfs towards supernovae or collapses. A&A 435 (3):
+967–985. doi:10.1051/0004-6361:20042542. astro-ph/0502133.
+

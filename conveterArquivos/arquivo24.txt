@@ -1,0 +1,1409 @@
+TIBYAN CORPUS: BALANCED AND COMPREHENSIVE ERROR
+COVERAGE CORPUS USING CHATGPT FOR ARABIC
+GRAMMATICAL ERROR CORRECTION
+Ahlam Alrehili
+Department of Computer Sciences, Faculty of Computing and Information Technology
+King Abdulaziz University, Saudi Electronic University
+Medina
+a.alrehili@seu.edu.sa
+Areej Alhothali
+Department of Computer Sciences, Faculty of Computing and Information Technology
+King Abdulaziz University
+Jeddah
+aalhothali@kau.edu.sa
+ABSTRACT
+Natural language processing (NLP) utilizes text data augmentation to overcome sample size con-
+straints. Scarce and low-quality data present particular challenges when learning from these domains.
+Increasing the sample size is a natural and widely used strategy for alleviating these challenges.
+Moreover, data-augmentation techniques are commonly used in languages with rich data resources to
+address problems such as exposure bias. In this study, we chose Arabic to increase the sample size
+and correct grammatical errors. Arabic is considered one of the languages with limited resources
+for grammatical error correction (GEC) despite being one of the most popular among Arabs and
+non-Arabs because of its close connection to Islam. Furthermore, QALB-14 and QALB-15 are the
+only datasets used in most Arabic grammatical error correction research, with approximately 20,500
+parallel examples, which is considered low compared with other languages. In addition, most Arabic
+data augmentation techniques have not been adequately addressed. Therefore, this study aims to
+develop an Arabic corpus called "Tibyan" for grammatical error correction using ChatGPT. ChatGPT
+is used as a data augmenter tool based on a pair of Arabic sentences containing grammatical errors
+matched with a sentence free of errors extracted from Arabic books, called guide sentences. Multiple
+steps were involved in establishing our corpus, including the collection and pre-processing of a pair of
+Arabic texts from various sources, such as books and open-access corpora. We then used ChatGPT to
+generate a parallel corpus based on the text collected previously, as a guide for generating sentences
+with multiple types of errors. By engaging linguistic experts to review and validate the automatically
+generated sentences, we ensured that they were correct and error-free. The corpus was validated and
+refined iteratively based on feedback provided by linguistic experts to improve its accuracy. Finally,
+we used the Arabic Error Type Annotation tool (ARETA) to analyze the types of errors in the Tibyan
+corpus. Our corpus contained 49% of errors, including seven types: orthography, morphology, syntax,
+semantics, punctuation, merge, and split. The Tibyan corpus contains approximately 600 K tokens.
+Introduction
+The Arabic language has a great deal of influence worldwide. It is an ancient language with deep roots in the human
+history. The Holy Qur’an’s language is Arabic, which has a special religious status among Muslims worldwide. Many
+of the most significant literary and philosophical works in human history have been written in Arabic, making it a
+sophisticated literary and poetic language [1].In addition to being an important scientific and intellectual language,
+arXiv:2411.04588v1  [cs.CL]  7 Nov 2024
+
+Running Title for Header
+Arabic has contributed greatly to the transfer of knowledge and culture to Europe and other countries as it was the
+language of scholars and philosophers during the Middle Ages [2].
+One of the most important and famous features of Arabic is that it consists of three main versions: classical Arabic,
+modern standard Arabic (MSA), and regional dialects [3]. Classical Arabic was used in the Holy Quran and ancient
+literary texts between the 7th and 9th centuries [4]. Non-native Arabic speakers may find it difficult to learn classical
+Arabic or Quranic Arabic because of the special symbols (Tanween) that indicate proper pronunciation. Modern
+Standard Arabic (MSA) is the official language used primarily in newspapers, television broadcasts, and films. As it
+is not commonly spoken as a first language, it is a language without native speakers. There are currently 274 million
+speakers worldwide1. MSA is a formal language that is not used in daily life. Arabic is a vast language with a variety of
+dialects, and all Arabic speakers learn a local dialect, such as Mesopotamian Arabic and Egyptian Arabic. Meanwhile,
+dialectal Arabic is used by Arabs as a daily language of conversation. Although Arabic dialects are fundamentally
+related, they cannot be understood by one another because Arab countries speak different dialects [4].
+Because MSA is rarely used in daily life, it is sometimes mixed with local dialects. Moreover, because of the rich and
+intricate nature of Arabic, ambiguity can lead to incomprehensible and inaccurate text. In addition, Arabic grammar
+presents several semantic, syntactic, and morphological challenges owing to its flexible word order, diacritic, and
+agglutination properties. Furthermore, considerable deficiencies at the Arabic morphological level have hampered
+extensive research in this area. At higher research levels, semantics and syntax did not significantly advance. Therefore,
+grammatical error correction (GEC) is becoming increasingly important for native and non-native speakers.
+Grammatical Error Correction (GEC) automatically detects and corrects grammatical errors in a text [5]. Recent
+approaches to grammatical error correction, such as the seq2seq model, require large, high-quality parallel datasets.
+However, many languages do not contain such data, making it difficult to train these models. Other languages contain
+only a limited number of examples, making it difficult to build models that can correct all types of linguistic errors.
+Moreover, the creation of such datasets can be time-consuming and expensive. Therefore, most researchers use data
+augmentation techniques to increase the size of Grammatical Error Correction (GEC) parallel data. Data augmentation
+techniques generate more diverse training examples, which enhances the model’s ability to generalize to unknown
+errors. Various error types and contexts can be introduced using data augmentation to balance the dataset. Consequently,
+grammatical error correction systems have become more robust and accurate.
+The Arabic language has limited resources. Only two parallel corpora are available for GEC research:QALB-14 [6] and
+QALB-15 [7]. The QALB-14 and QALB-15 are part of the Qatar Arabic Language Bank (QALB) project. QALB
+aims to create a large corpus of Arabic texts that have been manually corrected, such as user comments on news sites,
+essays written by native and non-native speakers, and machine translation text. A specialized annotation interface was
+developed for this project, along with comprehensive annotation guidelines [8] [9]. A total of 20,430 and 1,542 samples
+were available from the two training corpora, (QALB-14) and (QALB-15). Despite the researchers’ complete reliance
+on these data, they have some shortcomings, including inadequate coverage of Arabic language defects, inconsistent
+punctuation correction, and small size compared with o datasets in other languages.
+This study aims to contribute to the development of an Arabic corpus for Grammatical Error Correction by employing
+ChatGPT to generate paired sentences based on common errors found in Arabic books. First, we collected a diverse
+range of pair Arabic sentences; one containing common grammatical errors made by native speakers and other corrected
+versions of the sentence. The sentences collected from the three Arabic books were short, ranging from one to seven
+words. These sentences were extracted from three Arabic books namely "A Dictionary of Common Grammatical,
+morphological, and Linguistic Errors"2, "Common linguistic errors in cultural circles"3, "Common linguistic errors"4.
+Moreover, we used the A7’ta corpus [10] which is composed of 466 short sentence pairs taken from a book called
+Linguistic Error Detector (Saudi Press). Second, we instructed the ChatGPT model to generate full sentence pairs using
+our collected short sentence pairs, one containing the error and the other free from errors. Additionally, the corrected
+versions of the corpus were annotated and all grammatical errors were corrected by experts, creating a valuable resource
+for training and evaluating the performance of the Arabic GEC. Finally, we analyzed the types of errors generated in
+our corpus using the Arabic Error Type Annotation tool (ARETA) [11]. We make our corpus publicly available. The
+contributions of this study are as follows.
+• Collect and organize short Arabic sentences, including common grammatical errors, from various Arabic
+books as a guide.
+1https://www.statista.com/statistics/266808/the-most-spoken-languages-worldwide/
+2https://archive.org/details/20210306_20210306_1934/mode/2up
+3https://archive.org/details/20200317_20200317_0834
+4https://www.alukah.net/books/files/book_5755/bookfile/akhtaa.pdf
+2
+
+Running Title for Header
+• Using ChatGPT as a data augmenter, a full, long, and error-free Arabic corpus can be generated from the
+guiding sentences, resulting in an error-prone Arabic corpus.
+• Assuring that annotated errors are accurate and relevant by engaging linguistic experts to review and validate
+them manually.
+• The corpus was validated and refined iteratively based on the feedback provided by linguistic experts. Under-
+standing the distribution and characteristics of errors in different contexts by analyzing the linguistic properties
+of the corpus.
+The remainder of this paper is organized as follows: The second section discusses the available Arabic corpora and
+studies that used ChatGPT as a data aggregator. Section 3 describes the methodology used to build the GEC corpus.
+Section 4 describes our experimental setup. Section 5 analyzes the type and percentage of errors in our corpus, and
+Section 6 summarizes our contributions and outlines future directions for Arabic GEC research.
+Related work
+This section discusses the Arabic corpus available for grammatical error correction (GEC) and recent research using
+ChatGPT as a data augmentation for GEC.
+Arabic Corpus
+Five Arabic GEC datasets are publicly available for grammatical error correction. The first two are derived from the
+shared QALB-14 [6] and QALB-15 [7] tasks.In addition to these, there are the A7’ta corpus [10], the ZAEBUC
+dataset [12]) and Lang-8 corpus [13]. None of them were manually annotated for a specific type of error. An overview
+of the dataset statistics is presented in Table 1.
+The QALB corpus is one of the components of the Qatar Arabic Language Bank (QALB) project and was created as
+part of it. In the QALB project, large manual correction corpora for a variety of Arabic texts were developed, including
+texts written by native and non-native authors and machine translation outputs.
+The QALB-14 [6]is a compilation of Modern Standard Arabic comments written by native speakers on the Al Jazeera
+News website. Both native and non- native Arabic speakers were addressed in QALB-15. Learners of Arabic as a
+second language (L2) contributed texts to the QALB-15 [7], extracted from two learner corpora: the Arabic Learner
+Corpus (ALC) [14] and the Arabic Learners Written Corpus (ALWC) [15].The annotation process was divided into
+three phases: automatic preprocessing, automatic spelling corrections, and manual annotation by humans (annotators).
+They used morphological analysis [16] and the disambiguation system MADA (version 3.2) [17] to automate spelling
+corrections. Annotators were required to correct spelling, punctuation, word choice, morphology, syntax, and dialect
+errors. There were 21,396 sentences in the QALB-14 Corpus and 1,533 sentences in the QALB-15 corpus, divided into
+training, development, and test sentences.
+The QALB corpus contains valuable Arabic data but not all types of errors, such as lengthening short vowels, Nun
+dan Tanwin confusion, and shortening long vowels [11]. The datasets contained inconsistent manual annotations of
+punctuation corrections; for example, there was a space between the full stop and the word.
+A7’ta [10] is a parallel monolingual corpus that presents Arabic texts in parallel. A total of 470 erroneous sentences and
+470 correct sentences were found. Sentences were collected manually from a book called the Linguistic Error Detector
+(Saudi Press), which was designed to guide writers and readers in correct Arabic grammar usage. In this corpus, there
+are only 3,532 tokens, the majority of which are incomplete sentences, which cannot be used alone for deep learning.
+ZAEBUC [12] ) is a bilingual corpus annotated in Arabic and English by first-year university students at Zayed
+University. Designed to represent bilingual writers, one writing in their native language and one writing in their second
+language, the corpus contained short essay bilingual corpora matched to writers. The corpus creation process involved
+four steps. The first step was to obtain approval from ZU’s IRB board and then contact the faculty teaching the targeted
+courses. Written consent was obtained from all participating students. In parallel to the second step, manual text
+correction and CEFR annotation were performed independently. Morphological annotation followed text correction
+depending on the results. Finally, the semi-automatic annotations were manually corrected. There were 214 sentences
+in total, which was a relatively small corpus.
+The Lang-8 corpus [13] ) ranks as one of the largest corpora for training grammatical error correction systems based
+on machine translation. Furthermore, it contains nearly 80 languages of learner and corrected sentences based on
+Lang-8’s5 revision logs. There are approximately 737 sentence pairs in Arabic, which is one of the top 20 languages.
+5https://lang-8.com/
+3
+
+Running Title for Header
+Table 1: Available Arabic parallel corpus
+Corpus
+Split
+Line
+Words
+Level
+Domain
+QALB-14
+Train
+Dev
+Test
+19.4K
+1K
+948
+1M
+54K
+51K
+L1
+L1
+L1
+Comments
+Comments
+Comments
+QALB-15
+Train
+Dev
+Test-L1
+Test-L2
+310
+154
+158
+940
+43.3K
+24.7K
+22.8K
+48.5K
+L2
+L2
+L2
+L1
+Essays
+Essays
+Essays
+Comments
+ZAEBUC
+No spilt
+214
+33,376
+L1
+Essays
+A7’ta
+No spilt
+466
+-
+L1
+Sentences
+lang-8
+No spilt
+737
+-
+L2
+Comments
+However, the Lang-8 corpus is not suitable for evaluation because annotators do more than correct a learner’s sentence;
+it also provides feedback. Learners can benefit from these comments. However, the comments were merely noise in an
+evaluation dataset. Moreover, it is possible to find Arabic texts mixed with the learners’ language.
+ChatGPT for Data Augmentation
+ChatGPT has recently demonstrated effective GEC performance using zero-shot and few-shot prompts [18] [19] [20].
+ChatGPT is used in GEC in various ways. For Example, [21] evaluated the effectiveness of ChatGPT as a corrector for
+grammatical error correction (GEC) by using a prompt-based approach. In- structed ChatGPT to correct sentences
+for grammatical errors. In this study, perturbations unrelated to errors were introduced into ChatGPT to evaluate the
+context robustness.
+Moreover, ChatGPT used as a data augmenter, such as in fan et al. [22]), introduced GrammarGPT, an open-source
+Large Language Model (LLM) that is designed to correct native Chinese grammar errors. Fan et al. [22] studied
+ChatGPT-generated and human-annotated datasets in conjunction with an error-invariant augmentation method to
+achieve better accuracy when correcting native Chinese grammatical errors. They guided ChatGPT in generating
+ungrammatical sentences by providing clues and manually correcting sentences collected from websites without clues.
+The model was enhanced to correct native Chinese grammatical errors using an error-invariant augmentation method.
+A hybrid dataset of ChatGPT-generated and human-annotated data was used to fine-tune open-source LLMs with
+instruction tuning. Native Chinese grammatical error correction using open-source LLMs was demonstrated using this
+approach. In addition, it can be used to introduce natural language explanations for correction reasons. kaneko et al.
+[23]introduced a method called Controlled Generation with Prompt Insertion (PI) that allows Large Language Models
+(LLMs) to explain the reasons for corrections in natural language in the context of Grammatical Error Correction (GEC).
+The Grammatical Error Correction (GEC) explanations were improved using Chat-GPT. Large Language Models
+(LLMs) are used to explain the correction reasons in natural language using ChatGPT in a technique called controlled
+generation with prompt Insertion (PI). The LLMs produced better correction reasons by inserting edit prompts during
+generation and explicitly engaging them in providing explanations for all edits. According to the study, PI led to
+enhanced performance when describing the correction reasons for all correction points compared to using the original
+prompts for generation.
+The only Arabic study that has used ChatGPT to augment data is that of Kwon et al. [24], who used ChatGPT to inject
+grammatical errors into Arabic text. They created a parallel dataset using ChatGPT by selecting and corrupting 10,000
+correct sentences from an original training set. Therefore, note that our approach for increasing the amount of data
+using ChatGPT is unique.
+To the best of our knowledge, this is the first study to augment data by extracting sentence fragments from books (guide
+sentences) and instructing ChatGPT to generate two sentences using guide sentences, one correct and one with errors.
+According to an extensive review, there is a lack of research utilizing similar techniques for data augmentation. A novel
+avenue for expanding datasets was created by leveraging ChatGPT, which holds considerable promise across several
+fields. In addition to enriching the available data, this innovative method illustrates the versatility and adaptability of
+ChatGPT. Exploring and validating this approach can significantly advance this field and open doors for new possibilities
+and insights.
+4
+
+Running Title for Header
+Approach
+Figure 1 shows the proposed approach. We began by collecting pairs of sentences from Arabic books, one of which was
+correct and the other contained grammatical errors. This is called a guide sentence. There is also an Arabic corpus
+called A7’ta that contains sentences extracted from Arabic books. Guide sentences are usually short with limited tokens
+and incomplete sentences. ChatGPT was then instructed to construct two useful sentences based on the guide sentences:
+one with correct guide sentences and the other with grammatical errors based on incorrect guide sentences. In addition,
+the data were reviewed by a human annotator to ensure that they were accurate and did not contain grammatical errors.
+Figure 1: Process of creating the Tibyan corpus
+Data Collection
+Owing to the lack of parallel Arabic corpora, we initially collected pairs of correct and incorrect sentences. Various
+sources including books and available corpus were used during this phase. The following are the descriptions of the
+three Arabic books used:
+• A Dictionary of Common Grammatical, morphological, and Linguistic Errors: Several common linguistic
+errors are highlighted in this dictionary book to alert Arabic language students. Four main types of errors are
+discussed in "A Dictionary of Common Grammatical, morphological, and Linguistic Errors": Syntactic errors,
+errors in transitive verbs with prepositions, errors in grammar, morphology, and sentence structure, and errors
+in correctness and semantics.
+• Common linguistic errors in cultural circles: It contains six types of errors, which include errors in syntax,
+nouns, verbs, linguistic structures, masculine and feminine, and phonetics.
+• Common linguistic errors: This dataset contains approximately 83 sentence pairs with the most common
+linguistic errors in Arabic.
+Table 2 lists the number of sentences and types of errors included in each book. The total number of sentences was
+3166. In addition, there is an available corpus called A7’ta [10], which contains 466 sentence pairs extracted from a
+linguistic error detector (Saudi Press). It contains eight types of errors: syntactic, morphological, semantic, linguistic,
+stylistic, spelling, punctuation, and the use of informal and borrowed words [10].
+Data Pre-processing
+Preprocessing was performed once valuable linguistic sources were gathered. We manually extracted sentences from
+these sources from the hand sides of the books. As shown in Figure 2, the books contained correct and incorrect
+sentences along with explanations and clarifications. A separate file was created for each correct and incorrect sentence
+pair. One file contained the correct sentences, and the other contained incorrect sentences. Several obstacles were
+encountered, including the existence of correct sentences without incorrect sentences. In this case, we repeated the
+correct sentence in the files of correct sentences and incorrect sentences to increase the sample size and avoid ignoring
+any errors. In some cases, there was more than one correct sentence equivalent to one incorrect sentence; therefore, all
+correct sentences were placed in separate lines, and incorrect sentences were repeated for each correct sentence.
+5
+
+Running Title for Header
+Table 2: Arabic books used in the data collection phase.
+Book
+# Sentence
+Errors Type
+A Dictionary of Common
+Grammatical, morphological,
+and Linguistic Errors
+2241
+Syntactic errors
+Verbs with prepositions errors
+Grammatical errors
+Morphology
+Sentence structure
+Semantics errors
+Common linguistic errors
+in cultural circles
+842
+Syntax errors
+Nouns errors
+Verbs errors
+Linguistic structures errors
+Masculine and feminine errors
+Phonetic errors
+Common linguistic errors
+83
+Syntactic errors
+Grammatical errors
+Morphological errors
+Punctuation errors
+Figure 2: Sample of data exist in books
+A7’ta corpus has 300 folders. Each book’s eight main categories were further divided into eight categories. For each
+subcategory within the main category, there are many subfolders within the folder for each error type. Each error-type
+folder contains two files: one for correctly written sentences (correctness) and another for erroneous sentences (error).
+Sentence pairs were manually extracted from all folders. We then saved them in two separate files: one containing
+errors, and the other containing correct sentences.
+Data Augmentation
+The data collected in the previous stage consisted of sentences of one to eighteen words, as shown in Figure 3. The
+average word length was four words. At least one word differed between the sentence pairs. Moreover, it can be
+expressed as part of a sentence or as an incomplete sentence. These data are not valuable for many modern approaches
+such as seq2seq [25]and seq2edit [26], which require large amounts of data. Therefore, we used ChatGPT to convert
+parts of the sentences into full sentences. ChatGPT is a machine-learning and artificial neural network-based artificial
+intelligence language model. ChatGPT supports advanced natural-language understanding and generation, making
+it useful for a wide range of applications. ChatGPT was used for creative text synthesis, writing assistance, content
+generation, translation, and natural interactions with users in chatbots. Several areas of artificial intelligence can benefit
+from the ChatGPT technology, which represents a qualitative leap in natural language understanding.
+6
+
+Running Title for Header
+Figure 3: Sample of data after data collection phase
+Figure 4: An example of manual ChatGPT correct Sentence Generation.
+In this study, we employ ChatGPT to augment parallel data for grammatical error correction. By providing ChatGPT
+with the correct partial sentences obtained during data collection, we instructed it to construct a complete and useful
+sentence. We then instructed ChatGPT to replace the correct sentence fragment with an incorrect sentence fragment and
+generate grammatical errors, resulting in parallel data. Data were stored in two separate files. The first file contains a
+generated sentence containing the correct fragment, whereas the second file contains the same sentence but with the
+correct fragment replaced with an incorrect fragment, and contains grammatical errors. Using this innovative approach,
+we can enhance the ability of linguistic models to understand and generate texts better and more accurately, which
+enhances the quality and diversity of data.
+Using ChatGPT, we improved data augmentation by combining manual and automated approaches. In the manual
+approach, we manually provided ChatGPT-GUI(OpenAI, version GPT-4) with correct partial sentences derived from the
+a7’ta corpus. ChatGPT was then instructed to insert these sentences into the context of a useful sentence comprising five
+sentences and 200 words. Subsequently, we instructed ChatGPT to replace the correct partial with an incorrect partial.
+We then used ChatGPT to insert common grammatical errors into the incorrect sentences. For accuracy and relevance,
+we manually reviewed and validated the generated sentences based on the following requirements: no errors, including
+correct and incorrect parts in each generated sentence, and consistency with the correct part of the given sentence.
+Moreover, we manually verified that the correct part has not been replaced with another word that is compatible with
+the context or one that is synonymous with the correct part. The generated sentences may be inaccurate and may not
+include all required information. In this case, we use ChatGPT to generate new sentences that were compatible with the
+requirements. Although this method was time consuming, it guaranteed high-quality results. Figure 4, Figure 5, and
+Figure 6 show an example of manual ChatGPT sentence generation.
+Using this automated approach, we developed a Python script that uses the ChatGPT API (OpenAI, version gpt-3.5-
+turbo-instruct). To increase the dataset, we launched automated queries on ChatGPT to promote the creation of complete
+and correct sentences containing the correct guide sentences. Then, we replaced the correct guide sentence with an
+incorrect one and generated common grammatical errors, resulting in parallel data. For automatic generation, we used
+all data generated from books and the a7’ta corpus as inputs. It creates five sentences for each correct part of a sentence,
+which are between 150 and 200 words long. This method is characterized by speed, accuracy, and high-quality data
+generation.
+7
+
+Running Title for Header
+Figure 5: An example of manual ChatGPT incorrect Sentence Generation.
+Figure 6: An example of manual ChatGPT generating grammatical errors in an incorrect sentence.
+Human Annotation
+We compared them with professional annotators to ensure that the sentences generated by ChatGPT were accurate and
+error-free. We only provide annotators with data generated by ChatGPT assumed to be correct and part of a corrected
+sentence (guide sentences) extracted from books, whereas incorrect data are obtained without an audit. To ensure the
+reliability of the human annotation, annotation was performed in two phases.
+In the first phase, annotators were instructed to correct the morphology, punctuation, spelling, syntax, word choice,
+and dialectal usage within a given sentence without affecting the wording. Annotators are only required to specify the
+appropriate corrective action during annotation and not the type of error. Moreover, it instructs students to retain the
+correct parts of sentences extracted from books, without modifying their wording. We also instructed them to follow the
+same guidelines and rules developed by Zaghouani et al. (2014) [27] to ensure the uniformity of human annotation
+and compatibility with previous standards (QALB-14 and QALB-15). To ensure that all copies were corrected, we
+manually removed data from the annotator in both correct and incorrect parts to ensure compatibility between parallel
+data. After the first phase, the following comments were received:
+• Some words and phrases are repeated and they should be deleted from the sentences.
+• A few words were inserted into sentences that were irrelevant to the context. This should be replaced with a
+more appropriate word or deleted.
+• Some phrases contain religious transgressions or defects from legal, historical, or even realistic standpoints;
+therefore, they must be changed or deleted.
+We then reviewed all the annotators’ comments and made all necessary changes, including removing duplicate tokens
+and phrases containing religious transgressions. We then proceed to the second phase of annotation. We contract with
+the most qualified linguistic auditor to review the text to ensure the accuracy of sentences and freedom from errors. To
+ensure that a word fits the context, we instructed the annotator to delete or modify the word to fit the context without
+modifying sentence wording, remove duplicate words if separated by conjunctions, and remove repetitive phrases.
+8
+
+Running Title for Header
+Table 3: The BERTScore of correct and incorrect in generating sentences
+Precision
+Recall
+F1
+Correct generated sentences
+0.97%
+0.97%
+0.97%
+Incorrect generated sentences
+0.88%
+0.89%
+0.88%
+Furthermore, if they find a phrase that is not related to context or contains transgressions, they request to change it by a
+token or phrase related to context and highlight it for updating later in incorrect sentence pairs. This process aimed to
+achieve high data accuracy and quality through the efforts of professional annotators.
+Experiment
+Setting
+We used gpt-3.5-turbo-instruct for the ChatGPT API. The maximum sequence length was 1400, the target length was
+200, the temperature was 0.8, and the number of sentences generated was five. The prompt consisted of correctly guided
+sentences from books. The total number of guide sentences was 3627.
+Implementation Details
+Implementation was carried out in Python using the OpenAI library and langid for language identification. We first
+use the following promote “Create a useful sentence consisting of target length words using the guide correct sentence
+without any changes in the letters or semantic of the phrase: correct_guide" to generate full corrected sentence. The
+phrase in our previous promotion was a correct guide sentence, and we instructed the ChatGPT API not to change
+any letters or semantics so that the phrase’s meaning would remain the same, because in Arabic, changing one letter
+could alter the meaning of the entire sentence. After executing the previous promote, we obtained five sentences that all
+included the correct guide sentence separated by a full stop in one line. The generated sentence may not be a complete
+and may end in an incomplete word. To ensure the generation of complete sentences, we identified the maximum
+sequence length as 1400; therefore, the generated sentences were not all of the same length but varied from 200 to
+1400. We then applied post-processing to ensure proper formatting and punctuation of the resulting sentences. After
+that, To construct an incorrect sentence, we only search for correct guide in the correct sentence and replace it with the
+incorrect guide while maintaining the sentence’s structure. Finally, we also promote ChatGPT to generate errors in an
+incorrect sentence pair only by using the following promote: "In the following sentence, please add spelling, grammar,
+morphology, punctuation, semantic, and morphology errors, as well as merging and separating words". We used the
+previous promotion to ensure that the erroneous sentences were diverse and contained a wide range of errors in addition
+to those derived from books.
+Evaluation Metric
+For text generation models such as ChatGPT, BERTScore is used to calculate the precision, recall, and F1 scores by
+comparing the generated text to a target text. BERTScore [28] is a metric that measures the similarity between two
+pieces of text using contextual embeddings from BERT (Bidirectional Encoder Representations from Transformers).
+Precision measures the number of relevant (correct) words in the generated text. The recall value is the percentage of
+relevant words in the text generated by those in the reference text. In F1 Scoring, precision and recall were balanced,
+providing a balanced measure.
+Results
+The corrected and uncorrected sentences generated by ChatGPT were compared with sentences corrected by a human
+after annotation. We demonstrated the effectiveness of ChatGPT in generating error-free human-like sentences.
+Compared to human-corrected sentences, ChatGPT-generated corrected sentences resembled those produced by humans
+after annotation, as listed in Table 3. The ChatGPT model constructs sentences that follow a natural flow and coherence,
+similar to human speech. By rigorously analyzing ChatGPT’s output, we demonstrated its remarkable ability to produce
+sentences with accuracy and naturalness comparable to human corrections. A demonstration of ChatGPT’s ability to
+seamlessly integrate linguistic nuances and grammatical rules, ultimately delivering outputs indistinguishable from
+those produced by humans, serves as an advancement in natural language processing.
+9
+
+Running Title for Header
+Table 4: General Statistics for Tibyan corpus
+Correct Data
+Incorrect Data
+Lines
+6191
+6191
+Words
+618, 598
+604, 592
+Average Sentence Length
+99.91
+97.65
+Average Token Length
+4.84
+4.88
+Unique Tokens
+71, 976
+81, 905
+Analysis
+In this section, we highlight some of the statistics from our data. We then used the Arabic Error Type Annotation
+tool (ARETA) [11]to analyze the types of errors when receiving two data files, one with errors and the other without
+errors, and determine the type of error. The ARETA tool is based on Afifi’s and Atwell [29] comprehensive error
+classification, which classified 29 Arabic language error tags. The ARETA tool includes two modifications to Afifi’s
+comprehensive error classification system. First, merging (MG) and splitting (SP) errors were added to accommodate
+one-to-many corrections. Furthermore, they removed all other error tags such as OO, MO, XO, SO, and PO, representing
+orthographic, morphological, syntactic, semantic, and punctuation errors, respectively. Therefore, there were seven
+classes and 26 error tags in the ARETA taxonomy.
+General Statistics and Observations
+Table 4 summarizes the general statistics of the Tibyan Corpus. The total number of words was 618598 for correct
+data and 604592 for incorrect data. The average sentence length indicated the number of words in each sentence. In
+the correct data, there are approximately 99.92 words, whereas in incorrect data, there are approximately 97.66 words.
+The "Average Token Length" shows the average number of characters in each token. In the correct data, there are
+approximately 4.85 characters per word, whereas in the incorrect data, there are approximately 4.88 characters per
+word. An "unique token" shows a number of unique token (or words). The error-free data contained 71,976 unique
+tokens, whereas the error-containing data contained 81,905 unique tokens.
+Analysis of Error Type Before Data Augmentation
+In this section, we analyze the existing error types before data augmentation for both the A7’ta corpus and our extracted
+data from the books described in Section 3.1, using the ARETA tool. The A7’ta corpus consists of 466 sentences and
+2208 tokens. According to the ARETA tool, 22 error types exist in the a7’ta corpus, as listed in Table 5. The error rate
+is 33%. The corpus lacks four types of errors: lengthening short vowels (OG), shortening long vowels (OS), merged
+words (MG), and words that are split (SP). Owing to an insufficient number of words, a limited number of sentences,
+and the lack of focus on these types of errors in the a7’ta corpus. Moreover, we observed that lengthening short-vowels
+(OG) error types appeared in a combination with Additional Char (OD) error types. Despite its low frequency, it appears
+only three times. Figure 7 shows the types of combination errors and their frequencies.
+Our extracted data from the books described in Section 3.1 consists of 3166 sentences and 12407 tokens. According to
+the ARETA tool, 22 error types exist in our data, as listed in Table 5. The error rate is 31%. The corpus lacks four types
+of error: lengthening short vowels (OG), shortening long vowels (OS), confusion in Alif Fariqa (OW), and words that
+are split (SP). Moreover, a token may contain more than one type of error. Figure 8 shows the types of combination
+errors and their frequencies. We found that OD and OR error types usually existed together at 102 frequencies, followed
+by OH and OM at 65 frequencies. Another error combination exists at frequencies less than 20. Moreover, we observed
+that low-frequency error types appeared in combination with other types, such as OD and OG.
+When the data were combined, the total error rate was 32%. There were 23 types of errors and a lack of three types:
+lengthening short vowels (OG), shortening long vowels (OS), and words that are split (SP). This is due to the lack of a
+sufficient number of words and a limited number of sentences. As the tool did not accurately classify some semantic
+errors, 449 unknown errors were found, such as when we replaced a Modern Standard Arabic (MSA) token with a
+dialect or foreign word, using a word that differed from its meaning, or when more than one error was present in a
+phrase. Figure 9 shows the top ten types of combination errors and their frequencies. We observed that some error types
+usually exist together, such as OD with OR and OH and OM error types.
+10
+
+Running Title for Header
+Table 5: Analysis of Error Type Before Data Augmentation
+Tag
+Error Description
+A7’ta
+Our extracted
+data
+Both
+Orthography
+OA
+Alif, Ya & Alif-Maqsura
+4
+0%
+20
+0%
+24
+0%
+OC
+Char Order
+1
+0%
+12
+0%
+13
+0%
+OD
+Additional Char
+22
+1%
+176
+1%
+198
+1%
+OG
+Lengthening short vowels
+0
+0%
+0
+0%
+0
+0%
+OH
+Hamza errors
+69
+4%
+71
+1%
+140
+1%
+OM
+Missing char(s)
+12
+1%
+90
+1%
+102
+1%
+ON
+Nun & Tanwin Confusion
+1
+0%
+12
+0%
+13
+0%
+OR
+Char Replacement
+19
+1%
+375
+3%
+394
+3%
+OS
+Shortening long vowels
+0
+0%
+0
+0%
+0
+0%
+OT
+Ha/Ta/Ta-Marbuta Confusion
+3
+0%
+17
+0%
+20
+0%
+OW
+Confusion in Alif Fariqa
+3
+0%
+0
+0%
+3
+0%
+Morphology
+MI
+Word inflection
+40
+2%
+100
+1%
+140
+1%
+MT
+Verb tense
+2
+0%
+18
+0%
+20
+0%
+Syntax
+XC
+Case
+160
+9%
+872
+7%
+1032
+8%
+XF
+Definiteness
+20
+1%
+32
+0%
+52
+0%
+XG
+Gender
+20
+1%
+156
+1%
+176
+1%
+XM
+Missing word
+33
+2%
+226
+2%
+259
+2%
+XN
+Number
+12
+1%
+51
+0%
+63
+0%
+XT
+Unnecessary word
+69
+4%
+684
+6%
+753
+6%
+Semantics
+SF
+Conjunction error
+9
+1%
+3
+0%
+12
+0%
+SW
+Word selection error
+33
+2%
+681
+6%
+714
+5%
+Punctuation
+PC
+Punctuation confusion
+6
+0%
+1
+0%
+7
+0%
+PM
+Missing punctuation
+16
+1%
+11
+0%
+27
+0%
+PT
+Unnecessary punctuation
+3
+0%
+25
+0%
+28
+0%
+Merge
+MG
+Words are merged
+0
+0%
+4
+0%
+4
+0%
+Split
+SP
+Words are split
+0
+0%
+0
+0%
+0
+0%
+Unknown
+UNK
+Unkown Errors
+14
+1%
+194
+2%
+208
+2%
+Comb.
+-
+Error Combinations
+49
+3%
+400
+3%
+449
+3%
+571
+33%
+3831
+31%
+4402
+32%
+Figure 7: Types of combination errors and their frequencies in A7’ta corpus
+11
+
+Running Title for Header
+Figure 8: Types of combination errors and their frequencies in our extracted data
+Figure 9: Types of combination errors and their frequencies in A7’ta corpus
+Analysis of Error Type After Data Augmentation
+In this section, we analyze the error type after data augmentation, and before and after human annotation.
+Analyze the Error Type Before Human annotation
+The error rate increased by 7% for the a7’ta corpus (manual generation), 13% for our extracted data, and 11% for all the
+data, as listed in Table 6. Our corpus contained 23 types of errors. Three types of errors do not exist in the Tibyan corpus:
+OG, OS, and SP. There were only four instances of the ON error type in the Tibyan corpus. Although some errors exist
+at high frequencies such as OT, OH, PC, and OA, others exist at low frequencies such as ON, MT, and SF. Figure 10
+shows the error combinations of the top five low-frequency classes. The types of errors that appear in small percentages
+appear in combination with other types in varying percentages, as shown in Figure 9. In conclusion, all types of errors
+appeared in varying proportions, either alone or in combination. Figure 10 shows the error combination for the top five
+low-frequency classes. The types of errors that appeared in small percentages appear combined with other types in
+12
+
+Running Title for Header
+Table 6: Analysis of Error Type After Data Augmentation Before Human annotation
+Tag
+Error Description
+A7’ta Corpus
+(Manual)
+Our data
++ A7’ta
+(Automatic)
+Tibyan Corpus
+Orthography
+OA
+Alif, Ya & Alif-Maqsura
+1615
+3%
+20170
+4%
+21785
+4%
+OC
+Char Order
+447
+1%
+197
+0%
+644
+0%
+OD
+Additional Char
+289
+1%
+354
+0%
+643
+0%
+OG
+Lengthening short vowels
+0
+0%
+0
+0%
+0
+0%
+OH
+Hamza errors
+3881
+8%
+45210
+9%
+49091
+9%
+OM
+Missing char(s)
+157
+0%
+4333
+1%
+4490
+1%
+ON
+Nun & Tanwin Confusion
+0
+0%
+4
+0%
+4
+0%
+OR
+Char Replacement
+2446
+5%
+1894
+0%
+4340
+1%
+OS
+Shortening long vowels
+0
+0%
+0
+0%
+0
+0%
+OT
+Ha/Ta/Ta-Marbuta Confusion
+8608
+17%
+56273
+12%
+64881
+12%
+OW
+Confusion in Alif Fariqa
+10
+0%
+135
+0%
+145
+0%
+Morphology
+MI
+Word inflection
+122
+0%
+328
+0%
+450
+0%
+MT
+Verb tense
+1
+0%
+38
+0%
+39
+0%
+Syntax
+XC
+Case
+284
+1%
+8081
+2%
+8365
+2%
+XF
+Definiteness
+314
+1%
+1193
+0%
+1507
+0%
+XG
+Gender
+18
+1%
+179
+0%
+197
+0%
+XM
+Missing word
+18
+0%
+256
+0%
+274
+0%
+XN
+Number
+26
+0%
+124
+0%
+150
+0%
+XT
+Unnecessary word
+231
+0%
+602
+0%
+833
+0%
+Semantics
+SF
+Conjunction error
+4
+0%
+71
+0%
+75
+0%
+SW
+Word selection error
+292
+1%
+2951
+1%
+3243
+1%
+Punctuation
+PC
+Punctuation confusion
+269
+1%
+31822
+7%
+32091
+6%
+PM
+Missing punctuation
+307
+1%
+6
+0%
+313
+0%
+PT
+Unnecessary punctuation
+12
+1%
+508
+0%
+520
+0%
+Merge
+MG
+Words are merged
+78
+0%
+2112
+0%
+2190
+0%
+Split
+SP
+Words are split
+0
+0%
+0
+0%
+0
+0%
+Unknown
+UNK
+Unkown Errors
+0
+0%
+0
+0%
+0
+0%
+Comb.
+-
+Error Combinations
+1635
+3%
+36940
+8%
+38575
+7%
+20559
+40%
+213784
+44%
+235055
+43%
+varying percentages, as shown in Figure 9. In conclusion, all types of errors appeared in varying proportions, either
+alone or in combination.
+Analyze the Error Type After Human annotation
+In comparison with analyzing the error type following data augmentation before human annotation, we notice that a7’ta
+corpus (manual generation) has an error rate of 8%, our extracted data has an error rate of 5%, and all our data has an
+error rate of 6%, as listed in Table 7. Our corpus contained 26 types of errors. Furthermore, it contains two types of
+errors: OG and OS. The ON error types in the corpus increased to 527 instances. Although some errors exist at high
+frequencies such as OT, OH, PC, and OA, others exist at low frequencies such as ON, MT, and SF. Figure 11 shows
+the error combinations of the top five low-frequency classes. The types of errors that appeared in small percentages
+were combined with other types of errors in varying percentages. In conclusion, all error types appeared in varying
+proportions, either alone or in combination.
+A strength of the Tibyan Corpus is that it includes common errors by native Arabic speakers. There are several
+types of errors, including Alif, Ya, and Alif-Maqsura (OA), Hamza errors (OH), Ha/Ta/Ta-Marbuta confusion (OT),
+and punctuation confusion (PC). Despite the complexities of the Arabic orthography and grammar, these errors are
+challenging for native speakers.
+Native speakers, however, are more likely to make errors, such as char order (OC), additional char (OD), missing char
+(OM), char replacement (OR), nun and tanwin confusion (ON), confusion in Alif Fariqa (OW), merge (MG), and split
+(PS). It is more common for these errors to arise from typing than from a lack of language understanding. Because these
+errors are usually straightforward and follow predictable patterns, modern applications and spell checkers are generally
+13
+
+Running Title for Header
+Figure 10: Distribution for Class Combinations with OS, OG,ON, MG, and SP
+Figure 11: Distribution for Class Combinations with OS, OG, and SP
+effective at identifying and resolving them. Furthermore, some errors appear less frequently because they are uncommon
+among native speakers and are more likely to be made by second language learners. For example, lengthening short
+vowels (OG), shortening long vowels (OS) and Gender (XG). Native language writers usually use correct words and
+avoid grammatical mistakes. Language processing tools can be developed more efficiently by distinguishing between
+errors typical of native speakers and those typical of second-language learners.
+Limitation
+Although the ARETA tool is effective for determining Arabic errors, its classification is not always accurate. These
+tools sometimes fail to classify words with more than two errors and mark them with X or UNKs, even though the tool
+14
+
+Running Title for Header
+Table 7: Analyze the Error Type After Human annotation
+Tag
+Error Description
+A7’ta Corpus
+(Manual)
+Our data
++ A7’ta
+(Automatic)
+Tibyan Corpus
+Orthography
+OA
+Alif, Ya & Alif-Maqsura
+1428
+3%
+19543
+4%
+20971
+4%
+OC
+Char Order
+432
+0%
+181
+0%
+613
+0%
+OD
+Additional Char
+236
+1%
+605
+0%
+841
+0%
+OG
+Lengthening short vowels
+94
+0%
+426
+0%
+520
+0%
+OH
+Hamza errors
+3623
+7%
+44387
+10%
+48010
+9%
+OM
+Missing char(s)
+129
+0%
+4463
+1%
+4592
+1%
+ON
+Nun & Tanwin Confusion
+10
+0%
+517
+0%
+527
+0%
+OR
+Char Replacement
+2318
+5%
+2298
+1%
+4616
+1%
+OS
+Shortening long vowels
+105
+0%
+55
+0%
+160
+0%
+OT
+Ha/Ta/Ta-Marbuta Confusion
+8069
+16%
+53119
+12%
+61188
+12%
+OW
+Confusion in Alif Fariqa
+9
+0%
+112
+0%
+121
+0%
+Morphology
+MI
+Word inflection
+276
+1%
+1318
+0%
+1594
+0%
+MT
+Verb tense
+14
+0%
+95
+0%
+109
+0%
+Syntax
+XC
+Case
+639
+1%
+11372
+2%
+12011
+2%
+XF
+Definiteness
+378
+1%
+1615
+0%
+1993
+0%
+XG
+Gender
+81
+0%
+709
+0%
+790
+0%
+XM
+Missing word
+185
+0%
+1713
+3%
+1898
+0%
+XN
+Number
+61
+0%
+391
+0%
+452
+0%
+XT
+Unnecessary word
+1011
+2%
+3666
+1%
+4677
+1%
+Semantic
+SF
+Conjunction error
+94
+0%
+112
+0%
+206
+0%
+SW
+Word selection error
+1527
+3%
+4430
+1%
+5957
+1%
+Punctuation
+PC
+Punctuation confusion
+497
+1%
+18731
+4%
+19228
+4%
+PM
+Missing punctuation
+435
+1%
+3641
+1%
+4076
+1%
+PT
+Unnecessary punctuation
+16
+0%
+1251
+0%
+1267
+0%
+Merge
+MG
+Words are merged
+77
+0%
+0
+0%
+1420
+0%
+Split
+SP
+Words are split
+5
+0%
+102
+0%
+107
+0%
+Unknown
+UNK
+Unkown Errors
+0
+0%
+0
+0%
+0
+0%
+Comb.
+-
+Error Combinations
+2663
+5%
+54998
+12%
+57413
+11%
+23305
+48%
+224737
+49%
+308408
+49%
+already recognizes the various errors present in that word. For example, if a punctuation mark separates two words,
+and if the first and second words contain errors and there is no space between the punctuation mark and words, it is
+classified as UNK or X. In addition, we observed that it did not correctly classify words that have split (SP) errors. If
+the first letter of a word is separated from the rest, it is treated as one word, classified as an unnecessary word "XT" and
+another word classified as missing letter "OM", and they will not be considered one word. Furthermore, Merge errors
+containing n more than one error type were incorrectly classified. To ensure the correct classification of error types, we
+manually classified the X and UNK errors.
+Conclusion
+In conclusion, this study aimed to create an Arabic corpus called Tibyan for Grammatical Error Correction. We use a
+diverse range of Arabic text extracted from books and the a7’ta corpus containing common grammatical errors. The
+ChatGPT model is then used to generate parallel sentences containing quoted sentences extracted from Arabic books,
+one with grammatical errors and the other with correct sentences. By engaging linguistic experts and iteratively refining
+the corpus based on their feedback, we ensured that it represented the real world and was reliable. Ultimately, the
+Tibyan corpus will enable the development of an accurate and powerful Grammatical Error Correction tool tailored
+specifically for the Arabic language. Two key aims are addressed by the corpus: error-type coverage and unbalanced
+error-type classification. The Tibyan corpus contains all types of errors in Arabic, as the sentences were extracted from
+books, representing a diverse and rich source of errors. Moreover, it achieves a balance between types of errors. All the
+types of errors appeared in proportion to each other. In the future, we will use our corpus to construct a robust Arabic
+15
+
+Running Title for Header
+grammatical error correction model. In addition, the number of sentences and tokens can be increased using modern
+techniques.
+References
+[1] Muhammad Hasan Bakalla. Arabic culture: through its language and literature. Taylor & Francis, 2023.
+[2] Anwar G Chejne. The Arabic language: Its role in history. U of Minnesota Press, 1968.
+[3] Charles A Ferguson. Diglossia. word, 15(2):325–340, 1959.
+[4] Clive Holes. Modern Arabic: Structures, functions, and varieties. Georgetown University Press, 2004.
+[5] Christopher Bryant, Zheng Yuan, Muhammad Reza Qorib, Hannan Cao, Hwee Tou Ng, and Ted Briscoe.
+Grammatical error correction: A survey of the state of the art. Computational Linguistics, 49(3):643–701, 2023.
+[6] Behrang Mohit, Alla Rozovskaya, Nizar Habash, Wajdi Zaghouani, and Ossama Obeid. The first qalb shared
+task on automatic text correction for arabic. In Proceedings of the EMNLP 2014 Workshop on Arabic Natural
+Language Processing (ANLP), pages 39–47, 2014.
+[7] Alla Rozovskaya, Houda Bouamor, Nizar Habash, Wajdi Zaghouani, Ossama Obeid, and Behrang Mohit. The
+second qalb shared task on automatic text correction for arabic. In Proceedings of the Second workshop on Arabic
+natural language processing, pages 26–35, 2015.
+[8] Serena Jeblee, Houda Bouamor, Wajdi Zaghouani, and Kemal Oflazer. Cmuq@ qalb-2014: An smt-based system
+for automatic arabic error correction. In Proceedings of the EMNLP 2014 Workshop on Arabic Natural Language
+Processing (ANLP), pages 137–142, 2014.
+[9] Ossama Obeid, Wajdi Zaghouani, Behrang Mohit, Nizar Habash, Kemal Oflazer, and Nadi Tomeh. A web-based
+annotation framework for large-scale text correction. In The Companion Volume of the Proceedings of IJCNLP
+2013: System Demonstrations, pages 1–4, 2013.
+[10] Nora Madi and Hend S Al-Khalifa. A7’ ta: Data on a monolingual arabic parallel corpus for grammar checking.
+Data in brief, 22:237, 2019.
+[11] Riadh Belkebir and Nizar Habash. Automatic error type annotation for arabic. arXiv preprint arXiv:2109.08068,
+2021.
+[12] Nizar Habash and David Palfreyman. Zaebuc: An annotated arabic-english bilingual writer corpus. In Proceedings
+of the Thirteenth Language Resources and Evaluation Conference, pages 79–88, 2022.
+[13] Tomoya Mizumoto, Mamoru Komachi, Masaaki Nagata, and Yuji Matsumoto. Mining revision log of lan-
+guage learning sns for automated japanese error correction of second language learners. In Proceedings of 5th
+International Joint Conference on Natural Language Processing, pages 147–155, 2011.
+[14] Abdullah Alfaifi and Eric Atwell. Arabic learner corpora (alc): a taxonomy of coding errors. In The 8th
+International Computing Conference in Arabic, 2012.
+[15] S Farwaneh and M Tamimi. Arabic learners written corpus: A resource for research and learning. retrieved 2
+september, 2012, from the the university of arizona. the Center for Educational Resources in Culture, Language
+and Literacy web site: http://l2arabiccorpus. cercll. arizona. edu, 2012.
+[16] Nizar Habash and Owen Rambow. Arabic tokenization, part-of-speech tagging and morphological disambiguation
+in one fell swoop. In Proceedings of the 43rd annual meeting of the association for computational linguistics
+(ACL’05), pages 573–580, 2005.
+[17] Nizar Habash, Owen Rambow, and Ryan Roth. Mada+ tokan: A toolkit for arabic tokenization, diacritization,
+morphological disambiguation, pos tagging, stemming and lemmatization. In Proceedings of the 2nd international
+conference on Arabic language resources and tools (MEDAR), Cairo, Egypt, volume 41, page 62, 2009.
+[18] Haoran Wu, Wenxuan Wang, Yuxuan Wan, Wenxiang Jiao, and Michael Lyu. Chatgpt or grammarly? evaluating
+chatgpt on grammatical error correction benchmark. arXiv preprint arXiv:2303.13648, 2023.
+[19] Tao Fang, Shu Yang, Kaixin Lan, Derek F Wong, Jinpeng Hu, Lidia S Chao, and Yue Zhang. Is chatgpt a highly
+fluent grammatical error correction system. A comprehensive evaluation. CoRR, abs/2304.01746, 2023.
+[20] Mengsay Loem, Masahiro Kaneko, Sho Takase, and Naoaki Okazaki. Exploring effectiveness of gpt-3 in
+grammatical error correction: A study on performance and controllability in prompt-based methods. arXiv
+preprint arXiv:2305.18156, 2023.
+[21] Yue Zhang, Leyang Cui, Enbo Zhao, Wei Bi, and Shuming Shi. Robustgec: Robust grammatical error correction
+against subtle context perturbation. arXiv preprint arXiv:2310.07299, 2023.
+16
+
+Running Title for Header
+[22] Yaxin Fan, Feng Jiang, Peifeng Li, and Haizhou Li. Grammargpt: Exploring open-source llms for native chinese
+grammatical error correction with supervised fine-tuning. In CCF International Conference on Natural Language
+Processing and Chinese Computing, pages 69–80. Springer, 2023.
+[23] Masahiro Kaneko and Naoaki Okazaki. Controlled generation with prompt insertion for natural language
+explanations in grammatical error correction. arXiv preprint arXiv:2309.11439, 2023.
+[24] Sang Yun Kwon, Gagan Bhatia, El Moatez Billah Nagoud, and Muhammad Abdul-Mageed. Chatgpt for arabic
+grammatical error correction. arXiv preprint arXiv:2308.04492, 2023.
+[25] Ilya Sutskever, Oriol Vinyals, and Quoc V Le. Sequence to sequence learning with neural networks. Advances in
+neural information processing systems, 27, 2014.
+[26] Felix Stahlberg and Shankar Kumar. Seq2edits: Sequence transduction using span-level edit operations. arXiv
+preprint arXiv:2009.11136, 2020.
+[27] Wajdi Zaghouani, Behrang Mohit, Nizar Habash, Ossama Obeid, Nadi Tomeh, Alla Rozovskaya, Noura Farra,
+Sarah Alkuhlani, and Kemal Oflazer. Large scale arabic error annotation: Guidelines and framework. 2014.
+[28] Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q Weinberger, and Yoav Artzi. Bertscore: Evaluating text
+generation with bert. arXiv preprint arXiv:1904.09675, 2019.
+[29] Abdullah Alfaifi and ES Atwell. An evaluation of the arabic error tagset v2. In Proceedings of the AACL 2014-The
+American Association for Corpus Linguistics conference. The American Association for Corpus Linguistics, 2014.
+17
+

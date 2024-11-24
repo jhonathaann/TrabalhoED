@@ -1,0 +1,699 @@
+PZT Optical Memristors 
+Chenlei Li1+, Hongyan Yu2+, Tao Shu1+, Yueyang Zhang1, Chengfeng Wen1, Hengzhen Cao1, Jin Xie1, 
+Hanwen Li1, Zixu Xu1, Gong Zhang1, Zejie Yu1, Huan Li1, Liu Liu1, Yaocheng Shi1, Feng Qiu2*, 
+Daoxin Dai1,3* 
+1State Key Laboratory for Extreme Photonics and Instrumentation, College of Optical Science and 
+Engineering, International Research Center for Advanced Photonics, Zhejiang University, Zijingang 
+Campus, Hangzhou 310058, China 
+2 Hangzhou Institute for Advanced Study, University of Chinese Academy of Sciences, Hangzhou 
+310024, Zhejiang Province, China 
+3 Intelligent Optics and Photonics Research Center, Jiaxing Research Institute, Zhejiang University, 
+Jiaxing 314000, China 
++These authors contributed equally to this work. 
+*Corresponding Author: dxdai@zju.edu.cn; A-photonics@outlook.com 
+ 
+Abstract 
+Optical memristors represent a monumental leap in the fusion of photonics and electronics, heralding a 
+new era of new applications from neuromorphic computing to artificial intelligence. However, current 
+technologies are hindered by complex fabrication, limited endurance, high optical loss or low 
+modulation efficiency. For the first time, we unprecedentedly reveal optical non-volatility in thin-film 
+Lead Zirconate Titanate (PZT) by electrically manipulating the ferroelectric domains to control the 
+refractive index, providing a brand-new routine for optical memristors. The developed PZT optical 
+memristors offer unprecedented advantages more than exceptional performance metrics like low loss, 
+high precision, high-efficiency modulation, high stability quasi-continuity and reconfigurability. The 
+wafer-scale sol-gel fabrication process also ensures compatible with standardized mass fabrication 
+processes and high scalability for photonic integration. Specially, these devices also demonstrate unique 
+functional duality: setting above a threshold voltage enables non-volatile behaviors, below this threshold 
+allows volatile high-speed optical switching. This marks the first-ever optical memristor capable of 
+performing high-speed signal processing and non-volatile retention on a single platform, and is also the 
+inaugural demonstration of scalable functional systems. The PZT optical memristors developed here 
+facilitate the realization of novel paradigms for high-speed and energy-efficient optical interconnects, 
+programmable PICs, quantum computing, neural networks, in-memory computing and brain-like 
+architecture. 
+ 
+Introduction 
+Memristors, with the ability to modulate signals actively and hold memory states akin to synaptic activity 
+in the mammalian brain, have opened new avenues to non-volatile memory and neuromorphic 
+computing, significantly improving energy efficiency and integration density while bypassing the von 
+Neumann bottleneck 1. Inspired by the remarkable capabilities and technological promise of electronic 
+memristors, the photonics community has been striving to develop an optical counterpart called optical 
+memristors, which are capable of modulating the light amplitude/phase and holding the state non-
+volatilely2. Optical memristors represent a monumental leap in the fusion of photonics and electronics, 
+heralding a new era of high-speed energy-efficient information processing that promises to transcend 
+the constraints of traditional architectures.  
+Significant efforts haves been made towards developing optical memristors to create new paradigms in 
+photonic integrated circuits (PICs), and catalyze the emergence of new applications, including high-
+efficiency in-memory computing3-6, brain-inspired architectures7, post-fabrication trimming of PICs for 
+calibrating the operation of sophisticated programmable optical processors with fabrication-sensitive 
+structures, see more details in Supplementary section 1. Among them, phase-change materials (PCMs) 
+
+8-16 have received substantial attention owing to some favorable property, while the difficulty in the 
+inherent control mechanism for the amorphous/crystalline phase change might hinder the wide 
+application in large-scale integration2. Microelectromechanical systems (MEMS)17,18 and charge-
+based19,20 optical memristors are interesting but still suffer from the fabrication complexity or inability 
+for multi-level tuning, and few experimental demonstrations have been reported so far2. Ferroelectric 
+material is another option allows storage of optical information by switching non-volatile ferroelectric 
+domains through applying an external electric field21,22. In ref. 22, the Pockels coefficient was 
+controllable, and hence the refractive index changed under a direct current (DC) bias applied to the thin-
+film BaTiO3 (BTO). However, the heterogeneous integration of thin-film BTO required a few 
+complicated processes including molecular beam epitaxy, direct wafer bonding and wafer grinding, 
+while the modulation depth of 2×10-3 and the propagation loss of 4.8 dB/cm for the BTO waveguides 
+leave space for further refinement. Furthermore, an external DC bias was needed continuously and thus 
+maintaining the state still requires power supply, resulting in continuous power consumption at the idle 
+state. Therefore, more efforts are expected to explore a brand-new routine for optical memristors in terms 
+of optical performance, switching speed, energy, fabrication process, as well as the capability for scaling 
+to system-level integration2. 
+In this work, we reveal optical non-volatility and volatility in thin-film PZT for the first time. 
+Differently from BTO, we can precisely control the refractive index directly by electrically manipulating 
+the ferroelectric domain polarization, no bias voltage is required, providing a new platform of realizing 
+optical memristors. The PZT optical memristors successfully developed here, including representative 
+building blocks such as microring resonators (MRRs), Mach-Zehnder interferometers (MZIs), and 
+Fabry-Pérot (FP) cavities—essential elements with versatile functionality for advancing large-scale, on-
+chip programmable photonic systems23 and showcase electrically reconfigurable and 64-level quasi-
+continuous non-volatile phase-tuning with sub-microjoule switching energy and zero maintaining power 
+as well as long-term stability over weeks. We also demonstrate the scalability of PZT optical memristors 
+for developing PICs, featuring a memristive optical switch matrix and an adaptive memristive cavity. 
+The wafer-scale sol-gel fabrication process developed for thin-film PZT not only ensures CMOS 
+compatibility and scalability but also maintains low propagation losses, making it ideal for on-chip 
+photonic integration in wafer-scale. Specifically, our PZT optical memristors have a unique functional 
+duality related with a threshold voltage Vth, which has not yet been available in reported platforms: 
+operating above Vth enables non-volatility with permanent changes in domain polarization, while 
+working below Vth achieves fast volatile optical switching/modulation with high-efficiency Pockels 
+effect. This marks the first-ever optical memristor capable of performing high-speed signal processing 
+and non-volatile retention on a single platform, and presents the inaugural demonstration of scalable 
+functional systems with electrical-controlled optical memristors. Our finding underscores the great 
+promise for wide applications in high-speed and energy-efficient optical interconnects24, programmable 
+PICs25,quantum computing26,27, neural networks4,28, in-memory computing6 and brain-like computing29. 
+ 
+ 
+
+Results       
+ 
+Fig. 1 | Optical PZT memristor. a. Wafer-scale sol-gel fabrication processes of PZT Optical Memristors. b. Photograph 
+of the spin-coating wafer demonstrating uniform and defect-free bonding. c. Scanning electron microscopy (SEM) picture 
+of top view of the thin-film PZT (thickness~ 300nm). d. AFM image of the thin-film PZT. e. Photograph of a 4-inch 
+wafer including the fabricated PZT optical memristors patterned by using an ultraviolet stepper lithography system. f. 
+Colorized SEM of PZT MRR (blue). g. SEM picture of the cross section of a PZT ridge waveguide. h. Schematic 
+diagram of the ridge waveguide cross-section and the poling process. i. PZT unit cell representation before and after 
+poling. j. The dependence of the refractive index changes ∆𝑛𝑛eff(𝑃𝑃𝜈𝜈) against the net ferroelectric domain polarization, 
+and the corresponding simplified top-view schematic of ferroelectric domains in PZT. k. Hysteresis loop of Vset/Vreset 
+against ∆𝑛𝑛eff l Optical microscopy image of an MRR with a bending radius of 60 μm. m. Single-cycle demonstration 
+of one distinct non-volatile state，inset: procedure of setting protocol. n. Measured transmissions at the through port 
+of the MRR-based PZT optical memristor with different setting voltages Vset. o. Measured resonance-wavelength 
+detuning of the MRR-based PZT optical memristor set with different setting voltages Vset as the driving voltage Vdr 
+varies. p. Eye diagrams for NRZ modulation at the data rate of 48 Gbps with a driving voltage Vdr of 3 V. 
+
+The fabrication of thin-film PZT wafers and optical waveguides was carried out with the sol-gel process, 
+as illustrated schematically in Fig. 1a-g (see more details in Methods). The 4-inch PZT wafer was 
+realized with a top-surface roughness of 0.7 nm and a thickness non-uniformity less than 5 nm, as shown 
+in Fig. 1b-d. All the following processes, including the lithography, dry etching, and by-product cleaning 
+processes, were optimized for achieving PZT optical waveguides with smooth sidewalls/top-surfaces, 
+enabling high-quality building blocks and multi-functional photonic integrated circuits (PICs), as 
+depicted in (Fig. 1e-g). Such a wafer-scale sol-gel fabrication process developed for PZT PICs ensures 
+excellent CMOS compatibility and high scalability as well as low-cost production. The cross-section of 
+the fabricated PZT waveguide is shown in Fig. 1e, where the poling electrodes are strategically placed 
+on the slab and on both sides of the ridge. 
+As a ferroelectric material, PZT possesses a perovskite crystal structure. Initially, the crystal is in a 
+paraelectric phase, with positive and negative charge centers aligned at the body center (see the left part 
+of Fig. 1i). When a poling voltage Vpol is applied to the thin-film PZT, Zr and Ti4+ ions shift towards one 
+of the eight vertices, causing a displacement of the positive and negative charge centers. This shift 
+introduces the domain reorientation of PZT, enhancing its polarizability. As a result, these compositions 
+exhibit excellent dielectric and ferroelectric properties30 (Fig. 1i). After removing the external electric 
+field, the ferroelectric domain inside the thin-film PZT maintains a certain degree of polarization, known 
+as remanent polarization31. The refractive index neff(Pν) of thin-film PZT is related to the remnant 
+polarization in PZT32, i.e., 
+𝑛𝑛eff(𝑃𝑃𝜈𝜈) = 𝑛𝑛eff0 + 𝑛𝑛1
+𝑃𝑃𝜈𝜈2
+𝑃𝑃02,                              (1) 
+where neff0 is the refraction index of thin-film PZT with random polarization, n1 is the relative refractive 
+index, Pν is the net ferroelectric domain polarization, and P0 is the ferroelectric domain polarization on 
+the boundary of the thin film. According to equation (1), a different ratio of the mixed-polarization 
+domains in PZT, depending on Vset, would result in a different refractive index neff(Pν), as described in 
+Fig. 1j (Supplementary section 2). Therefore, non-volatile “SET” process can be controlled by applying 
+different setting voltage Vset, which is maintained for about one minute to stabilize the ferroelectric 
+domain and thus achieve different neff(Pν). Similarly, applying a reverse voltage can reset the net 
+ferroelectric domain polarization in PZT to its initial state. The relationship between Δneff against Vset is 
+depicted by the hysteresis loop of PZT given in Fig. 1k.  
+Notably, the device is revealed to exhibit a unique functional duality related with a threshold voltage 
+Vth. To achieve the non-volatile effect, the applied voltage should be higher than Vth to induce notable 
+changes in ferroelectric domain polarization. On the other hand, when the voltage is less than Vth, the 
+weak electric field does not induce notable changes in ferroelectric domain polarization, and thus the 
+refractive index is modulated electrically via the Pockels effect in PZT volatilely, providing an effective 
+routine for realizing high-speed electro-optic (EO) modulation or switching without triggering the non-
+volatile effect. 
+According to this principle, we employed a thin-film PZT MRR for realizing multi-level non-volatile 
+operation and high-speed volatile operation post-poling (Fig. 1l). With an electrode spacing of 4 μm, the 
+threshold voltage for this MRR is determined experimentally as ~8 V. Fig. 1m shows a single-cycle 
+demonstration of one distinct non-volatile state and varying the setting voltage Vset results in multi-level 
+non-volatile resonance-wavelength detuning, as illustrated in Fig. 1n. Piezoresponse Force Microscopy 
+(PFM) images intuitively show the change of the domain polarizations in the thin-film PZT waveguide 
+with different setting voltages Vset in Supplementary section 3. For high-speed volatile operation, with 
+the present MRR, The EO modulation efficiency of the PZT waveguides and its dependence on Vset were 
+firstly characterized by measuring the resonance-wavelength detuning of the fabricated MRR against 
+the driving voltage Vdr when it was set with Vset= 0, 10, 15, and 20 V. Here Vdr was varied from −8 V to 
+8 V, staying below the threshold, as shown in Fig. 1o. When Vdr was negative (i.e., opposite to the poling 
+direction), the measured modulation efficiency was about 42, 25, 12, and 6 pm/V with Vset= 0, 10, 15, 
+and 20 V, respectively. When Vdr was positive, the modulation efficiency became 26, 33, 20, and 23 
+pm/V, respectively. Such asymmetry of the Vset-dependence for the modulation efficiency is attributed 
+
+to the special mechanism in PZT, as expected by our theoretical prediction in Supplementary section 2. 
+Then high-speed EO modulation for NRZ signals was demonstrated by using the setup described in 
+method. As given in Fig. 1p, the recorded NRZ eye-diagram with a driving voltage Vdr of 3 V at 48 Gbps, 
+showcases the functional duality of the present PZT memristor enabling high-speed modulation.  
+Further measurements confirmed the fabricated PZT waveguide had a low propagation loss of ~1.9 
+dB/cm and low temperature sensitivity of ~30 pm/°C (Supplementary sections 4 and 5). Additionally, 
+we also investigated the DC drift of the thin-film PZT waveguides (Supplementary Section 6), finding 
+high stability with a negligible phase drift of less than 0.05π. The ability to address the issue of DC 
+drifting, which often challenges other EO modulators or switches fabricated on e.g. thin-film lithium 
+niobate33, is very promising for various applications with optical switching and modulation.  
+Consequently, thin-film PZT provides a promising option as a brand-new platform for developing on-
+chip optical memristors, and thus we present several representative building blocks for various 
+applications in the following sections.   
+ 
+Building blocks 
+MZI-based PZT optical memristors 
+MZIs are crucial fundamental components for photonic systems on a chip, encompassing the versatile 
+functionality of e.g. optical modulation, optical switching, variable optical attenuation, optical filtering, 
+variable optical splitting for optical interconnects and optical computing 34,35. For example, large-scale 
+photonic switches are typically assembled from 2×2 MZI switches interconnected into networks or 
+arrays of various topologies, including cross-bar, Benes, and path-independent loss (PI-Loss), along with 
+their numerous variants 28,34,36. However, developing large-scale PICs presents significant challenges, 
+particularly in calibrating a large number of MZI elements due to random phase errors in their initial 
+states, which often require complex processes and additional power consumption. In this section, we 
+demonstrate MZI-based PZT optical memristors for optical switching, Fig. 2a-b, highlighting their 
+potential to simplify the calibration and non-volatile reconfigurability as well as volatile high-speed 
+optical signal processing. 
+The present MZI-based PZT optical memristor, consists of two imbalanced arms and two 2×2 
+multimode interferometers with a splitting ratio of 50%: 50%. Electrodes used for applying a lateral 
+electric field were placed on both sides of these two arm waveguides, forming the phase shifters with 
+the length of e.g. ~1.0 mm. Initially, we poled the arm waveguides by applying the voltage in the 
+direction shown in Fig. 2a. Fig. 2c shows the measured non-volatile quasi-continuous tuning of the notch 
+wavelength as Vset increases with 20 levels, achieving a fine resolution of 100 pm per level with steps of 
+less than 1.0 V. Especially, a non-volatile phase shift of π was achieved when Vset=15.0 V. The power 
+consumption for non-volatile setting is in sub-microjoule scale, owing to a near-zero leakage current 
+(less than ~0.05 nA) in the thin-film PZT (Supplementary section 7). Importantly, thin-film PZT can be 
+reset by applying a high poling voltage Vpol of ~80 V when needed, thereby erasing the setting state of 
+PZT optical memristors.  
+To further demonstrate the functional duality of thin-film PZT, the MZI operated in a push-pull 
+configuration shown in Fig. 2a for high-speed optical signal processing with a driving voltage Vdr lower 
+than Vth. Fig. 2d shows the measurement results when 4 Vpp (Voltage peak-peak) was applied with 10 
+MHz frequency (Methods), indicating that the device is switchable in nano-second scale. Fig. 2e presents 
+the measured transmissions at the cross port of the MZI with 1-mm-long phase shifters when operating 
+with Vdr= 0 and 5.0 V, respectively, showing that a phase-shifting of π was achieved, and correspondingly 
+the modulation efficiency VπL is about 0.5 V∙cm. The estimated Pockels coefficient of the post-poling 
+PZT is as high as 120 pm/V, which is over four times higher than that of lithium niobate37, thus paving 
+a revolutionary routine for realizing high-efficiency and high-speed EO switching/modulation. 
+
+ 
+ 
+Fig. 2 | The present MZI-based PZT optical memristors. a. Schematic of the MZI -based 2×2 PZT optical 
+memristors, consisting of two imbalanced arms with 1-mm-long phase shifters and two 2×2 multimode interferometers 
+with a splitting ratio of 50%: 50%; the purple arrow represents the direction of the poling electric field; the blue arrow 
+represents the direction of the applied drive voltage Vdr. b. Optical microscopy image of the fabricated 2×2 MZI optical 
+memristors. c. Quasi-continuous tuning of the wavelength notch with the setting voltage Vset varying from 8 V to 32 V. 
+Before the setting voltage is applied to set any state, this optical memristor was re-initialized by applying a high poling 
+voltage Vpol of 80 V. d. Real-time optical modulation measurements. Normalized output intensity from the through port 
+when the device operates with a drive voltage Vdr of 4 Vpp at the frequency of 10 MHz. The upper one represents the 
+input electrical signals, and the bottom one represents the switched optical signals. e. Measured transmissions at the 
+cross port when operating with Vdr =0 and 5.0 V, respectively. 
+ 
+ 
+
+FP-cavity-based PZT optical memristors 
+Optical cavities have been recognized as another key element for realizing various functionality 
+(including optical filtering, modulation or switching) due to the great advantages in structure flexibility, 
+footprint compactness and energy efficiency 38-40. Unfortunately, the resonance wavelengths are often 
+extremely susceptible to the fabrication variations and thus one often needs to thermally or electrically tune the 
+resonance wavelength for alignment with additional high-power consumption41. In this section, we propose a 
+1×2-FP-cavity-based PZT optical memristor, as shown in Fig. 3a-b (more design details in 
+Supplementary section 8). Note that the present device has a short cavity length, enabling a free spectral 
+range (FSR) as large as 8 nm, which is much larger than regular MRRs on the same chip, helping to 
+clearly observe the multi-level non-volatility revealed here. With this PZT optical memristor, we 
+achieved quasi-continuous 64-level (6-bit) non-volatile setting by varying the voltage Vset from 10 V to 
+36 V, as shown in Fig. 3c-d. The maximum wavelength-detuning reaches up to 3.0 nm and the 
+corresponding non-volatile refractive-index change was approximately 4.6×10-3 (Supplementary section 
+9). Such quasi-continuous non-volatility enables the phase-shift manipulating of photonic devices 
+precisely. Meanwhile, the Q-factor of the resonance peaks remains almost unchanged, indicating that 
+the multi-level non-volatility enabled by manipulating the domain polarization in thin-film PZT does 
+not introduce a notable influence on the waveguide’s propagation loss. More levels of non-volatility 
+could be achieved by further refining the setting voltage Vset.   
+Fig. 3e demonstrates the remarkable repeatability and stability of the FP-cavity-based optical 
+memristor by characterizing five target states set with Vset=30, 21, 23, 25, and 36 V as examples, 
+respectively. For each target state, the following cycle process was repeated 20 times (Supplementary 
+section 10): (i) setting the target state; (ii) measuring the resonance wavelength; (ii) erasing to the initial 
+state. These twenty resonance wavelengths corresponding to the same setting voltage Vset have very 
+excellent consistency and repeatability with a minor wavelength variation of less than ±0.05 nm, 
+validating the great potential of PZT optical memristors for creating highly reliable and multi-level non-
+volatile photonic elements, more details are shown in Supplementary section 11. 
+The functional duality of the FP-cavity-based PZT memristor was also showcased in experiments. 
+When operating below Vth, this PZT memristor demonstrated its availability for high-speed optical 
+switching/modulation. In particular, temporal responses of the device were measured with different 
+modulation frequencies of 1 Hz, 100 kHz, and 5 MHz, while the driving voltage was chosen as 4 Vpp, as 
+shown in Fig. 3 f-h. The optical signal was effectively modulated across different frequencies, 
+showcasing the device's versatility for high-speed switching with minimal electro-optic relaxation 
+effects, which is a crucial issue for low-frequency or long-timescale applications, like ubiquitous DC 
+bias in modulators42. As shown in Fig. 3i, the switching exhibited a fast rising/falling time of around 2.5 
+ns, primarily limited by the measurement setup in the lab. Intrinsically, the switching speed can be 
+achieved in sub-nanosecond scale. 
+Fig. 3j demonstrates the measured static spectral responses at the through port of this FP cavity when 
+operated with different driving voltages Vdr of −10, 0, and +10 V, respectively. The EO modulation 
+efficiencies for negative and positive biases were different with the measured values of 30 pm/V and 20 
+pm/V, respectively, showing the asymmetry similar to the MRR-based PZT optical memristors 
+mentioned above. By judiciously choosing the appropriate ferroelectric domain polarization and bias 
+voltage, the effective Pockels coefficient can be enhanced, which is advantageous for developing high-
+performance EO modulators as desired for high-speed optical processing systems.  
+
+  
+Fig. 3 |The present FP-cavity-based PZT optical memristor. a. Schematic configuration. MWGs, multimode 
+waveguide gratings, Modemux, mode multiplexers. b. Optical microscopy image of the fabricated device. c. Measured 
+transmission spectral responses at the through port with different setting voltages Vset. d. 64-level setting process 
+(detuning with 1559.2 nm) induced by applying different setting voltages Vset. e. Five distinct non-volatile states, 
+corresponding to the setting voltages Vset of 30, 21, 23, 25, and 36 V. For each non-volatile state, there are 20 cycles 
+measured for the resonance-wavelength detuning. Real-time optical modulation measurements: f-h: Normalized output 
+optical intensity at the through port when operating with rectangular driving-voltage signals (Vdr=4Vpp) at the frequency 
+of 1 Hz (f), 100 kHz (g) and 5 MHz (h). i. The rising/falling edge of the switched optical signals. j. Measured spectral 
+responses at the through port of the FP cavity when operating with different driving voltages Vdr of −10, 0, and +10 V, 
+respectively. 
+ 
+
+Multifunctional Photonic Circuits Enabled by Scalable PZT Optical Memristors 
+Previously reported optical memristors were still limited to the implementations of individual elements 
+(such as MZIs and MRRs) 12,22, and have not demonstrated their potential scalability for multifunctional 
+photonic systems on a chip with large-scale integration, which is essential for practical applications. 
+Here, we make the efforts to demonstrate the scalability and versatility of our PZT optical memristors 
+with the following two representative architectures, including a memristive optical switch matrix and an 
+adaptive memristive multi-channel optical cavities for spectral manipulation. 
+Memristive Optical Switch Matrix. 
+The memristive optical switch matrix demonstrated here is a 4×4 non-blocking optical switch with Benes 
+topology, as shown in Fig. 4a, integrating six 2×2 MZI-based PZT optical memristors cascaded in three 
+stages and two waveguide crossings (Supplementary section 12). Initially, these six 2×2 MZIs showed 
+notable random phase errors due to the random variation of the waveguide dimensions, which is a 
+common challenge in developing large-scale PICs43. Fig. 4b shows the measured transmissions Tij (i, 
+j=1, 2, 3, 4) from port Ii to port Oj at the initial state without any calibration, illustrating that light from 
+any one input port was routed to the target and non-target output ports with randomly power ratios 
+(Supplementary section 13). In this case, careful calibration is often inevitable for conventional MZIs, 
+which introduces high complexity for the development and also consumes additional power to 
+compensate the random phase errors43. Fortunately, the initial random phase errors can be compensated 
+conveniently by utilizing the PZT non-volatility to introduce permanent phase-correction for each 2×2 
+MZI. By applying the appropriate setting voltage, we achieved phase shifts ranging from 0 to π, 
+effectively reconfiguring each MZI to the desired ON or OFF state. Several typical routing 
+configurations were demonstrated successfully by applying optimal setting voltages Vset, as summarized 
+in Fig. 4c-e and Table S2 in the Supplemental materials. For example, we configured the routes non-
+volatilely as follows: (1) Configuration #1 with the routines of I1→O1, I2→O2, I3→O3 and I4→O4; (2) 
+Configuration #2 with the routines of I1→O3, I2→O4, I3→O1, and I4→O2; (3) Configuration #3 with the 
+routines of I1→O2, I2→O1, I3→O3, and I4→O4. All these non-volatile reconfigurations of optical routines 
+were realized with decent extinction ratios higher than 15 dB within the wavelength range of 1530-1600 
+nm. In particular, for a single MZI, one can achieve non-volatile optical power routing with a low excess 
+loss less than 0.3 dB and high extinction ratios greater than 30 dB at the center wavelength 
+(Supplementary section 14). In theory, the performance could be further enhanced with fine phase 
+control. This memristive optical switch matrix was further used to demonstrate high-bit-rate data routing 
+by choosing configuration #3 as an example (Supplementary section 14), and 40 Gbps non-return-to-
+zero (NRZ) data were launched into the corresponding input port. Fig. 4f shows the measured eye-
+diagrams for the data routing in the configuration #3, exhibiting high signal-to-noise ratios, showing 
+great potential for developing large-scale N×N optical switch matrix with excellent non-volatile 
+reconfiguration and high-speed operation. The ability to compensate the initial random phase errors non-
+volatilely eliminates the need for continuous power consumption for correction, representing a great 
+advancement for developing programmable photonic chips. 
+
+    
+ 
+Fig. 4 | Examples of multifunctional photonic circuits enabled by scalable PZT optical memristors: a, Optical 
+microscopy image of the 4×4 optical switch. b. Chart of the measured transmissions from the input ports (I1, I2, I3, and 
+I4) to the output ports (O1, O2, O3, and O4) at the initial state with random phase errors. c-e Chart of the measured 
+transmissions from the input ports (I1, I2, I3, and I4) to the output ports (O1, O2, O3, and O4) when all the 2×2 MZI 
+switches are reconfigured with the desired optical routines (as defined by configurations #1, #2 and #3) by applying 
+the appropriate setting voltages. f. Measured eye diagrams for the optical signals propagating along the routines (I1-O2, 
+I2-O1, I3-O3, I4-O4) as defined by configuration #3. FP-cavity-based PZT optical memristors in cascade for adaptive 
+memristive spectral manipulation: g. Schematic configuration; h. Optical microscopy image of the fabricated device; i. 
+Measured transmission spectra at the through ports for the initial state without any correction; j. Measured transmission 
+spectra at the through/cross ports when the resonance wavelength of each FP cavity was aligned carefully to have 
+uniform channel spacing by applying the corresponding setting voltage Vset; k. Measured transmission spectra at the 
+through/cross ports when channels #1 and #3 are erased and retrospectively reset so that their resonance wavelengths 
+are respectively aligned with channels #2 and #4.  
+
+Adaptive Memristive Optical Cavities for Spectral Manipulation.  
+Optical cavities have been developed very popularly and used very widely, while the resonance 
+wavelengths have to be tuned for alignment with additional power consumption 41. Here, we developed 
+an adaptive approach of non-volatilely fine-tuning the resonance wavelengths of multiple FP cavities in 
+cascade for PZT optical memristors (Fig. 4g-h). Fig. 4i gives the measured initial transmission at the 
+through port, showing high non-uniformity of the channel spacing, which seriously hinders the 
+application in systems. When channels #1- #4 were tuned by applying the appropriate setting voltages 
+Vset of 15, 30, 12, and 13V, the resonance wavelengths were well aligned with a uniform channel spacing 
+of 200 GHz (1.6 nm), as shown in, as shown in Fig. 4j. Note that the Q-factor changes of these FP 
+cavities were negligible, further validating that no additional loss was introduced. To further verify the 
+non-volatile spectral manipulation, the setting states of channels #1 and #3 were erased and reset with 8 
+V and 15 V, in which way their resonance wavelengths were aligned with channels #2 and #4, 
+respectively, as shown in Fig. 4k. Accordingly, the present four-channel FP-cavity-based PZT optical 
+memristors were reconfigured successfully to have a two-channel spectral response with a channel 
+spacing of 400 GHz and enhanced extinction ratios of >25 dB. The chip was also characterized after it 
+was stored at room temperature for three weeks, exhibiting a gentle resonance-wavelength shift less than 
+0.01 nm, thus verifying a high long-term stability (Supplementary section 15). which is crucial for 
+practical applications. The demonstrated non-volatility addresses the key issues for optical cavities used 
+for the applications like wavelength-selective switches (WSSs), which are crucial components in flexible 
+optical networks 44. In addition, the present structure could also work as a modulator array available to 
+work together with an optical frequency comb or multi-wavelength lasers for ultra-high capacity optical 
+interconnects 41 or optical computing 45,46with multiple wavelength-channels. 
+These demonstrations in Fig. 4 showcase the great potential of PZT optical memristors for developing 
+large-scale photonic chips used in many applications, paving a way for future memristor-based photonic 
+computing and communication platforms.  
+Vision of potential applications of optical PZT memristors  
+Our vision of potential applications of the developed optical PZT memristors is illustrated in Fig. 5, 
+which highlights the diverse application prospects of the thin-film PZT platform for PICs, showcasing 
+great potential in optical interconnects, microwave photonics, optical neural networks, and Lidar, etc. 
+As shown in Fig. 5, a general architecture of compact optical transmitters/receivers with multiple FP-
+cavity modulators or filters in cascade is presented, as desired for high-capacity wavelength-division-
+multiplexed optical interconnects. For this optical transmitter, the volatility of these cascaded FP-cavity 
+modulators supports high-speed EO modulation, while their electrical non-volatility is used for precise 
+trimming to align the central wavelengths as defined. For this receiver, the non-volatility is utilized for 
+achieving accurate wavelength alignment for the multi-channel FP-cavity filter. With this configuration, 
+ultra-compact, high-speed, energy-efficient, and high-data-capacity optical interconnect systems can be 
+realized with an optical frequency comb laser source. 
+Compared with other non-volatile solutions, the present thin-film PZT platform supports low-loss 
+waveguide propagation as well as high-speed EO modulation, enabling various large-scale 
+reconfigurable PICs. For example, the integration of multiple high-speed EO MZI switches and low-loss 
+waveguide spirals can achieve high-speed tunable optical delaylines and the array, facilitating the 
+realization of high-speed parallel signal processors that can manipulate signals across temporal, 
+wavelength, and spatial dimensions. The chip can be reconfigured conveniently to support a range of 
+advanced functionalities, including accurate microwave reception, narrowband microwave filtering, and 
+wide-bandwidth arbitrary waveform generation for optical computing. The inherent non-volatility of 
+PZT optical waveguides allows for precise trimming of random phase errors in MZI switches, greatly 
+simplifying the control systems and significantly reducing the energy consumption for the PICs when 
+used for handling complex and diverse signal processing tasks. 
+We also present a general optical neural network (ONN) architecture, which can be implemented 
+efficiently using the present PZT optical memristors equipped with MZIs or MRRs, without any 
+
+additional complexity of design and presents significant challenges, as depicted in Fig. 5. In this example, 
+this architecture is designed with MZIs, while a mesh of MRRs can also be developed similarly. With 
+this ONN, high-speed training is facilitated through the volatility of the thin-film PZT MZI when the 
+driving voltage Vdr is below the threshold voltage Vth. After the network is trained very well, non-volatile 
+setting can be achieved by appropriately adjusting one arm of the MZI-based optical memristors, 
+depending on the setting voltage Vset. In contrast, the use of non-volatile PCMs for being reconfigured 
+with optical pulses presents challenges for large-scale PICs, due to the inability to support high-speed 
+training, the complexity of the control systems, and unavailability of ultra-low energy consumption. 
+The last but not the least, with the high-speed EO modulation capability of the present PZT optical 
+memristors when working below Vth, an optical phased array (OPA) with frequency-modulated 
+continuous-wave (FMCW) technology is achievable for all-solid-state light detection and ranging 
+(LiDAR). When compared with the popular thermo-optically modulated silicon OPAs, the present PZT 
+optical memristors have significant advantages of consuming ultra-low energy, eliminating the thermal 
+crosstalk and enabling ultra-fast modulation speeds, which is especially crucial within dense OPAs for 
+high-resolution LiDAR systems47. On the other hand, the PZT optical memristors offer high modulation 
+efficiency with low temperature sensitivity as well as low DC drift, which is evidently more 
+advantageous than conventional EO modulation used for OPAs. This is exactly essential for real-time 
+data processing and rapid environmental mapping in autonomous vehicles and other applications 
+requiring precise spatial-awareness and object-detection.  
+ 
+Fig. 5 |Pat of the potential applications in the Future   
+ 
+ 
+
+Conclusions and Discussion 
+This work reported a brand-new integrated optical memristors based on thin-film PZT. We have revealed 
+the approach of directly controlling the refractive index with electrical non-volatility by harnessing 
+multi-level mixed-polarization domain states in thin-film PZT. Our presented PZT optical memristors 
+offer unprecedented advantages with exceptional performance metrics like low losses, low switching 
+energy, high modulation depth, high stability, quasi-continuous reconfigurability, which have not been 
+achieved simultaneously for other existed optical memristor technologies (see the comparison with 
+details in Supplementary Table S1). In addition, the performance of the present PZT optical memristors 
+can even be improved further by optimizing the fabrication and setting/poling process. According to 
+observations in Ref. 48, which shows that the poling time in thin-film PZT depends on the pulse duration 
+and waveforms, the speeds for both Set and Reset operations of the present PZT optical memristors 
+could be improved by shortening voltage pulses. 
+Notably, the present PZT optical memristors have unique functional duality with multi-level non-volatile 
+settings and high-speed volatile switching, as summarized in Supplementary Section 16. This marks a 
+significant advancement by uniquely merging non-volatile and volatile technologies in a single platform, 
+a capability not yet reported elsewhere. Very excitingly, the functional duality opens new paradigms in 
+high-speed and energy-efficient photonic computing, where the weight array could be retrained 
+volatilely with a fast speed in GHz-scale and stored non-volatilely with high precision. We also highlight 
+the scalability of PZT optical memristors for developing PICs with a number of elements, featuring a 
+memristive optical switch matrix and an adaptive memristive cavity. The wafer-scale sol-gel fabrication 
+process ensures CMOS compatibility and scalability, while maintaining low propagation losses, making 
+it ideal for large-scale on-chip photonic integration.   
+These unparalleled capabilities of PZT optical memristors are extremely exciting with significantly 
+reduced energy consumption and greatly enhanced processing speed, and show great potential for 
+overcoming the von Neumann bottleneck, positioning PZT optical memristor as a transformative 
+strategy for new paradigms in integrated photonics. Looking forward, we anticipate further integration 
+of functionalities, like high-speed and energy-efficient optical interconnects, microwave photonics, 
+optical phased array Lidar, quantum computing, optical neural networks, in-memory computing and 
+brain-like architectures.  
+ 
+References 
+1 
+Strukov, D. B., Snider, G. S., Stewart, D. R. & Williams, R. S. The missing memristor found. 
+nature 453, 80-83 (2008). 
+2 
+Youngblood, N., Ríos Ocampo, C. A., Pernice, W. H. P. & Bhaskaran, H. Integrated optical 
+memristors. Nat. Photonics 17, 561-572 (2023). 
+3 
+Ríos, C. et al. In-memory computing on a photonic platform. Sci. Adv. 5, eaau5759 (2019). 
+4 
+Feldmann, J., Youngblood, N., Wright, C. D., Bhaskaran, H. & Pernice, W. H. All-optical spiking 
+neurosynaptic networks with self-learning capabilities. Nature 569, 208-214 (2019). 
+5 
+Feldmann, J. et al. Parallel convolutional processing using an integrated photonic tensor core. 
+Nature 589, 52-58 (2021). 
+6 
+Lian, C. et al. Photonic (computational) memories: tunable nanophotonics for data storage and 
+computing. Nanophotonics 11, 3823-3854 (2022). 
+7 
+Shastri, B. J. et al. Photonics for artificial intelligence and neuromorphic computing. Nat. 
+Photonics 15, 102-114 (2021). 
+8 
+Zhang, Y. et al. Electrically reconfigurable non-volatile metasurface using low-loss optical 
+phase-change material. Nat. Nanotechnol. 16, 661-666 (2021). 
+9 
+Wuttig, M., Bhaskaran, H. & Taubner, T. Phase-change materials for non-volatile photonic 
+applications. Nat. Photonics 11, 465-476 (2017). 
+10 
+Fang, Z. et al. Arbitrary Programming of Racetrack Resonators Using Low-Loss Phase-Change 
+Material Sb2Se3. Nano Lett. 24, 97-103 (2023). 
+11 
+Fang, Z. et al. Ultra-low-energy programmable non-volatile silicon photonics based on phase-
+
+change materials with graphene heaters. Nat. Nanotechnol. 17, 842-848 (2022). 
+12 
+Chen, R. et al. Non-volatile electrically programmable integrated photonics with a 5-bit 
+operation. Nat. Commun. 14, 3465 (2023). 
+13 
+Ríos, C. et al. Integrated all-photonic non-volatile multi-level memory. Nat. Photonics 9, 725-
+732 (2015). 
+14 
+Wei, M. et al. Monolithic back-end-of-line integration of phase change materials into foundry-
+manufactured silicon photonics. Nat. Commun. 15, 2786 (2024). 
+15 
+Zhang, H. et al. Miniature multilevel optical memristive switch using phase change material. 
+ACS Photonics 6, 2205-2212 (2019). 
+16 
+Zheng, J. et al. Nonvolatile electrically reconfigurable integrated photonic switch enabled by a 
+silicon PIN diode heater. Adv. Mater. 32, 2001218 (2020). 
+17 
+Kim, D. U. et al. Programmable photonic arrays based on microelectromechanical elements with 
+femtowatt-level standby power consumption. Nat. Photonics 17, 1089-1096 (2023). 
+18 
+Edinger, P. et al. in 2022 IEEE 35th International Conference on Micro Electro Mechanical 
+Systems Conference (MEMS)    995-997 (IEEE, 2022). 
+19 
+Cheung, S. et al. Energy efficient photonic memory based on electrically programmable 
+embedded III-V/Si memristors: switches and filters. Commun. Eng. 3 (2024). 
+20 
+Tossoun, B. et al. High-speed and energy-efficient non-volatile silicon photonic memory based 
+on heterogeneously integrated memresonator. Nat Commun 15, 551 (2024). 
+21 
+Guo, R. et al. Non-volatile memory based on the ferroelectric photovoltaic effect. Nat. Commun. 
+4, 1990 (2013). 
+22 
+Geler-Kremer, J. et al. A ferroelectric multilevel non-volatile photonic phase shifter. Nat. 
+Photonics 16, 491-497 (2022). 
+23 
+Xie, Y. et al. Towards large-scale programmable silicon photonic chip for signal processing. 
+Nanophotonics 13, 2051-2073 (2024). 
+24 
+Mao, J. et al. Ultra-fast perovskite electro-optic modulator and multi-band transmission up to 
+300 Gbit s−1. Commun. Mater. 5, 114 (2024). 
+25 
+Delaney, M. et al. Nonvolatile programmable silicon photonics using an ultralow-loss Sb2Se3 
+phase change materia. Sci. Adv. 7, 3500 (2021). 
+26 
+Lvovsky, A. I., Sanders, B. C. & Tittel, W. Optical quantum memory. Nat. Photonics 3, 706-714 
+(2009). 
+27 
+Zheng, Y. et al. Multichip multidimensional quantum networks with entanglement retrievability. 
+Science 381, 221-226 (2023). 
+28 
+Xu, Z. et al. Large-scale photonic chiplet Taichi empowers 160-TOPS/W artificial general 
+intelligence. Science 384, 6692 (2024). 
+29 
+Zhang, W. et al. Edge learning using a fully integrated neuro-inspired memristor chip. Science 
+381, 1205-1211 (2023). 
+30 
+Monga, S. et al. Prospects of non-linear optical behaviour of PZT/ZnO heterostructures. Ceram. 
+Int. 49, 11737-11752 (2023). 
+31 
+Morioka, H., Asano, G., Oikawa, T., Funakubo, H. & Saito, K. Large remanent polarization of 
+100% polar-axis-oriented epitaxial tetragonal Pb (Zr 0.35 Ti 0.65) O 3 thin films. Appl. Phys. 
+Lett. 82, 4761-4763 (2003). 
+32 
+Glinchuk, M. et al. Optical refraction index and polarization profile of ferroelectric thin films. 
+Integr. Ferroelectr. 38, 101-110 (2001). 
+33 
+Salvestrini, J. P., Guilbert, L., Fontana, M., Abarkan, M. & Gille, S. Analysis and Control of the 
+DC Drift in LiNbO3Based Mach–Zehnder Modulators. J. Lightwave Technol. 29, 1522-1534 
+(2011). 
+34 
+Shen, Y. et al. Deep learning with coherent nanophotonic circuits. Nat. Photonics 11, 441-446 
+(2017). 
+35 
+Lu, K. et al. Empowering high-dimensional optical fiber communications with integrated 
+photonic processors. Nat. Commun. 15, 3515 (2024). 
+
+36 
+Chen, X., Lin, J. & Wang, K. A Review of Silicon‐Based Integrated Optical Switches. Laser 
+Photonics Rev. 17, 2200571 (2023). 
+37 
+Wang, C. et al. Integrated lithium niobate electro-optic modulators operating at CMOS-
+compatible voltages. Nature 562, 101-104 (2018). 
+38 
+Li, X., Gao, W., Lu, L., Chen, J. & Zhou, L. Ultra-low-loss multi-layer 8 × 8 microring optical 
+switch. Photonics Res. 11, 712-723 (2023). 
+39 
+Zhang, C. et al. Reconfigurable multichannel amplitude equalizer based on cascaded silicon 
+photonic microrings. Photonics Res. 11, 742-749 (2023). 
+40 
+Eppenberger, M. et al. Resonant plasmonic micro-racetrack modulators with high bandwidth and 
+high temperature tolerance. Nat. Photonics 17, 360-367 (2023). 
+41 
+Rizzo, A. et al. Massively scalable Kerr comb-driven silicon photonic link. Nat. Photonics 17, 
+781-790 (2023). 
+42 
+Holzgrafe, J. et al. Relaxation of the electro-optic response in thin-film lithium niobate 
+modulators. Opt. Express 32, 3619-3631 (2024). 
+43 
+Song, L. et al. Low-loss calibration-free 2× 2 Mach-Zehnder switches with varied-width 
+multimode-interference couplers. J. Lightwave Technol. 40, 5254-5259 (2022). 
+44 
+Khope, A. S. P. et al. Multi-wavelength selective crossbar switch. Opt. Express 27, 5203-5216 
+(2019). 
+45 
+Bai, B. et al. Microcomb-based integrated photonic processing unit. Nat Commun 14, 66 (2023). 
+46 
+Xu, S., Wang, J., Yi, S. & Zou, W. High-order tensor flow processing using integrated photonic 
+circuits. Nat Commun 13, 7970 (2022). 
+47 
+Wang, W. et al. Cascaded subarray design and control method for power efficient, thermal 
+crosstalk optimized optical phased array. Opt. Express 31, 37381-37394 (2023). 
+48 
+Kobayashi, T., Suzuki, Y., Makimoto, N., Funakubo, H. & Maeda, R. Influence of pulse poling 
+on the piezoelectric property of Pb (Zr0. 52, Ti0. 48) O3 thin films. AIP Adv. 4 (2014). 
+ 
+Acknowledgements 
+We acknowledge support from the National Natural Science Foundation of China (U23B2047, 
+62321166651, 62305294, and 92150302), Natural Science Foundation of Zhejiang Province 
+(LD19F050001), Zhejiang Provincial Major Research and Development Program (2022C01103), 
+Fundamental Research Funds for the Central Universities, China Postdoctoral Science Foundation 
+(2023M733039), and Leading Innovative and Entrepreneur Team Introduction Program of Zhejiang 
+(2021R01001), “Pioneer” and “Leading Goose” R&D Program of Zhejiang Province (2024C01112). 
+Author contribution. D.D. and C.L. conceived the idea, C.L. developed the theory of PZT optical non-
+volatility, C.L., T.S. and D.D. designed the PZT memristors and the chip layout, T.S., C.L., H.Y. and 
+C.W. fabricated the chip, Y.Z and C.L. carried out the high-speed optical signal-processing of the 
+memristors, H.C. and J.X. built up the system experiments for measuring eye-diagrams, H.Y., H.L., Z.X., 
+Z.Y. contributed to the discussion of the fabrication and poling process, C.L. and D.D. wrote the 
+manuscript, all authors discussed the results and contributed to the manuscript. D.D. and F.Q. supervised 
+the project. 
+ 
+Competing interests: 
+The authors declare no competing interests.  
+ 
+Data availability.  
+Data underlying the results presented in this paper are not publicly available at this time but may be 
+obtained from the authors upon reasonable request. 
+ 
+ 
+
+Methods 
+Fabrication of PZT optical memristors. For the fabrication of the present PZT optical memristors, as 
+shown in Fig. S1, the surface of SiO2/Si was chemically modified with an atomic seed layer firstly, 
+which promotes the crystallization of PZT in the desired atomic lattice orientation. After the PZT thin-
+film was formed by the spin-coating technique, the substrate was heated in a rapid thermal annealing 
+system at elevated temperatures under O2 atmosphere. The spin-coating and rapid thermal annealing 
+process were repeated several times to obtain the target film thickness of 300 nm. The details of the PZT 
+deposition can refer to Juhe EO Tech. Co., Ltd. (www.eomaterials.com).The waveguide structure was 
+patterned using the electron-beam lithography (EBL) or ultraviolet stepper lithography, and then was 
+etched to a depth of 200 nm using the inductively coupled plasma process. Subsequently, a metal 
+electrode pattern was created using the ultraviolet contact lithography, and the metal electrode consisting 
+of 5-nm-thick Ti and 400-nm-thick Au layers was formed using the electron-beam evaporation and lift-
+off processes. Finally, a 1.8-μm-thick SiO2 film was spin-coated on top as the upper-cladding. 
+ 
+ 
+Fig. S1 Fabrication process of PZT Optical Memristors. Surface Preparation: the SiO2/Si substrate was chemically modified 
+with an atomic seed layer; PZT Deposition: PZT film was deposited by spin-coating, followed by rapid thermal annealing; a 
+300 nm thickness PZT film was achieved; Waveguide Patterning: the waveguide structure was patterned using electron-beam 
+lithography (or ultraviolet stepper lithography) and etched to a 200 nm depth; Electrode Formation: metal electrodes (5-nm-
+thick Ti and 400-nm-thick Au) were patterned; Upper Cladding: a 1.8-μm-thick SiO2 film was spin-coated. 
+ 
+PZT waveguide characterization. Fig. S2a shows the schematic diagram of the waveguide cross-
+section and the poling process. In this work, the thin-film PZT was poled conveniently at room 
+temperature by applying an external electric field Epol of ~20 V/μm for ~30 minutes. The state of the 
+ferroelectric domain in PZT after poling is defined as the “initial” state in this paper. The PZT optical 
+memristors were developed on a 4-inch PZT-on-insulator wafer featuring a 300-nm-thick thin-film PZT. 
+The PZT ridge waveguides were designed with 200-nm etching depth, while the refractive index of PZT 
+and SiO2 are given as nPZT=2.40 and nSiO2=1.44 at the wavelength-band of 1550 nm, respectively. The 
+simulated field distribution for the TE0 mode of the PZT optical waveguide is shown Fig. S2b, where 
+the optical field is tightly confined in the PZT ridge with a high confinement factor over 85% due to the 
+high refractive-index contrast, which facilitates strong electro-optic interaction in PZT. 
+
+ 
+Fig. S2 PZT waveguide characterization. a. Schematic diagram of the waveguide cross-section and the poling process. b. 
+Simulated field profile of the TE0 mode. 
+ 
+Experimental setup for spectral responses measurement 
+ 
+Fig. S3 Schematic of the experimental setup for spectral responses measurement with external electrical voltage. ASE: 
+amplified spontaneous emission; DUT: device under test.  
+ 
+The transmission spectral responses were measured with the setup consisting of an amplified 
+spontaneous emission (ASE) source and an optical spectrum analyzer (OSA) whose resolution was set 
+at 0.02 nm, as shown Fig. S3. The results were normalized with the transmission of a straight waveguide 
+fabricated on the same chip near the devices. A sourcemeter (Keithley 2410) was used to apply the 
+external electrical field for poling or setting the PZT optical memristors and measure the current 
+simultaneously.  
+ 
+Experimental setup for eye diagram measurement 
+ 
+Fig. S4 Setup used for the eye diagram measurement. AWG: arbitrary waveform generator. EDFA: erbium-doped fiber 
+amplifier. EA: electrical RF amplifier 
+ 
+Light was polarization-controlled and coupled to the fabricated PZT chip, and the modulator was driven 
+by the RF signals generated by the arbitrary waveform generator (AWG) amplified by a linear electrical 
+RF amplifier (EA), while a bias-Tee was used so that the modulator operates at the quadrature point with 
+a given DC bias. The output optical signal was amplified using an erbium-doped fiber amplifier (EDFA) 
+It was then detected by a 45-GHz photodetector and connected to the oscilloscope. 
+
+Experimental setup for high-speed optical signal-processing 
+ 
+Fig. S5 Schematic of the experimental setup for high-speed optical signal-processing. AFG: arbitrary function generator, 
+device under test (DUT). 
+ 
+Fig. S5 shows the high-speed optical signal-processing: a tunable laser was used as the light source and 
+was coupled into the PZT optical memristors through a grating coupler. Here a polarization controller 
+(PC) was used to achieve TE-polarized light for the input. A continuous rectangular-wave signal with 
+different modulated frequency generated from an arbitrary function generator (AFG) was then applied 
+to the DUT. The modulated optical signals were coupled from the chip to the fiber connected with a10%: 
+90% power splitter and the port with 90% output-power was connected to the oscilloscope (DSO) via a 
+photodetector (PD), while the other 10% output-power was collected by an optical spectrum analyzer, 
+which allowed synchronized observation of the operating wavelength. A Keithley 2410 sourcemeter was 
+employed to apply the external electric field for setting/resetting the PZT optical memristors and to 
+measure the leakage current simultaneously. 
+ 
+Experimental setup for High-bit-rate data routing  
+Fig. S6 shows the measurement setup for high-bit-rate data routing with the developed memristive 
+optical switch matrix. Here the tunable laser was set at 1550nm with an output power of 13 dBm injected 
+into a LiNbO3 Mach-Zehnder modulator. The high-speed OOK signals with a standard pseudo-random 
+binary sequence (PRBS) pattern were generated by an arbitrary waveform generator (AWG) and then 
+amplified by the commercial RF amplifier (SHF S807C), and finally were injected to drive the optical 
+modulator. The modulated optical signals were then sent to the memristive optical switch matrix. At the 
+receiving end, the optical signals were amplified by an erbium-doped fiber amplifier (EDFA,) and 
+subsequently analyzed with a sampling oscilloscope.  
+ 
+Fig. S6. Experimental setup for high-bit-rate data routing: AWG: arbitrary waveform generator. EDFA: erbium-doped fiber 
+amplifier 
+ 
+

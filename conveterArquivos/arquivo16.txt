@@ -1,0 +1,192 @@
+HOW THE StarDICE PHOTOMETRIC CALIBRATION OF STANDARD
+STARS CAN IMPROVE COSMOLOGICAL CONSTRAINTS?
+T. SOUVERIN1, J. NEVEU1,3, M. BETOULE1, S. BONGARD1, P. E. BLANC5,
+J. COHEN TANUGI2,6, S. DAGORET-CAMPAGNE3, F. FEINSTEIN4, M. FERRARI5,
+F. HAZENBERG1, C. JURAMY1, L. LE GUILLOU1, A. LE VAN SUU5, M. MONIEZ3, E. NUSS2,
+B. PLEZ2, N. REGNAULT1, E. SEPULVEDA1, K. SOMMER2
+1Sorbonne Universit´e, CNRS, Universit´e de Paris, LPNHE, 75252 Paris Cedex 05, France; 2LUPM,
+Universit´e Montpellier & CNRS, F-34095 Montpellier, France; 3Universit´e Paris-Saclay, CNRS,
+IJCLab, 91405, Orsay, France; 4CPPM, Universit´e d’Aix-Marseille & CNRS, 163 av. de Luminy 13288
+Marseille Cedex 09, France; 5Observatoire de Haute-Provence, Universit´e d’Aix-Marseille & CNRS,
+04870 Saint Michel L’Observatoire, France; 6LPC, IN2P3/CNRS, Universit´e Clermont Auvergne,
+F-63000 Clermont-Ferrand, France
+The number of type Ia supernova (SNe Ia) observations will grow significantly within the
+next decade, mainly thanks to the Legacy Survey of Space and Time (LSST) undertaken
+by the Vera Rubin Observatory in Chile. With this improvement, statistical uncertainties
+will decrease, and flux calibration will become the main uncertainty for the characterization
+of dark energy. Currently, the astronomical flux scale is anchored on the numerical models
+of white dwarf atmospheres from the CALSPEC catalog, and every error on the model can
+induce a bias over cosmological parameters inference. The StarDICE experiment proposes a
+new calibration reference that only relies on observations from the optical watt defined by the
+NIST towards the magnitude of standard stars. It is currently operating at l’Observatoire
+de Haute-Provence and has been collecting data since the beginning of 2023. To overcome
+the photometric calibration uncertainty and reach a sub-percent precision, the instrument
+throughput has been calibrated with a Collimated Beam Projector.
+It will be monitored
+on-site with a LED-based artificial star source calibrated with NIST photodiodes. In this
+proceeding, we will first illustrate how an error in the photometric calibration can impact the
+SNe Ia distance moduli and thus bias the measurement of cosmological parameters. Then we
+will present the StarDICE experiment and how we can recalibrate the CALSPEC catalog at
+the millimagnitude level on the NIST scale with photometric analysis.
+1
+CALSPEC calibration
+Nowadays, the CALSPEC calibration is the state-of-the-art for the astrophysical photometric
+calibration.
+The three CALSPEC prime standards are pure hydrogen white dwarfs (WD),
+named G191B2B, GD71 and GD153. The calibration of their spectral density energy (SED)
+is anchored on numerical model of their atmosphere. In few words, the numerical radiative
+arXiv:2411.03256v1  [astro-ph.IM]  5 Nov 2024
+
+3000
+4000
+5000
+6000
+7000
+8000
+9000
+10000
+11000
+Wavelength [Å]
+0.98
+1.00
+1.02
+F/F2024
+G191B2B
+2013 release
+2014 release
+2019 release
+2024 release
+Figure 1 – Relative flux of the G191B2B standard between CALSPEC releases normalized by the flux from the
+2024 release and at F(λ ≃5556 ˚A).
+transfer model of their atmosphere is fitted on the hydrogen absorption lines obtained with high-
+resolution spectroscopy from the Space Telescope Imaging Spectrograph (STIS) of the Hubble
+Space Telescope (HST) (see Bohlin et al., 20141 for the detailed method). Over the past
+decade, the CALSPEC calibration has undergone multiple releases, coming from the evolution
+of the model used to simulate the WD atmosphere. Hence, the calibrated spectra of the three
+primary standards vary with the CALSPEC release used. Figure 1 illustrates the relative flux
+in the G191B2B SED, revealing a chromatic variation of up to ∼2% between the different
+CALSPEC releases.
+2
+Simulation of SNe Ia observation and calibration
+We aim to track variations in the calibration and their impact on dark energy parameter con-
+straints using simulations from the Lemaˆıtre project presented by Lacroix, this proceeding.
+We simulate SNe Ia light curves with the Mocksurveya package based on a wCDM model with
+w = −1, following the redshift distribution of the three surveys. The number of SNe Ia simu-
+lated are 1841 for ZTF; 886 for SNLS; and 659 for HST, reaching quantities equivalent to the
+Lemaˆıtre combination. The simulated bandpasses are generated with the Bandpassesb package.
+To calibrate an instrument, one effective method is to observe an on-sky reference like a CAL-
+SPEC standard star, which is assumed to be accurate. By comparing the expected integrated
+flux of the spectrum over the filter bandpass with the measured flux, we can determine an offset
+calibration term for each filter, known as zero points. They serve as reference values, anchoring
+our measurements to a photometric system reference, such as the CALSPEC calibration.
+To investigate the influence of different CALSPEC releases on the filter transmissions of our
+surveys, we simulate the observation of the 2024 CALSPEC release of G191B2B by integrating
+the Lemaˆıtre survey filter transmissions. This simulation is repeated for the 2013 release, and
+we compute the flux difference for each filter of each survey using the two CALSPEC releases.
+The differences quantify the calibration bias from using one release over the other. To examine
+the impact of this calibration bias on the fit of cosmological parameters, we add the flux bias
+to the corresponding zero point value for each filter, producing a biased dataset of SNe Ia
+simulations. This keeps the observed flux constant while altering only the zero points used to
+fit the cosmological parameters.
+We then generate a Hubble diagram by fitting the distance moduli µ of each SN with
+SNCosmoc. Figure 1 shows the residual plot to the simulated cosmology, revealing significant
+scatter and an important bias for the SNLS survey. This analysis underlines that a miscali-
+ahttps://gitlab.in2p3.fr/lemaitre/mocksurvey
+bhttps://gitlab.in2p3.fr/lemaitre/bandpasses
+chttps://github.com/nregnault/sncosmo
+
+10 2
+10 1
+100
+101
+102
+103
+z
+0.03
+0.02
+0.01
+0.00
+0.01
+0.02
+0.03
+ [mag]
+Anchored @ 
+ CMB Scale
+snls
+ztf
+subaru
+Figure 2 – Residuals of a Hubble diagram modified by introducing a flux calibration bias in the simulation. The
+red and black dashed lines represent how a deviation of w of respectively 3 % and 10 % impacts the distance
+moduli µ. The colored surfaces represent an approximate visualization of the redshifts ranges of each survey.
+bration of approximately 10 mmag on µ can lead to a bias exceeding 3 % in the constraint of
+w. Consequently, achieving a 1 mmag accuracy in the measurement of CALSPEC standards is
+crucial to reach w accuracy below 3 %, aligning with the precision goals of modern cosmology.
+3
+StarDICE experiment
+An approach to meet this requirement involves directly measuring the absolute flux of CAL-
+SPEC spectra without relying on prior numerical models. This is achieved by transferring the
+calibration from laboratory standards to observations of CALSPEC standards, as discussed in
+Section 6 of Bohlin et al. 20141.
+The StarDICE experiment proposes a metrology chain from laboratory flux references toward
+the measurement of standard star spectra. This calibration transfer is schematized in Figure 3,
+and goes as follows: (1) is operated by the NIST (Houston et al.
+20083) and results in a
+silicon photodiode calibrated against the POWRd facility; (2) is achieved with the StarDICE
+sensor calibration bench (Betoule et al. 20234); (3) consists of the calibration of a StarDICE
+artificial star with the previously calibrated StarDICE camera; (4) is the recalibration of the
+CALSPEC standard stars with the calibrated StarDICE telescope (Souverin et al. 2024 in
+prep.); (5) is performed by the survey itself, observing standard stars to calibrate its instrument.
+The StarDICE photometric instrument is a Newton telescope hosted l’Observatoire de
+Haute-Provence, observing in the ugrizy photometric system.
+It has been operational since
+early 2023, currently undergoing a pre-survey phase focused on testing observing strategies.
+Since September 2023, it has cumulated around 30 nights of observations. During this phase,
+the priority has been given to observing CALSPEC primary standards when they are visible,
+and secondary standards otherwise, with several targets observed each night. A first photomet-
+ric analysis have been pursued to evaluate the StarDICE performance to refine the CALSPEC
+calibration, for every ugrizy filter. We have analyzed a total of 9 observation nights of G191B2B,
+and studied the accuracy at which StarDICE can measure the zero point of each filter.
+The results are depicted in Figure 4, showing the Root Mean Square of the zero point
+measurement for each filter, normalized by the square root of the observation nights Nnights.
+With Nnights = 9, the StarDICE experiment demonstrates the ability to refine the CALSPEC
+calibration to a dispersion of about 1 % for the griz bands. Scaling this performance to a 2-year
+dhttps://www.nist.gov/laboratories/tools-instruments/primary-optical-watt-radiometer-powr-facility
+
+Figure 3 – Calibration transfer of the StarDICE experiment, from the standard watt defined by the NIST to
+the measurement of a type Ia supernovæ. The top row corresponds to the sources, while the bottom shows the
+detectors. The purple box represents every step undertaken by the StarDICE experiment, while the red box shows
+the calibration of the standard stars. Every step of this transfer aims to calibrate more sensitive detectors and
+goes through approximately 20 orders of magnitude of luminosity.
+u
+g
+r
+i
+z
+y
+0.00
+0.02
+0.04
+0.06
+RMS(ZP0)
+Nnights
+Nnights = 1
+Nnights = 9
+Nnights = 84
+Figure 4 – RMS of ZP0 fitted for the 9 photometric nights of observations and for each StarDICE band, normalized
+by the square root of the number of nights. The square represents the RMS for one night of observations; the
+circles represent the RMS for the 9 photometric nights used in this analysis; the triangles represent the predicted
+RMS for 84 observation nights, corresponding to approximately 2 years of the StarDICE survey.
+survey, equivalent to ∼80 observation nights, we estimate achieving a dispersion of 0.2 % to
+0.4 % for the griz bands. This precision is roughly two to four times higher than the target
+needed to reduce the systematic bias on the w determination to less than 3 %.
+Significant improvements are expected for the StarDICE experiment in the coming years,
+which will hopefully reduce the zero point dispersion. These enhancements include the instal-
+lation of an artificial star to continuously monitor telescope calibration, an infrared camera to
+track cloud-induced extinction, and the implementation of spectrophotometric analysis for more
+accurate atmospheric contribution estimations.
+References
+1. Bohlin et al., 2014, https://ui.adsabs.harvard.edu/abs/2014PASP..126..711B
+2. Guy et al., 2007, https://ui.adsabs.harvard.edu/abs/2007A&A...466...11G
+3. Houston et al. 2008, https://doi.org/10.6028/NIST.SP.250-41e2008
+4. Betoule et al. 2023, https://ui.adsabs.harvard.edu/abs/2023A&A...670A.119B
+

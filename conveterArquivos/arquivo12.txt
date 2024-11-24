@@ -1,0 +1,2147 @@
+EUROPEAN ORGANIZATION FOR NUCLEAR RESEARCH (CERN)
+CERN-EP-2024-272
+LHCb-PAPER-2024-041
+November 7, 2024
+Measurement of the ψ(2S) to J/ψ
+cross-section ratio as a function of
+centrality in PbPb collisions at
+√sNN = 5.02 TeV
+LHCb collaboration†
+Abstract
+The dissociation of quarkonium states with different binding energies produced in
+heavy-ion collisions is a powerful probe for investigating the formation and properties
+of the quark-gluon plasma. The ratio of production cross-sections of ψ(2S) and J/ψ
+mesons times the ratio of their branching fractions into the dimuon final state is
+measured as a function of centrality using data collected by the LHCb detector in
+PbPb collisions at √sNN = 5.02 TeV. The measured ratio shows no dependence on
+the collision centrality, and is compared to the latest theory predictions and to the
+recent measurements in literature.
+Submitted to JHEP
+© 2024 CERN for the benefit of the LHCb collaboration. CC BY 4.0 licence.
+†Authors are listed at the end of this paper.
+arXiv:2411.05669v1  [nucl-ex]  8 Nov 2024
+
+ii
+
+1
+Introduction
+The production of charmonia, in particular of the J/ψ and ψ(2S) states, has long been
+considered a key probe for understanding the properties of the quark-gluon plasma (QGP).
+The idea that quarkonium suppression is an indicator of QGP formation was introduced by
+T. Matsui and H. Satz, who proposed that in deconfined nuclear matter, cc pairs become
+unbound under the effect of colour screening [1]. Following their theory, quarkonium states,
+and in particular those that are loosely bound (Fig. 1), dissociate in the hot and dense
+medium produced in heavy-ion collisions. Experimentally, the relative yields between
+different quarkonium states are thus expected to change with the centrality of the collision,
+the latter being closely related to the temperature of the medium.
+Early results from the NA50 collaboration at the SPS showed J/ψ suppression in PbPb
+collisions [2,3]. These results were extensively debated but were not a conclusive signature
+of QGP formation as other competing mechanisms can also contribute to quarkonium
+suppression, including cold nuclear matter (CNM) effects such as shadowing and nuclear
+absorption, and final-state interactions with comoving particles. Further studies by the
+E866 [4], PHENIX [5], ALICE [6], CMS [7] and LHCb [8, 9] experiments showed that
+the suppression is observed even in smaller collision systems like proton-nucleus (pA),
+known to be less prone to colour-screening effects. In particular, the suppression of
+ψ(2S) production relative to that of J/ψ states in pA collisions suggests that comovers,
+rather than QGP effects alone, are important in understanding quarkonium behaviour in
+high-energy collisions. Theoretical models accounting for these effects have been developed
+to provide a more comprehensive interpretation of the data [10].
+In addition, J/ψ production in heavy-ion collisions was extensively studied by RHIC
+and LHC experiments which played a crucial role in understanding quarkonium suppression
+in a hot and dense medium. Results from the PHENIX [11] and STAR [12] experiments
+demonstrated significant suppression of J/ψ yields in AuAu collisions, while also providing
+insight into the competing effects of QGP formation and CNM contributions. These
+findings were then complemented by the ALICE [13] and CMS [14] experiments which
+studied charmonium production in a variety of collision systems including PbPb, and also
+by the LHCb collaboration, which focused on the different production mechanisms [15].
+Together, these studies have advanced the understanding of the interplay between cold
+and hot nuclear matter effects, motivating new investigations of the properties of the
+medium through the relative suppression of quarkonium states.
+In this paper, the relative production of ψ(2S) to J/ψ states, both decaying to two
+muons, is studied as a function of centrality using the 2018 PbPb collision data collected
+at a nucleon-nucleon centre-of-mass energy of √sNN = 5.02 TeV by the LHCb experiment,
+corresponding to an integrated luminosity of around 230 µb−1 [18]. The ratio of cross-
+sections (σ) of the two charmonium states multiplied by their branching fractions (B) in
+the dimuon channel is measured as
+B(ψ(2S) →µ+µ−)
+B(J/ψ →µ+µ−) · σ(ψ(2S))
+σ(J/ψ) = N(ψ(2S))
+N(J/ψ) · εtot(J/ψ)
+εtot(ψ(2S)),
+(1)
+where N and εtot are the signal yields and efficiencies, respectively.
+1
+
+Figure 1: Binding energies of different quarkonium states taken from Ref. [16]. The hatched band
+indicates the QGP temperature estimated from thermal photon yields [17] in PbPb collisions at
+√sNN = 2.76 TeV. The symbol ψ′ stands for the ψ(2S) state.
+2
+The LHCb detector and data selection
+The LHCb detector [19,20] is a single-arm forward spectrometer covering the pseudorapidity
+range 2 < η < 5, designed for the study of particles containing b or c quarks. The detector
+includes a high-precision tracking system consisting of a silicon-strip vertex detector
+(VELO) surrounding the interaction region [21], a large-area silicon-strip detector located
+upstream of a dipole magnet with a bending power of about 4 T m, and three stations of
+silicon-strip detectors and straw drift tubes [22] placed downstream of the magnet. The
+tracking system provides a measurement of the momentum, p, of charged particles with a
+relative uncertainty that varies from 0.5% at low momentum to 1.0% at 200 GeV/c. The
+minimum distance of a track to a primary vertex (PV), the impact parameter, is measured
+with a resolution of (15 + 29/pT) µm, where pT is the component of the momentum
+transverse to the beam, in GeV/c. Different types of charged hadrons are distinguished
+using information from two ring-imaging Cherenkov detectors (RICH) [23]. Photons,
+electrons and hadrons are identified by a calorimeter system consisting of scintillating-pad
+and preshower detectors, an electromagnetic and a hadronic calorimeter (ECAL and
+HCAL). Muons are identified by a system composed of alternating layers of iron and
+multiwire proportional chambers [24].
+The online event selection is performed by a trigger [25], which consists of a hardware
+stage, based on information from the calorimeter and muon systems, followed by a software
+stage, which applies a full event reconstruction. At the hardware level, events are required
+to have a muon with high pT. Events are selected at software level if the number of
+clusters in the VELO, Nc, satisfies 6000 < Nc < 10000 or if Nc < 6000 and two muons
+with pT > 400 MeV/c are identified. Moreover, to suppress contamination from Pb-gas
+interactions,1 a minimum of 15 VELO tracks in the backward direction, η < 0, is required,
+along with the condition that the PV must be close to the beam collision point. The
+1Neon gas was injected in the beam pipe near the interaction point, using the LHCb fixed-target SMOG
+system [18], concurrently with PbPb collisions.
+2
+
+J/ψ and ψ(2S) candidates are reconstructed in the dimuon final state, satisfying selection
+requirements on transverse momentum, 0.3 < pT < 10 GeV/c, and rapidity, 2.0 < y < 4.5.
+The two muons are both required to have pT greater then 900 MeV/c and to satisfy particle
+identification (PID) requirements based on information from the RICH, calorimeter and
+muon systems.
+3
+Yields in centrality intervals
+The charmonium yields are determined in intervals of the collision centrality. Centrality
+intervals are defined as percentiles of the total inelastic hadronic PbPb cross-section and
+are associated with the impact parameter of the colliding particles and the mean number
+of participating nucleons, ⟨Npart⟩[26]. A higher centrality percentile corresponds to more
+peripheral collisions with a larger impact parameter, while a lower centrality percentile
+corresponds to more central collisions with a smaller impact parameter. To estimate
+these geometric quantities, the Glauber Monte Carlo (GMC) model adapted to LHCb
+conditions is used [26, 27]. The impact parameter cannot be measured directly and is
+instead estimated using the total energy deposited in the ECAL, with which it scales
+linearly. The method is based on a binned fit of the total ECAL energy in simulated
+minimum-bias PbPb interactions where the GMC model is used and the experimental
+conditions of the signal sample are reproduced. This fit establishes a per-event dependence
+of ⟨Npart⟩and the collision centrality in terms of the energy deposited in the ECAL. The
+centrality intervals used are defined in Table 1. The data used to determine the ratio are
+limited to centrality values down to about 65 % due to the inability of the detector to
+cope with the increasing occupancy.
+The charmonium yields, N(ψ(2S)) and N(J/ψ), are extracted by an unbinned
+maximum-likelihood fit to the dimuon invariant-mass distribution in each centrality
+interval where the J/ψ signal is modelled by a Crystal Ball function [28] with tail param-
+eters fixed from simulation. A Gaussian function is used to describe the ψ(2S) signal;
+the difference between the peak positions of the J/ψ and ψ(2S) signals is fixed to the
+difference of the known masses of the two states [29]. The background is described by
+an exponential function. Figure 2 shows the dimuon invariant-mass distribution in each
+centrality interval compared to the fit results. The J/ψ and ψ(2S) yields extracted by the
+fit are shown in Table 1.
+Table 1: Range for the number of participating nucleons ⟨Npart⟩and signal yields in each
+centrality interval.
+Centrality (%)
+90–100
+80–90
+70–80
+60–70
+⟨Npart⟩
+2.4–5.5
+5.5–13.0
+13.0–26.5
+26.5–48.0
+N(J/ψ)
+596 ± 28
+2099 ± 52
+3320 ± 74
+2221 ± 77
+N(ψ(2S))
+13 ± 5
+53 ± 14
+68 ± 26
+85 ± 36
+3
+
+3000
+3500
+4000
+]
+2c
+) [MeV/
+−
+µ
++
+µ
+(
+m
+1
+10
+2
+10
+3
+10
+4
+10
+)
+2c
+Candidates / (11 MeV/
+Data
+ signal
+ψ
+J/
+(2S) signal
+ψ
+Background
+Total
+60% < Centrality < 70%
+LHCb
+ = 5.02 TeV PbPb
+NN
+s
+3000
+3500
+4000
+]
+2c
+) [MeV/
+−
+µ
++
+µ
+(
+m
+1
+10
+2
+10
+3
+10
+4
+10
+)
+2c
+Candidates / (11 MeV/
+Data
+ signal
+ψ
+J/
+(2S) signal
+ψ
+Background
+Total
+70% < Centrality < 80%
+LHCb
+ = 5.02 TeV PbPb
+NN
+s
+3000
+3500
+4000
+]
+2c
+) [MeV/
+−
+µ
++
+µ
+(
+m
+1
+10
+2
+10
+3
+10
+4
+10
+)
+2c
+Candidates / (11 MeV/
+Data
+ signal
+ψ
+J/
+(2S) signal
+ψ
+Background
+Total
+80% < Centrality < 90%
+LHCb
+ = 5.02 TeV PbPb
+NN
+s
+3000
+3500
+4000
+]
+2c
+) [MeV/
+−
+µ
++
+µ
+(
+m
+1
+10
+2
+10
+3
+10
+4
+10
+)
+2c
+Candidates / (11 MeV/
+Data
+ signal
+ψ
+J/
+(2S) signal
+ψ
+Background
+Total
+90% < Centrality < 100%
+LHCb
+ = 5.02 TeV PbPb
+NN
+s
+Figure 2: Dimuon invariant-mass distributions in each centrality interval after all selection
+requirements are applied, compared to the fit results.
+4
+Simulation and efficiencies
+The total signal selection efficiencies εtot in Eq. 1 are determined using simulation. The
+simulated decays are reconstructed and analysed using the same software tools as those
+used to process the data. In the simulation, J/ψ and ψ(2S) particles are generated
+using Pythia [30] and embedded into minimum-bias PbPb collisions from the EPOS
+event generator [31]. The decays of unstable particles are described by EvtGen [32],
+in which final-state radiation is generated using PHOTOS [33]. The interaction of the
+generated particles with the detector and its response are implemented using the GEANT4
+toolkit [34, 35] adapted to LHCb [36]. After reconstruction, the simulated events are
+weighted to improve agreement with data. The correction weights are obtained as a
+function of pT and Nc from the background-subtracted data and simulation sample of J/ψ
+candidates. The total efficiencies include the geometric acceptance of the detector, the
+candidate reconstruction and selection, the particle identification and the effect of the
+trigger, which are estimated in each centrality interval, using the weighted simulation.
+The acceptance efficiency, defined as the fraction of J/ψ →µ+µ−decays with both
+muons entering the acceptance of the LHCb spectrometer, is determined using a simulation
+sample produced without any requirement on the kinematics of the decay products. This
+efficiency is found to be independent of centrality. The combined reconstruction and
+selection efficiency is calculated as the fraction of generated events in the acceptance that
+pass the selection requirements other than those related to PID and the trigger. The PID
+efficiency for the two muons is estimated from dedicated pp calibration data samples, and
+computed as a function of the muon kinematics. Specifically, the muon PID efficiency
+is determined in intervals of muon pT and Nc, showing a smooth dependence up to the
+4
+
+Table 2: Range of the relative systematic uncertainty contributions for the ratio measurement
+across the four centrality intervals.
+Source
+Uncertainty (%)
+Signal fit model
+0.5–2.2
+Background fit model
+0.5–6.3
+Weighting procedure
+0.1–0.2
+PID efficiency extrapolation
+0.1–2.8
+Simulation sample size
+0.5–1.0
+Trigger efficiency estimation
+< 0.1
+edge of the multiplicity region at Nc = 5000. In each muon pT bin, it is then extrapolated
+via a quadratic fit function to Nc values up to 10000, to cover the multiplicity region of
+the measurement reported here using PbPb collisions. Finally, the trigger efficiency is
+computed as the fraction of simulated signal particles that pass the trigger requirement.
+5
+Systematic uncertainties
+Several sources of systematic uncertainty associated with the determination of the signal
+and background yields and with the evaluation of the efficiencies are considered.
+The systematic uncertainty arising from the signal parametrisation consists of two
+contributions. The first is associated with the choice of the fixed parameters of the J/ψ
+signal fit function. It is estimated by varying the parameters within their uncertainties
+obtained in simulation. The second contribution is estimated by repeating the signal yield
+extraction with an alternative parametrisation of the J/ψ signal using the convolution of a
+Crystal Ball and a Gaussian function where both widths are free to vary. Compared to the
+large statistical uncertainty affecting the ψ(2S) yield, the systematic uncertainty arising
+from the ψ(2S) fit model is negligibly small and ignored. The uncertainty in background
+modelling is assessed by comparing the results from the baseline fit to those obtained
+using a second-order polynomial instead of the exponential function.
+The systematic uncertainty arising from the evaluation of the efficiencies consists
+of different contributions. The first contribution is related to the weighting procedure
+applied to the simulation, and is taken into consideration by randomly varying each weight
+within its uncertainty and estimating the total efficiencies again. Using 50 different sets
+of generated weights, the uncertainty considered is the relative variation of the obtained
+efficiencies. Another contribution pertains to the estimation of the PID efficiency. An
+alternative approach is used, where the extrapolation to the high-multiplicity region that
+is not covered by the pp calibration sample is performed with a linear function instead of
+a second-order polynomial. The limited size of the simulation sample used to determine
+the efficiencies is also a source of systematic uncertainty, and is taken into account using
+the statistical uncertainties of the efficiencies determined from simulation. Finally, a
+systematic uncertainty due to the trigger efficiency is assigned by using a data-driven
+method where the efficiency is determined from events triggered independently of the
+signal muons [37]. The total systematic uncertainty is computed as the sum in quadrature
+of each contribution shown in Table 2.
+5
+
+6
+Results
+The results in different centrality intervals are listed in Table 3 and are presented as a
+function of the number of participating nucleons ⟨Npart⟩in Figs. 3 and 4, where they are
+compared with some of the recently published measurements and with theory predictions,
+respectively. In particular, Fig. 3 compares these results to the ALICE measurement [38],
+performed in PbPb collisions at the same centre-of-mass energy and at similar rapidities
+and transverse momenta but covering different centrality region. The two measurements
+are in agreement within uncertainties in the overlapping region, showing no dependency
+on ⟨Npart⟩. The LHCb pp [39] and pPb [40] measurements are reported in the same figure
+showing also agreement with the results reported here. The ratio measured in these studies
+is integrated over the kinematic range, and is associated with a number of participating
+nucleons of ⟨Npart⟩= 2 (8) for the pp (pPb) measurement, as estimated using the GMC
+model [27].
+Figure 4 shows a comparison of these results with two recent theoretical calculations.
+In the statistical hadronization model (SHMc) [41,42], it is assumed that, near the phase
+boundary between the QGP at high temperatures and the confined hadronic matter at
+lower temperatures, a fireball is formed during collisions, which is near thermal equilibrium.
+The TAMU model [43,44] is a transport model developed in a nonperturbative hydro-
+Langevin-RRM framework that includes collisional energy loss and heavy-quark diffusion
+in the medium. When compared to the data reported in this article, the SHMc model,
+although showing no dependency of the ratio on the centrality, generally underestimates its
+value. On the other hand, the TAMU model predictions are in better agreement with the
+experimental result, especially in the lower multiplicity intervals. A slight disagreement is
+observed in the highest multiplicity interval, where the data differ from the two theoretical
+predictions and the ALICE measurement by approximately 1.5 standard deviations.
+Table 3: Cross-section times branching fraction ratio between ψ(2S) and J/ψ states in intervals
+of centrality and corresponding number of participating nucleons ⟨Npart⟩. The first uncertainties
+are statistical and the second are systematic.
+Centrality (%)
+⟨Npart⟩
+B(ψ(2S) →µ+µ−)
+B(J/ψ →µ+µ−) · σ(ψ(2S))
+σ(J/ψ)
+90–100
+2.40–5.50
+0.018 ± 0.007 ± 0.001
+80–90
+5.50–13.0
+0.020 ± 0.005 ± 0.001
+70–80
+13.0–26.5
+0.016 ± 0.006 ± 0.001
+60–70
+26.5–48.0
+0.027 ± 0.011 ± 0.001
+6
+
+1
+10
+2
+10
+〉
+part
+N
+〈
+0
+0.01
+0.02
+0.03
+0.04
+0.05
+0.06
+0.07
+)
+ψ
+(J/
+σ
+(2S))
+ψ
+(
+σ
+ ⋅ 
+)
+−
+µ
++
+µ
+→
+ψ
+(J/
+B
+)
+−
+µ
++
+µ
+→
+(2S)
+ψ
+(
+B
+this work
+PRL 132 (2024) 042301
+JHEP 05 (2024) 243
+JHEP 04 (2024) 111
+JHEP 04 (2024) 111
+LHCb 5.02 TeV PbPb,
+ALICE 5.02 TeV PbPb,
+LHCb 13.0 TeV pp,
+LHCb 8.16 TeV pPb,
+LHCb 8.16 TeV Pbp,
+Figure 3: Cross-section times branching fraction ratio between ψ(2S) and J/ψ states as a function
+of the number of participating nucleons ⟨Npart⟩compared with ALICE PbPb [38] and LHCb
+pp [39] and pPb [40] results.
+20
+40
+60
+〉
+part
+N
+〈
+0
+0.01
+0.02
+0.03
+0.04
+0.05
+0.06
+0.07
+)
+ψ
+(J/
+σ
+(2S))
+ψ
+(
+σ
+ ⋅ 
+)
+−
+µ
++
+µ
+→
+ψ
+(J/
+B
+)
+−
+µ
++
+µ
+→
+(2S)
+ψ
+(
+B
+this work
+PRB 797 (2019) 134836
+NPA 943 (2015) 147
+LHCb 5.02 TeV, 2.0 < y < 4.5,
+SHMc 5.02 TeV, 2.0 < y < 4.5,
+TAMU 5.02 TeV, 2.5 < y < 4.0,
+Figure 4: Cross-section times branching fraction ratio between ψ(2S) and J/ψ states as a function
+of the number of participating nucleons ⟨Npart⟩compared with the SHMc [41,42] and TAMU
+models [43,44] predictions shown by the coloured bands representing the uncertainties.
+7
+
+7
+Conclusions
+The ψ(2S) to J/ψ production cross-section ratio in PbPb collisions at a centre-of-mass
+energy of 5.02 TeV corresponding to an integrated luminosity of around 230 µb−1 is
+measured as a function of event centrality. No significant dependence on the centrality is
+found. The results are also compared to the latest theory predictions, with which they
+agree within 1.5 standard deviations or better, with a slight tension in the lowest centrality
+interval. The SHMc calculations tend to underestimate the data over the whole range; the
+TAMU model achieves a better description. However, the current experimental precision
+precludes any firm conclusion. This study is a first step towards a deeper understanding
+of quarkonium production in PbPb collisions at midcentrality that can be achieved by
+additional measurements with the upgraded LHCb detector in Run 3 [45].
+Acknowledgements
+We thank Anton Andronic, Ralf Rapp and Biao Gang for providing the theoretical
+predictions for our measurement. We express our gratitude to our colleagues in the CERN
+accelerator departments for the excellent performance of the LHC. We thank the technical
+and administrative staff at the LHCb institutes. We acknowledge support from CERN and
+from the national agencies: CAPES, CNPq, FAPERJ and FINEP (Brazil); MOST and
+NSFC (China); CNRS/IN2P3 (France); BMBF, DFG and MPG (Germany); INFN (Italy);
+NWO (Netherlands); MNiSW and NCN (Poland); MCID/IFA (Romania); MICIU and
+AEI (Spain); SNSF and SER (Switzerland); NASU (Ukraine); STFC (United Kingdom);
+DOE NP and NSF (USA). We acknowledge the computing resources that are provided by
+CERN, IN2P3 (France), KIT and DESY (Germany), INFN (Italy), SURF (Netherlands),
+PIC (Spain), GridPP (United Kingdom), CSCS (Switzerland), IFIN-HH (Romania),
+CBPF (Brazil), and Polish WLCG (Poland). We are indebted to the communities behind
+the multiple open-source software packages on which we depend. Individual groups or
+members have received support from ARC and ARDC (Australia); Key Research Program
+of Frontier Sciences of CAS, CAS PIFI, CAS CCEPP, Fundamental Research Funds for
+the Central Universities, and Sci. & Tech. Program of Guangzhou (China); Minciencias
+(Colombia); EPLANET, Marie Sk lodowska-Curie Actions, ERC and NextGenerationEU
+(European Union); A*MIDEX, ANR, IPhU and Labex P2IO, and R´egion Auvergne-Rhˆone-
+Alpes (France); AvH Foundation (Germany); ICSC (Italy); Severo Ochoa and Mar´ıa
+de Maeztu Units of Excellence, GVA, XuntaGal, GENCAT, InTalent-Inditex and Prog.
+Atracci´on Talento CM (Spain); SRC (Sweden); the Leverhulme Trust, the Royal Society
+and UKRI (United Kingdom).
+References
+[1] T. Matsui and H. Satz, J/ψ suppression by quark-gluon plasma formation, Phys.
+Lett. B178 (1986) 416.
+[2] NA50 collaboration, M. C. Abreu et al., J/ψ and Drell-Yan cross-sections in PbPb
+interactions at 158 GeV/c per nucleon, Phys. Lett. B410 (1997) 327.
+8
+
+[3] NA50 collaboration, B. Alessandro et al., A new measurement of J/ψ suppres-
+sion in Pb-Pb collisions at 158 GeV per nucleon, Eur. Phys. J. C39 (2005) 335,
+arXiv:hep-ex/0412036.
+[4] NuSea Collaboration, M. J. Leitch et al., Measurement of differences between J/ψ
+and ψ
+′ suppression in p −A collisions, Phys. Rev. Lett. 84 (2000) 3256.
+[5] PHENIX collaboration, U. A. Acharya et al., Measurement of ψ(2S) nuclear modifi-
+cation at backward and forward rapidity in p + p, p + Al, and p + Au collisions at
+√sNN = 200 GeV, Phys. Rev. C105 (2022) 064912, arXiv:2202.03863.
+[6] ALICE collaboration, B. B. Abelev et al., Suppression of ψ(2S) production in p-Pb
+collisions at √sNN = 5.02 TeV, JHEP 12 (2014) 073, arXiv:1405.3796.
+[7] CMS collaboration, A. M. Sirunyan et al., Measurement of prompt ψ(2S) production
+cross sections in proton-lead and proton-proton collisions at √sNN = 5.02 TeV, Phys.
+Lett. B790 (2019) 509, arXiv:1805.02248.
+[8] LHCb collaboration, R. Aaij et al., Study of ψ(2S) production and cold nuclear matter
+effects in pPb collisions at √sNN = 5 TeV, JHEP 03 (2016) 133, arXiv:1601.07878.
+[9] LHCb collaboration, R. Aaij et al., Prompt and nonprompt J/ψ production and
+nuclear modification in pPb collisions at √sNN = 8.16 TeV, Phys. Lett. B774 (2017)
+159, arXiv:1706.07122.
+[10] E. G. Ferreiro, Excited charmonium suppression in proton–nucleus collisions as a
+consequence of comovers, Phys. Lett. B749 (2015) 98, arXiv:1411.0549.
+[11] PHENIX collaboration, A. Adare et al., J/ψ production vs centrality, transverse
+momentum, and rapidity in Au+Au collisions at √sNN = 200 GeV, Phys. Rev. Lett.
+98 (2007) 232301, arXiv:nucl-ex/0611020.
+[12] STAR collaboration, J. Adam et al., Measurement of inclusive J/ψ suppression in
+Au+Au collisions at √sNN = 200 GeV through the dimuon channel at STAR, Phys.
+Lett. B797 (2019) 134917, arXiv:1905.13669.
+[13] ALICE collaboration, J. Adam et al., J/ψ suppression at forward rapidity in Pb-Pb
+collisions at √sNN = 5.02 TeV, Phys. Lett. B766 (2017) 212, arXiv:1606.08197.
+[14] CMS collaboration, S. Chatrchyan et al., Suppression of non-prompt J/ψ, prompt
+J/ψ, and Υ(1S) in PbPb collisions at √sNN = 2.76 TeV, JHEP 05 (2012) 063,
+arXiv:1201.5069.
+[15] LHCb collaboration, R. Aaij et al., Study of exclusive photoproduction of charmonium
+in ultra-peripheral lead-lead collisions, JHEP 06 (2023) 146, arXiv:2206.08221.
+[16] H. Satz, Colour deconfinement and quarkonium binding, J. Phys. G32 (2006) R25,
+arXiv:hep-ph/0512217.
+[17] ALICE collaboration, J. Adam et al., Direct photon production in Pb-Pb collisions at
+√sNN = 2.76 TeV, Phys. Lett. B754 (2016) 235, arXiv:1509.07324.
+9
+
+[18] LHCb collaboration, R. Aaij et al., Precision luminosity measurements at LHCb,
+JINST 9 (2014) P12005, arXiv:1410.0149.
+[19] LHCb collaboration, A. A. Alves Jr. et al., The LHCb detector at the LHC, JINST 3
+(2008) S08005.
+[20] LHCb collaboration, R. Aaij et al., LHCb detector performance, Int. J. Mod. Phys.
+A30 (2015) 1530022, arXiv:1412.6352.
+[21] R. Aaij et al., Performance of the LHCb Vertex Locator, JINST 9 (2014) P09007,
+arXiv:1405.7808.
+[22] LHCb Outer Tracker Group, P. d’Argent et al., Improved performance of the LHCb
+Outer Tracker in LHC Run 2, JINST 12 (2017) P11016, arXiv:1708.00819.
+[23] LHCb RICH Group, M. Adinolfi et al., Performance of the LHCb RICH detector at
+the LHC, Eur. Phys. J. C73 (2013) 2431, arXiv:1211.6759.
+[24] A. A. Alves, Jr. et al., Performance of the LHCb muon system, JINST 8 (2013)
+P02022, arXiv:1211.1346.
+[25] R. Aaij et al., Design and performance of the LHCb trigger and full real-time recon-
+struction in Run 2 of the LHC, JINST 14 (2019) P04013, arXiv:1812.10790.
+[26] LHCb collaboration, R. Aaij et al., Centrality determination in heavy-ion collisions
+with the LHCb detector, JINST 17 (2022) P05009, arXiv:2111.01607.
+[27] C. Loizides, J. Nagle, and P. Steinberg, Improved version of the PHOBOS Glauber
+Monte Carlo, SoftwareX 1-2 (2015) 13, arXiv:1408.2549.
+[28] T. Skwarnicki, A study of the radiative cascade transitions between the Upsilon-prime
+and Upsilon resonances, PhD thesis, Institute of Nuclear Physics, Krakow, 1986,
+DESY-F31-86-02.
+[29] Particle Data Group, S. Navas et al., Review of particle physics, Phys. Rev. D110
+(2024) 030001.
+[30] T. Sj¨ostrand, S. Mrenna, and P. Skands, A brief introduction to PYTHIA 8.1, Comput.
+Phys. Commun. 178 (2008) 852, arXiv:0710.3820.
+[31] T. Pierog et al., EPOS LHC: Test of collective hadronization with data measured at
+the CERN Large Hadron Collider, Phys. Rev. C92 (2015) 034906.
+[32] D. J. Lange, The EvtGen particle decay simulation package, Nucl. Instrum. Meth.
+A462 (2001) 152.
+[33] P. Golonka and Z. Was, PHOTOS Monte Carlo: a precision tool for QED correctionsin
+Z and W decays, Eur. Phys. J. C45 (2006) 97.
+[34] Geant4 collaboration, S. Agostinelli et al., Geant4: A simulation toolkit, Nucl. Instrum.
+Meth. A506 (2003) 250.
+10
+
+[35] Geant4 collaboration, J. Allison et al., Geant4 developments and applications, IEEE
+Trans. Nucl. Sci. 53 (2006) 270.
+[36] M. Clemencic et al., The LHCb simulation application, Gauss: Design, evolution and
+experience, J. Phys. Conf. Ser. 331 (2011) 032023.
+[37] R. Aaij et al., The LHCb trigger and its performance in 2011, JINST 8 (2013) P04022,
+arXiv:1211.3055.
+[38] ALICE collaboration, S. Acharya et al., ψ(2S) suppression in Pb-Pb collisions at the
+LHC, Phys. Rev. Lett. 132 (2024) 042301, arXiv:2210.08893.
+[39] LHCb collaboration, R. Aaij et al., Multiplicity dependence of σψ(2S)/σJ/ψ in pp
+collisions at √s = 13 TeV, JHEP 05 (2024) 243, arXiv:2312.15201.
+[40] LHCb collaboration, R. Aaij et al., Prompt and nonprompt ψ(2S) production in pPb
+collisions at √sNN = 8.16 TeV, JHEP 04 (2024) 111, arXiv:2401.11342.
+[41] A. Andronic et al., Transverse momentum distributions of charmonium states with the
+statistical hadronization model, Phys. Lett. B797 (2019) 134836, arXiv:1901.09200.
+[42] A. Andronic, P. Braun-Munzinger, K. Redlich, and J. Stachel, Decoding the phase
+structure of QCD via particle production at high energy, Nature 561 (2018) 321,
+arXiv:1710.09425.
+[43] X. Du and R. Rapp, Sequential regeneration of charmonia in heavy-ion collisions,
+Nucl. Phys. A943 (2015) 147, arXiv:1504.00670.
+[44] B. Wu and R. Rapp, Charmonium transport in heavy-ion collisions at the LHC,
+Universe 10 (2024) 244, arXiv:2404.09881.
+[45] LHCb collaboration, R. Aaij et al., The LHCb Upgrade I, JINST 19 (2024) P05065,
+arXiv:2305.10515.
+11
+
+LHCb collaboration
+R. Aaij38
+, A.S.W. Abdelmotteleb57
+, C. Abellan Beteta51, F. Abudin´en57
+,
+T. Ackernley61
+, A. A. Adefisoye69
+, B. Adeva47
+, M. Adinolfi55
+, P. Adlarson82
+,
+C. Agapopoulou14
+, C.A. Aidala83
+, Z. Ajaltouni11, S. Akar66
+, K. Akiba38
+,
+P. Albicocco28
+, J. Albrecht19
+, F. Alessio49
+, M. Alexander60
+, Z. Aliouche63
+,
+P. Alvarez Cartelle56
+, R. Amalric16
+, S. Amato3
+, J.L. Amey55
+, Y. Amhis14
+,
+L. An6
+, L. Anderlini27
+, M. Andersson51
+, A. Andreianov44
+, P. Andreola51
+,
+M. Andreotti26
+, D. Andreou69
+, A. Anelli31,n
+, D. Ao7
+, F. Archilli37,t
+,
+M. Argenton26
+, S. Arguedas Cuendis9,49
+, A. Artamonov44
+, M. Artuso69
+,
+E. Aslanides13
+, R. Ata´ıde Da Silva50
+, M. Atzeni65
+, B. Audurier12
+, D. Bacher64
+,
+I. Bachiller Perea10
+, S. Bachmann22
+, M. Bachmayer50
+, J.J. Back57
+,
+P. Baladron Rodriguez47
+, V. Balagura15
+, A. Balboni26
+, W. Baldini26
+, L. Balzani19
+,
+H. Bao7
+, J. Baptista de Souza Leite61
+, C. Barbero Pretel47,12
+, M. Barbetti27
+, I.
+R. Barbosa70
+, R.J. Barlow63
+, M. Barnyakov25
+, S. Barsuk14
+, W. Barter59
+,
+M. Bartolini56
+, J. Bartz69
+, J.M. Basels17
+, S. Bashir40
+, G. Bassi35,q
+, B. Batsukh5
+,
+P. B. Battista14, A. Bay50
+, A. Beck57
+, M. Becker19
+, F. Bedeschi35
+, I.B. Bediaga2
+,
+N. A. Behling19
+, S. Belin47
+, K. Belous44
+, I. Belov29
+, I. Belyaev36
+, G. Benane13
+,
+G. Bencivenni28
+, E. Ben-Haim16
+, A. Berezhnoy44
+, R. Bernet51
+, S. Bernet Andres45
+,
+A. Bertolin33
+, C. Betancourt51
+, F. Betti59
+, J. Bex56
+, Ia. Bezshyiko51
+, J. Bhom41
+,
+M.S. Bieker19
+, N.V. Biesuz26
+, P. Billoir16
+, A. Biolchini38
+, M. Birch62
+,
+F.C.R. Bishop10
+, A. Bitadze63
+, A. Bizzeti
+, T. Blake57
+, F. Blanc50
+, J.E. Blank19
+,
+S. Blusk69
+, V. Bocharnikov44
+, J.A. Boelhauve19
+, O. Boente Garcia15
+,
+T. Boettcher66
+, A. Bohare59
+, A. Boldyrev44
+, C.S. Bolognani79
+, R. Bolzonella26,k
+,
+R. B. Bonacci1
+, N. Bondar44
+, A. Bordelius49
+, F. Borgato33,o
+, S. Borghi63
+,
+M. Borsato31,n
+, J.T. Borsuk41
+, S.A. Bouchiba50
+, M. Bovill64
+, T.J.V. Bowcock61
+,
+A. Boyer49
+, C. Bozzi26
+, A. Brea Rodriguez50
+, N. Breer19
+, J. Brodzicka41
+,
+A. Brossa Gonzalo47,†
+, J. Brown61
+, D. Brundu32
+, E. Buchanan59, A. Buonaura51
+,
+L. Buonincontri33,o
+, A.T. Burke63
+, C. Burr49
+, J.S. Butter56
+, J. Buytaert49
+,
+W. Byczynski49
+, S. Cadeddu32
+, H. Cai74, A. C. Caillet16, R. Calabrese26,k
+,
+S. Calderon Ramirez9
+, L. Calefice46
+, S. Cali28
+, M. Calvi31,n
+, M. Calvo Gomez45
+,
+P. Camargo Magalhaes2,x
+, J. I. Cambon Bouzas47
+, P. Campana28
+,
+D.H. Campora Perez79
+, A.F. Campoverde Quezada7
+, S. Capelli31
+, L. Capriotti26
+,
+R. Caravaca-Mora9
+, A. Carbone25,i
+, L. Carcedo Salgado47
+, R. Cardinale29,l
+,
+A. Cardini32
+, P. Carniti31,n
+, L. Carus22, A. Casais Vidal65
+, R. Caspary22
+,
+G. Casse61
+, M. Cattaneo49
+, G. Cavallero26,49
+, V. Cavallini26,k
+, S. Celani22
+,
+D. Cervenkov64
+, S. Cesare30,m
+, A.J. Chadwick61
+, I. Chahrour83
+, M. Charles16
+,
+Ph. Charpentier49
+, E. Chatzianagnostou38
+, M. Chefdeville10
+, C. Chen13
+, S. Chen5
+,
+Z. Chen7
+, A. Chernov41
+, S. Chernyshenko53
+, X. Chiotopoulos79
+, V. Chobanova81
+,
+S. Cholak50
+, M. Chrzaszcz41
+, A. Chubykin44
+, V. Chulikov28
+, P. Ciambrone28
+,
+X. Cid Vidal47
+, G. Ciezarek49
+, P. Cifra49
+, P.E.L. Clarke59
+, M. Clemencic49
+,
+H.V. Cliff56
+, J. Closier49
+, C. Cocha Toapaxi22
+, V. Coco49
+, J. Cogan13
+,
+E. Cogneras11
+, L. Cojocariu43
+, S. Collaviti50
+, P. Collins49
+, T. Colombo49
+, M. C.
+Colonna19
+, A. Comerma-Montells46
+, L. Congedo24
+, A. Contu32
+, N. Cooke60
+,
+I. Corredoira 47
+, A. Correia16
+, G. Corti49
+, J.J. Cottee Meldrum55, B. Couturier49
+,
+D.C. Craik51
+, M. Cruz Torres2,f
+, E. Curras Rivera50
+, R. Currie59
+, C.L. Da Silva68
+,
+S. Dadabaev44
+, L. Dai71
+, X. Dai6
+, E. Dall’Occo49
+, J. Dalseno47
+,
+C. D’Ambrosio49
+, J. Daniel11
+, A. Danilina44
+, P. d’Argent24
+, G. Darze3, A.
+Davidson57
+, J.E. Davies63
+, A. Davis63
+, O. De Aguiar Francisco63
+, C. De Angelis32,j
+,
+F. De Benedetti49
+, J. de Boer38
+, K. De Bruyn78
+, S. De Capua63
+, M. De Cian22
+,
+12
+
+U. De Freitas Carneiro Da Graca2,a
+, E. De Lucia28
+, J.M. De Miranda2
+, L. De Paula3
+,
+M. De Serio24,g
+, P. De Simone28
+, F. De Vellis19
+, J.A. de Vries79
+, F. Debernardis24
+,
+D. Decamp10
+, V. Dedu13
+, S. Dekkers1
+, L. Del Buono16
+, B. Delaney65
+,
+H.-P. Dembinski19
+, J. Deng8
+, V. Denysenko51
+, O. Deschamps11
+, F. Dettori32,j
+,
+B. Dey77
+, P. Di Nezza28
+, I. Diachkov44
+, S. Didenko44
+, S. Ding69
+, L. Dittmann22
+,
+V. Dobishuk53
+, A. D. Docheva60
+, C. Dong4,b
+, A.M. Donohoe23
+, F. Dordei32
+,
+A.C. dos Reis2
+, A. D. Dowling69
+, W. Duan72
+, P. Duda80
+, M.W. Dudek41
+,
+L. Dufour49
+, V. Duk34
+, P. Durante49
+, M. M. Duras80
+, J.M. Durham68
+, O. D.
+Durmus77
+, A. Dziurda41
+, A. Dzyuba44
+, S. Easo58
+, E. Eckstein18, U. Egede1
+,
+A. Egorychev44
+, V. Egorychev44
+, S. Eisenhardt59
+, E. Ejopu63
+, L. Eklund82
+,
+M. Elashri66
+, J. Ellbracht19
+, S. Ely62
+, A. Ene43
+, J. Eschle69
+, S. Esen22
+,
+T. Evans63
+, F. Fabiano32,j
+, L.N. Falcao2
+, Y. Fan7
+, B. Fang7
+, L. Fantini34,p,49
+,
+M. Faria50
+, K. Farmer59
+, D. Fazzini31,n
+, L. Felkowski80
+, M. Feng5,7
+, M. Feo19
+,
+A. Fernandez Casani48
+, M. Fernandez Gomez47
+, A.D. Fernez67
+, F. Ferrari25
+,
+F. Ferreira Rodrigues3
+, M. Ferrillo51
+, M. Ferro-Luzzi49
+, S. Filippov44
+, R.A. Fini24
+,
+M. Fiorini26,k
+, M. Firlej40
+, K.L. Fischer64
+, D.S. Fitzgerald83
+, C. Fitzpatrick63
+,
+T. Fiutowski40
+, F. Fleuret15
+, M. Fontana25
+, L. F. Foreman63
+, R. Forty49
+,
+D. Foulds-Holt56
+, V. Franco Lima3
+, M. Franco Sevilla67
+, M. Frank49
+,
+E. Franzoso26,k
+, G. Frau63
+, C. Frei49
+, D.A. Friday63
+, J. Fu7
+, Q. Fuehring19,56
+,
+Y. Fujii1
+, T. Fulghesu16
+, E. Gabriel38
+, G. Galati24
+, M.D. Galati38
+,
+A. Gallas Torreira47
+, D. Galli25,i
+, S. Gambetta59
+, M. Gandelman3
+, P. Gandini30
+, B.
+Ganie63
+, H. Gao7
+, R. Gao64
+, T.Q. Gao56
+, Y. Gao8
+, Y. Gao6
+, Y. Gao8,
+L.M. Garcia Martin50
+, P. Garcia Moreno46
+, J. Garc´ıa Pardi˜nas49
+, P. Gardner67
+, K. G.
+Garg8
+, L. Garrido46
+, C. Gaspar49
+, R.E. Geertsema38
+, L.L. Gerken19
+,
+E. Gersabeck63
+, M. Gersabeck20
+, T. Gershon57
+, S. G. Ghizzo29,
+Z. Ghorbanimoghaddam55, L. Giambastiani33,o
+, F. I. Giasemis16,e
+, V. Gibson56
+,
+H.K. Giemza42
+, A.L. Gilman64
+, M. Giovannetti28
+, A. Giovent`u46
+, L. Girardey63
+,
+P. Gironella Gironell46
+, C. Giugliano26,k
+, M.A. Giza41
+, E.L. Gkougkousis62
+,
+F.C. Glaser14,22
+, V.V. Gligorov16,49
+, C. G¨obel70
+, E. Golobardes45
+, D. Golubkov44
+,
+A. Golutvin62,44,49
+, S. Gomez Fernandez46
+, W. Gomulka40, F. Goncalves Abrantes64
+,
+M. Goncerz41
+, G. Gong4,b
+, J. A. Gooding19
+, I.V. Gorelov44
+, C. Gotti31
+,
+J.P. Grabowski18
+, L.A. Granado Cardoso49
+, E. Graug´es46
+, E. Graverini50,r
+,
+L. Grazette57
+, G. Graziani
+, A. T. Grecu43
+, L.M. Greeven38
+, N.A. Grieser66
+,
+L. Grillo60
+, S. Gromov44
+, C. Gu15
+, M. Guarise26
+, L. Guerry11
+, M. Guittiere14
+,
+V. Guliaeva44
+, P. A. G¨unther22
+, A.-K. Guseinov50
+, E. Gushchin44
+, Y. Guz6,44,49
+,
+T. Gys49
+, K. Habermann18
+, T. Hadavizadeh1
+, C. Hadjivasiliou67
+, G. Haefeli50
+,
+C. Haen49
+, M. Hajheidari49, G. Hallett57
+, M.M. Halvorsen49
+, P.M. Hamilton67
+,
+J. Hammerich61
+, Q. Han8
+, X. Han22,49
+, S. Hansmann-Menzemer22
+, L. Hao7
+,
+N. Harnew64
+, T. H. Harris1
+, M. Hartmann14
+, S. Hashmi40
+, J. He7,c
+,
+F. Hemmer49
+, C. Henderson66
+, R.D.L. Henderson1,57
+, A.M. Hennequin49
+,
+K. Hennessy61
+, L. Henry50
+, J. Herd62
+, P. Herrero Gascon22
+, J. Heuel17
+,
+A. Hicheur3
+, G. Hijano Mendizabal51, J. Horswill63
+, R. Hou8
+, Y. Hou11
+,
+N. Howarth61, J. Hu72
+, W. Hu6
+, X. Hu4,b
+, W. Huang7
+, W. Hulsbergen38
+,
+R.J. Hunter57
+, M. Hushchyn44
+, D. Hutchcroft61
+, M. Idzik40
+, D. Ilin44
+, P. Ilten66
+,
+A. Inglessi44
+, A. Iniukhin44
+, A. Ishteev44
+, K. Ivshin44
+, R. Jacobsson49
+, H. Jage17
+,
+S.J. Jaimes Elles75,49,48
+, S. Jakobsen49
+, E. Jans38
+, B.K. Jashal48
+, A. Jawahery67,49
+,
+V. Jevtic19
+, E. Jiang67
+, X. Jiang5,7
+, Y. Jiang7
+, Y. J. Jiang6
+, M. John64
+, A.
+John Rubesh Rajan23
+, D. Johnson54
+, C.R. Jones56
+, T.P. Jones57
+, S. Joshi42
+,
+B. Jost49
+, J. Juan Castella56
+, N. Jurik49
+, I. Juszczak41
+, D. Kaminaris50
+,
+S. Kandybei52
+, M. Kane59
+, Y. Kang4,b
+, C. Kar11
+, M. Karacson49
+,
+13
+
+D. Karpenkov44
+, A. Kauniskangas50
+, J.W. Kautz66
+, M.K. Kazanecki41, F. Keizer49
+,
+M. Kenzie56
+, T. Ketel38
+, B. Khanji69
+, A. Kharisova44
+, S. Kholodenko35,49
+,
+G. Khreich14
+, T. Kirn17
+, V.S. Kirsebom31,n
+, O. Kitouni65
+, S. Klaver39
+,
+N. Kleijne35,q
+, K. Klimaszewski42
+, M.R. Kmiec42
+, S. Koliiev53
+, L. Kolk19
+,
+A. Konoplyannikov44
+, P. Kopciewicz40,49
+, P. Koppenburg38
+, M. Korolev44
+,
+I. Kostiuk38
+, O. Kot53, S. Kotriakhova
+, A. Kozachuk44
+, P. Kravchenko44
+,
+L. Kravchuk44
+, M. Kreps57
+, P. Krokovny44
+, W. Krupa69
+, W. Krzemien42
+,
+O.K. Kshyvanskyi53, S. Kubis80
+, M. Kucharczyk41
+, V. Kudryavtsev44
+, E. Kulikova44
+,
+A. Kupsc82
+, B. K. Kutsenko13
+, D. Lacarrere49
+, P. Laguarta Gonzalez46
+, A. Lai32
+,
+A. Lampis32
+, D. Lancierini56
+, C. Landesa Gomez47
+, J.J. Lane1
+, R. Lane55
+,
+G. Lanfranchi28
+, C. Langenbruch22
+, J. Langer19
+, O. Lantwin44
+, T. Latham57
+,
+F. Lazzari35,r
+, C. Lazzeroni54
+, R. Le Gac13
+, H. Lee61
+, R. Lef`evre11
+, A. Leflat44
+,
+S. Legotin44
+, M. Lehuraux57
+, E. Lemos Cid49
+, O. Leroy13
+, T. Lesiak41
+, E. Lesser49,
+B. Leverington22
+, A. Li4,b
+, C. Li13
+, H. Li72
+, K. Li8
+, L. Li63
+, M. Li8, P. Li7
+,
+P.-R. Li73
+, Q. Li5,7
+, S. Li8
+, T. Li5,d
+, T. Li72
+, Y. Li8, Y. Li5
+, Z. Lian4,b
+,
+X. Liang69
+, S. Libralon48
+, C. Lin7
+, T. Lin58
+, R. Lindner49
+, H. Linton62
+,
+V. Lisovskyi50
+, R. Litvinov32,49
+, F. L. Liu1
+, G. Liu72
+, K. Liu73
+, S. Liu5,7
+, W.
+Liu8, Y. Liu59
+, Y. Liu73, Y. L. Liu62
+, A. Lobo Salvia46
+, A. Loi32
+, T. Long56
+,
+J.H. Lopes3
+, A. Lopez Huertas46
+, S. L´opez Soli˜no47
+, Q. Lu15
+, C. Lucarelli27
+,
+D. Lucchesi33,o
+, M. Lucio Martinez79
+, V. Lukashenko38,53
+, Y. Luo6
+, A. Lupato33,h
+,
+E. Luppi26,k
+, K. Lynch23
+, X.-R. Lyu7
+, G. M. Ma4,b
+, S. Maccolini19
+,
+F. Machefert14
+, F. Maciuc43
+, B. Mack69
+, I. Mackay64
+, L. M. Mackey69
+,
+L.R. Madhan Mohan56
+, M. J. Madurai54
+, A. Maevskiy44
+, D. Magdalinski38
+,
+D. Maisuzenko44
+, M.W. Majewski40, J.J. Malczewski41
+, S. Malde64
+, L. Malentacca49,
+A. Malinin44
+, T. Maltsev44
+, G. Manca32,j
+, G. Mancinelli13
+, C. Mancuso30,14,m
+,
+R. Manera Escalero46
+, F. M. Manganella37, D. Manuzzi25
+, D. Marangotto30,m
+,
+J.F. Marchand10
+, R. Marchevski50
+, U. Marconi25
+, E. Mariani16, S. Mariani49
+,
+C. Marin Benito46,49
+, J. Marks22
+, A.M. Marshall55
+, L. Martel64
+, G. Martelli34,p
+,
+G. Martellotti36
+, L. Martinazzoli49
+, M. Martinelli31,n
+, D. Martinez Gomez78
+,
+D. Martinez Santos81
+, F. Martinez Vidal48
+, A. Martorell i Granollers45
+,
+A. Massafferri2
+, R. Matev49
+, A. Mathad49
+, V. Matiunin44
+, C. Matteuzzi69
+,
+K.R. Mattioli15
+, A. Mauri62
+, E. Maurice15
+, J. Mauricio46
+, P. Mayencourt50
+,
+J. Mazorra de Cos48
+, M. Mazurek42
+, M. McCann62
+, L. Mcconnell23
+,
+T.H. McGrath63
+, N.T. McHugh60
+, A. McNab63
+, R. McNulty23
+, B. Meadows66
+,
+G. Meier19
+, D. Melnychuk42
+, F. M. Meng4,b
+, M. Merk38,79
+, A. Merli50
+,
+L. Meyer Garcia67
+, D. Miao5,7
+, H. Miao7
+, M. Mikhasenko76
+, D.A. Milanes75
+,
+A. Minotti31,n
+, E. Minucci28
+, T. Miralles11
+, B. Mitreska19
+, D.S. Mitzel19
+,
+A. Modak58
+, R.A. Mohammed64
+, R.D. Moise17
+, S. Mokhnenko44
+, E.
+F. Molina Cardenas83
+, T. Momb¨acher49
+, M. Monk57,1
+, S. Monteil11
+,
+A. Morcillo Gomez47
+, G. Morello28
+, M.J. Morello35,q
+, M.P. Morgenthaler22
+,
+J. Moron40
+, W. Morren38
+, A.B. Morris49
+, A.G. Morris13
+, R. Mountain69
+,
+H. Mu4,b
+, Z. M. Mu6
+, E. Muhammad57
+, F. Muheim59
+, M. Mulder78
+, K. M¨uller51
+,
+F. Mu˜noz-Rojas9
+, R. Murta62
+, P. Naik61
+, T. Nakada50
+, R. Nandakumar58
+,
+T. Nanut49
+, I. Nasteva3
+, M. Needham59
+, N. Neri30,m
+, S. Neubert18
+, N. Neufeld49
+,
+P. Neustroev44, J. Nicolini19,14
+, D. Nicotra79
+, E.M. Niel49
+, N. Nikitin44
+,
+P. Nogarolli3
+, P. Nogga18, C. Normand55
+, J. Novoa Fernandez47
+, G. Nowak66
+,
+C. Nunez83
+, H. N. Nur60
+, A. Oblakowska-Mucha40
+, V. Obraztsov44
+, T. Oeser17
+,
+S. Okamura26,k
+, A. Okhotnikov44, O. Okhrimenko53
+, R. Oldeman32,j
+, F. Oliva59
+,
+M. Olocco19
+, C.J.G. Onderwater79
+, R.H. O’Neil59
+, D. Osthues19,
+J.M. Otalora Goicochea3
+, P. Owen51
+, A. Oyanguren48
+, O. Ozcelik59
+, F. Paciolla35,u
+,
+14
+
+A. Padee42
+, K.O. Padeken18
+, B. Pagare57
+, P.R. Pais22
+, T. Pajero49
+, A. Palano24
+,
+M. Palutan28
+, X. Pan4,b
+, G. Panshin44
+, L. Paolucci57
+, A. Papanestis58,49
+,
+M. Pappagallo24,g
+, L.L. Pappalardo26,k
+, C. Pappenheimer66
+, C. Parkes63
+, D.
+Parmar76
+, B. Passalacqua26,k
+, G. Passaleva27
+, D. Passaro35,q
+, A. Pastore24
+,
+M. Patel62
+, J. Patoc64
+, C. Patrignani25,i
+, A. Paul69
+, C.J. Pawley79
+,
+A. Pellegrino38
+, J. Peng5,7
+, M. Pepe Altarelli28
+, S. Perazzini25
+, D. Pereima44
+, H.
+Pereira Da Costa68
+, A. Pereiro Castro47
+, P. Perret11
+, A. Perrevoort78
+, A. Perro49
+,
+M.J. Peters66, K. Petridis55
+, A. Petrolini29,l
+, J. P. Pfaller66
+, H. Pham69
+,
+L. Pica35,q
+, M. Piccini34
+, L. Piccolo32
+, B. Pietrzyk10
+, G. Pietrzyk14
+, D. Pinci36
+,
+F. Pisani49
+, M. Pizzichemi31,n
+, V. Placinta43
+, M. Plo Casasus47
+, T. Poeschl49
+,
+F. Polci16,49
+, M. Poli Lener28
+, A. Poluektov13
+, N. Polukhina44
+, I. Polyakov44
+,
+E. Polycarpo3
+, S. Ponce49
+, D. Popov7
+, S. Poslavskii44
+, K. Prasanth59
+,
+C. Prouve81
+, D. Provenzano32,j
+, V. Pugatch53
+, G. Punzi35,r
+, S. Qasim51
+, Q. Q.
+Qian6
+, W. Qian7
+, N. Qin4,b
+, S. Qu4,b
+, R. Quagliani49
+, R.I. Rabadan Trejo57
+,
+J.H. Rademacker55
+, M. Rama35
+, M. Ram´ırez Garc´ıa83
+, V. Ramos De Oliveira70
+,
+M. Ramos Pernas57
+, M.S. Rangel3
+, F. Ratnikov44
+, G. Raven39
+,
+M. Rebollo De Miguel48
+, F. Redi30,h
+, J. Reich55
+, F. Reiss63
+, Z. Ren7
+,
+P.K. Resmi64
+, R. Ribatti50
+, G. R. Ricart15,12
+, D. Riccardi35,q
+, S. Ricciardi58
+,
+K. Richardson65
+, M. Richardson-Slipper59
+, K. Rinnert61
+, P. Robbe14,49
+,
+G. Robertson60
+, E. Rodrigues61
+, A. Rodriguez Alvarez46, E. Rodriguez Fernandez47
+,
+J.A. Rodriguez Lopez75
+, E. Rodriguez Rodriguez47
+, J. Roensch19, A. Rogachev44
+,
+A. Rogovskiy58
+, D.L. Rolf49
+, P. Roloff49
+, V. Romanovskiy66
+, A. Romero Vidal47
+,
+G. Romolini26
+, F. Ronchetti50
+, T. Rong6
+, M. Rotondo28
+, S. R. Roy22
+,
+M.S. Rudolph69
+, M. Ruiz Diaz22
+, R.A. Ruiz Fernandez47
+, J. Ruiz Vidal82,y
+,
+A. Ryzhikov44
+, J. Ryzka40
+, J. J. Saavedra-Arias9
+, J.J. Saborido Silva47
+, R. Sadek15
+,
+N. Sagidova44
+, D. Sahoo77
+, N. Sahoo54
+, B. Saitta32,j
+, M. Salomoni31,n,49
+,
+I. Sanderswood48
+, R. Santacesaria36
+, C. Santamarina Rios47
+, M. Santimaria28,49
+,
+L. Santoro 2
+, E. Santovetti37
+, A. Saputi26,49
+, D. Saranin44
+, A. Sarnatskiy78
+,
+G. Sarpis59
+, M. Sarpis63
+, C. Satriano36,s
+, A. Satta37
+, M. Saur6
+, D. Savrina44
+,
+H. Sazak17
+, F. Sborzacchi49,28
+, L.G. Scantlebury Smead64
+, A. Scarabotto19
+,
+S. Schael17
+, S. Scherl61
+, M. Schiller60
+, H. Schindler49
+, M. Schmelling21
+,
+B. Schmidt49
+, S. Schmitt17
+, H. Schmitz18, O. Schneider50
+, A. Schopper49
+,
+N. Schulte19
+, S. Schulte50
+, M.H. Schune14
+, R. Schwemmer49
+, G. Schwering17
+,
+B. Sciascia28
+, A. Sciuccati49
+, I. Segal76
+, S. Sellam47
+, A. Semennikov44
+,
+T. Senger51
+, M. Senghi Soares39
+, A. Sergi29
+, N. Serra51
+, L. Sestini33
+, A. Seuthe19
+,
+Y. Shang6
+, D.M. Shangase83
+, M. Shapkin44
+, R. S. Sharma69
+, I. Shchemerov44
+,
+L. Shchutska50
+, T. Shears61
+, L. Shekhtman44
+, Z. Shen6
+, S. Sheng5,7
+,
+V. Shevchenko44
+, B. Shi7
+, Q. Shi7
+, Y. Shimizu14
+, E. Shmanin25
+, R. Shorkin44
+,
+J.D. Shupperd69
+, R. Silva Coutinho69
+, G. Simi33,o
+, S. Simone24,g
+, N. Skidmore57
+,
+T. Skwarnicki69
+, M.W. Slater54
+, J.C. Smallwood64
+, E. Smith65
+, K. Smith68
+,
+M. Smith62
+, A. Snoch38
+, L. Soares Lavra59
+, M.D. Sokoloff66
+, F.J.P. Soler60
+,
+A. Solomin44,55
+, A. Solovev44
+, I. Solovyev44
+, N. S. Sommerfeld18, R. Song1
+,
+Y. Song50
+, Y. Song4,b
+, Y. S. Song6
+, F.L. Souza De Almeida69
+, B. Souza De Paula3
+,
+E. Spadaro Norella29
+, E. Spedicato25
+, J.G. Speer19
+, E. Spiridenkov44, P. Spradlin60
+,
+V. Sriskaran49
+, F. Stagni49
+, M. Stahl49
+, S. Stahl49
+, S. Stanislaus64
+, E.N. Stein49
+,
+O. Steinkamp51
+, O. Stenyakin44, H. Stevens19
+, D. Strekalina44
+, Y. Su7
+, F. Suljik64
+,
+J. Sun32
+, L. Sun74
+, D. Sundfeld2
+, W. Sutcliffe51, P.N. Swallow54
+, K. Swientek40
+,
+F. Swystun56
+, A. Szabelski42
+, T. Szumlak40
+, Y. Tan4,b
+, Y. Tang74
+, M.D. Tat64
+,
+A. Terentev44
+, F. Terzuoli35,u,49
+, F. Teubert49
+, E. Thomas49
+, D.J.D. Thompson54
+,
+H. Tilquin62
+, V. Tisserand11
+, S. T’Jampens10
+, M. Tobin5,49
+, L. Tomassetti26,k
+,
+15
+
+G. Tonani30,m,49
+, X. Tong6
+, D. Torres Machado2
+, L. Toscano19
+, D.Y. Tou4,b
+,
+C. Trippl45
+, G. Tuci22
+, N. Tuning38
+, L.H. Uecker22
+, A. Ukleja40
+,
+D.J. Unverzagt22
+, B. Urbach59
+, E. Ursov44
+, A. Usachov39
+, A. Ustyuzhanin44
+,
+U. Uwer22
+, V. Vagnoni25
+, V. Valcarce Cadenas47
+, G. Valenti25
+,
+N. Valls Canudas49
+, H. Van Hecke68
+, E. van Herwijnen62
+, C.B. Van Hulse47,w
+,
+R. Van Laak50
+, M. van Veghel38
+, G. Vasquez51
+, R. Vazquez Gomez46
+,
+P. Vazquez Regueiro47
+, C. V´azquez Sierra47
+, S. Vecchi26
+, J.J. Velthuis55
+,
+M. Veltri27,v
+, A. Venkateswaran50
+, M. Verdoglia32
+, M. Vesterinen57
+, D.
+Vico Benet64
+, P. V. Vidrier Villalba46, M. Vieites Diaz49
+, X. Vilasis-Cardona45
+,
+E. Vilella Figueras61
+, A. Villa25
+, P. Vincent16
+, F.C. Volle54
+, D. vom Bruch13
+,
+N. Voropaev44
+, K. Vos79
+, C. Vrahas59
+, J. Wagner19
+, J. Walsh35
+, E.J. Walton1,57
+,
+G. Wan6
+, C. Wang22
+, G. Wang8
+, J. Wang6
+, J. Wang5
+, J. Wang4,b
+, J. Wang74
+,
+M. Wang30
+, N. W. Wang7
+, R. Wang55
+, X. Wang8, X. Wang72
+, X. W. Wang62
+,
+Y. Wang6
+, Z. Wang14
+, Z. Wang4,b
+, Z. Wang30
+, J.A. Ward57,1
+, M. Waterlaat49,
+N.K. Watson54
+, D. Websdale62
+, Y. Wei6
+, J. Wendel81
+, B.D.C. Westhenry55
+,
+C. White56
+, M. Whitehead60
+, E. Whiter54
+, A.R. Wiederhold63
+, D. Wiedner19
+,
+G. Wilkinson64
+, M.K. Wilkinson66
+, M. Williams65
+, M. J. Williams49,
+M.R.J. Williams59
+, R. Williams56
+, Z. Williams55
+, F.F. Wilson58
+, M. Winn12,
+W. Wislicki42
+, M. Witek41
+, L. Witola22
+, G. Wormser14
+, S.A. Wotton56
+, H. Wu69
+,
+J. Wu8
+, X. Wu74
+, Y. Wu6
+, Z. Wu7
+, K. Wyllie49
+, S. Xian72, Z. Xiang5
+, Y. Xie8
+,
+A. Xu35
+, J. Xu7
+, L. Xu4,b
+, L. Xu4,b
+, M. Xu57
+, Z. Xu49
+, Z. Xu7
+, Z. Xu5
+, K.
+Yang62
+, S. Yang7
+, X. Yang6
+, Y. Yang29,l
+, Z. Yang6
+, V. Yeroshenko14
+,
+H. Yeung63
+, H. Yin8
+, C. Y. Yu6
+, J. Yu71
+, X. Yuan5
+, Y Yuan5,7
+,
+E. Zaffaroni50
+, M. Zavertyaev21
+, M. Zdybal41
+, F. Zenesini25,i
+, C. Zeng5,7
+,
+M. Zeng4,b
+, C. Zhang6
+, D. Zhang8
+, J. Zhang7
+, L. Zhang4,b
+, S. Zhang71
+,
+S. Zhang64
+, Y. Zhang6
+, Y. Z. Zhang4,b
+, Z. Zhang4,b
+, Y. Zhao22
+, A. Zharkova44
+,
+A. Zhelezov22
+, S. Z. Zheng6
+, X. Z. Zheng4,b
+, Y. Zheng7
+, T. Zhou6
+, X. Zhou8
+,
+Y. Zhou7
+, V. Zhovkovska57
+, L. Z. Zhu7
+, X. Zhu4,b
+, X. Zhu8
+, V. Zhukov17
+,
+J. Zhuo48
+, Q. Zou5,7
+, D. Zuliani33,o
+, G. Zunica50
+.
+1School of Physics and Astronomy, Monash University, Melbourne, Australia
+2Centro Brasileiro de Pesquisas F´ısicas (CBPF), Rio de Janeiro, Brazil
+3Universidade Federal do Rio de Janeiro (UFRJ), Rio de Janeiro, Brazil
+4Department of Engineering Physics, Tsinghua University, Beijing, China, Beijing, China
+5Institute Of High Energy Physics (IHEP), Beijing, China
+6School of Physics State Key Laboratory of Nuclear Physics and Technology, Peking University, Beijing,
+China
+7University of Chinese Academy of Sciences, Beijing, China
+8Institute of Particle Physics, Central China Normal University, Wuhan, Hubei, China
+9Consejo Nacional de Rectores (CONARE), San Jose, Costa Rica
+10Universit´e Savoie Mont Blanc, CNRS, IN2P3-LAPP, Annecy, France
+11Universit´e Clermont Auvergne, CNRS/IN2P3, LPC, Clermont-Ferrand, France
+12D´epartement de Physique Nucl´eaire (DPhN), Gif-Sur-Yvette, France
+13Aix Marseille Univ, CNRS/IN2P3, CPPM, Marseille, France
+14Universit´e Paris-Saclay, CNRS/IN2P3, IJCLab, Orsay, France
+15Laboratoire Leprince-Ringuet, CNRS/IN2P3, Ecole Polytechnique, Institut Polytechnique de Paris,
+Palaiseau, France
+16LPNHE, Sorbonne Universit´e, Paris Diderot Sorbonne Paris Cit´e, CNRS/IN2P3, Paris, France
+17I. Physikalisches Institut, RWTH Aachen University, Aachen, Germany
+18Universit¨at Bonn - Helmholtz-Institut f¨ur Strahlen und Kernphysik, Bonn, Germany
+19Fakult¨at Physik, Technische Universit¨at Dortmund, Dortmund, Germany
+20Physikalisches Institut, Albert-Ludwigs-Universit¨at Freiburg, Freiburg, Germany
+21Max-Planck-Institut f¨ur Kernphysik (MPIK), Heidelberg, Germany
+16
+
+22Physikalisches Institut, Ruprecht-Karls-Universit¨at Heidelberg, Heidelberg, Germany
+23School of Physics, University College Dublin, Dublin, Ireland
+24INFN Sezione di Bari, Bari, Italy
+25INFN Sezione di Bologna, Bologna, Italy
+26INFN Sezione di Ferrara, Ferrara, Italy
+27INFN Sezione di Firenze, Firenze, Italy
+28INFN Laboratori Nazionali di Frascati, Frascati, Italy
+29INFN Sezione di Genova, Genova, Italy
+30INFN Sezione di Milano, Milano, Italy
+31INFN Sezione di Milano-Bicocca, Milano, Italy
+32INFN Sezione di Cagliari, Monserrato, Italy
+33INFN Sezione di Padova, Padova, Italy
+34INFN Sezione di Perugia, Perugia, Italy
+35INFN Sezione di Pisa, Pisa, Italy
+36INFN Sezione di Roma La Sapienza, Roma, Italy
+37INFN Sezione di Roma Tor Vergata, Roma, Italy
+38Nikhef National Institute for Subatomic Physics, Amsterdam, Netherlands
+39Nikhef National Institute for Subatomic Physics and VU University Amsterdam, Amsterdam,
+Netherlands
+40AGH - University of Krakow, Faculty of Physics and Applied Computer Science, Krak´ow, Poland
+41Henryk Niewodniczanski Institute of Nuclear Physics Polish Academy of Sciences, Krak´ow, Poland
+42National Center for Nuclear Research (NCBJ), Warsaw, Poland
+43Horia Hulubei National Institute of Physics and Nuclear Engineering, Bucharest-Magurele, Romania
+44Affiliated with an institute covered by a cooperation agreement with CERN
+45DS4DS, La Salle, Universitat Ramon Llull, Barcelona, Spain
+46ICCUB, Universitat de Barcelona, Barcelona, Spain
+47Instituto Galego de F´ısica de Altas Enerx´ıas (IGFAE), Universidade de Santiago de Compostela,
+Santiago de Compostela, Spain
+48Instituto de Fisica Corpuscular, Centro Mixto Universidad de Valencia - CSIC, Valencia, Spain
+49European Organization for Nuclear Research (CERN), Geneva, Switzerland
+50Institute of Physics, Ecole Polytechnique F´ed´erale de Lausanne (EPFL), Lausanne, Switzerland
+51Physik-Institut, Universit¨at Z¨urich, Z¨urich, Switzerland
+52NSC Kharkiv Institute of Physics and Technology (NSC KIPT), Kharkiv, Ukraine
+53Institute for Nuclear Research of the National Academy of Sciences (KINR), Kyiv, Ukraine
+54School of Physics and Astronomy, University of Birmingham, Birmingham, United Kingdom
+55H.H. Wills Physics Laboratory, University of Bristol, Bristol, United Kingdom
+56Cavendish Laboratory, University of Cambridge, Cambridge, United Kingdom
+57Department of Physics, University of Warwick, Coventry, United Kingdom
+58STFC Rutherford Appleton Laboratory, Didcot, United Kingdom
+59School of Physics and Astronomy, University of Edinburgh, Edinburgh, United Kingdom
+60School of Physics and Astronomy, University of Glasgow, Glasgow, United Kingdom
+61Oliver Lodge Laboratory, University of Liverpool, Liverpool, United Kingdom
+62Imperial College London, London, United Kingdom
+63Department of Physics and Astronomy, University of Manchester, Manchester, United Kingdom
+64Department of Physics, University of Oxford, Oxford, United Kingdom
+65Massachusetts Institute of Technology, Cambridge, MA, United States
+66University of Cincinnati, Cincinnati, OH, United States
+67University of Maryland, College Park, MD, United States
+68Los Alamos National Laboratory (LANL), Los Alamos, NM, United States
+69Syracuse University, Syracuse, NY, United States
+70Pontif´ıcia Universidade Cat´olica do Rio de Janeiro (PUC-Rio), Rio de Janeiro, Brazil, associated to 3
+71School of Physics and Electronics, Hunan University, Changsha City, China, associated to 8
+72Guangdong Provincial Key Laboratory of Nuclear Science, Guangdong-Hong Kong Joint Laboratory of
+Quantum Matter, Institute of Quantum Matter, South China Normal University, Guangzhou, China,
+associated to 4
+73Lanzhou University, Lanzhou, China, associated to 5
+17
+
+74School of Physics and Technology, Wuhan University, Wuhan, China, associated to 4
+75Departamento de Fisica , Universidad Nacional de Colombia, Bogota, Colombia, associated to 16
+76Ruhr Universitaet Bochum, Fakultaet f. Physik und Astronomie, Bochum, Germany, associated to 19
+77Eotvos Lorand University, Budapest, Hungary, associated to 49
+78Van Swinderen Institute, University of Groningen, Groningen, Netherlands, associated to 38
+79Universiteit Maastricht, Maastricht, Netherlands, associated to 38
+80Tadeusz Kosciuszko Cracow University of Technology, Cracow, Poland, associated to 41
+81Universidade da Coru˜na, A Coruna, Spain, associated to 45
+82Department of Physics and Astronomy, Uppsala University, Uppsala, Sweden, associated to 60
+83University of Michigan, Ann Arbor, MI, United States, associated to 69
+aCentro Federal de Educac˜ao Tecnol´ogica Celso Suckow da Fonseca, Rio De Janeiro, Brazil
+bCenter for High Energy Physics, Tsinghua University, Beijing, China
+cHangzhou Institute for Advanced Study, UCAS, Hangzhou, China
+dSchool of Physics and Electronics, Henan University , Kaifeng, China
+eLIP6, Sorbonne Universit´e, Paris, France
+fUniversidad Nacional Aut´onoma de Honduras, Tegucigalpa, Honduras
+gUniversit`a di Bari, Bari, Italy
+hUniversit`a di Bergamo, Bergamo, Italy
+iUniversit`a di Bologna, Bologna, Italy
+jUniversit`a di Cagliari, Cagliari, Italy
+kUniversit`a di Ferrara, Ferrara, Italy
+lUniversit`a di Genova, Genova, Italy
+mUniversit`a degli Studi di Milano, Milano, Italy
+nUniversit`a degli Studi di Milano-Bicocca, Milano, Italy
+oUniversit`a di Padova, Padova, Italy
+pUniversit`a di Perugia, Perugia, Italy
+qScuola Normale Superiore, Pisa, Italy
+rUniversit`a di Pisa, Pisa, Italy
+sUniversit`a della Basilicata, Potenza, Italy
+tUniversit`a di Roma Tor Vergata, Roma, Italy
+uUniversit`a di Siena, Siena, Italy
+vUniversit`a di Urbino, Urbino, Italy
+wUniversidad de Alcal´a, Alcal´a de Henares , Spain
+xFacultad de Ciencias Fisicas, Madrid, Spain
+yDepartment of Physics/Division of Particle Physics, Lund, Sweden
+†Deceased
+18
+

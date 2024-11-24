@@ -1,1 +1,875 @@
-ola meu nome é samara eu tenho 14 anos, teria se não fosse
+Exploring the effects of dark matter - dark energy interaction on cosmic evolution in
+viscous dark energy scenario
+Ashadul Halder∗
+Department of Physics, St.
+Xavier’s College,
+30, Mother Teresa Sarani, Kolkata 700016, India.
+Madhurima Pandey†
+Department of Physics, School of Applied Sciences and Humanities,
+Haldia Institute of Technology, Haldia, 721657, West Bengal, India.
+Rupa Basu‡
+Department of Physics, St.
+Xavier’s College,
+30, Mother Teresa Sarani, Kolkata 700016, India.
+Debasish Majumdar§
+Department of Physics Ramakrishna Mission Vivekananda Educational and Research Institute,
+Belur Math, Howrah 711202, West-Bengal, India
+(Dated: November 21, 2024)
+We explore the influence of interactions between dark matter (DM) and dark energy (DE) on the
+cosmic evolution of the Universe within a viscous dark energy (VDE) framework. Moving beyond
+traditional interacting dark energy (IDE) models, we propose a generalized IDE model adaptable to
+diverse IDE scenarios via IDE coupling parameters. In order to investigate deviations from ΛCDM
+across cosmic epochs by highlighting how viscous and the interactions between DM and DE impact
+cosmic density and expansion rates, we consider a model agnostic form of VDE. Eventually we
+perform a Bayesian analysis using the Union 2.1 Supernova Ia dataset and Markov Chain Monte
+Carlo (MCMC) sampling to obtain optimal values of model parameters. This comprehensive analysis
+provides insights about the interplay between viscous and IDE in shaping the Universe’s expansion
+history.
+I.
+INTRODUCTION
+There is no denying that a new data driven age in modern cosmology has begun. In 1998, Supernova Type Ia (SNIa)
+[1, 2] observation first discovered that the Universe is not only expanding, but also accelerating. Subsequently, the
+phenomenon of the Universe’s late time acceleration have been confirmed by several studies such as the measurement
+of baryon acoustic oscillations (BAO) [3] in the galaxy power spectrum, large scale structure observation and Cosmic
+Microwave Background Radiation (CMBR) [4, 5] observations. The known luminous object in the Universe accounts
+for only about 4.9% of the total mass energy budget of the Universe.
+The analysis of satellite borne PLANCK
+experiment on the anisotropy of CMBR suggests that the Universe overwhelmingly contains unknown dark matter
+(DM) and dark energy (DE). The former one is an unseen unknown matter, whose only definite evidence so far is
+due to their gravitational effects, makes up for around 26.8% of the Universe’s contents. The rest around 69.3% is
+yet another unknown energy known as DE thought to invoke a negative pressure opposite to gravity and cause the
+recent accelerated expansion of the Universe.
+As previously mentioned, the pressure acts in opposition to gravity to accelerate the Universe against the propensity
+of an eventual gravitational collapse caused by the mass contained within the Universe. Since then, a number of
+theoretical frameworks have been proposed to explain the nature and origin of the mysterious DE and the ensuing late
+temporal acceleration. The cosmological constant scenario, which is popularly known as ΛCDM model, is considered to
+be a DE candidate. Recent PLANCK CMB measurements have validated the ΛCDM model as a phenomenologically
+feasible cosmological model [6].
+However, this well known model (ΛCDM model) is insufficient to fully describe
+our Universe [7]. The physical properties of DE and DM are still an enigma from a theoretical perspective. The
+cosmological constant has long standing coincidence and fine tuning issues [7, 8] . According to observations, the
+∗ashadul.halder@gmail.com
+† madhurima0810@gmail.com
+‡ rupabasu.in@gmail.com
+§ debasish.majumdar@gm.rkmvu.ac.in
+arXiv:2411.13379v1  [astro-ph.CO]  20 Nov 2024
+
+2
+ΛCDM model can satisfactorily explain cosmic large - scale structures, but it encounters several challenges at the
+dwarf - galaxy scale, including the well known issues with missing satellites, core - cusp and too - big - to - fail
+problems [9]. A few disparities between various observations under ΛCDM have appeared and become increasingly
+significant in the last few years. The most prominent one is the H0 tension, obtained from Planck CMB data, which
+is around 5σ apart from the values acquired from standard candles and lensing time - delay observations [10–12]. The
+other less important one is the S8 tension having a 1 - 2σ differ between the value of S8 = σ8(Ωm)0.5 bounded by
+Planck CMB and that from weak lensing measurements [13–16].
+Since, we still don’t completely understood how realistic the DE is, cosmologists have put out a plethora of options
+to address these mysteries. In general, we can classify them into two major categories, i.e., the DE models [17, 18] and
+modified theory of gravity. Within the context of general relativity (GR) [19, 20], the former one seeks to introduce
+a new cosmic fluid or matter field. However, in the latter scenario, the standard GR lagrangian is modified by a
+physical mechanism that is specific to the breakdown of Einstein’s gravity.
+From thermodynamics it can be stated that, a Universal feature of any realistic fluid dynamics is dissipative process.
+This dissipative process has been taken into account to conduct several cosmological analyses. Both bulk and shear
+viscosity in the stress energy tensor of the cosmic fluid [21, 22] are furnished by such dissipative process. Although
+the shear viscosity can be disregarded at large scales in the case of isotropic and homogeneous Universe, but the
+impact of bulk viscosity has been widely studied in the context of viscous dark matter (VDM) [23, 24], viscous
+dark energy (VDE) [25–28] and cosmic inflation. Additionally, in various models, viscosity has been suggested as
+a possible explanation for the current acceleration. Viscosity not only modifies the Hubble evolution, but it also
+produces additional entropy that warms the baryon and dark matter fluids that may affect the thermal evolution of
+the Universe.
+In the present work, the possible impact of the DM and DE interaction in VDE framework on the dynamics of
+the Universe has been addressed. In lieu of considering different interacting dark energy (IDE) models [29–31], we
+introduce an generalized IDE model in our calculation. Different IDE models can be obtained from this generalized
+model by tuning its parameters. The evolution equation of Hubble parameters due to different VDE models can also
+be acquired from a generalized expression as introduced in [32]. In our analysis, we investigate the dynamics of the
+Universe is studied by studying evolution of cosmological density parameters and higher order evolution parameters
+namely, deceleration parameter (q), jerk parameter (j) and snap parameter (s). In order to understand the variation
+of the Universe’s mass fraction over time, an extensive study has been done on Om parameter in the present work.
+We further extend our analysis using three point diagnostic Om3 parameter as described in [33].
+The paper is organized as follows.
+In section II we discussed about interplay between DM and DE. Different
+VDE models and their effect on the evolution of Hubble parameter have been discussed extensively in section III.
+Calculations and results are shown in section IV. Eventually, in section V some concluding remarks are given.
+II.
+INTERPLAY BETWEEN DARK MATTER AND DARK ENERGY
+The interaction between DM and DE could significantly influence universal dynamics, including the optical depth
+and spin temperature of the 21-cm transition. In the standard cosmological model, the density parameters of DM
+(Ωχ) and DE (Ωde) evolve as Ωχ,0(1+z)3 and Ωde,0(1+z)3(1+ωde) respectively, where Ωχ,0 and Ωde,0 are the respective
+density parameters at the redshift z = 0, and ωde is the equation of state (EOS) parameter of DE. However, the DM
+and DE densities, in the presence of their in between interactions, have been evolved in the following manner [34]:
+(1 + z)H(z)dρχ
+dz −3H(z)ρχ = −Q
+(1)
+(1 + z)H(z)dρde
+dz
+−3H(z)(1 + ωde)ρde = Q
+(2)
+Here, Q denotes the energy transfer between DM and DE due to DM-DE interaction. In this work, we consider three
+benchmark models to investigate the effect of DM-DE interaction on brightness temperature. The energy transfer
+expressions for those benchmark models are described below [35–38]:
+Model-I
+Q = 3λH(z)ρde
+Model-II
+Q = 3λH(z)ρχ
+Model-III
+Q = 3λH(z)(ρde + ρχ)
+
+3
+TABLE I. Stability conditions of the model parameters for different IDE models
+Model
+Q
+EOS of dark energy
+Constraints
+I
+3λH(z)ρde
+ωde < −1
+λ < −2ωdeΩχ
+II
+3λH(z)ρχ
+ωde < −1
+0 < λ < −ωde/4
+III
+3λH(z)(ρde + ρχ)
+ωde < −1
+0 < λ < −ωde/4
+Here, λ is the coupling parameter, determining the strength of the DM - DE interaction and ρde, ρχ are the
+densities of DE and DM respectively. The stability conditions for each of the models are described in Table I. Various
+phenomenological studies have constrained these models using observational data from PLANCK, SNIa, and BAO
+[37–44].
+All these three models can be expressed using a general expression given by,
+Q = 3H(z)(λdeρde + λχρχ).
+(3)
+In the above equation, λde(λχ) indicated the coupling parameter for DE (DM). In the present analysis we parame-
+terize the coupling parameters λχ and λde in terms of λr and λθ, as
+λχ = λr sin(λθ)
+(4)
+λde = λr cos(λθ)
+(5)
+III.
+VISCOUS DARK ENERGY (VDE) MODELS
+The dynamics of the Universe may be significantly impacted by the presence of viscosity in the dark energy fluid.
+The two Freidmann equations that govern the dynamics of Friedmann - Robertson - Walker (FRW) Universe are as
+follows
+˙a2
+a2 = ρ
+3,
+(6)
+¨a
+a = −ρ + 3p
+6
+.
+(7)
+In the above equations, the dot represents the derivative with respect to the cosmic time t, whereas the parameters
+a, ρ and p stand for the scale factor, energy densities and pressure of the cosmic fluids, which include relativistic
+radiation, baryon matter, DM and DE, respectively. Throughout this work, we consider 8πG = c = ℏ= 1. The stress
+- energy tensor of a cosmic DE fluid with the bulk viscosity ζ is expressed as
+T de
+µν = ρdeUµUν + pdehµν,
+(8)
+where pde and ρde indicate the effective pressure and the energy density of the VDE fluid respectively. Uµ is the four
+- velocity of the VDE fluid in comoving coordinates, where Uµ = (1, 0, 0, 0) and the projection tensor is denoted by
+hµν = gµν + UµUν. According to Eckart’s theory as a first order limit of the Israel - Stewart scenario having zero
+relation time, the effective pressure pde at thermodynamical equilibrium for a typical VDE fluid can be restated as
+[21]
+pde = ωdeρde = ζθ.
+(9)
+In the above equation, ωde, ζ and θ denote the equation of state (EoS) of DE fluid, bulk viscosity and expansion
+scalar respectively. Moreover, the energy conservation equation associated with the VDE fluid can be expressed as
+˙
+ρde + θ(pde + ρde) = 0,
+(10)
+where θ = 3H = ˙a
+a and H defines the Hubble parameter, which governs the background evolution of the Universe.
+In our analysis, we assume that the bulk viscosity of DE is proportional to the Hubble parameter as ζ = ηH, where
+η is a dimensionless free parameter. Therefore, the effective pressure pde in Equation 9 turns out as
+pde = ωdeρde −3ηH2.
+(11)
+
+4
+Model
+Constraints
+Free parameters
+I
+ωde = −1, Ωk = 0
+η
+II
+Ωk = 0
+η, ωde
+III
+ωde = −1
+η, Ωk
+TABLE II. Constraints and parameters of three viscous dark energy models
+The effects of three VDE models have been investigated in our analysis.
+• Model I (VΛDE): A one parameter extension of the conventional six parameter ΛCDM model has been taken
+into account in this first model. Here ωde is fixed at -1. Therefore, we refer this model as the VΛDE model and its
+effective pressure takes the form pde = −ρde −3ηH2. The dimensionless Hubble parameter H(z) of the VΛDE model
+is given by
+H(z) = H0
+
+1
+1 + η Ωm,0(1 + z)3 +
+
+1 −
+1
+1 + η Ωm,0
+
+(1 + z)−3η
+1/2
+,
+(12)
+where the present value of the Hubble parameter is denoted as H0. In the above equation (Equation 12), z and Ωm,0
+represent the redshift and current density parameter of matter including both baryonic matter and DM. It is to be
+noted that, the contribution from the radiation and spatial curvature components have been ignored in this model.
+If we put η = 0 in Equation 12, then VΛDE model will be reduced to the standard ΛCDM model.
+• Model II (VωDE): In this model, an additional free parameter ωde is introduced along with the viscosity
+parameter η. Therefore, this model has been mentioned as VωDE model. Furthermore, the Hubble parameter H(z)
+in VωDE model can be expressed as
+H(z) = H0
+
+ωde
+ωde −η Ωm,0(1 + z)3 +
+
+1 −
+ωde
+ωde −η Ωm,0
+
+(1 + z)3(1+ωde−η)
+1/2
+.
+(13)
+• Model III (VKDE): In order to account for the impact of bulk viscosity on the spatial curvature, we incorporate
+the curvature contribution into the cosmic pie. The present vakue of the curvature density parameter Ωk is considered
+as another model parameter. We can exhibit the corresponding Hubble parameter of the VKDE model as
+H(z) = H0
+
+2
+2 + 3η Ωk,0(1 + z)2 +
+1
+1 + η Ωm,0(1 + z)3+
+
+1 −
+2
+2 + 3η Ωk,0 −
+1
+1 + η Ωm,0
+
+(1 + z)−3η
+1/2
+,
+(14)
+where Ωk,0 is the current curvature density parameter. In Table II, we tabulate the constraints and parameters of the
+three individual models. Since bulk viscosity has minimal effect at low redshifted epochs, the evolution of Universe
+closely resembles the standard ΛCDM cosmology for lower redshifts. The bulk viscosity of DE is addressed by th
+three previously mentioned VDE models. At lower redshift, the second model offers a relatively faster expansion of
+the Universe for ωde ≤−1, as an extra effect of ωde (EoS of DE) is considered. The expansion rate, however, sharply
+declines for ωde ⪆−0.7. In contrast the third VDE model investigates the impact of the Universe’s spatial curvature
+in the presence of viscous flow of DE. It can be observed that the evolution of the Universe is minimally modified. at
+late times according to the recent bounds of curvature.
+The generalized expression of the Hubble parameter for all three models (Equation 12, Equation 13, Equation 14)
+can be written as
+H(z) = H0
+
+2
+2 + 3η Ωk,0(1 + z)2 +
+ωde
+ωde −η Ωm,0(1 + z)3
++
+
+1 −
+2
+2 + 3η Ωk,0 −
+ωde
+ωde −η Ωm,0
+
+(1 + z)3(1+ωde−η)
+1/2
+.
+(15)
+In the case of interacting dark energy model, the above expression takes the form,
+H(z) = H0
+
+2
+2 + 3η Ωk,0(1 + z)2 +
+ωde
+ωde −η
+
+Ωb,0(1 + z)3 + ρχ
+ρc,0
+
++ (1 + z)−3η ρde
+ρc,0
+1/2
+.
+(16)
+
+5
+FIG. 1. Variation of Hubble evolution (H(z)/H0) with redshift z for different model parameters. See text for detail.
+h0
+λr
+λθ
+ωde
+Ωk,0
+η
+0.674
+0.02
+π/4
+-1.0
+0.01**
+0.3
+TABLE III. Benchmark point for different parameter for Figure 1, 2 and 4.
+IV.
+CALCULATIONS AND RESULTS
+How the interactions between DM and DE impact the evolution of the Universe within a VDE framework has
+been explored in this work. Rather than relying on conventional IDE models, we introduce a generalized IDE model
+that can represent a wide array of IDE scenarios by tuning its parameters, λr and λθ. By adopting a generalized
+form of the Hubble parameter in VDE framework, we establish a basis for our calculations. This form enables us to
+systematically analyze the dynamic effects of viscosity and dark sector interactions on cosmic evolution, facilitating a
+versatile approach to studying different IDE conditions within a unified framework.
+In Figure 1, the Hubble evolutions with redshift z are shown for different chosen parameter values. In this regard, we
+consider a set of benchmark values of the model parameters as shown in Table III. The Hubble evolution corresponding
+to these benchmark values (blue dashed line) exhibits slightly lower values of H(z)/H0 for different redshifts z
+compared to that of the ΛCDM model (black dashed line). It is to be noted that for the ΛCDM model, we choose
+h0 = 0.674. The green solid line represents the same for λr = 0.05, while keeping the values of the other parameters
+the same as in Table III. Similarly, the blue solid line, red solid line, cyan solid line, and magenta solid line describe
+the Hubble evolution with redshift z for λθ = π/3, ωde = −0.95, Ωk,0 = 0.05, and η = 0.1, respectively, while keeping
+the other parameters fixed at benchmark values for individual cases. From this figure, it can be seen that the effect
+of Ωk,0 is minimal on the evolution of the Hubble parameter.
+In presence of VDE and interaction between DM and DE, the evolution history of the density parameters are
+remarkably different from the ΛCDM model (see Figure 2(a)). In Figure 2(a), the black and green solid lines represent
+the evolution of dark matter density parameter Ωde for the case of ΛCDM model and the present model with the
+benchmark values of model parameters (see Table III).
+The red and blue solid lines represent the same for the
+benchmark values with additional modifications h0 = 0.7 and η = 0.1 respectively. The dashed, dash-dotted and
+dotted lines of corresponding colour exhibits the evolution of dark matter density parameter (Ωχ), baryon density
+parameter (Ωb) and radiation density parameter (Ωrad) respectively for individual cases. From this figure one can see
+that, at the present epoch the values of density parameters are independent to model and model parameters, however
+the dependence on model and model parameters become prominent as we approach toward higher values of z. Here,
+the effect of h0 is prominent in the case of Ωrad only, while it is negligible in the cases of dark matter,dark energy and
+baryons. On the other hand, the density parameters for all constituents of the Universe show notable variation for
+η = 0.1.
+We also show a parametric representation of dark energy density parameter Ωde and matter density parameter Ωm,
+i.e. Ωχ + Ωb in Figure 2(b). Here the ΛCDM model demonstrate a straight line (black dashed line), while in presence
+
+6
+(a)
+(b)
+FIG. 2. (a) Evolution of density parameters with redshift z for different model parameters. See text for detail. (b) Parametric
+representation of Ωde and Ωm (Ωχ + Ωb). See text for detail.
+of the interactions in dark sector components, the representative lines become curved. From the magenta line of this
+figure (Figure 2(b)) one can conclude that the bulk viscosity parameter η plays a crucial role in the estimation of the
+curvature of that line.
+To achieve a thorough comprehension of the cosmological evolution, it is essential to ascertain the following param-
+eters [45]:
+q = −1
+a
+d2a
+dt2
+1
+a
+da
+dt
+−2
+,
+(17)
+j = +1
+a
+d3a
+dt3
+1
+a
+da
+dt
+−3
+,
+(18)
+s = +1
+a
+d4a
+dt4
+1
+a
+da
+dt
+−4
+,
+(19)
+.
+(20)
+In the above expressions, q denotes the deceleration parameter of the Universe. It can alternatively be expressed as
+q = −¨aa
+˙a2 , where a denotes the scale factor, and the over-dot signifies the time derivative. Additionally, the parameter
+j represents the jerk parameter, which characterizes the rate of change of the deceleration parameter with time. The
+snap parameter s represents the rate of change of the jerk parameter with time and the Om parameter provides a
+measure of the cosmic acceleration relative to the gravitational attraction exerted by matter.
+In order to distinguish the model adopted in this work from the model inspired by ΛCDM it may be worthwhile
+to express the Om3 parameter for the model. The Om parameter has been extensively studied in the earlier works
+[46]. The Om parameter is generally defined in terms of hubble parameter in a way that can directly be measured in
+cosmological observations. The Om parameter can be defined as a two point diagnostic given by [33, 47]
+Om(z2, z1) =
+h2(z2) −h2(z1)
+(1 + z2)3 −(1 + z1)3 ,
+(21)
+with z1 = 0, the Om parameter reduces to
+Om(z, 0) = Om(z) =
+h2(z) −1
+(1 + z2)3 −1.
+(22)
+In general, when z1 < z2, Om(z1, z2) > 0
+
+7
+0
+1
+2
+3
+4
+5
+-0.2
+0.0
+0.2
+0.4
+0.6
+0
+1
+2
+3
+4
+0.7
+0.8
+0.9
+1.0
+1.1
+1.2
+1.3
+(a)
+(b)
+FIG. 3. (a) Evolution of Om parameters with redshift z for different model parameters. (b) Evolution of Om3(z1, z2, z3)
+parameter with redshift difference (z3 −z2) for different model parameters with z1 = 0.20 and z2 = 0.57. See text for detail.
+with x = z + 1 and h(x) = H(x)/H0, it can be shown that, for ΛCDM Om(x) = Ωm,0. Also Om(x) > Ωm,0 for
+quintessence and Om(x) < Ωm,0 for phantom. In terms of z1 and z2 for ΛCDM, Om(z1, z2) = Ωm,0. When z1 < z2,
+the value of Om(z1, z2) is greater that zero (case of quintessence), whereas Om(z1, z2) < 0 represents the case of
+phantom. Thus the Om parameter can be useful in distinguishing the DE models. Now the three point diagnostic
+Om3 is defined as [33]
+Om3(z1, z2, z3) = Om(z2, z1)
+Om(z3, z1) = h2(z2) −h2(z1)
+h2(z3) −h2(z2)
+(1 + z3)3 −(1 + z1)3
+(1 + z2)3 −(1 + z1)3 .
+(23)
+For ΛCDM model Om3 = 1 for any redshift z. In Figure 3(a) we show the variation of Om(z) with redshift z. In
+this case z1 = 0 has been chosen. In this plot ΛCDM is shown in black dashed line. As expected this is a straight
+line parallel to z axis at Om(z) = Ωm,0 ∼0.31. The other cases represent the DE model considered here but with
+different parameters. It appears that all the cases are close to each other except for the case where the viscosity
+η = 0.10, which differs from the from the rest to a considerable extent. Note that, for other cases,the viscosity is fixed
+at a value η = 0.30. It appears that as the fluid gets more viscous, the Om parameter tends to deviate more than the
+ΛCDM case. It can also be noted from Figure 3(a) that with the increasing λr (DM - DE interaction strength) the
+model deviates more from the ΛCDM model.
+In Figure 3(b), we plot Om3(z1, z2, z3) with (z3 −z2) while z1, z2 are kept fixed. The value of z1, z2 are fixed at
+z1 = 0.20 [48], z2 = 0.57 [49] respectively and z3 is allowed to vary. From Figure 3(b) it is seen that the all variations
+pass through the point where z3 = z2 and at that point Om3 = 1. The deviation of Om from 1 to < 1 indicates
+the phantom nature of dark energy. From this figure (Figure 3(b)) in can also be observed that with the progress of
+Universe’s evolution, as redshift decreases, the dark energy tends to represent the quintessence case.
+In the analysis depicted in Figure 4(a), the newly proposed model consistently exhibits a lower value of q(z)
+compared to the ΛCDM model, as obtained from the plots. Consequently, the graphs illustrating the jerk parameter
+j(z) (Figure 4(b)) and snap parameter s(z) (Figure 4(c)) depict higher values relative to the standard cosmic model
+(ΛCDM). Notably, the line generated with benchmark values closely aligns with the solid blue line in the plot of
+deceleration parameter (q(z)), although a small discrepancies observed in higher-order parameters (j(z) and s(z)).
+From this figure (Figure 4) one can investigate the impact of λr in the dynamics of the Universe, which essentially
+represents the strength of the DM - DE interaction. It is observed that adjustments in λr contribute to an increase
+in q both at present and in future cosmic dynamics, while concurrently leading to lower values of j(z) and s(z)
+across the redshift range. The equation of state parameter for dark energy Ωde significantly influences the behavior
+of cosmological parameters. Variations in Ωde lead to discernible effects on q(z) as well as j(z) and s(z), underscoring
+the pivotal role of dark energy in shaping expansion dynamics. The effect of the universal curvature is similar to the
+same for ωde, but lower in magnitude. The curvature of the Universe is represented in this analysis by the present-day
+curvature density parameter Ωk,0. The effect of the viscous parameter η reveals significant influence on cosmological
+parameters. The magenta line denotes the case where the value of η is modified to η = 0.10 from the benchmark set
+of parameters. It can be observed that the lower value of η provides higher values of deceleration and lower values of
+jerk and snap parameter (j(z) and s(z) respectively).
+
+8
+0
+1
+2
+3
+4
+5
+-1.0
+-0.5
+0.0
+0.5
+0
+1
+2
+3
+4
+5
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+(a)
+(b)
+0
+1
+2
+3
+4
+5
+-2
+0
+2
+4
+(c)
+FIG. 4.
+Variation of (a) q, (b) j and (c) s parameters with redshift z for different sets of model parameters
+In the subplots of Figure 5, we visually represent the present deceleration parameter q0 across the λr −λθ parameter
+plane for different values of η: η = 0.0, η = 0.1, η = 0.3, and η = −0.1, corresponding to Figure 5(a), Figure 5(b),
+Figure 5(c), and Figure 5(d), respectively. A noticeable trend emerges wherein, for any given η, the fluctuation of q0
+with respect to λr is most within the range π/12 ≤λθ ≤π/6. This fluctuation diminishes for both lower and higher
+values of λθ (λθ ≤π/12 and λθ ≥π/6), reaching a minimum at π/2.
+The plots reveal that for higher values of η (e.g., η = 0.3 in Figure 5(c)), the fluctuation of q0 is more and q0
+increases with increasing λr. However, the resulting range of q0 (∼−0.9) deviates significantly from the same for the
+case of ΛCDM model. Conversely, as lower values of η are considered, the numerical value of q0 increases, approaching
+∼−0.5 for η ∼0.0. Furthermore, our analysis extends to negative values of η, where q0 increases further for more
+negative chosen values of η (⪅−0.52). An additional phenomena can also be observed that, at lower values of η, the
+fluctuation of q0 diminishes significantly, completely disappears around η ≈0.006 (see Figure 6). Further reduction
+in η prompts q0 to decrease with increasing θr and the rate of this inverse fluctuation amplifying as η decreases even
+further.
+The variation of q0 with η is illustrated in Figure 6 for different chosen sets of λr and λθ. From Figure 6 it can be
+seen that, the values of q0 decreases with increasing η. Although for every set of λr and λθ, the values of q0 are almost
+same, the values of q0 falls more rapidly with η at higher values of λr. This nature also can be noticed in Figure 5.
+The optimum values from the posterior plots are h0 = 0.68, λr = 0.09, λθ = 0.41, ωde = −1.07, Ωk,0 = 0.10 and
+η = 0.05. However it can be seen that, for the case of λr the population increases with approaching lower values of
+λr. On the other hand, λθ is an angle ranges −π to π, so in this case the case of optimum point is not significant,
+here the most probable value of λθ ≈7π/10.
+We conduct a Bayesian analysis to compare our model with the Union 2.1 supernova Ia data. To perform this
+comparison, we calculate the distance modulus using standard cosmological distance relations incorporating the
+proposed cosmological model. This calculated distance modulus is then compared with the same as obtained from the
+
+9
+Out[27]=
+0
+π
+12
+π
+6
+π
+4
+π
+3
+5 π
+12
+π
+2
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+-0.52841850
+-0.52835010
+-0.52828170
+-0.52821330
+-0.52814490
+-0.52807650
+-0.52800810
+-0.52793970
+Out[33]=
+0
+π
+12
+π
+6
+π
+4
+π
+3
+5 π
+12
+π
+2
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+-0.66367
+-0.66234
+-0.66101
+-0.65968
+-0.65835
+-0.65702
+-0.65569
+-0.65436
+(a)
+(b)
+Out[39]=
+0
+π
+12
+π
+6
+π
+4
+π
+3
+5 π
+12
+π
+2
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+-0.93990
+-0.93626
+-0.93262
+-0.92898
+-0.92534
+-0.92170
+-0.91806
+-0.91442
+Out[45]=
+0
+π
+12
+π
+6
+π
+4
+π
+3
+5 π
+12
+π
+2
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+-0.40512
+-0.40368
+-0.40224
+-0.40080
+-0.39936
+-0.39792
+-0.39648
+-0.39504
+(c)
+(d)
+FIG. 5. (a) Variation of deceleration parameter (q0) in λr −λθ parameter plane for η = 0.0, (b) for η = 0.1, (c) for η = 0.3,
+(d) for η = −0.1 keeping other parameters fixed at h0 = 0.674, Ωk,0 = 0 and ωde = −1.0.
+Union 2.1 supernova Ia data. In our analysis, the posterior distributions of different parameters are obtained using the
+Markov Chain Monte Carlo (MCMC) iteration method (Figure 7) via the MCMCSTAT package [50, 51]. We utilize
+a total of 105 events with an adaptation interval of 500, within the parameter ranges: h0 ∈[0.6, 0.8], λr ∈[0.0, 0.2],
+λθ ∈[−π, π], ωde ∈[−1.5, −0.7], Ωk,0 ∈[0.0, 0.2] and η ∈[−0.3, 0.5].
+The topmost plots in the first, second, third, and fourth columns of Figure 7 represent the posterior distribution for
+the parameters h0, λr, λθ, ωde, Ωk,0 and η respectively. The remaining plots in Figure 7 show contour representations
+of the posterior distribution in various two-parameter spaces. In these contour plots, darker regions denote higher
+posterior probabilities, and the lines indicate the boundaries of the 1σ, 2σ, and 3σ regions.
+From this analysis, the obtained set of optimum points are h0 = 0.68+0.03
+−0.03, λr = 0.09+0.07
+−0.06, λθ = 0.41+1.86
+−2.07,
+ωde = −1.07+0.25
+−0.27, Ωk,0 = 0.10+0.07
+−0.07 and η = 0.05+0.13
+−0.14. From the histogram corresponds to Ωk,0 (in Figure 7), it can
+be seen that, the fluctuation of population with Ωk,0 is not very prominent, the pick in the histogram plot for Ωk,0 is
+also small. So one can conclude that the effect of curvature term is not significant in the dynamics of the Universe
+where our proposed model is considered. A similar characteristic can be observed in the 1-D histogram plot for ωde,
+although the pick is prominent in this particular case. On the other hand, the mixing angle λθ can be varied within
+π to π, in this case the pick is located at ≈7π/10. The histogram plot corresponds to λr clearly indicates that the
+
+10
+FIG. 6.
+Variation of deceleration parameter (q0) with η for various chosen values of λr and λθ.
+lower value of λr fits well with the observational data. The posterior distribution for h0 and η are resemble to the
+Gaussian distribution. The optimum values of h0 and η are respectively h0 = 0.68 and η = 0.05.
+V.
+SUMMERY AND CONCLUSION
+In this work, using a viscous dark energy framework, we examine how the interaction of dark matter and dark
+energy affects the evolution of the universe. We present a generalized interacting dark energy (IDE) model that
+can adjust to different IDE scenarios by varying its parameters, λr and λθ, instead of depending on traditional IDE
+models. Using this generalized model, we analyze the evolution of the Hubble parameter, incorporating nonzero bulk
+viscosity for dark energy. We begin with discussing three established viscous dark energy scenarios. Following this,
+we adopt a generalized form of the Hubble parameter for the VDE scenario, as introduced in one of our previous
+works [32], and eventually modify it to account for interacting dark energy scenarios.
+We show the evolution of the Hubble parameter with redshift z under different VDE and IDE scenarios and the
+fluctuation from the same as calculated for ΛCDM model in Figure 1. This figure demonstrates that higher values
+of viscosity slow down the expansion, suggesting that viscous effects in DE may act as resistance to acceleration.
+Interaction between dark matter and dark energy further modifies the expansion rate.
+A comparison of the evolution of cosmic density parameters in a VDE and interacting DM - DE model is drawn
+in Figure 2(a). In Figure 2(a), the dark matter density parameter, Ωχ, the dark energy density parameter, Ωde,
+the baryon density parameter, Ωb, and the radiation density parameter, Ωrad, are shown with different benchmark
+parameters. The plot reveals that, while the density parameters for different cosmic components are similar across
+models at the current epoch. However differences from the ΛCDM model grow at higher redshifts. It can be observed
+that an increased value of viscosity parameter η helps to deviate the density parameters more from the same as
+calculated for ΛCDM model.
+In Figure 2(b), a parametric representation of the dark energy density parameter Ωde and total matter density
+parameter, Ωm (sum of Ωχ and Ωb), shows a straight line trend for ΛCDM model. In contrast, the inclusion of dark
+sector interactions results in curved lines and the curvature essentially sensitive to the bulk viscous parameter η.
+Figure 3(a) shows the variation of Om(z) with redshift z. Om parameter for ΛCDM model is shown by a dashed
+black line, which remains almost unchanged at Om(z) = 0.31. However, a significant deviation is observed for the
+case of higher viscous dark energy. From Figure 3(a), it is also observed that, an increasing value of λr results in
+more pronounced deviations from ΛCDM.
+The three-point diagnostic parameter Om3(z1, z2, z3) is plotted with varying z3 in Figure 3(b), keeping z1 = 0.20
+and z2 = 0.57 fixed. For the ΛCDM model, the parameter Om3 remains consistently at unity across all redshifts.
+From Figure 3(b), one can see that, all curves pass through Om3 = 1 at z3 = z2, however the value of Om3 parameter
+lie less than unity at z3 > z2. Here the values of Om parameter less than unity suggests a phantom-like dark energy
+behavior, while decreasing redshift (progression toward the present Universe) trends toward a quintessence-like nature
+
+11
+FIG. 7.
+Corner plot showing the MCMC result for our model carried out using the observational results of Union 2.1 supernova
+Ia data. The histograms on the diagonal show the marginalized posterior densities for each parameter.
+of dark energy (Om3 > 1), which can be seen at z3 < z −2.
+In Figure 4(a), our proposed model demonstrates consistently lower values of the deceleration parameter q(z)
+relative to the ΛCDM model, while the jerk parameter j(z) and snap parameter s(z) exhibit higher values. The
+benchmark parameters (dashed blue line) align closely with the deceleration parameters calculated with a fixed value
+of η, although slight deviations appear for the case of j(z) and s(z). From (Figure 4) one can analyze the impact of
+the interaction strength λr on the Universe’s evolution. Increases in λr result in higher q values, both presently and in
+future scenarios, while lowering j(z) and s(z) across the redshift range. In contrast, a completely opposite phenomena
+is observed at z ⪆0.4. Furthermore, the dark energy equation of state parameter ωde significantly influences the
+evolution of q(z), j(z), and s(z), emphasizing dark energy’s central role in cosmic expansion dynamics. The curvature
+term’s influence (Ωk,0) is minimal to that of ωde but with reduced magnitude. Modifying the viscous parameter η
+reveals a substantial effect on all parameters. The magenta line in Figure 4(a) shows that lowering η to 0.10 enhances
+deceleration, while j(z) and s(z) are reduced for the same.
+The subplots in Figure 5 graphically depicts the value of present deceleration parameter q0 in the λr −λθ parameter
+
+12
+plane for different vaues of η: η = 0.0, 0.1, 0.3, and −0.1. There is a tendency that the variation of q0 with regard to
+λr is most noticeable within π/12 ≤λθ ≤π/6. Both at lower and higher values of λθ, th fluctuation decreases and it
+reached its minimum value at λθ ≈π/2.
+Figure 5(c) shows that with higher η values, as in η = 0.3, q0 increases with increasing λr. On the other hand,
+as a lower value of η is considered, the variation of q0 with λr decreases and from η ⪆0.006 (see Figure 6) it starts
+showing reverse variation. It is also observed that, at lower values of η correspond to higher q0 values, approaching
+−0.5 for η ≈0.0.
+A Bayesian analysis is performed to compare the proposed model with Union 2.1 supernova Ia dataset. Using Markov
+Chain Monte Carlo (MCMC) sampling with 100,000 events, the posterior distributions for parameters namely h0, λr,
+λθ, ωde, Ωk,0, and η were obtained within their specified ranges. The MCMC results highlighted the optimal parameter
+values: h0 = 0.68, λr = 0.09, λθ = 0.41, ωde = −1.07, Ωk,0 = 0.10, and η = 0.05. Posterior distributions in Figure 7
+showed that variations in the curvature term Ωk,0 have minimal effect on cosmic dynamics, whereas parameters like
+λθ and ωde show prominent peaks, indicating significant influence. Therefore, in the presence of viscosity in DE fluid,
+the evolution of Universe has been significantly influenced by DM - DE interaction.
+ACKNOWLEDGEMENTS
+Two of the authors (A.H. and R.B.) wish to acknowledge the support received from St. Xavier’s College, Kolkata.
+One of the authors (R.B.) also thanks the Women Scientist Scheme-A fellowship (SR/WOS-A/PM-49/2018), Depart-
+ment of Science and Technology (DST), Govt. of India, for providing financial support.
+[1] A. G. Riess, A. V. Filippenko, P. Challis, A. Clocchiatti, A. Diercks, P. M. Garnavich, R. L. Gilliland, C. J. Hogan, S. Jha,
+R. P. Kirshner, B. Leibundgut, M. M. Phillips, D. Reiss, B. P. Schmidt, R. A. Schommer, R. C. Smith, J. Spyromilio,
+C. Stubbs, N. B. Suntzeff, and J. Tonry, Observational evidence from supernovae for an accelerating universe and a
+cosmological constant, Astron. J 116, 1009 (1998).
+[2] S. Perlmutter, M. S. Turner, and M. White, Constraining dark energy with type ia supernovae and large-scale structure,
+Phys. Rev. Lett. 83, 670 (1999).
+[3] D. H. Weinberg, M. J. Mortonson, D. J. Eisenstein, C. Hirata, A. G. Riess, and E. Rozo, Observational probes of cosmic
+acceleration, Phys. Rep. 530, 87 (2013), arXiv:1201.2434 [astro-ph.CO].
+[4] C. L. Bennett et al., Nine-year wilkinson microwave anisotropy probe (wmap) observations: Final maps and results,
+Astrophys. J. Suppl. Ser. 208, 20 (2013).
+[5] P. Collaboration, Planck 2013 results. XVI. Cosmological parameters, Astron. Astrophys. 571, A16 (2014), arXiv:1303.5076
+[astro-ph.CO].
+[6] P.
+Collaboration,
+Planck
+2015
+results.
+XIII.
+Cosmological
+parameters,
+Astron.
+Astrophys.
+594,
+A13
+(2016),
+arXiv:1502.01589 [astro-ph.CO].
+[7] S. Weinberg, The cosmological constant problem, Rev. Mod. Phys. 61, 1 (1989).
+[8] I. Zlatev, L. Wang, and P. J. Steinhardt, Quintessence, cosmic coincidence, and the cosmological constant, Phys. Rev.
+Lett. 82, 896 (1999).
+[9] J. S. Bullock and M. Boylan-Kolchin, Small-Scale Challenges to the ΛCDM Paradigm, Annu. Rev. Astron. Astrophys. 55,
+343 (2017), arXiv:1707.04256 [astro-ph.CO].
+[10] A. G. Riess, The Expansion of the Universe is Faster than Expected, Nature Rev. Phys. 2, 10 (2019), arXiv:2001.03624
+[astro-ph.CO].
+[11] A. G. Riess, S. Casertano, W. Yuan, L. M. Macri, and D. Scolnic, Large magellanic cloud cepheid standards provide a 1%
+foundation for the determination of the hubble constant and stronger evidence for physics beyond λcdm, The Astrophysical
+Journal 876, 85 (2019).
+[12] K. C. Wong et al., H0LiCOW - XIII. A 2.4 per cent measurement of H0 from lensed quasars: 5.3σ tension between early-
+and late-Universe probes, Mon. Not. Roy. Astron. Soc. 498, 1420 (2020), arXiv:1907.04869 [astro-ph.CO].
+[13] C. Hikage et al., Cosmology from cosmic shear power spectra with Subaru Hyper Suprime-Cam first-year data, Publ.
+Astron. Soc. Jpn. 71, 43 (2019), arXiv:1809.09148 [astro-ph.CO].
+[14] H. Hildebrandt et al., KiDS+VIKING-450: Cosmic shear tomography with optical and infrared data, Astron. Astrophys.
+633, A69 (2020), arXiv:1812.06076 [astro-ph.CO].
+[15] M. Asgari et al., KiDS-1000 cosmology: Cosmic shear constraints and comparison between two point statistics, Astron.
+Astrophys. 645, A104 (2021), arXiv:2007.15633 [astro-ph.CO].
+[16] A. Amon et al. (DES Collaboration), Dark energy survey year 3 results: Cosmology from cosmic shear and robustness to
+data calibration, Phys. Rev. D 105, 023514 (2022).
+[17] R. Caldwell, A phantom menace? cosmological consequences of a dark energy component with super-negative equation of
+state, Phys. Lett. B 545, 23 (2002).
+
+13
+[18] A. Kamenshchik, U. Moschella, and V. Pasquier, An alternative to quintessence, Phys. Lett. B 511, 265 (2001).
+[19] S. Nojiri and S. D. Odintsov, Modified gravity with negative and positive powers of curvature: Unification of inflation and
+cosmic acceleration, Phys. Rev. D 68, 123512 (2003).
+[20] G. R. Dvali, G. Gabadadze, and M. Porrati, 4-D gravity on a brane in 5-D Minkowski space, Phys. Lett. B 485, 208 (2000),
+arXiv:hep-th/0005016.
+[21] C. Eckart, The thermodynamics of irreversible processes. iii. relativistic theory of the simple fluid, Phys. Rev. 58, 919
+(1940).
+[22] A. Di Prisco, L. Herrera, and J. Ib´a˜nez, Qualitative analysis of dissipative cosmologies, Phys. Rev. D 63, 023501 (2000).
+[23] W. Zimdahl, D. J. Schwarz, A. B. Balakin, and D. Pav´on, Cosmic antifriction and accelerated expansion, Phys. Rev. D
+64, 063501 (2001).
+[24] H. Velten and D. J. Schwarz, Dissipation of dark matter, Phys. Rev. D 86, 083501 (2012).
+[25] J. Ren and X.-H. Meng, Cosmological model with viscosity media (dark fluid) described by an effective equation of state,
+Phys. Lett. B 633, 1 (2006).
+[26] M. Xin-He and D. Xu, Friedmann cosmology with bulk viscosity: A concrete model for dark energy, Commun. Theor.
+Phys. 52, 377 (2009).
+[27] R. Colistete, J. C. Fabris, J. Tossa, and W. Zimdahl, Bulk viscous cosmology, Phys. Rev. D 76, 103516 (2007).
+[28] G. S. Khadekar, S. Ray, and X. H. Meng, FLRW viscous cosmological models, arXiv e-prints , arXiv:1611.01023 (2016),
+arXiv:1611.01023 [physics.gen-ph].
+[29] A. A. Costa, R. C. G. Landim, B. Wang, and E. Abdalla, Interacting dark energy: possible explanation for 21-cm absorption
+at cosmic dawn, Eur. Phys. J. C 78, 746 (2018).
+[30] Y. Wang and G.-B. Zhao, Constraining the dark matter vacuum energy interaction using the edges 21 cm absorption
+signal, Astrophys. J. 869, 26 (2018).
+[31] A. Halder and M. Pandey, Probing the effects of primordial black holes on 21-cm EDGES signal along with interacting dark
+energy and dark matter–baryon scattering, Mon. Not. Roy. Astron. Soc. 508, 3446 (2021), arXiv:2101.05228 [astro-ph.CO].
+[32] A. Halder, S. S. Pandey, and A. S. Majumdar, Global 21-cm brightness temperature in viscous dark energy models, JCAP
+10, 049, arXiv:2207.09177 [astro-ph.CO].
+[33] V. Sahni, A. Shafieloo, and A. A. Starobinsky, Two new diagnostics of dark energy, Phys. Rev. D 78, 103502 (2008),
+arXiv:0807.3548 [astro-ph].
+[34] C. Li, X. Ren, M. Khurshudyan, and Y.-F. Cai, Implications of the possible 21-cm line excess at cosmic dawn on dynamics
+of interacting dark energy, Phys. Lett. B 801, 135141 (2020).
+[35] Z.-K. Guo, N. Ohta, and S. Tsujikawa, Probing the coupling between dark components of the universe, Phys. Rev. D 76,
+023508 (2007).
+[36] E. Di Valentino, A. Melchiorri, O. Mena, and S. Vagnozzi, Nonminimal dark sector physics and cosmological tensions,
+Phys. Rev. D 101, 063502 (2020).
+[37] A. A. Costa, X.-D. Xu, B. Wang, and E. Abdalla, Constraints on interacting dark energy models from planck 2015 and
+redshift-space distortion data, JCAP 2017 (01), 028.
+[38] O. Bertolami, F. Gil Pedro, and M. Le Delliou, Dark energy–dark matter interaction and putative violation of the equiv-
+alence principle from the abell cluster a586, Phys. Lett. B 654, 165 (2007).
+[39] J.-H. He, B. Wang, and E. Abdalla, Testing the interaction between dark energy and dark matter via the latest observations,
+Phys. Rev. D 83, 063515 (2011).
+[40] L. Santos, W. Zhao, E. G. M. Ferreira, and J. Quintin, Constraining interacting dark energy with cmb and bao future
+surveys, Phys. Rev. D 96, 103529 (2017).
+[41] W. Yang, S. Pan, and A. Paliathanasis, Cosmological constraints on an exponential interaction in the dark sector, Mon.
+Not. Roy. Astron. Soc. 482, 1007 (2018).
+[42] M. Le Delliou, R. J. F. Marcondes, and G. B. Lima Neto, New observational constraints on interacting dark energy using
+galaxy clusters virial equilibrium states, Mon. Not. Roy. Astron. Soc. 490, 1944 (2019).
+[43] M. Gavela, D. Hern´andez, L. L. Honorez, O. Mena, and S. Rigolin, Dark coupling, JCAP 2009 (07), 034.
+[44] J.-H. He, B. Wang, and E. Abdalla, Stability of the curvature perturbation in dark sectors’ mutual interacting models,
+Phys. Lett. B 671, 139 (2009).
+[45] M. Visser, Jerk, snap, and the cosmological equation of state, Class. Quantum Grav. 21 (2003).
+[46] D. Adak, D. Majumdar, and S. Pal, Generalizing thawing dark energy models: the standard vis-`a-vis model independent
+diagnostics, Mon. Not. Roy. Astron. Soc. 437, 831 (2013).
+[47] A. Shafieloo, V. Sahni, and A. A. Starobinsky, New null diagnostic customized for reconstructing the properties of dark
+energy from baryon acoustic oscillations data, Phys. Rev. D 86, 103527 (2012).
+[48] C. Blake et al., The WiggleZ Dark Energy Survey: mapping the distance–redshift relation with baryon acoustic oscillations,
+Mon. Not. Roy. Astron. Soc. 418, 1707 (2011).
+[49] A. G. S´anchez et al., The clustering of galaxies in the SDSS-III Baryon Oscillation Spectroscopic Survey: cosmological
+implications of the large-scale two-point correlation function, Mon. Not. Roy. Astron. Soc. 425, 415 (2012).
+[50] H. Haario, M. Laine, A. Mira, and E. Saksman, Dram: Efficient adaptive mcmc, Stat. Comput. 16, 339 (2006).
+[51] H. Haario, E. Saksman, and J. Tamminen, An adaptive metropolis algorithm, Bernoulli 7, 223 (2001).
+

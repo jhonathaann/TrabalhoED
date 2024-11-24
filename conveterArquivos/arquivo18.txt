@@ -1,0 +1,1220 @@
+Prepared for submission to JCAP
+Is there a dynamical tendency in H0
+with late time measurements?
+Mauricio Lopez-Henandeza Josue De-Santiagoa,b
+aDepartamento de F´ısica, Centro de Investigaci´on y de Estudios Avanzados del I.P.N.
+Apartado Postal 14-740, 07000, Ciudad de M´exico, M´exico
+bConsejo Nacional de Humanidades, Ciencias y Tecnolog´ıas, Av.
+Insurgentes Sur 1582,
+03940, Ciudad de M´exico, M´exico
+E-mail: mauricio.lopez@cinvestav.mx, Josue.desantiago@cinvestav.mx
+Abstract. The discrepancy between the Hubble constant H0 values derived from early-
+time and late-time measurements, reaching up to 4σ, represents the most serious challenge
+in modern cosmology and astrophysics.
+In this work, we investigate if a similar tension
+exists between only late time measurements at different redshifts. We use the latest public
+datasets including Cosmic Chronometers, Megamasers, SNe Ia and DESI-BAO, that span
+from redshift z ∼0 up to z ∼2.3. By dividing the data into redshift bins, we derive H0 values
+from each bin separately. Our analysis reveals a phenomenological dynamic evolution in H0
+across different redshift ranges, with a significance from 1.5σ and 2.3σ, depending on the
+parameterization. Consistency of the model demands observational constancy of H0 since it
+is an integration constant within the Friedmann-Lemaˆıtre-Robertson-Walker (FLRW) metric.
+Thus, these findings suggest that the observed Hubble tension might not only exist between
+early and late-time measurements but also among late-time data themselves, providing new
+insights into the nature of the Hubble tension.
+arXiv:2411.00095v1  [astro-ph.CO]  31 Oct 2024
+
+Contents
+1
+Introduction
+1
+2
+Cosmology
+2
+3
+Data
+4
+4
+Fitting
+4
+5
+Results
+6
+5.1
+Quadratic parameterization
+8
+5.2
+Fourier parameterization
+8
+5.3
+Unbinned results
+10
+6
+Summary and conclusions
+11
+1
+Introduction
+Our current understanding of the Universe relies on the ΛCDM model which incorporates
+the cosmological constant Λ and a cold dark matter component. This model is the most
+accepted and successful in explaining most cosmological observations [1, 2]. One of the most
+important challenges within the astrophysics and cosmology community is the discrepancy
+of more than 4σ for the Hubble constant H0, between local measurements using the cosmic
+distance ladder and early-time measurements of the cosmic microwave background (CMB).
+The former based on direct observations of Supernovae Type Ia (SNe Ia) calibrated with
+Cepheids by the SH0ES team [3] and the latter obtained by the Planck satellite, which relies
+on the ΛCDM model [1]. This so called Hubble tension has led to an exhaustive search for
+potential explanations. A wide range of models have been used to address the H0 tension,
+proposing either a dark energy (DE) component during the early evolution of the Universe
+[4–9], a DE component with a time-varying equation of state [10–12], extra interactions
+between the components of the Universe [13–16], or modified gravity [17–19]. For a more
+comprehensive study about the H0 tension and alternative proposals, see the reviews [20–22].
+In the ΛCDM model, H0 is a constant by definition: it represents the Hubble parameter
+H(z) at the present epoch H0 = H(z = 0). However, recent results have shown that H0
+depends on the redshift of the probes used to determine it. The first of these results, from
+six gravitationally lensed quasars with measured time delays by the H0LiCOW program,
+indicated that H0 decreases with lens redshift [23], with no evidence suggesting that this
+trend is due to unaccounted systematics [24]. Subsequent studies have found a similar feature
+in different datasets [25–34], offering a new perspective on the Hubble tension due to an
+apparent redshift dependence of a quantity that should, tautologically, be a constant.
+Recently, the Dark Energy Spectroscopic Instrument (DESI) collaboration published its
+cosmological constraints from the first year of observations of baryon acoustic oscillations
+(BAO). The results favor models with a DE component whose equation of state varies with
+time by more than 2.6σ [35], which challenges the paradigm of what we previously believed
+to be correct in the ΛCDM model. This dynamical DE could be responsible for a H0 that
+depends on redshift.
+– 1 –
+
+Ref. [25] found that splitting cosmological data in different redshift bins up to z = 0.7
+gives different estimates to H0 which are in contradiction with a single constant H0 at 2.1σ
+level. Leading to the conclusion that the Hubble tension is present even between late time
+measurements themselves when taken at different redshifts. Ref. [25] assumed a cosmological
+constant and used BAO-BOSS data [2]. The new DESI results lead us to question whether
+the new data together with a dynamical DE could solve this tension.
+The paper is organized as follows. In section 2, we detail the implemented methodology,
+along with the theory behind the cosmological probes used in this paper. In section 3, we
+mention the data used. In section 4, we explain the criteria used to split the data into bins.
+In section 5, we present our results on constraining the value of H0 in each of the bins.
+Finally, the summary and conclusions can be found in section 6.
+2
+Cosmology
+In light of the new discoveries for the first cosmological results from DESI [35], in this work
+we use a flat Universe with a dynamical Dark Energy component, with a Chevallier-Polarski-
+Linder (CPL) equation of state given by w(a) = w0 + wa(1 −a) [36, 37]. The Friedmann
+equation is given by the following parameterization
+H(z) = H0
+
+Ωm(1 + z)3 + (1 −Ωm)f(z)
+1/2 ,
+(2.1)
+where
+f(z) = (1 + z)3(1+w0+wa)e−3waz/(1+z),
+(2.2)
+and with H0, Ωm, w0, wa the free parameters.
+Following [25], we will split different cosmological data according to their redshift in order
+to estimate the Hubble constant using only data in certain redshift ranges. This method
+involves binning a modern dataset that includes the new DESI data, cosmic chronometers
+(CC), megamasers, and SNe Ia samples.
+The SNe Ia samples comprises the Pantheon+
+compilation, and the new Union3 compilation and Dark Energy Survey (DES) Year 5 data
+release. With this new data we were able to expand the redshift range in the analysis to
+observe in more depth the evolution of H0 with the redshift of the data.
+Cosmic chronometers provide a direct estimate of the expansion rate of the Universe.
+This method takes advantage of the fact that the Hubble parameter, H(z), can be directly
+expressed as a function of the time differential of the Universe, dt, over a given redshift
+interval, dz [38]
+H(z) = −
+1
+1 + z
+dz
+dt .
+(2.3)
+CCs evolve homogeneously as a function of cosmic time and on a timescale much longer than
+their age difference. Given H(z), to obtain H0 from eq. (2.1) it is necessary to determine
+Ωm, w0, wa from other observations.
+The water megamasers found in the accretion disks of supermassive black holes in active
+galactic nuclei (AGN) act like a laser beam in the microwave band, providing a method to
+calculate extragalactic distances without relying on the cosmic distance ladder [39]. The
+disk model returns an estimation of the angular diameter distance ˆDA to the galaxy and its
+recession velocity ˆvi. The decomposition of this velocity between its peculiar and cosmological
+components ˆvi = vpec,i + czi is unknown for objects this close. Each ˆDA is related to its
+– 2 –
+
+expected redshift zi and the cosmological parameters by the equation
+DA(z) =
+c
+1 + z
+Z z
+0
+dz′
+H(z′).
+(2.4)
+Following [40], we take peculiar velocities of the galaxies into account incorporating σpec =
+250 km s−1 into the velocity uncertainties. The chi-squared used to constrain cosmological
+parameters is then given as
+χ2 =
+N
+X
+i=1
+"
+(vi −ˆvi)2
+σ2
+v,i + σ2pec
++ (DA(vi/c) −ˆDi)2
+σ2
+D,i
+#
+,
+(2.5)
+where the expected cosmological recession velocities are given by vi = czi, N the number
+of data, σv,i is the statistical uncertainty in the velocity measurement ˆvi, and σD,i is the
+standard deviation of the distance measurement ˆDi. We take the expected velocities vi for
+megamaser host galaxies as nuisance parameters.
+The SNe Ia data gives the apparent magnitude mb of each SNe, which can be compared
+with the predicted model given by
+mb = M + µ(z) = M + 25 + 5log10
+DL(z)
+Mpc
+
+,
+(2.6)
+where M is the absolute magnitude for SNe Ia, and DL(z) is the luminosity distance, which
+in the case of SNe Ia can be written, according to [41], by
+DL(z) = (1 + zhel)(1 + zcmb)DA(zcmb),
+(2.7)
+zhel is the heliocentric redshift of the SNe (or its host galaxy) and zcmb is this redshift corrected
+for the peculiar motion of the solar system with respect to the CMB. Note that the parameters
+M and H0 are degenerate when analyzing SNe alone. Therefore, SNe measurements are used
+to constrain other cosmological parameters, particularly the matter density Ωm.
+The BAO measurements provide distances relative to the sound horizon, rd, as a function
+of redshift [2]. Along the line-of-sight direction, a measurement of the redshift interval, ∆z,
+gives a means to measure the Hubble distance at redshift z,
+DH(z) =
+c
+H(z).
+(2.8)
+Along the transverse direction, measuring the angle ∆θ subtended by the BAO feature at z
+estimates the comoving angular diameter distance, DM(z)
+DM(z) = (1 + z)DA(z),
+(2.9)
+These measurements can also be summarized by a single estimation representing the spheri-
+cally averaged distance
+DV(z) =
+
+zD2
+M(z)DH(z)
+1/3 ,
+(2.10)
+BAO measurements constrain these distances all divided by the sound horizon rd. Therefore,
+H0 and rd are degenerated with each other. The BAO measurements constraint the product
+H0rd, and therefore are key in the treatment of Hubble tension. This constraint implies that
+a higher H0, as that obtained by SH0ES [3], requires a lower rd, which is incompatible with
+the value inferred by the Planck Collaboration [1]. In this work we won’t use the CMB prior
+on rd as this will imply the use of data outside our redshift bins.
+– 3 –
+
+3
+Data
+To constrain H0, we use the following public data up to the redshift z < 2.33, including
+their systematic errors and covariance matrices. These data correspond to the latest public
+measurements of the observables from the previous section:
+I. Distances and recession velocities from 6 megamasers in the range 0.002 ≤z ≤0.034,
+from the Megamaser Cosmology Project [39, 40, 42].
+II. 32 cosmic chronometers data in the range 0.07 ≤z ≤2, from refs. [43–51]. We estimate
+the covariance matrix1 between these data points following ref. [52].
+III. BAO measurements in galaxy, quasar and Lyman-α forest tracers from the Year 1 data
+release of DESI. These are measurements of the transverse comoving distance DM and
+Hubble rate DH, or their combination DV, relative to the sound horizon rd with the
+following effective redshifts zeff = 0.30, 0.51, 0.71, 0.93, 1.32, 1.49, 2.33 [35].
+IV. For the superenovae type Ia measurements, we use any of the three latest compilations.
+1,590 SNe Ia from the Pantheon+ compilation in the redshift range 0.01 ≤z ≤2.26
+[53]. Recently published results from the Year 5 data release of the Dark Energy Survey
+(DES Y5) that include 1,635 new photometrically classified SNe Ia and 194 low-redshift
+SNe Ia (which are also in common with Pantheon+), spanning 0.025 ≤z ≤1.3 [54].
+Finally, 22 binned data points from 2087 SNe Ia from the Union3 sample in the range
+0.05 ≤z ≤2.26 [55], which has 1360 SNe in common with Pantheon+. We include
+both the statistical and systematic uncertainties in the three sets. We emphasize that
+these SNe Ia data are not independent of each other, and therefore, we cannot combine
+them. However, they differ in the way they analyze systematic errors and astrophysical
+parameters, making it interesting to compare the results of each of them.
+Compared with the data used in ref. [25] which includes the BOSS BAO data [2] and
+the Pantheon sample [56], we have the BAO data from DESI Y1, the recent supernovae
+compilations Pantheon+, Union3 and DES Y5, as well as three extra measurements of CC.
+Since the Pantheon+, DES and Union3 data cannot be combined, we present each of their
+results separately. The analyses always include the megamasers+CC+DESI data, which we
+will call “Base”, but differ in the SNe sample. We denote each case as Base+PantheonPlus,
+Base+Union3 and Base+DES.
+4
+Fitting
+In this section, we describe how we fit the cosmological parameters using the data specified
+in the last section. Our objective is to see if the estimation of the Hubble constant H0 is
+consistent when using data at different redshifts. We will split the total redshift range from
+our data in separate redshift bins with z ∈(zi
+min, zi
+max) and we use only data coming from
+that bin to estimate H0.
+The redshift width of the bins varies between each other as we follow the strategy used in
+[25] requiring that the average redshift of each bin coincides between megamasers, SNe and
+1The detailed recipe on how to correctly estimate the covariance matrix for cosmic chronometers is given
+in https://gitlab.com/mmoresco/CCcovariance
+– 4 –
+
+Base+PantheonPlus
+Bin
+Data
+Range
+¯z
+1
+Megamasers, SNe
+0.01 < z ≤0.069
+0.032
+2
+SNe, CC
+0.069 < z ≤0.199
+0.15
+3
+SNe, CC, DESI-BGS
+0.199 < z ≤0.425
+0.30
+4
+SNe, CC, DESI-LRG1 (z = 0.51)
+0.425 < z ≤0.625
+0.51
+5
+SNe, CC, DESI-LRG2 (z = 0.71)
+0.625 < z ≤0.7891
+0.71
+6
+SNe, CC, DESI-LRG3+ELG1
+0.7891 < z ≤1.13
+0.93
+7
+SNe, CC, DESI-ELG2, DESI-QSO
+1.13 < z ≤1.65
+1.38
+8
+SNe, CC, DESI-Lya
+1.65 < z ≤2.3
+1.94
+Base+Union3
+Bin
+Data
+Range
+¯z
+1
+Megamasers, SNe
+0 < z ≤0.069
+0.05
+2
+SNe, CC
+0.069 < z ≤0.19
+0.12
+3
+SNe, CC, DESI-BGS
+0.19 < z ≤0.44
+0.30
+4
+SNe, CC, DESI-LRG1 (z = 0.51)
+0.44 < z ≤0.649
+0.51
+5
+SNe, CC, DESI-LRG2 (z = 0.71)
+0.649 < z ≤0.79
+0.71
+6
+SNe, CC, DESI-LRG3+ELG1
+0.79 < z ≤1.23
+0.93
+7
+SNe, CC, DESI-ELG2, DESI-QSO
+1.23 < z ≤1.7
+1.36
+8
+SNe, CC, DESI-Lya
+1.7 < z ≤2.3
+2.26
+Base+DES
+Bin
+Data
+Range
+¯z
+1
+Megamasers, SNe
+0 < z ≤0.069
+0.041
+2
+SNe, CC
+0.069 < z ≤0.19
+0.12
+3
+SNe, CC, DESI-BGS
+0.19 < z ≤0.401
+0.30
+4
+SNe, CC, DESI-LRG1 (z = 0.51)
+0.401 < z ≤0.63
+0.51
+5
+SNe, CC, DESI-LRG2 (z = 0.71)
+0.63 < z ≤0.826
+0.71
+6
+SNe, CC, DESI-LRG3+ELG1
+0.826 < z ≤1.13
+0.93
+Table 1: Summary of the data, range in redshift and ¯z in each bin for each different data set.
+BAO. We use the weighted average ¯z given by
+¯zi =
+PNi
+k zk(σk)−2
+PNi
+k (σk)−2
+,
+(4.1)
+where Ni denotes the number of data used in the bin i and σk denotes the error in the
+observable at redshift zk. For megamasers we use σ2
+k = σ2
+ˆv,k+σ2
+pec+σ2
+ˆD,k. The bins constructed
+in each analysis are summarized in table 1.
+Not all bins contain all the data.
+The megamasers appear only in the first redshift
+bin, while some bins lack DESI data. We only require that all bins contain either CCs or
+megamasers to break the degeneracies needed to obtain a value of H0. We emphasize that
+the condition (4.1) leads to different binnings and different ¯z’s depending on the SNe’s used
+(PantheonPlus, Union3 and DES).
+– 5 –
+
+Data
+H0
+h
+km
+s Mpc
+i
+Bin 1
+Bin 2
+Bin 3
+Bin 4
+Bin 5
+Bin 6
+Bin 7
+Bin 8
+Base+PantheonPlus
+73.32+3.34
+−2.92
+67.84+5.37
+−5.20
+66.08+5.26
+−5.11
+56.24+6.91
+−6.36
+67.19+8.92
+−7.82
+78.86+10.30
+−8.62
+64.32+10.24
+−7.91
+64.16+15.82
+−12.51
+Base+Union3
+73.38+3.12
+−2.82
+63.35+5.58
+−5.03
+66.88+5.26
+−5.17
+59.20+7.26
+−6.53
+65.12+8.86
+−7.63
+79.14+10.38
+−9.13
+64.03+9.69
+−8.14
+66.11+14.32
+−11.77
+Base+DES
+73.43 ± 2.97
+65.67+5.97
+−5.52
+63.04+5.41
+−5.11
+61.78+6.45
+−5.99
+66.36+8.37
+−8.09
+77.04+9.79
+−9.02
+–
+–
+Table 2: Numerical values for the best-fit H0 in each bin and for each data set. To see the redshift range
+of each of the bins refer to table 1. This data is plotted in fig. 1.
+To fit the parameters, we used the Python module emcee [57]. We set flat priors for all the
+parameters, in particular for H0 the prior is large enough that its fitting is mainly influenced
+by the measurements
+H0 ∈(0, 150).
+(4.2)
+On the other hand, the data contained in a single bin lack the power to constrain the
+equation of state parameters w0 and wa. Therefore the posteriors of these parameters are
+mainly influenced by their priors. We considered large prior ranges
+wa ∈(−2.5, 2.5), w0 ∈(−1.5, −1/3),
+(4.3)
+to allow for enough freedom in the DE dynamics.
+These ranges contain both the DESI
+estimation2 and the cosmological constant w0 = −1, wa = 0. After we fit the parameters, w0
+and wa take values in their entire allowed region without preference for a particular value.
+This comes from the narrow ranges in z for each bin which limit the evolution of f(z) in
+equation (2.2) and therefore the possible observable effects from a dynamical Dark Energy.
+In subsection 5.3 we do find limits for w0 and wa using the full redshift range of the data.
+Not all bins fit all parameters due to the fact that each bin may or may not contain a
+certain type of data. The only parameters fitted in all bins are Ωm, H0, w0, wa, and the
+absolute magnitude of SNe Ia M.
+5
+Results
+We show the fitted values of H0 for each bin in Table 2 and illustrate them in figure 1. In
+all three analyses, H0 decreases as function of redshift for z < 0.6, which agrees with [25].
+In the next two bins, the value of H0 increases to a maximum of ∼78 km s−1 Mpc−1 and
+then decreases again. Note that the scarcity and low quality of data inflate the errors at high
+redshifts.
+In figure 1 we see that the estimations in H0 seem to depend on the redshift. In order
+to quantify how much this measurements deviate from a constant, we introduce different
+parameterizations
+eH0(¯z, θk) ,
+(5.1)
+that are functions of the redshift of the measurements ¯z and some parameters θk for k =
+1, 2, · · · which allow eH0 to deviate from a constant. Assuming statistical independence we
+2We recall that w0 = −0.64 ± 0.11, and wa = −1.27+0.40
+−0.34 for DESI+CMB+Union3 [35].
+– 6 –
+
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+z
+50
+55
+60
+65
+70
+75
+80
+85
+90
+H0 [kms
+1Mpc
+1]
+Base+DES
+Base+PantheonPlus
+Base+Union3
+Figure 1: Best-fit values for the Hubble constant in each bin and for each different data set. The Base+DES
+data cover the range z ≤1.3, so it includes only 6 redshift bins, compared to Base+PantheonPlus and
+Base+Union3, which cover a wider range. For a better visibility, we shifted the redshift centers ¯zi + 0.02 for
+Base+PantheonPlus and ¯zi + 0.03 for Base+Union3. The centers of the bins ¯zi differ for each data set due
+to eq. (4.1). The green horizontal band corresponds to the value from SH0ES [3] (H0 = 73.04 ± 1.04 km
+s−1Mpc−1) and the light red horizontal band corresponds to the value from Planck 2018 [1] within a ΛCDM
+scenario (H0 = 67.4 ± 0.5 km s−1Mpc−1).
+compute the total posterior as
+Ptot(θk) =
+imax
+Y
+i=1
+Pi
+
+eH0(¯zi, θk)
+
+,
+(5.2)
+where the posteriors Pi result from the fits of each of the bins. With this, we fit the parameters
+θk and estimate how much eH0 deviates from a constant.
+We evaluate how statistically significant is the deviation from a constant H0 by using
+three different methods. First, we use the Bayesian evidence given by [58]
+E =
+Z
+Π(θk)L(θk)dθk ,
+(5.3)
+where Π is the prior and L the Likelihood of the parameters θk. We compute the integral
+using the nested integration algorithm Polychord [59, 60]. Here a larger value means a model
+with more probability. We report the Bayes factor given by
+B = Evar
+Econs
+(5.4)
+and use it to determine if either the variable model or the constant is favored by the data.
+Secondly, the Akaike Information Criterion (AIC) defined as [61, 62]
+AIC = −2 log Lmax + 2k,
+(5.5)
+where Lmax is the maximum likelihood that can be obtained within the model and k the
+number of free parameters.
+Between the two models, the variable and the constant, the
+– 7 –
+
+one with the smaller AIC value is preferred by the data. This criterion favors the larger
+Lmax but penalizes too many extra parameters. In the next subsections we report ∆AIC =
+AICvar −AICcons.
+Thirdly, we determine the number of standard deviations (σ) away from a constant. For
+parameterizations with a single extra parameter we only divide the distance to a constant
+by the standard deviation of the parameter. For models with more parameters, we compute
+the p-value of the variable model and, assuming a Gaussian distribution, we determine the
+number of standard deviations associated with that p-value. This is the least rigorous of our
+tests, but serves to communicate the relevance of our results as the cosmological community
+is familiar with the concept that a few σ’s can be the result of statistical fluctuations and
+not a physical effect.
+5.1
+Quadratic parameterization
+The first 6 bins in figure 1 seem to indicate a quadratic behaviour, therefore we propose a
+quadratic parameterization of the form
+eH0(z) = ˆH0 + mz + bz2,
+(5.6)
+with parameters ˆH0, m and b. For the fit, we exclude the results for bins 7 and 8 in order to
+avoid biases caused by the abrupt drop in the value of H0 in bin 7, and the large error bars
+in bin 8.
+The results are shown in table 3 and in figure ??, which displays the best fit to this
+quadratic function. We also drew the 2.3, 16, 84 and 97.7 percentiles of the fitted samples
+as a function of redshift to represent the 1σ and 2σ errors.
+From the table 3 we can see that the parameters m and b deviate from zero, favouring a
+non constant H0 model. The values of the Bayes factor and the ∆AIC however, show that
+this parametrization improves very modestly the fit to the data given by the constant H0.
+Only accounting for a barely worth mentioning result according to the Jeffreys’ scale [63] of
+the Bayes factor. And according to the ∆AIC scale in [62] corresponding to no preference
+between the models.
+It is evident that the low values of H0 in the last two bins can lead to a fitting which is
+compatible with a constant H0 (m = 0 and b = 0). This can be considered a limitation of
+the quadratic parameterization, which asks for H0 to grow up to infinity at large redshifts.
+As this parameterization is purely phenomenological, we change it for one that won’t present
+this behaviour in the next subsection.
+5.2
+Fourier parameterization
+If we consider all the bins in figure 1, we see a possible oscillatory behavior. Therefore, we
+follow ref. [64] by proposing a parameterization in terms of the Fourier series
+eH0(z, bk, ck) = ˆH0 +
+X
+k
+[bk sin(2kπa) + ck cos(2kπa)] ,
+(5.7)
+where a = 1/(1 + z) is the scale factor. After fitting different cuts of the series, we have
+obtained that the second term in the cosine series c2 follows the oscillatory trend particularly
+well. In order to simplify the parameterization we stay with
+eH0(z) = ˆH0 + A cos(4πa).
+(5.8)
+– 8 –
+
+Data
+ˆH0
+h
+km
+s Mpc
+i
+m
+h
+km
+s Mpc
+i
+b
+h
+km
+s Mpc
+i
+σ
+∆AIC
+B
+Base+PantheonPlus
+75.18+3.76
+−3.42
+−65.96+26.31
+−26.69
+72.27+31.63
+−30.81
+1.5
+-1.67
+1.59
+Base+Union3
+75.06+3.79
+−3.47
+−63.98+29.04
+−28.90
+70.32+34.48
+−33.89
+1.3
+-0.70
+1.30
+Base+DES
+74.64+3.62
+−3.36
+−64.89+26.68
+−26.49
+71.83+32.00
+−32.08
+1.5
+-1.52
+1.72
+Table 3: Constraints on the parameters ˆH0, m and b in the quadratic parameterization (5.6) for the first
+6 bins. We compared the model to a constant H0 and determine the Bayes factor B, ∆AIC and σ deviation.
+While the σ values favors a dynamic H0, the Bayes factor indicates only a barely worth mentioning preference
+for the quadratic model, and the ∆AIC shows no preference between them, as determined using the scale
+provided by [62].
+0.0
+0.2
+0.4
+0.6
+0.8
+z
+50
+55
+60
+65
+70
+75
+80
+85
+H0 [kms
+1Mpc
+1]
+Base+DES
+Bin 1
+Bin 2
+Bin 3
+Bin 4
+Bin 5
+Bin 6
+0.0
+0.2
+0.4
+0.6
+0.8
+z
+55
+60
+65
+70
+75
+80
+85
+90
+H0 [kms
+1Mpc
+1]
+Base+Union3
+Bin 1
+Bin 2
+Bin 3
+Bin 4
+Bin 5
+Bin 6
+0.0
+0.2
+0.4
+0.6
+0.8
+z
+50
+55
+60
+65
+70
+75
+80
+85
+90
+H0 [kms
+1Mpc
+1]
+Base+PantheonPlus
+Bin 1
+Bin 2
+Bin 3
+Bin 4
+Bin 5
+Bin 6
+Figure 2:
+The fit of the quadratic function
+(5.6) against the binned results for H0 in the
+Base+PantheonPlus sample, Base+Union3 sample
+and Base+DES sample. The dashed line represents
+the best fit, while the external solid lines represent
+the 1σ and 2σ errors. For this parametrization we
+only use the first 6 bins of each data set.
+0.0
+0.2
+0.4
+0.6
+0.8
+z
+50
+55
+60
+65
+70
+75
+80
+85
+H0 [kms
+1Mpc
+1]
+Base+DES
+Bin 1
+Bin 2
+Bin 3
+Bin 4
+Bin 5
+Bin 6
+0.0
+0.5
+1.0
+1.5
+2.0
+z
+50
+55
+60
+65
+70
+75
+80
+85
+90
+H0 [kms
+1Mpc
+1]
+Base+Union3
+Bin 1
+Bin 2
+Bin 3
+Bin 4
+Bin 5
+Bin 6
+Bin 7
+Bin 8
+0.00
+0.25
+0.50
+0.75
+1.00
+1.25
+1.50
+1.75
+2.00
+z
+50
+55
+60
+65
+70
+75
+80
+85
+90
+H0 [kms
+1Mpc
+1]
+Base+PantheonPlus
+Bin 1
+Bin 2
+Bin 3
+Bin 4
+Bin 5
+Bin 6
+Bin 7
+Bin 8
+Figure 3:
+The fit to the Fourier parameteriza-
+tion (5.8) against the binned results for H0 in the
+Base+PantheonPlus sample, Base+Union3 sample
+and Base+DES sample. Recall that Base+DES only
+has 6 bins. The dashed line represents the best fit,
+while the external solid lines represent the 1σ and 2σ
+errors.
+– 9 –
+
+Data
+ˆH0
+h
+km
+s Mpc
+i
+A
+h
+km
+s Mpc
+i
+σ
+∆AIC
+B
+6 bins
+Base+PantheonPlus
+67.15+2.40
+−2.35
+5.70+2.82
+−2.88
+2
+−1.90
+2.11
+Base+Union3
+67.10+2.34
+−2.47
+5.35+3.08
+−2.94
+1.8
+−1.22
+1.90
+Base+DES
+66.15+2.39
+−2.19
+6.53+2.88
+−2.85
+2.3
+−2.90
+3.87
+8 bins
+Base+PantheonPlus
+66.63+2.39
+−2.27
+5.59+2.76
+−2.78
+2
+−2.03
+2.21
+Base+Union3
+66.68+2.25
+−2.34
+5.24+2.97
+−2.91
+1.8
+−1.26
+1.54
+Table 4: Constraints on the parameters ˆH0 and A in the Fourier parameterization (5.8). Remember that
+Base+PantheonPlus and Base+Union3 reach up to z = 2.3 while Base+DES only up to z = 1.13.
+We
+compared the model to a constant H0 and determine the Bayes factor B, ∆AIC and σ deviation. We see that
+the deviation from a constant is larger in σ’s than for the quadratic model. The ∆AIC is slightly better for
+the Fourier model than for a constant, although from the scale in [62] there is no preference to either model.
+The Bayes factors values account for a barely worth mentioning value according to the Jeffreys’ scale [63],
+with the exception of the Base+DES data, which shows a substantial preference for the non constant model.
+with only the two parameters ˆH0 and A.
+We now fit all the available bins showing the results in table 4. Figure ?? displays the fit
+for the 8 bins in the Base+PantheonPlus and Base+Union3 samples, and for only 6 bins in
+the Base+DES sample, remembering this data set has a reduced redshift range.
+Again, table 4 includes the σ, ∆AIC and B values to see the robustness of this model
+against a constant H0. The parameter A is different from zero up to ∼2.3 standard devia-
+tions, suggesting a preference for the non constant model. However, the scale in [62] states
+that the difference in AIC values is insufficient to favor any of the models. Table 4 also
+contains the results in each data set for only 6 bins, confirming a general improvement over
+the quadratic parameterization. On Jeffreys’ scale [63], the Bayes factors in table 4 account
+for a barely worth mentioning value, with the exception of the Base+DES sample, where we
+found a substantial preference for the non constant model. It is interesting to note that the
+latest two bins in Base+PantheonPlus and Base+Union3 don’t change too much the results
+in each data set compared to 6 bins.
+5.3
+Unbinned results
+In Table 5 we show the fitted values of the cosmological parameters using the full redshift
+range of the data. For the Hubble constant we obtain an intermediate value between CMB
+and SH0ES of H0 ≈70 km s−1Mpc−1, see figure 4. The constraints on w0 and wa are in
+good agreement with those found for DESI+SNe in [35]. Table 5 shows that a cosmological
+constant Λ (corresponding to w0 = −1 and wa = 0) as a source of DE is excluded at ap-
+proximately 2σ with Base+Union3 and Base+DES data, while Base+PantheonPlus excludes
+it at approximately 1σ. Moreover, Ωm agrees with the Planck value, Ωm = 0.315 ± 0.007;
+however, the sound horizon rd disagrees with the Planck value, rd = 147.09 ± 0.26, by about
+1.5σ.
+– 10 –
+
+67
+68
+69
+70
+71
+72
+73
+74
+H0 [kms
+1Mpc
+1]
+SH0ES 2022
+Planck 2018
+Base+PantheonPlus
+Base+Union3
+Base+DES
+Figure 4:
+Estimates of the Hubble constant H0 for the unbinned data set Base+PantheonPlus,
+Base+Union3 and Base+DES, compared to H0 estimates for SH0ES [3] (H0 = 73.04 ± 1.04 km s−1Mpc−1)
+and Planck 2018 team [1] (H0 = 67.4 ± 0.5 km s−1Mpc−1).
+Data
+H0
+h
+km
+s Mpc
+i
+Ωm
+wo
+wa
+rd [Mpc]
+Base+PantheonPlus
+71.08+2.15
+−2.07
+0.31 ± 0.02
+−0.88+0.08
+−0.07
+−0.45+0.58
+−0.61
+140.95+4.29
+−4.11
+Base+Union3
+70.39+2.16
+−2.11
+0.33 ± 0.02
+−0.68 ± 0.13
+−1.35+0.74
+−0.78
+139.58+4.31
+−4.13
+Base+DES
+70.63+2.13
+−2.08
+0.33 ± 0.02
+−0.75 ± 0.09
+−1.17+0.64
+−0.66
+140.13+4.26
+−4.20
+Table 5: Best-fit values on the parameters H0, Ωm, w0, wa and rd of the megamasers+CC+DESI+SNe
+dataset, without binning and over the entire redshift range z < 2.33. Without the CC and megamasers data,
+H0, rd and M cannot be determined. We see that the constraints on w0 and wa resemble those in [35], for
+DESI + SNe data. A cosmological constant (w0 = −1 and wa = 0) is excluded by ∼2σ when the SNe data
+are either Union3 or DES.
+6
+Summary and conclusions
+In this work, we have studied the evolution in the value of H0 with the redshift of the data
+used to determine it, finding a dynamic evolution in H0. For that we used the latest dataset
+of CC, megamaser, SNe Ia and BAO observations from the Year 1 data release of DESI. The
+results show that the Hubble tension, referring to a phenomenologically non-constant value
+in H0, cannot be resolved by the new DESI data together with a dynamical DE.
+The SNe observations are chosen from one of the three most recent samples of Pantheon+,
+Union3 and DES. Pantheon+ and Union 3 share about 1360 SNe but differ in their analysis
+and treatment over systematics. DES has 1635 new SNe but share 194 low redshift SNe with
+Pantheon+. Our three data samples share the megamasers+CC+DESI data but differ in the
+SNe data. Base+PantheonPlus and Base+Union3 formed a total of 8 bins, and 6 bins for
+Base+DES.
+If we consider only the first 6 bins, we found (see fig. 1), for the three samples, that H0
+decreases as a function of redshift for z < 0.5, and then rises in the region 0.5 < z < 0.9 up
+to ∼78 km s−1Mpc−1. In fact, if we include bins 7 and 8, the dynamic trend becomes more
+robust, with H0 decreasing again for these bins.
+– 11 –
+
+The results show a dynamical trend in H0 with a statistical significance up to 1.5σ, for
+the quadratic parameterization (5.6) and up to 2.3σ for the Fourier parameterization (5.8),
+indicating a preference for a non constant model. However, the values in ∆AIC and the
+Bayes factor B, which penalize the extra parameters in the dynamical models, do not provide
+substantial support for the quadratic function against a constant value. From a Bayesian
+point of view, both the quadratic function and a constant H0 fit the bins results equally well.
+Similar conclusions are obtained for the Fourier parameterization, except for the results of
+Base+DES, which have the highest ∆AIC and B values showing a substantial preference for
+the dynamical model, according to the Jeffrey’s scale.
+Remarkably, the value of eH0(z = 0) for both models, as shown in tables 3 and 4, is in
+complete agreement with that obtained by SH0ES, H0 = 73.04 ± 1.04 km s−1Mpc−1.
+We highlight that the three data sets, which use different SNe samples, show similar
+behaviors even though each sample differs in its content and methodology. Because of this,
+we can infer that this trend is not caused by uncountable systematic errors in the SNe
+parameters and it is more of an intrinsic behavior guided by the data.
+We have ignored any calibration on either rd or M. However, if we adopt them, we find
+that the bins values of H0 are completely consistent with a constant. This would require
+to use data outside of the redshift bin, either CMB data to determine rd or distance leader
+data to determine M. As fixing rd or M is equivalent to fixing H0 from the beginning, which
+prevents the data from speaking for itself. It is relevant to highlight that any solution to the
+Hubble tension that only modifies the calibration of rd or M won’t solve the tension presented
+here. In the unbinned case, in subsection 5.3 we obtained a rd which is 1.5σ smaller than the
+one measured by Planck.
+Of course, the results for H0 may vary if one adopts a different binning strategy but we
+expect that the significance of the trend do not change significantly. This evolution in the
+Hubble constant might offer a new perspective on the Hubble tension. Since we’re using
+the w0waCDM model with very broad priors, it seems that a dynamical DE can’t remove
+this trend. Using a cosmological constant as the Dark Energy component only reduces the
+errorbars of the estimation of H0 due to the reduced parameter space. This may increase the
+significance of the non constant models.
+Some possible solutions would be either a hidden systematic error or some other assump-
+tion in the model. This could even be the reason why SH0ES and Planck have different values
+for H0 given that they use data with different redshifts, but this needs further study, maybe
+considering H0 not as an integration constant, but as a quantity dependent on the observed
+region of the Universe. Unfortunately, directly corroborating that the Hubble parameter at
+present time has different values depending on the region of the Universe is difficult, as due
+to the finiteness of the speed of light, we observe those regions in the past. However, nothing
+prevents us from thinking that just as there are perturbations to matter, these bring with
+them anisotropies in the expansion rate of the Universe with H0 being more of an average
+value and the local departure of the cosmological principle [65–70].
+Our binning strategy splits the data used, reducing the available data in each bin. This,
+combined with the decreasing quality in the data, produces large error bars in the inferred
+parameters which get worse at large z’s. Therefore the quadratic and Fourier fittings present
+large uncertainties. We do not rule out that the constant H0 be the correct result; we need
+to wait to improve the quality and number of the data to be able to reach a final conclusion.
+The Hubble tension remains one of the most significant challenges in modern cosmology
+and astrophysics, highlighting persistent discrepancies in H0 values derived from different
+– 12 –
+
+observational methods and across varied redshifts. This work contributes to the present dis-
+cussion, providing further evidence that the Hubble tension is not only confined to early-
+versus late-time measurements but also appears consistently within purely late-time mea-
+surements reflecting unresolved aspect of cosmological models and data calibration.
+Acknowledgments
+The authors thankfully acknowledge Sebastien Fromenteau for his useful comments in the
+development of this work. M. L. H. was supported by Conahcyt grant 806098.
+References
+[1] Planck Collaboration, Aghanim, N. et al., Planck 2018 results - vi. cosmological parameters,
+A&A 641 (2020) A6.
+[2] S. Alam, M. Aubert, S. Avila et al., Completed sdss-iv extended baryon oscillation spectroscopic
+survey: Cosmological implications from two decades of spectroscopic surveys at the apache point
+observatory, Phys. Rev. D 103 (2021) 083533.
+[3] A.G. Riess, W. Yuan, L.M. Macri et al., A comprehensive measurement of the local value of the
+hubble constant with 1 km s-1 mpc-1 uncertainty from the hubble space telescope and the sh0es
+team, The Astrophysical Journal Letters 934 (2022) L7.
+[4] J. Sakstein and M. Trodden, Early dark energy from massive neutrinos as a natural resolution
+of the hubble tension, Phys. Rev. Lett. 124 (2020) 161301.
+[5] A. Gogoi, R.K. Sharma, P. Chanda and S. Das, Early mass-varying neutrino dark energy:
+Nugget formation and hubble anomaly, The Astrophysical Journal 915 (2021) 132.
+[6] S.X. Tian and Z.-H. Zhu, Early dark energy in k-essence, Phys. Rev. D 103 (2021) 043518.
+[7] T.L. Smith, V. Poulin and M.A. Amin, Oscillating scalar fields and the hubble tension: A
+resolution with novel signatures, Phys. Rev. D 101 (2020) 063523.
+[8] R. Murgia, G.F. Abell´an and V. Poulin, Early dark energy resolution to the hubble tension in
+light of weak lensing surveys and lensing anomalies, Phys. Rev. D 103 (2021) 063502.
+[9] A. Chudaykin, D. Gorbunov and N. Nedelko, Combined analysis of planck and sptpol data
+favors the early dark energy models, Journal of Cosmology and Astroparticle Physics 2020
+(2020) 013.
+[10] Y. Wang, L. Pogosian, G.-B. Zhao and A. Zucca, Evolution of dark energy reconstructed from
+the latest observations, The Astrophysical Journal Letters 869 (2018) L8.
+[11] W. Yang, S. Pan, E. Di Valentino et al., Observational constraints on one-parameter dynamical
+dark-energy parametrizations and the H0 tension, Phys. Rev. D 99 (2019) 043543.
+[12] R.-Y. Guo, J.-F. Zhang and X. Zhang, Can the h0 tension be resolved in extensions to λcdm
+cosmology?, Journal of Cosmology and Astroparticle Physics 2019 (2019) 054.
+[13] L. Amendola, Coupled quintessence, Phys. Rev. D 62 (2000) 043511.
+[14] S. Kumar, R.C. Nunes and S.K. Yadav, Cosmological bounds on dark matter-photon coupling,
+Phys. Rev. D 98 (2018) 043521.
+[15] W.L. Xu, C. Dvorkin and A. Chael, Probing sub-gev dark matter-baryon scattering with
+cosmological observables, Phys. Rev. D 97 (2018) 103530.
+[16] C.D. Kreisch, F.-Y. Cyr-Racine and O. Dor´e, Neutrino puzzle: Anomalies, interactions, and
+cosmological tensions, Phys. Rev. D 101 (2020) 123505.
+– 13 –
+
+[17] R. D’Agostino and R.C. Nunes, Measurements of H0 in modified gravity theories: The role of
+lensed quasars in the late-time universe, Phys. Rev. D 101 (2020) 103505.
+[18] Cruz, N. M. Jim´enez and Escamilla-Rivera, Celia, Late-time and big bang nucleosynthesis
+constraints for generic modified gravity surveys, Eur. Phys. J. Plus 136 (2021) 51.
+[19] S. Mandal, D. Wang and P.K. Sahoo, Cosmography in f(q) gravity, Phys. Rev. D 102 (2020)
+124029.
+[20] E.D. Valentino, O. Mena, S. Pan et al., In the realm of the hubble tension—a review of
+solutions*, Classical and Quantum Gravity 38 (2021) 153001.
+[21] J.L. Cervantes-Cota, S. Galindo-Uribarri and G.F. Smoot, The unsettled number: Hubble’s
+tension, Universe 9 (2023) .
+[22] L. Perivolaropoulos and F. Skara, Challenges for λcdm: An update, New Astronomy Reviews
+95 (2022) 101659.
+[23] K.C. Wong, S.H. Suyu, G.C.-F. Chen et al., H0LiCOW – XIII. A 2.4 per cent measurement of
+H0 from lensed quasars: 5.3σ tension between early- and late-Universe probes, Monthly Notices
+of the Royal Astronomical Society 498 (2019) 1420.
+[24] Millon, M., Galan, A., Courbin, F. et al., Tdcosmo - i. an exploration of systematic
+uncertainties in the inference of h0 from time-delay cosmography, A&A 639 (2020) A101.
+[25] C. Krishnan, E.O. Colg´ain, Ruchika, A.A. Sen, M.M. Sheikh-Jabbari and T. Yang, Is there an
+early universe solution to hubble tension?, Phys. Rev. D 102 (2020) 103525.
+[26] E. ´O Colg´ain, M. Sheikh-Jabbari, R. Solomon et al., Putting flat λcdm in the (redshift) bin,
+Physics of the Dark Universe 44 (2024) 101464.
+[27] M. Malekjani, R. Mc Conville, E. ´O Colg´ain et al., On redshift evolution and negative dark
+energy density in pantheon + supernovae, The European Physical Journal C 84 (2024) 317.
+[28] M.G. Dainotti, B.D. Simone, T. Schiavone et al., On the hubble constant tension in the sne ia
+pantheon sample, The Astrophysical Journal 912 (2021) 150.
+[29] J.P. Hu and F.Y. Wang, Revealing the late-time transition of H0: relieve the Hubble crisis,
+Monthly Notices of the Royal Astronomical Society 517 (2022) 576.
+[30] Jia, X. D., Hu, J. P. and Wang, F. Y., Evidence of a decreasing trend for the hubble constant,
+A&A 674 (2023) A45.
+[31] X.D. Jia, J.P. Hu and F.Y. Wang, Uncorrelated estimations of h0 redshift evolution from desi
+baryon acoustic oscillation observations, 2406.02019.
+[32] M.G. Dainotti, B. De Simone, T. Schiavone et al., On the evolution of the hubble constant with
+the sne ia pantheon sample and baryon acoustic oscillations: A feasibility study for
+grb-cosmology in 2030, Galaxies 10 (2022) .
+[33] E. ´O Colg´ain, M.M. Sheikh-Jabbari, R. Solomon, G. Bargiacchi, S. Capozziello, M.G. Dainotti
+et al., Revealing intrinsic flat ΛCDM biases with standardizable candles, Phys. Rev. D 106
+(2022) L041301.
+[34] C. Krishnan, E. ´O Colg´ain, M.M. Sheikh-Jabbari and T. Yang, Running hubble tension and a
+h0 diagnostic, Phys. Rev. D 103 (2021) 103509.
+[35] DESI collaboration, DESI 2024 VI: Cosmological Constraints from the Measurements of
+Baryon Acoustic Oscillations, 2404.03002.
+[36] M. Chevallier and D. Polarski, Accelerating universes with scaling dark matter, International
+Journal of Modern Physics D 10 (2001) 213.
+[37] E.V. Linder, Exploring the expansion history of the universe, Phys. Rev. Lett. 90 (2003) 091301.
+– 14 –
+
+[38] R. Jimenez and A. Loeb, Constraining cosmological parameters based on relative galaxy ages,
+The Astrophysical Journal 573 (2002) 37.
+[39] D.W. Pesce, J.A. Braatz, M.J. Reid, J.J. Condon, F. Gao, C. Henkel et al., The megamaser
+cosmology project. xi. a geometric distance to cgcg 074-064, The Astrophysical Journal 890
+(2020) 118.
+[40] D.W. Pesce, J.A. Braatz, M.J. Reid et al., The megamaser cosmology project. xiii. combined
+hubble constant constraints, The Astrophysical Journal Letters 891 (2020) L1.
+[41] W.D. Kenworthy, D. Scolnic and A. Riess, The local perspective on the hubble tension: Local
+structure does not impact measurement of the hubble constant, The Astrophysical Journal 875
+(2019) 145.
+[42] M.J. Reid, D.W. Pesce and A.G. Riess, An improved distance to ngc 4258 and its implications
+for the hubble constant, The Astrophysical Journal Letters 886 (2019) L27.
+[43] C. Zhang, H. Zhang, S. Yuan, S. Liu, T.-J. Zhang and Y.-C. Sun, Four new observational h(z)
+data from luminous red galaxies in the sloan digital sky survey data release seven, Research in
+Astronomy and Astrophysics 14 (2014) 1221.
+[44] R. Jimenez, L. Verde, T. Treu and D. Stern, Constraints on the equation of state of dark
+energy and the hubble constant from stellar ages and the cosmic microwave background*, The
+Astrophysical Journal 593 (2003) 622.
+[45] J. Simon, L. Verde and R. Jimenez, Constraints on the redshift dependence of the dark energy
+potential, Phys. Rev. D 71 (2005) 123001.
+[46] M. Moresco, A. Cimatti, R. Jimenez et al., Improved constraints on the expansion rate of the
+universe up to z ∼1.1 from the spectroscopic evolution of cosmic chronometers, Journal of
+Cosmology and Astroparticle Physics 2012 (2012) 006.
+[47] M. Moresco, L. Pozzetti and A.C. others, A 6% measurement of the hubble parameter at
+z∼0.45: direct evidence of the epoch of cosmic re-acceleration, Journal of Cosmology and
+Astroparticle Physics 2016 (2016) 014.
+[48] A.L. Ratsimbazafy, S.I. Loubser, S.M. Crawford et al., Age-dating luminous red galaxies
+observed with the Southern African Large Telescope, Monthly Notices of the Royal Astronomical
+Society 467 (2017) 3239.
+[49] D. Stern, R. Jimenez, L. Verde, M. Kamionkowski and S.A. Stanford, Cosmic chronometers:
+constraining the equation of state of dark energy. i: H(z) measurements, Journal of Cosmology
+and Astroparticle Physics 2010 (2010) 008.
+[50] N. Borghi, M. Moresco and A. Cimatti, Toward a better understanding of cosmic chronometers:
+A new measurement of h(z) at z ∼0.7, The Astrophysical Journal Letters 928 (2022) L4.
+[51] M. Moresco, Raising the bar: new constraints on the Hubble parameter with cosmic
+chronometers at z ∼2, Monthly Notices of the Royal Astronomical Society: Letters 450 (2015)
+L16.
+[52] M. Moresco, R. Jimenez, L. Verde, A. Cimatti and L. Pozzetti, Setting the stage for cosmic
+chronometers. ii. impact of stellar population synthesis models systematics and full covariance
+matrix, The Astrophysical Journal 898 (2020) 82.
+[53] D. Brout et al., The pantheon+ analysis: Cosmological constraints, The Astrophysical Journal
+938 (2022) 110.
+[54] DES Collaboration, T.M.C. Abbott et al., The dark energy survey: Cosmology results with
+1500 new high-redshift type ia supernovae using the full 5-year dataset, 2401.02929.
+[55] D. Rubin, G. Aldering, M. Betoule et al., Union through unity: Cosmology with 2,000 sne using
+a unified bayesian framework, 2311.12098.
+– 15 –
+
+[56] D.M. Scolnic, D.O. Jones, A. Rest et al., The complete light-curve sample of spectroscopically
+confirmed sne ia from pan-starrs1 and cosmological constraints from the combined pantheon
+sample, The Astrophysical Journal 859 (2018) 101.
+[57] D. Foreman-Mackey, D.W. Hogg, D. Lang and J. Goodman, emcee: The mcmc hammer,
+Publications of the Astronomical Society of the Pacific 125 (2013) 306.
+[58] R. Trotta, Bayes in the sky: Bayesian inference and model selection in cosmology, Contemp.
+Phys. 49 (2008) 71 [0803.4089].
+[59] J. Skilling, Nested sampling for general bayesian computation, Bayesian Analysis 1 (2006) 833.
+[60] W.J. Handley, M.P. Hobson and A.N. Lasenby, PolyChord: nested sampling for cosmology,
+Mon. Not. Roy. Astron. Soc. 450 (2015) L61 [1502.01856].
+[61] H. Akaike, A new look at the statistical model identification, IEEE Transactions on Automatic
+Control 19 (1974) 716.
+[62] K.P. Burnham and D.R. Anderson, Multimodel inference: Understanding aic and bic in model
+selection, Sociological Methods & Research 33 (2004) 261.
+[63] H. Jeffreys, The theory of probability, OuP Oxford (1998).
+[64] D. Tamayo and J.A. Vazquez, Fourier-series expansion of the dark-energy equation of state,
+Mon. Not. Roy. Astron. Soc. 487 (2019) 729 [1901.08679].
+[65] J.P. Hu, X.D. Jia, J. Hu and F.Y. Wang, Hints of new physics for the hubble tension: violation
+of cosmological principle, 2410.06450.
+[66] A. Heinesen and H.J. Macpherson, A prediction for anisotropies in the nearby hubble flow,
+Journal of Cosmology and Astroparticle Physics 2022 (2022) 057.
+[67] K. Bolejko, M.A. Nazer and D.L. Wiltshire, Differential cosmic expansion and the hubble flow
+anisotropy, Journal of Cosmology and Astroparticle Physics 2016 (2016) 035.
+[68] Hu, J. P., Wang, Y. Y., Hu, J. and Wang, F. Y., Testing the cosmological principle with the
+pantheon+ sample and the region-fitting method, A&A 681 (2024) A88.
+[69] B¨ohringer, Hans, Chon, Gayoung and Collins, Chris A., Observational evidence for a local
+underdensity in the universe and its effect on the measurement of the hubble constant, A&A
+633 (2020) A19.
+[70] Schwarz, D. J. and Weinhorst, B., (an)isotropy of the hubble diagram: comparing hemispheres,
+A&A 474 (2007) 717.
+– 16 –
+

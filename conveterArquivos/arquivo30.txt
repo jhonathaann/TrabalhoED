@@ -1,0 +1,760 @@
+Origins of the fastest stars from merger-disruption of
+He-CO white dwarfs
+Hila Glanz1,*,+, Hagai B. Perets1,*,+, Aakash Bhat2,3, and Ruediger Pakmor4
+*glanz@campus.technion.ac.il; hperets@physics.technion.ac.il
++these authors contributed equally to this work
+1Technion - Israel Institute of Technology , Haifa, 3200002, Israel
+2Institut f¨ur Physik und Astronomie, Universit¨at Potsdam, Karl-Liebknecht-Str. 24/25, 14476 Potsdam-Golm,
+Germany
+3Dr. Karl-Remeis Observatory, Sternwartstr.7, 96049 Bamberg, Germany
+4Max-Planck-Institut f¨ur Astrophysik, Karl-Schwarzschild-Str. 1, D-85748 , Garching, Germany
+ABSTRACT
+Hypervelocity white dwarfs (HVWDs) are stellar remnants moving at speeds exceeding the Milky Way’s escape velocity1–6. The
+origins of the fastest HVWDs are enigmatic, with proposed formation scenarios facing challenges explaining both their extreme
+velocities and observed properties7,8. Here we report a three-dimensional hydrodynamic simulation of a merger between two
+hybrid helium-carbon-oxygen white dwarfs (HeCO WDs with masses of 0.68 and 0.62 M⊙). We find that the merger leads to
+a partial disruption of the secondary WD, coupled with a double-detonation explosion of the primary WD. This launches the
+remnant core of the secondary WD at a speed of 2000 km s−1, consistent with observed HVWDs. The low mass of the ejected
+remnant and its heating from the primary WD’s ejecta explain the observed luminosities and temperatures of hot HVWDs,
+which are otherwise difficult to reconcile with previous models. This discovery establishes a new formation channel for HVWDs
+and points to a previously unrecognized pathway for producing peculiar Type Ia supernovae and faint explosive transients.
+Hypervelocity white dwarfs (HVWDs1,2,4,6) are enigmatic objects, hurtling through our galaxy at speeds exceeding
+the Milky Way’s escape velocity (> 500 km s−1;9). Their existence challenges our understanding of stellar evolution and
+the dynamics of close binary systems. While most white dwarfs exhibit velocities typical of the Galactic disk or halo,
+HVWDs possess extreme speeds, implying a violent ejection mechanism. The advent of high-precision astrometry from the
+Gaia mission10,11 has led to the identification of seven HVWD candidates with velocities exceeding 1000 km/s4,6, further
+deepening the mystery surrounding their origin (lower velocity HVWDs were suggested to be produced from partial deflagration
+supernovae of WDs and later also identified; see1,2,6 and references therein). Of these, two of the first identified HVWDs
+(D6-2 and D6-3) have very low measured radial velocities (RVs), possibly inconsistent with the far higher measured tangential
+velocities, casting doubt on their identification as HVWDs and/or their measured velocities4,12,13, while the other five have
+large radial velocities consistent with typical ∼2000 km s−1 (see table in the supplementary information; SI). Older WDs
+might also have non-negligible peculiar velocities of up to a few hundred km s−1 suggesting a larger uncertainty in ejection
+velocity. In particular, in-going (towards the direction of the Galactic disk) HVWDs could not have originated from the disk,
+suggesting large ages and peculiar velocities for their progenitors at the time of ejection. D6-2 and J0927 are in-going HVWDs,
+which might suggest that the inferred extreme ejection velocity of J0927 (the highest velocity inferred; 2519+271
+−147
+6) could be
+lower, more in par with other HVWDs, and potentially closer to ∼2000 km s−1, but conversely, could also be higher.
+A leading hypothesis for the formation of such HVWDs involves the "dynamically driven double-degenerate double-
+detonation" (D6) scenario14–17 (based on earlier double detonation scenarios not involving two WDs18,19). In this model, a
+close binary system consisting of two white dwarfs (one typically massive > 0.85M⊙) undergoes a gravitational wave inspiral.
+As the primary white dwarf accretes a small amount of Helium from its companion, a Helium detonation is triggered in
+the accreted and any low-mass pre-existing Helium shell, leading to a second, Carbon-detonation in the core and a Type Ia
+supernova explosion. The companion white dwarf, no longer gravitationally bound, is flung outward at high speed.
+Nevertheless, the D6 scenario faces difficulties in explaining both the extreme HVWD velocities (> 2000 km s−1) and
+the observed properties of these objects. Recent studies7,8 have shown that detonation of a massive WD primary scenario
+as envisioned in the D6 scenario does not produce the high temperatures and inflated radii on observable timescales in some
+HVWDs, particularly for those with the highest velocities, for which the D6 scenario requires high mass HVWDs (> 1 M⊙20,21).
+Moreover, the predicted rate of HVWD formation from D6 events, if it were the main channel for the origin of type Ia SNe,
+appears to be significantly higher than the observed rate4,12, and HVWDs were not found close to secure type Ia supernova
+1
+arXiv:2410.17306v1  [astro-ph.HE]  22 Oct 2024
+
+Mb,Tot
+Mb,He
+Mb,IGE
+Mb,IME
+Kick Velocity
+Angular Momentum
+[M⊙]
+[M⊙]
+[M⊙]
+[M⊙]
+[km s−1]
+[g cm2 s−1]
+0.49
+3.1·10−3
+3·10−3
+1·10−2
+2061
+2.48×1050
+Table 1. Final properties of the remnant (bound mass), where Mb stands for bound mass, the third column is the total mass of
+He in the remnant, the fourth column is the total mass of the elements we consider as an iron group (Scandium to Nickel), and
+the fifth is the total bound mass of the intermediate elements (Fluorine to Calcium). Bound material is calculated by finding all
+mass with a positive energy, including the internal energy. The velocity refers to the velocity of the highest central density
+region of the remnant. The last column shows the total angular momentum in the remnant.
+remnants12,22. More recent studies suggested that companions might also explode23–25, which could potentially resolve the
+rates and supernova remnant issue, without significantly affecting the SN observations. However, in this case, no HVWD would
+form at all, requiring an alternative origin, like the one suggested here.
+Here, we present a novel scenario for the origin of HVWDs based on a three-dimensional hydrodynamical simulation of a
+merger between two hybrid helium-carbon-oxygen white dwarfs (HeCO WDs). This simulation reveals a previously unexplored
+pathway for HVWD formation, distinct from the standard D6 model. We find that the merger of two HeCO WDs (0.68 and
+0.62 M⊙) can lead to a partial tidal disruption of the lower-mass white dwarf (i.e. the secondary or companion), coupled with
+a double-detonation explosion of the primary. This process launches the remnant low-mass hot core of the disrupted white
+dwarf at hypervelocity speeds, which can remain inflated and hot for long timescales, consistent with observations. Thereby,
+our findings provide a compelling explanation for the origin of the fastest HVWDs and offer new insights into the diversity of
+explosive stellar phenomena.
+We model the merger using 3D hydrodynamical simulation using the Arepo code26 (see Methods). Figure 1 illustrates the
+key stages of the merger and explosion (A full movie showing the merger can be found in the SI, as well as a figure with more
+detailed snapshots; 2.2). As the secondary WD approaches the primary, it is tidally deformed and begins to transfer mass. This
+mass transfer eventually triggers a helium detonation on the surface of the primary WD. In the D6 scenario the high temperature
+and density conditions on the massive primary lead to early Helium detonation, occurring while the secondary is still intact,
+and after minimal accretion from the companion. However, in the low-mass HeCO cases shown here, a Helium detonation
+occurs only after the secondary has already begun to be significantly disrupted. In particular, a significant mass of Helium
+has already been transferred from the secondary to the primary, allowing for stronger, more energetic Helium detonation. The
+Helium detonation propagates around the primary, converging on the opposite side and driving a shock wave into the core.
+This shock wave initiates a secondary detonation in the carbon-oxygen core, leading to a supernova explosion, leaving the
+secondary unbound and ejected at a higher velocity. The very close approach and partial disruption allow for higher orbital (and
+eventually ejection) velocities and stronger heating of the companion.
+Although the secondary WD is partially disrupted during the merger (stripped of 0.13 M⊙, and transferred 0.013 M⊙to the
+primary), its core remains intact, when the Carbon-Oxygen detonation ensues. This core, tidally and debris-impact-heated and
+now unbound, is ejected following the supernova explosion at a velocity of 2061 km s−1. The properties of the ejected remnant
+are summarized in Table 1. The remnant has a mass of 0.492 M⊙, including a small amount of helium (0.003 M⊙) and traces of
+heavier elements synthesized during the explosion. Due to the strong tidal interaction during the merger, the ejected HVWD is
+expected to be rapidly rotating. The initial rotation velocity should be comparable to the ejection velocity. However, as the
+remnant expands and cools, its rotation velocity decreases due to angular momentum conservation. At the final snapshot of
+our simulation, the HVWD has a total angular momentum of 2.48×1050 g cm2 s−1; during its long-term evolution, the WD
+expands and its rotational velocity is expected to be significantly lower. For the currently inferred radius of ∼0.05 R⊙for some
+of the HVWDs we would expect a rotation velocity of ∼770 km s−1.
+The supernova explosion resulting from the double detonation releases 1.13×1051 erg of nuclear energy (Table 2). The
+explosion ejects a total of 0.82 M⊙of material, including 0.1 M⊙of iron-group elements, of which 0.072 M⊙in radioactive
+56Ni, and 0.42 M⊙of intermediate-mass elements. Interestingly, the Helium shell burning and detonation prior to the CO
+detonation already produces a few 0.01 M⊙of both radioactive 56Ni, as well as faster decaying radioactive elements 48Cr and
+52Fe which could affect the early light-curve, and typically not expected in normal type Ia SNe (see the radioactive elements
+production evolution in time in Fig. 2).
+Table 1 summarizes the SN explosion properties. Given the low 56Ni produced, the Helium burning products in the outer
+shells, and the relatively small amount of ejecta the SN is likely to be faint and peculiar. The mass and 56Ni might be consistent
+with 91bg-like SNe, however such SNe are only observed in old environments in early-type galaxies27. In addition, since the
+primary also had a large orbital velocity at the time of the explosion, SNe-producing HVWDs should have a large center of
+mass velocities. This could potentially be identified as a shift in velocity measurement of nebular spectra taken long after the
+explosion of such peculiar faint SN. The supernova remnant (SNR) of such SNe, if identified, should also have such a shift. In
+2/13
+
+Total Nuclear Energy
+Mu,1
+Mu,2
+Mu,Tot
+Mu,IGE
+Mu,IME
+SN CoM Velocity
+[erg]
+[M⊙]
+[M⊙]
+[M⊙]
+[M⊙]
+[M⊙]
+[km s−1]
+1.126·1051
+0.68
+0.14
+0.82
+0.1
+0.42
+1187
+Table 2. Final properties of the supernova, where Mu stands for the total unbound mass, 1 stands for the ejected mass from the
+primary, and 2 for the secondary. IGE are Iron group elements (Scandium to Nickel), and IME are Intermediate elements
+(Fluorine to Calcium). SN velocity is the unbound mass’s center of mass velocity (CoM).
+particular, if paired with an identified HVWD, it should have a velocity in counter direction to that of the HVWD. We find the
+SNR center of mass velocity in our simulation to be 1187 km s−1.
+Following the simulation we record the remnant properties (densities, compositions, temperature) found in the simulation,
+and then follow its long-term evolution, following the same approach as ref.7, by mapping the properties into 1D and then
+using the MESA stellar evolution code28 (see Methods). Figure 3 shows the long-term evolution of the ejected HVWD in the
+Hertzsprung-Russell diagram (HR diagram). The remnant is initially hot and luminous, and experiences some super-Eddington
+mass-loss, but then cools and fades over time as it expands and releases its thermal energy. The low mass of the remnant
+contributes to its inflated state and prolonged cooling time.
+The observed physical properties of several HVWD candidates are also plotted in Figure 3, taken from6, besides for J092729.
+The radius and temperature of our simulated remnant align well with the observed values, particularly for the HVWD J0546
+and J1332, and to a lesser extent with J0927 (consistent within 2-sigma uncertainty, or 1σ, if ref.6 inferred temperature is
+adapted), but see further discussion on the properties J1332 in the SI, section 2.4. This suggests that our proposed formation
+scenario can explain the observed properties of the more reliable and highest-velocity HVWDs. That being said, D6-1 and
+J1235 do show consistent reliable high radial velocities but are not directly explained by our specific simulation. Nevertheless,
+given the large phase space of HeCO WD mergers, it is possible that more consistent models can be found with more/less
+massive HeCOs configurations (see also discussion on velocities in the SI, section 2.3).
+Our 3D hydrodynamical simulation has revealed a new channel for the formation of HVWDs through the merger of two
+hybrid HeCO white dwarfs. This scenario differs significantly from the previously proposed D6 model, which involves the
+detonation of a massive CO white dwarf, following very little mass transfer, leaving the companion intact. In our simulation,
+the merger of two lower-mass HeCO WDs leads to a partial tidal disruption of the secondary WD and a double-detonation
+explosion of the low-mass primary. The close approach of the binary down to the point of partial tidal disruption allows for
+the larger velocity of the companion, even though the primary is relatively low-mass. Hence, this leads to the ejection of the
+remnant core of the secondary as an HVWD with a velocity exceeding 2000 km s−1.
+This novel channel offers several advantages in explaining the observed properties of HVWDs. First, it naturally produces
+the high ejection velocities observed for some HVWDs, which are difficult to achieve in the D6 scenario without invoking
+massive progenitor WDs, which are rare. Second, the low mass of the ejected remnant and its heating from the primary WD’s
+ejecta explain the observed luminosities and inflated radii of HVWDs, which can not be reconciled with the D6 model for
+HVWDs with such velocities.
+Our findings have broader implications for our understanding of stellar evolution and explosive transients. They highlight
+the potential importance of HeCO WDs in producing a variety of thermonuclear events. The merger of HeCO WDs may lead to
+peculiar Type Ia supernovae with fainter luminosities and potentially distinct observational signatures compared to standard
+SNe Ia. Further studies are needed to characterize the detailed properties of these explosions and their potential contribution to
+the observed diversity of SNe Ia.
+The discovery of HVWDs was initially hailed as a smoking-gun signature of the D6 scenario and its potential role in
+producing the majority of SNe Ia. However, our results suggest that HVWDs may originate from a wider range of progenitor
+systems and explosion mechanisms. This casts doubt on the D6 scenario as the dominant channel for SNe Ia and emphasizes
+the need to explore alternative pathways.
+The current study is limited by the computational cost of 3D hydrodynamical simulations, which restricts the exploration of
+wider parameter space of HeCO WD mergers. Future studies with larger parameter surveys will help to constrain the range of
+HVWD properties and the rates of these events. Nevertheless, our findings clearly demonstrate the viability of HeCO WD
+mergers as a source of HVWDs and open up new avenues for research into the explosive fates of binary white dwarf systems
+(see also24,30,31 for other explosive transients involving HeCO WDs). Moreover, analytic estimates (see SI; section 2.3) suggest
+that it is likely that the phase space of merging double HeCO WDs could produce HVWDs of a wider range of velocities and
+masses beyond the specific point derived from the fully modeled case shown here. It could naturally explain (and predict) a
+wider range of velocities in the range 2000±300 km s−1 expected for HVWDs from the partial HeCO tidal-disruption channel.
+Indeed, the inferred velocities (within the 1−σ uncertainties) of all besides D6-2 (which is the least reliable given its very low
+radial velocity) of the HVWDs reside in this range. In fact, these might explain the preference for this velocity range.
+3/13
+
+In summary, we have demonstrated that the merger of two HeCO WDs can produce HVWDs with properties consistent
+with observations, both in terms of ejection velocities, ages, and physical properties. This novel channel provides a compelling
+explanation for the origin of the fastest HVWDs and sheds new light on the diversity of explosive transients in the Universe.
+1 Methods
+We investigate the formation of HVWDs through the merger of two hybrid helium-carbon-oxygen (HeCO) white dwarfs using
+a three-dimensional magnetohydrodynamical simulation. This is the first study to explore this scenario, in particular, in 3D,
+allowing us to capture the complex dynamics of the merger process and the subsequent ejection of the HVWD.
+1.1 HeCO White Dwarfs
+HeCO white dwarfs are a class of stellar remnants characterized by a helium-rich outer layer surrounding a carbon-oxygen core.
+Their formation is linked to binary star interactions, where processes like Roche lobe overflow and common envelope evolution
+lead to the accumulation of helium on the white dwarf24,32,33. These hybrid WDs can have masses and compositions that fall
+between those of typical helium WDs and carbon-oxygen WDs, making their merger outcomes particularly interesting.
+More specifically, we investigate the fate of a double degenerate binary system consisting of a primary Helium-rich HeCO
+WD, with the total mass of 0.69M⊙made of a CO core of 0.59M⊙and a massive helium shell of 0.1M⊙(see details in24),
+and a secondary hybrid HeCO WD with total mass of 0.62M⊙made of a CO core of 0.58M⊙and a massive helium shell of
+0.038M⊙(following34). Note, that the much higher He shell for this hybrid is attained through a somewhat different evolution
+than that described in35, as explored in24.
+For the density profile and composition of the 0.62M⊙WD, we use a similar method as in36, where we generate the 1D
+profile in hydrostatic equilibrium, with 0.0365M⊙He shell, following the results of33.
+1.2 Hydrodynamical Simulation
+We model the merger of two HeCO white dwarfs using the moving-mesh hydrodynamics code Arepo37–40. This code provides
+a self-gravitating, adaptive mesh framework for simulating astrophysical phenomena, incorporating a Helmholtz equation
+of state for degenerate matter and a 55 isotope nuclear reaction network to capture the thermonuclear processes involved in
+the merger. A detailed description of WD merger simulations in Arepo can be found in24, and our models closely follow
+similar approaches and modeling. We run our simulation with a cell mass resolution of 9×1026g, a minimum cell volume of
+∼1019cm, ∼3.5106 cells, in a total box size of 1012cm to incorporate the explosion and the expansion of the remnant.
+1.2.1 Initial Conditions
+The initial conditions for our simulation are derived from 1D stellar evolution models. These models provide the density,
+temperature, and composition profiles for both the primary and secondary HeCO white dwarfs. The specific parameters of our
+simulated binary system are:
+Primary WD: Mass = 0.69 M⊙, CO core = 0.59 M⊙, He shell = 0.1 M⊙as modelled in24 using MESA28,41,42, and mapped
+to 3D. Secondary WD: Mass = 0.62 M⊙, CO core = 0.58 M⊙, He shell = 0.038, M⊙, where the composition is based on MESA
+models in33. This model was generated synthetically in the same method as in36.
+The 3D white dwarf models are initialized in Arepo, relaxed to ensure stability, and then placed in a binary configuration
+within a large simulation domain. The initial separation of the binary is chosen to be wide enough to minimize initial tidal
+forces, 5.1×104 km, and the corresponding orbital period was 177.5s.
+1.2.2 Inspiral and Merger
+We simulate the inspiral of the binary system, initially accelerating it by artificially removing angular momentum to mimic the
+effect of gravitational wave emission. This artificial inspiral is halted just before the secondary WD enters the Roche radius of
+the primary and mass transfer becomes dynamically significant (see24 for a similar approach and further details). The binary
+separation at this point was 2.37×104km, with an orbital period of 8.7s.
+We then follow the fully realistic evolution of the merger. As the secondary WD approaches the primary, it is tidally
+deformed and disrupted (∼100s after the end of the accelerated inspiral stage). The dynamical mass transfer of helium from the
+secondary triggers a helium detonation on the surface of the primary. This detonation propagates around the primary, leading
+to a secondary detonation in the carbon-oxygen core and a supernova explosion. The partially disrupted secondary WD, still
+containing its core, is ejected at high velocity by the force of the explosion. These stages are presented in Figure 4 in the SI,
+while some are also in Figure 1 of the main part. A full movie of the simulation can be found in the SI.
+1.3 Evolution of the Bound Remnant HVWD
+To model the long-term evolution of the runaway WD we follow a similar approach as in7. We map the output of the simulation
+(∼300 s after the explosion) to the 1D stellar evolution software MESA. This procedure has been applied before for Athena++
+4/13
+
+Name
+vr
+vtot
+vejection
+Tef f
+R
+d
+z
+tdisk
+[km s−1]
+[km s−1]
+[km s−1]
+[K]
+[R⊙]
+[kpc]
+[kpc]
+[Myr]
+D6-1
+1200±40
+2045+251
+−190
+2254+248
+−199
+7000
+0.23+0.04
+−0.03
+1.91+0.2
+−0.2
+-0.57+0.07
+−0.06
+0.63+0.04
+−0.04
+D6-2
+80±10
+1151+59
+−55
+1051+62
+−52
+7000
+0.15+0.01
+−0.01
+0.84+0.05
+−0.04
+-0.27+0.01
+−0.02
+-0.72+0.01
+−0.01
+D6-3
+-20±80
+2248+340
+−324
+2393+377
+−396
+7000
+0.17+0.02
+−0.02
+2.26+0.34
+−0.35
+0.93+0.14
+−0.14
+2.24+0.21
+−0.17
+J1235-3752
+-1694±10
+2670+339
+−250
+2471+351
+−256
+21000
+0.104+0.026
+−0.030
+4.53+2.17
+−1.82
+1.73+0.42
+−0.50
+1.87+0.86
+−0.25
+J0927-6335
+-2285±20
+2753+271
+−148
+2519+271
+−147
+60000
+0.052+0.025
+−0.020
+4.07+1.01
+−0.70
+-0.70+0.27
+−0.35
+-1.32+0.42
+−0.42
+J0546+0836
+1200±20
+1699+660
+−390
+1864+682
+−416
+95000
+0.051+0.029
+−0.021
+4.02+2.29
+−1.67
+-0.69+0.29
+−0.40
+0.61+0.08
+−0.08
+J1332-3541
+1090±50
+1464+707
+−331
+1619+707
+−320
+70000
+0.017+0.013
+−0.007
+1.63+1.19
+−0.68
+0.74+0.53
+−0.30
+0.64+0.13
+−0.14
+Table 3. Kinematic and physical properties of suspected D6 hypervelocity white dwarfs, including radial velocity, total
+velocity, ejection velocity, effective temperature, radius, distance, height above the Galactic plane, and flight time back to the
+Galactic disk.
+simulations of helium subdwarfs20 and more recently of helium white dwarfs8, as well as Arepo simulations of massive white
+dwarfs7. Here, we follow the procedure outlined in reference7. The 3D profiles of the runaway WD (taken at the last snapshot,
+which is 10-20 times dynamical timescales after the explosion, allowing sufficient time for the WD to adjust) are averaged to
+give a 1D profile with temperature, density, and mass fraction information. A 22 isotope network approx_21_plusco56 is used
+to model the nuclear reactions during this evolution and includes the isotopes 1H, 3,4He, 12C, 14N, 16O, 20Ne, 24Mg, 28Si, 32S,
+36Ar, 40Ca, 44Ti, 48,56Cr, 52,54,56Fe, 56Co, and 56Ni. It therefore includes the most important reactions of nickel decay and α
+capture on carbon. We relax a white dwarf to our output profiles of composition and entropy, as outlined in7, and we get rid of
+almost all of the outer layers where 56Ni dominates the atmosphere to such an extent that the material will become unbound on
+short timescales (but longer than the hydrodynamical simulation). This cut is chosen again to be the mass coordinate where the
+energy due to 56Ni decay is twice the gravitational binding energy of the star. This results in a final mass of 0.482 M⊙, with
+only 0.005 M⊙cut-off. Once relaxed the white dwarf is allowed to evolve for a maximum time of 100 Myr.
+2 Supplementary Information
+This supplementary information provides additional details and supporting material for the main text.
+2.1 The properties of the hypervelocity WDs
+Table 3 summarizes the physical and kinematic properties of the seven fastest hypervelocity WDs, from tables 2 and 3 in ref.6
+(kinematics and radii) and from Refs.4,29,43,44 for the temperatures and radii.
+2.2 Detailed evolution of the merger: Movie and snapshots
+A movie visualizing the merger of the two HeCO white dwarfs and the subsequent ejection of the HVWD is available online
+1. The movie shows the tidal disruption of the secondary WD, the double-detonation explosion of the primary, and the
+high-velocity ejection of the remnant core.
+In addition, we provide more detailed snapshots of the evolution in Fig. 4
+2.3 Analytic Estimate of Ejection Velocities
+The ejection velocity of the HVWD can be estimated analytically by considering the Keplerian velocity of the binary system at
+the time of the explosion. Assuming that the explosion occurs near the tidal radius, the ejection velocity of the secondary is
+given by:
+vej ≈M1
+Mtot
+r
+GMtot
+Rtid
+,
+(1)
+where G is the gravitational constant, Mtot is the total mass of the binary system, and Rtid is the tidal radius. The Tidal
+radius can be approximated as:
+Rtid ≈R1
+2M1
+M2
+1/3
+,
+(2)
+1https://tinyurl.com/dd2hyperv
+5/13
+
+Where R1 is the radius of the primary WD and M1 and M2 are the masses of the primary and secondary WDs, respectively.
+The radii of the WDs are calculated using the mass-radius relation formulation by ref.45.
+Figure 5 shows the expected ejection velocities for a range of binary WD progenitors, calculated using such an analytic
+estimate. The measured ejection velocity in our simulation matches the analytic prediction well. Nevertheless, this simplified
+estimate should be taken with a grain of salt, given that the final stages of the tidal evolution and deformation before the SN
+explosion affect the orbit and the structure of the WDs, and even some of the companion mass is stripped; hence these should
+only be considered as order of magnitude expectations as to bracket the range of possible ejection velocities in the double
+HeCO WD merger scenario.
+2.4 The properties of HVWD J1332
+Given that in both the D6 scenario and our model, the outer layers of the ejected HVWD are stripped, it is unlikely that such
+a WD would have a hydrogen atmosphere. Therefore, we do not adapt the properties of the HVWD inferred by29 for J1332
+using a hydrogen-rich atmosphere, but the ones assuming a Helium outer atmosphere (hotter and puffier). Nevertheless, for
+completeness, in Figure 6 we show the HR diagram, radius, and temperature models, and their comparison with observations
+of J1332 if the hydrogen-rich model of29 is taken at face value. In that case, the HR position is only consistent within 2−σ
+and the inferred radius is no longer consistent with our simulation results. One should note that in that case, J1332 could be
+consistent with a model of a far more massive CO HVWD, as discussed in7.
+2.5 Population Synthesis Considerations
+Population synthesis studies suggest that mergers involving hybrid WDs are not rare among double WD mergers, with as much
+as 25% of WD mergers including at least one hybrid WD30,31. The mergers of double HeCO WDs represent only a fraction of
+these, with a smaller fraction likely producing the specific conditions required for the partial disruption and double-detonation
+explosion observed in our simulation. If such explosions are a significant source of HVWDs, their relatively low occurrence
+rate could explain the paucity of HVWDs compared to the rate of normal Type Ia SNe.
+2.6 Observational Signatures
+The peculiar Type Ia SNe produced by the HeCO WD merger scenario are expected to have fainter luminosities and different
+observational signatures compared to standard SNe Ia. These differences arise from the lower mass of the exploding WD and
+the distinct composition of the ejecta. Further studies are needed to characterize the detailed observational properties of these
+explosions and their potential contribution to the observed diversity of SNe Ia. These will be explored in future studies.
+3 Software and third party data repository citations
+We make use of the following codes: Arepo37,38,40,46, MESA28,41,42,47, Matplotlib48, NumPy49, and SciPy50. MESA
+inlists will be made available through the MESA community on Zenodo.
+References
+1. Jordan, I., George C., Perets, H. B., Fisher, R. T. & van Rossum, D. R. Failed-detonation Supernovae: Subluminous
+Low-velocity Ia Supernovae and their Kicked Remnant White Dwarfs with Iron-rich Cores. Astrophys. J. Lett. 761, L23,
+DOI: 10.1088/2041-8205/761/2/L23 (2012). 1208.5069.
+2. Vennes, S. et al. An unusual white dwarf star may be a surviving remnant of a subluminous Type Ia supernova. Science
+357, 680–683, DOI: 10.1126/science.aam8378 (2017). 1708.05568.
+3. Raddi, R. et al. Further Insight on the Hypervelocity White Dwarf, LP 40-365 (GD 492): A Nearby Emissary from a
+Single-degenerate Type Ia Supernova. Astrophys. J. 858, 3, DOI: 10.3847/1538-4357/aab899 (2018). 1803.07564.
+4. Shen, K. J. et al. Three Hypervelocity White Dwarfs in Gaia DR2: Evidence for Dynamically Driven Double-degenerate
+Double-detonation Type Ia Supernovae. Astrophys. J. 865, 15, DOI: 10.3847/1538-4357/aad55b (2018). 1804.11163.
+5. Raddi, R. et al. Partly burnt runaway stellar remnants from peculiar thermonuclear supernovae. Mon. Not. R. Astron. Soc.
+489, 1489–1508, DOI: 10.1093/mnras/stz1618 (2019). 1902.05061.
+6. El-Badry, K. et al. The fastest stars in the Galaxy. The Open J. Astrophys. 6, 28, DOI: 10.21105/astro.2306.03914 (2023).
+2306.03914.
+7. Bhat, A. et al. Supernova Shocks Cannot Explain the Inflated State of Hypervelocity Runaways from White Dwarf Binaries.
+arXiv e-prints arXiv:2407.03424, DOI: 10.48550/arXiv.2407.03424 (2024). 2407.03424.
+6/13
+
+8. Wong, T. L. S., White, C. J. & Bildsten, L. Shocking and Mass Loss of Compact Donor Stars in Type Ia Supernovae.
+Astrophys. J. 973, 65, DOI: 10.3847/1538-4357/ad6a11 (2024). 2408.00125.
+9. Brown, W. R. Hypervelocity Stars. Annu. Rev. Astron. Astrophys. 53, 15–49, DOI: 10.1146/annurev-astro-082214-122230
+(2015).
+10. Gaia Collaboration et al. Gaia Data Release 2. Summary of the contents and survey properties. Astron. Astrophys. 616, A1,
+DOI: 10.1051/0004-6361/201833051 (2018). 1804.09365.
+11. Gaia Collaboration et al. Gaia Data Release 3. Summary of the content and survey properties. Astron. Astrophys. 674, A1,
+DOI: 10.1051/0004-6361/202243940 (2023). 2208.00211.
+12. Igoshev, A. P., Perets, H. & Hallakoun, N. Hyper-runaway and hypervelocity white dwarf candidates in Gaia Data Release
+3: Possible remnants from Ia/Iax supernova explosions or dynamical encounters. Mon. Not. R. Astron. Soc. 518, 6223–6237,
+DOI: 10.1093/mnras/stac3488 (2023). 2209.09915.
+13. Scholz, R. D. Hypervelocity star candidates from Gaia DR2 and DR3 proper motions and parallaxes. Astron. Astrophys.
+685, A162, DOI: 10.1051/0004-6361/202348430 (2024). 2402.10714.
+14. Guillochon, J., Dan, M., Ramirez-Ruiz, E. & Rosswog, S. Surface Detonations in Double Degenerate Binary Systems
+Triggered by Accretion Stream Instabilities. Astrophys. J. Lett. 709, L64–L69, DOI: 10.1088/2041-8205/709/1/L64 (2010).
+0911.0416.
+15. Pakmor, R., Kromer, M., Taubenberger, S. & Springel, V. Helium-ignited Violent Mergers as a Unified Model for Normal
+and Rapidly Declining Type Ia Supernovae. Astrophys. J. Lett. 770, L8, DOI: 10.1088/2041-8205/770/1/L8 (2013).
+1302.2913.
+16. Sato, Y. et al. A Systematic Study of Carbon-Oxygen White Dwarf Mergers: Mass Combinations for Type Ia Supernovae.
+Astrophys. J. 807, 105, DOI: 10.1088/0004-637X/807/1/105 (2015). 1505.01646.
+17. Shen, K. J. et al. Three Hypervelocity White Dwarfs in Gaia DR2: Evidence for Dynamically Driven Double-degenerate
+Double-detonation Type Ia Supernovae. Astrophys. J. 865, 15, DOI: 10.3847/1538-4357/aad55b (2018). 1804.11163.
+18. Iben, I., Jr. & Tutukov, A. V. On the evolution of close binaries with components of initial mass between 3 solar masses
+and 12 solar masses. Astrophys. J. Suppl. Ser. 58, 661–710, DOI: 10.1086/191054 (1985).
+19. Iben, J., Icko, Nomoto, K., Tornambe, A. & Tutukov, A. V. On Interacting Helium Star–White Dwarf Pairs as Supernova
+Precursors. Astrophys. J. 317, 717, DOI: 10.1086/165318 (1987).
+20. Bauer, E. B., White, C. J. & Bildsten, L. Remnants of Subdwarf Helium Donor Stars Ejected from Close Binaries with
+Thermonuclear Supernovae. Astrophys. J. 887, 68, DOI: 10.3847/1538-4357/ab4ea4 (2019). 1906.08941.
+21. Bauer, E. B., Chandra, V., Shen, K. J. & Hermes, J. J. Masses of White Dwarf Binary Companions to Type Ia Supernovae
+Measured from Runaway Velocities. Astrophys. J. Lett. 923, L34, DOI: 10.3847/2041-8213/ac432d (2021). 2112.03189.
+22. Shields, J. V. et al. No Surviving SN Ia Companion in SNR 0509-67.5: Stellar Population Characterization and Comparison
+to Models. Astrophys. J. Lett. 950, L10, DOI: 10.3847/2041-8213/acd6a0 (2023). 2305.03750.
+23. Tanikawa, A., Nomoto, K., Nakasato, N. & Maeda, K. Double-detonation Models for Type Ia Supernovae: Trigger of
+Detonation in Companion White Dwarfs and Signatures of Companions’ Stripped-off Materials. Astrophys. J. 885, 103,
+DOI: 10.3847/1538-4357/ab46b6 (2019). 1909.09770.
+24. Pakmor, R., Zenati, Y., Perets, H. B. & Toonen, S. Thermonuclear explosion of a massive hybrid HeCO white dwarf
+triggered by a He detonation on a companion. Mon. Not. R. Astron. Soc. 503, 4734–4747, DOI: 10.1093/mnras/stab686
+(2021). 2103.06277.
+25. Pakmor, R. et al. On the fate of the secondary white dwarf in double-degenerate double-detonation Type Ia supernovae.
+Mon. Not. R. Astron. Soc. 517, 5260–5271, DOI: 10.1093/mnras/stac3107 (2022). 2203.14990.
+26. Springel, V. E pur si muove: Galilean-invariant cosmological hydrodynamical simulations on a moving mesh. Mon. Not. R.
+Astron. Soc. 401, 791–851, DOI: 10.1111/j.1365-2966.2009.15715.x (2010). 0901.4107.
+27. Perets, H. B. et al. A faint type of supernova from a white dwarf with a helium-rich companion. Nature 465, 322–325,
+DOI: 10.1038/nature09056 (2010). 0906.2003.
+28. Paxton, B. et al. Modules for Experiments in Stellar Astrophysics (MESA). Astrophys. J. Suppl. Ser. 192, 3, DOI:
+10.1088/0067-0049/192/1/3 (2011). 1009.1622.
+29. Werner, K., El-Badry, K., Gänsicke, B. T. & Shen, K. J. Ultraviolet spectroscopy of the supernova Ia hypervelocity
+runaway white dwarf J0927-6335. Astron. Astrophys. 689, L6, DOI: 10.1051/0004-6361/202451635 (2024). 2408.08397.
+7/13
+
+30. Perets, H. B., Zenati, Y., Toonen, S. & Bobrick, A. Normal type Ia supernovae from disruptions of hybrid He-CO white-
+dwarfs by CO white-dwarfs. arXiv e-prints arXiv:1910.07532, DOI: 10.48550/arXiv.1910.07532 (2019). 1910.07532.
+31. Zenati, Y. et al. The Origins of Calcium-rich Supernovae From Disruptions of CO White Dwarfs by Hybrid He-CO White
+Dwarfs. Astrophys. J. 944, 22, DOI: 10.3847/1538-4357/acaf65 (2023). 2207.13110.
+32. Iben, J., I. & Tutukov, A. V. On the evolution of close binaries with components of initial mass between 3 M and 12 M.
+Astrophys. J. Suppl. Ser. 58, 661–710, DOI: 10.1086/191054 (1985).
+33. Zenati, Y., Toonen, S. & Perets, H. B. Formation and evolution of hybrid He–CO white dwarfs and their properties. Mon.
+Notices Royal Astron. Soc. 482, 1135–1142, DOI: 10.1093/mnras/sty2723 (2018). http://oup.prod.sis.lan/mnras/article-pdf/
+482/1/1135/26205282/sty2723.pdf.
+34. Zenati, Y., Perets, H. B. & Toonen, S. Neutron star-white dwarf mergers: early evolution, physical properties, and outcomes.
+Mon. Not. R. Astron. Soc. 486, 1805–1813, DOI: 10.1093/mnras/stz316 (2019). 1807.09777.
+35. Zenati, Y., Toonen, S. & Perets, H. B. Formation and evolution of hybrid He-CO white dwarfs and their properties. Mon.
+Not. R. Astron. Soc. 482, 1135–1142, DOI: 10.1093/mnras/sty2723 (2019). 1803.04444.
+36. Pakmor, R. et al. On the fate of the secondary white dwarf in double-degenerate double-detonation Type Ia supernovae.
+Mon. Not. R. Astron. Soc. 517, 5260–5271, DOI: 10.1093/mnras/stac3107 (2022). 2203.14990.
+37. Springel, V. E pur si muove: Galilean-invariant cosmological hydrodynamical simulations on a moving mesh. Mon. Not. R.
+Astron. Soc. 401, 791–851, DOI: 10.1111/j.1365-2966.2009.15715.x (2010). 0901.4107.
+38. Pakmor, R., Bauer, A. & Springel, V. Magnetohydrodynamics on an unstructured moving grid. Mon. Not. R. Astron. Soc.
+418, 1392–1401, DOI: 10.1111/j.1365-2966.2011.19591.x (2011). 1108.1792.
+39. Zhu, C., Pakmor, R., van Kerkwijk, M. H. & Chang, P. Magnetized Moving Mesh Merger of a Carbon-Oxygen White
+Dwarf Binary. Astrophys. J. Lett. 806, L1, DOI: 10.1088/2041-8205/806/1/L1 (2015). 1504.01732.
+40. Weinberger, R., Springel, V. & Pakmor, R. The AREPO Public Code Release. Astrophys. J. Suppl. Ser. 248, 32, DOI:
+10.3847/1538-4365/ab908c (2020). 1909.04667.
+41. Paxton, B. et al. Modules for Experiments in Stellar Astrophysics (MESA): Planets, Oscillations, Rotation, and Massive
+Stars. Astrophys. J. Suppl. Ser. 208, 4, DOI: 10.1088/0067-0049/208/1/4 (2013). 1301.0319.
+42. Paxton, B. et al. Modules for Experiments in Stellar Astrophysics (MESA): Pulsating Variable Stars, Rotation, Convective
+Boundaries, and Energy Conservation. Astrophys. J. Suppl. Ser. 243, 10, DOI: 10.3847/1538-4365/ab2241 (2019).
+1903.01426.
+43. Chandra, V. et al. The SN Ia runaway LP 398-9: detection of circumstellar material and surface rotation. Mon. Not. R.
+Astron. Soc. 512, 6122–6133, DOI: 10.1093/mnras/stac883 (2022). 2110.06935.
+44. Werner, K., Reindl, N., Rauch, T., El-Badry, K. & Bédard, A. The photospheres of the hottest fastest stars in the Galaxy.
+Astron. Astrophys. 682, A42, DOI: 10.1051/0004-6361/202348286 (2024). 2311.13388.
+45. Nauenberg, M. Analytic Approximations to the Mass-Radius Relation and Energy of Zero-Temperature Stars. Astrophys.
+J. 175, 417, DOI: 10.1086/151568 (1972).
+46. Pakmor, R. et al. Improving the convergence properties of the moving-mesh code AREPO. Mon. Not. R. Astron. Soc. 455,
+1134–1143, DOI: 10.1093/mnras/stv2380 (2016). 1503.00562.
+47. Jermyn, A. S. et al. Modules for Experiments in Stellar Astrophysics (MESA): Time-dependent Convection, Energy
+Conservation, Automatic Differentiation, and Infrastructure. Astrophys. J. Suppl. Ser. 265, 15, DOI: 10.3847/1538-4365/
+acae8d (2023). 2208.03651.
+48. Hunter, J. D. Matplotlib: A 2d graphics environment. Comput. Sci. & Eng. 9, 90–95, DOI: 10.1109/MCSE.2007.55 (2007).
+49. Harris, C. R. et al. Array programming with NumPy. Nature 585, 357–362, DOI: 10.1038/s41586-020-2649-2 (2020).
+50. Virtanen, P. et al. SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python. Nat. Methods 17, 261–272,
+DOI: 10.1038/s41592-019-0686-2 (2020).
+Acknowledgments
+HBP acknowledges support for this project from the European Union’s Horizon 2020 research and innovation program under
+grant agreement No 865932-ERC-SNeX. HG acknowledges support for the project from the Council for Higher Education
+of Israel. A.B. was supported by the Deutsche Forschungsgemeinschaft (DFG) through grant GE2506/18-1 and by the Kavli
+Summer Program which took place at MPA in Garching in July 2023, and was supported by the Kavli Foundation. We would
+like to thank Evan Bauer and Robert Fisher for their valuable comments and discussions.
+8/13
+
+Author contributions statement
+HG led the key research, ran the hydrodynamical simulations, and analyzed their results. HBP initiated and supervised the
+project, suggested the main ideas, analyzed the results, and wrote the main parts of the paper. AB made the long-term WD
+evolution modeling and analyzed them. RP assisted with running the hydrodynamical simulations. All authors contributed to
+writing the paper, making the figures, and reviewing the manuscript.
+9/13
+
+Ԧ𝑣
+4He Detonation
+4He Shock Propagation
+12C Detonation
+Remnant Ejection
+𝜌12C
+Ԧ𝑣
+𝜌
+4He
+Ԧ𝑣
+𝜌56Ni
+Ԧ𝑣
+Temperature
+Figure 1. The panels show the time evolution from the time of the ignition of the helium detonation (left panels) to the time
+when the shock converges in the CO core of the primary WD (third from the left), and finally the ejected remnant in the right
+panels.
+10/13
+
+Figure 2. Production of radioactive elements throughout the merger. The early Helium burning and detonation already
+produces a significant amount of radioactive elements, with a few 0.01 M⊙of radioactive 56Ni, as well as faster decaying
+radioactive elements 48Cr and 52Fe produced at this stage. The bulk of the 56Ni is produced by the CO detonation beginning at
+t=878.8 s.
+3.8
+4.0
+4.2
+4.4
+4.6
+4.8
+5.0
+log(Teff/K)
+4
+2
+0
+2
+4
+log(L/L
+)
+R=0.01
+R=0.03
+R=0.1
+R=0.3
+J0546
+J1332
+J0927
+J1235
+D6(1-3)
+4
+6
+Log(Age)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+2.5
+2.0
+1.5
+1.0
+0.5
+0.0
+0.5
+log(R/R
+)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+log(Age/yrs)
+3.8
+4.0
+4.2
+4.4
+4.6
+4.8
+5.0
+log(Teff/K)
+J1235
+J0927
+J0546
+J1332
+D6-2
+Figure 3. Left: The HR diagram for our model compared with the observed values. The error bars depict the 1 and 2 σ
+uncertainties. The black arrow marks the point when the star is 104 years old. Right: The radius and temperature evolution of
+the model as a function of its age. In particular, the HVWDs J0546, J1332, and J0927 may be explained by our model, within
+the 1-sigma (J0546, J1332) and 2σ (J0927; or 1σ too, if ref.6 inferred temperature is adapted) uncertainties, but see further
+discussion in the SI regarding J1332 2.4
+11/13
+
+𝜌12C
+𝜌
+4He
+𝜌56Ni
+Temperature
+Figure 4. The panels show the time evolution from the time of the partial disruption of the secondary WD (left panels) to the
+time of the He detonation (second left) when the shock converges in the CO core of the primary WD (third from the left), and
+finally the ejected remnant in the right panels.
+12/13
+
+Figure 5. Expected ejection velocities of partially disrupted WDs from merging binary HeCO WD progenitors. Three primary
+masses are shown, corresponding to the upper mass expected for HeCO WDs (0.74 M⊙); the simulated primary (0.69 M⊙); and
+a lower mass primary expected to experience a double detonation (0.63 M⊙; likely a lower limit). The measured ejection
+velocity in the simulation well matched the simple analytic estimate.
+3.8
+4.0
+4.2
+4.4
+4.6
+4.8
+5.0
+log(Teff/K)
+4
+2
+0
+2
+4
+log(L/L
+)
+R=0.01
+R=0.03
+R=0.1
+R=0.3
+J0546
+J1332
+J0927
+J1235
+D6(1-3)
+4
+6
+Log(Age)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+2.5
+2.0
+1.5
+1.0
+0.5
+0.0
+0.5
+log(R/R
+)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+log(Age/yrs)
+3.8
+4.0
+4.2
+4.4
+4.6
+4.8
+5.0
+log(Teff/K)
+J1235
+J0927
+J0546
+J1332
+D6-2
+Figure 6. Left: The HR diagram for our model compared with the observed values, assuming a hydrogen-dominated
+atmosphere for J1332 based on ref.29. The error bars depict the 1 and 2 σ uncertainties. The black arrow marks the point when
+the star is 104 years old. Right: The radius and temperature evolution of the model as a function of its age. In particular, the HR
+positions of HVWDs J0546, J1332, and J0927 may be explained by our model, within the 1-sigma (J0546) and 2-sigma (J0927,
+J1332); as well as the temperatures of these WDs, while the radius of J1332 is inconsistent, if hydrogen atmosphere is assumed
+for J1332
+.
+13/13
+

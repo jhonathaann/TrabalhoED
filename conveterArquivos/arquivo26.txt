@@ -1,0 +1,861 @@
+Interpreting the Learned Model in
+MuZero Planning
+Hung Guei1[0000−0002−5590−7529], Yan-Ru Ju1∗[0009−0008−0816−6933],
+Wei-Yu Chen1,2∗[0009−0009−5984−6493], and Ti-Rong Wu1[0000−0002−7532−3176]
+1 Institute of Information Science, Academia Sinica, Taipei, Taiwan
+2 Department of Electrical Engineering, National Taiwan University, Taipei, Taiwan
+{hguei,yanru}@iis.sinica.edu.tw, b09901084@ntu.edu.tw,
+tirongwu@iis.sinica.edu.tw
+Abstract. MuZero has achieved superhuman performance in various
+games by using a dynamics network to predict environment dynamics
+for planning, without relying on simulators. However, the latent states
+learned by the dynamics network make its planning process opaque. This
+paper aims to demystify MuZero’s model by interpreting the learned la-
+tent states. We incorporate observation reconstruction and state consis-
+tency into MuZero training and conduct an in-depth analysis to evaluate
+latent states across two board games: 9x9 Go and Outer-Open Gomoku,
+and three Atari games: Breakout, Ms. Pacman, and Pong. Our find-
+ings reveal that while the dynamics network becomes less accurate over
+longer simulations, MuZero still performs effectively by using planning
+to correct errors. Our experiments also show that the dynamics network
+learns better latent states in board games than in Atari games. These
+insights contribute to a better understanding of MuZero and offer direc-
+tions for future research to improve the playing performance, robustness,
+and interpretability of the MuZero algorithm.
+Keywords: MuZero · Interpretability · Reinforcement learning · Plan-
+ning · Tree search
+1
+Introduction
+Reinforcement learning has shown significant success across various domains,
+with particularly notable achievements in games [16, 18, 20]. One of the most re-
+markable milestones is AlphaZero [19], an algorithm that leverages environment
+simulators for planning and masters board games like Chess and Go through
+self-play without using any human knowledge. Building on this advancement,
+MuZero [17] introduces a dynamics network that learns the rules of environ-
+ment dynamics, enabling planning without requiring environment simulators.
+This dynamics network further extends MuZero to complex environments, in-
+cluding visual environments like Atari games [5, 17], physics-based simulations
+[12], stochastic environments [1], and even non-game applications [15, 22].
+* These authors contributed equally to this work.
+arXiv:2411.04580v1  [cs.AI]  7 Nov 2024
+
+2
+H. Guei et al.
+Despite the effectiveness of MuZero, the dynamics network increases the
+opacity of its planning process, as they are not directly interpretable. Conse-
+quently, several studies have been conducted to investigate the planning process
+of MuZero. Hamrick et al. [8] demonstrated that simpler and shallower planning
+is often as performant as more complex planning, and search at evaluation time
+only slightly improves generalization. Vries et al. [21] found that the observation
+embeddings and latent states learned by the dynamics network often diverge,
+potentially leading to unstable planning, and proposed adding a regularization
+term during training to align the latent states. He et al. [9] conducted empirical
+experiments analyzing policy and value errors, reporting that MuZero struggles
+to accurately evaluate policies and values when dealing with out-of-distribution
+states.
+However, although many studies have emerged in recent years to highlight
+inaccuracies in MuZero’s dynamics network, it remains a mystery that MuZero
+still achieves superhuman performance in many applications despite these limi-
+tations. To address this challenge, in this paper, we aim to interpret the latent
+states learned by MuZero and investigate its impact during the planning process.
+Specifically, we leverage two enhanced techniques in MuZero – observation re-
+construction [8, 21, 25] and state consistency [25] – to analyze the latent states
+across two board games: 9x9 Go and Outer-Open Gomoku, and three Atari
+games: Breakout, Ms. Pacman, and Pong. We also investigate the impact of the
+latent states during planning.
+The contributions of this paper can be summarized as follows. First, we con-
+firm that the dynamics network becomes increasingly inaccurate when simulating
+environments further into the future, consistent with previous findings. Second,
+we demonstrate that the dynamics network learns better when the observations
+are visually simple, as evidenced by more accurate observation reconstruction in
+board games compared to Atari games. Third, we establish that although the
+latent states gradually become inaccurate, MuZero can still play effectively by
+planning to correct the inaccuracies and maintain the playing performance. How-
+ever, excessively large search trees can still diminish the playing performance. In
+summary, through empirical experiments across various games, our work offers
+a deeper understanding of MuZero and provides directions for future research to
+improve the performance, robustness, and interpretability of the MuZero algo-
+rithm.
+2
+MuZero and Its Improvements
+MuZero [17], a model-based reinforcement learning algorithm, builds upon Alp-
+haZero [19] by introducing a learned model for predicting environment dynamics.
+Its architecture includes three key networks: representation, dynamics, and pre-
+diction. The representation network h encodes an observation ot into a latent
+state, called hidden state st, at time step t, denoted by h(ot) = st. The dynam-
+ics network g provides state transitions, g(st, at) = r(1)
+t+1, s(1)
+t+1, where r(1)
+t+1 is the
+predicted reward, and s(1)
+t+1 is the next hidden state. Here, the superscript (k)
+
+Interpreting the Learned Model in MuZero Planning
+3
+indicates that the hidden state s(k)
+t
+has been unrolled by the dynamics network
+for k steps. For simplicity, the superscript is omitted when k = 0. The prediction
+network f predicts a policy pt and a value vt of a given hidden state st, denoted
+by f(st) = pt, vt.
+The training process of MuZero is composed of self-play and optimization.
+Self-play uses Monte Carlo tree search (MCTS) [2, 4, 13] by applying three
+networks to collect training game records. Namely, an MCTS search tree is con-
+structed for each move, in which the representation network h encodes the ob-
+servation ot at the root node, the dynamics network g expands the child nodes
+for planning ahead, and the prediction network f estimates policy and value for
+each node to guide the search tree. Once the MCTS is complete, an action at is
+sampled from the search policy πt and applied to the environment, resulting in
+an observed reward ut+1 and the next observation ot+1. This process continues
+until the game ends and an outcome z is obtained. The optimization trains the
+networks using collected game records. For each training record, MuZero obtains
+st = h(ot) and recurrently unrolls st for K steps to obtain all s(k)
+t+k, r(k)
+t+k, p(k)
+t+k,
+and v(k)
+t+k for 1 ≤k ≤K, as illustrated in Fig. 1. The networks are optimized
+jointly by policy loss lp, value loss lv, and reward loss lr, as
+Lµ =
+K
+X
+k=0
+lp(πt+k, p(k)
+t+k) +
+K
+X
+k=0
+lv(zt+k, v(k)
+t+k) +
+K
+X
+k=1
+lr(ut+k, r(k)
+t+k) + c||θ||2,
+(1)
+where zt+k is either the outcome z for board games or the n-step return for
+Atari games, and the last term is an L2 regularization. When newer networks
+are prepared, they will be used by self-play.
+𝑜𝑡+1
+𝑜𝑡+2
+𝑜𝑡
+ℎ
+𝑠𝑡
+𝑠𝑡+1
+1
+𝑔
+𝑟𝑡+1
+1
+𝑢𝑡+1
+𝑎𝑡
+𝑠𝑡+2
+2
+𝑔
+𝑟𝑡+2
+2
+𝑢𝑡+2
+𝑎𝑡+1
+⋯
+𝑑
+ො𝑜𝑡+1
+1
+𝑓
+𝑝𝑡+1
+1 , 𝑣𝑡+1
+1
+𝑑
+ො𝑜𝑡+2
+2
+𝑓
+𝑝𝑡+2
+2 , 𝑣𝑡+2
+2
+𝑑
+ො𝑜𝑡
+𝑓
+𝑝𝑡, 𝑣𝑡
+𝑟𝑡+𝐾
+𝐾
+𝑢𝑡+𝐾
+𝑜𝑡+𝐾
+𝑠𝑡+𝐾
+𝐾
+𝑑
+ො𝑜𝑡+𝐾
+𝐾
+𝑓
+𝑝𝑡+𝐾
+𝐾, 𝑣𝑡+𝐾
+𝐾
+𝑔
+𝑎𝑡+𝐾−1
+⋯
+𝑠𝑡+1
+𝑠𝑡+2
+𝑠𝑡+𝐾
+Fig. 1. An illustration of the MuZero unrolling process.
+Several improvements have been proposed since the advent of MuZero, par-
+ticularly two regularizations aimed at improving the state transitions of the
+dynamics network: observation reconstruction and state consistency. For the ob-
+
+4
+H. Guei et al.
+servation reconstruction [8, 21, 25], a decoder network d, denoted as d(st) = ˆot,
+is adopted to obtain ˆo(k)
+t+k for each s(k)
+t+k as shown in Fig. 1, then the network is
+optimized using the difference between ot+k and ˆo(k)
+t+k. This allows MuZero to
+predict future observations without qualitatively changing the planning behavior
+[8]. For the state consistency [25], SimSiam [3] is adopted to align hidden states
+st+k and s(k)
+t+k, thereby increasing the accuracy of the dynamics network. The
+decoder loss Ld and state consistency loss Lc are defined as
+Ld =
+K
+X
+k=0
+ld(ot+k, ˆo(k)
+t+k) and Lc =
+K
+X
+k=1
+lc(st+k, s(k)
+t+k).
+(2)
+During the optimization, a joint loss L = Lµ + λdLd + λcLc is applied, in which
+λd and λc controlling the scale of Ld and Lc, respectively.
+3
+Interpreting the Hidden States
+This section evaluates the quality of hidden states learned by MuZero. We first
+train five MuZero models, each on a different game, with a decoder network
+and state consistency: two board games, 9x9 Go and Outer-Open Gomoku, and
+three Atari games, Breakout, Ms. Pacman, and Pong. We then use the decoder
+network to interpret the hidden states.
+3.1
+Training MuZero Models with a Decoder
+To train the MuZero model with a decoder network and state consistency, we
+use the MiniZero framework [24] for implementation. Specifically, we use Gum-
+bel MuZero [5] with hyperparameters listed in Table 1 for training, following
+the MuZero network architecture [17] that uses a residual network [10] as the
+backbone and following the approach proposed by Ye et al. [25] for the decoder
+network architecture. The experiments are conducted on a machine with two
+Intel Xeon Silver 4216 CPUs and four NVIDIA RTX A5000 GPUs.
+Table 1. The hyperparameters for training MuZero with a decoder. For unlisted hy-
+perparameters, we follow those in MiniZero [24].
+Hyperparameter
+Board Games
+Atari Games
+Iteration
+300
+Training steps
+60k
+Batch size
+512
+Unroll steps (K)
+5
+# Blocks
+3
+2
+# Simulations
+16
+18
+Decoder scale (λd)
+1
+25
+Consistency scale (λc)
+0
+1
+
+Interpreting the Learned Model in MuZero Planning
+5
+To ensure the performance of each model, we evaluate the playing perfor-
+mance to verify whether training with a decoder network impacts MuZero’s
+planning ability. For the comparison, we additionally train a baseline model for
+each game, namely a MuZero model without a decoder using the same hyper-
+parameters except setting λd = 0. For board games, we use the Elo ratings [19]
+to evaluate the model by 200 games against the baseline model (search with 400
+simulations per move), in which the baseline is anchored to 1000 Elo. For Atari
+games, we follow the approach in Muesli [11] to calculate the average returns
+of the latest 100 finished self-play games. The evaluation results are summa-
+rized in Table 2, where MuZero with a decoder performs slightly better in board
+games, while its performance varies from game to game in Atari games. Overall,
+adding a decoder network will not have a serious negative impact on the playing
+performance, consistent with the findings of Hamrick et al. [8].
+Table 2. The comparison of the playing performance between MuZero models with
+and without a decoder in five games. The performance of board games and Atari games
+is measured using Elo rating and average return, respectively.
+Game
+w/ Decoder
+w/o Decoder
+Go
+1088.74
+1000.00
+Gomoku
+1048.96
+1000.00
+Breakout
+358.90
+383.17
+Ms. Pacman
+4528.70
+3732.80
+Pong
+19.65
+20.07
+3.2
+Decoding Hidden States into Observations
+We first investigate whether the hidden states generated by the representation
+network can be accurately decoded into observations. Specifically, we compare
+the decoded observations ˆot with the true observations ot to evaluate perfor-
+mance in both in-distribution and out-of-distribution states for each game, as
+shown in Fig. 2. In-distribution states are from the final self-play iterations gen-
+erated by the evaluated MuZero model, while out-of-distribution states are from
+the initial iterations. For in-distribution states, the stones in board games are
+accurate, and the object outlines in Atari games generally match, with minor
+errors like a missing ball in Breakout or blurry ghosts in Ms. Pacman. On the
+other hand, the decoded observations perform worse in out-of-distribution states.
+For example, several blurry stones are incorrectly shown in board games, and
+many common objects are blurry or even missing in Atari games, such as the
+bricks in Breakout, ghosts in Ms. Pacman, and the ball in Pong. We conclude
+that the decoder network performs better in board games, possibly due to the
+challenge of learning complex Atari images, and also performs better in familiar
+in-distribution states.
+
+6
+H. Guei et al.
+ot
+ˆot
+(a) In-distribution states
+ot
+ˆot
+(b) Out-of-distribution states
+Fig. 2. The comparison between true and decoded observations for in-distribution and
+out-of-distribution states across five games. The games, from left to right, are Go,
+Gomoku, Breakout, Ms. Pacman, and Pong.
+3.3
+Analyzing Unrolled Hidden States
+Next, we evaluate the quality of the unrolled hidden states generated by the
+dynamics network, examining whether ˆo(k)
+t+k still aligns with ot+k after unrolling k
+steps. Fig. 3 presents the results for Go and Breakout under different k, including
+0, 1, 5, 10, 15, and 20. Note that when k = 0, the hidden state is generated by
+the representation network, as no unrolling occurs. For Go, ˆo(k)
+t+k remain robust
+with a small number of unrolling steps but become blurry as k increases like
+ˆo(20)
+t+20. Conversely, ˆo(k)
+t+k in Breakout are less accurate, in which the larger k is,
+the more mistakes are, especially in the scores, the paddle, and the blocks. To
+summarize, the hidden states generally become less accurate during unrolling
+through the dynamics network, similar to the findings in previous works [9, 21].
+Also, following a similar approach to Vries et al. [21], we perform principal
+component analysis (PCA) on the same games and visualize the PCA projec-
+tions for ot, ˆot, ˆo(5)
+t , and ˆo(t)
+t , as shown in Fig. 4. In Go, the trajectories of all
+decoded observations align well with ot, indicating that the dynamics network
+effectively learns the game rules and can simulate future observations regardless
+of the unrolling steps. In contrast, for Breakout, only ˆo(5)
+t
+remains aligned. This
+may be because MuZero only unrolls five steps during training; when unrolling
+
+Interpreting the Learned Model in MuZero Planning
+7
+k = 0
+k = 1
+k = 5
+k = 10
+k = 15
+k = 20
+ot+k
+ˆo(k)
+t+k
+(a) Go
+ot+k
+ˆo(k)
+t+k
+(b) Breakout
+Fig. 3. The comparison between true and decoded observations at different unrolling
+steps in Go and Breakout.
+End
+Start
+End
+Start
+End
+•
+ො𝑜𝑜𝑡𝑡
+(𝑡𝑡)
+•
+ො𝑜𝑜𝑡𝑡
+(5)
+•
+ො𝑜𝑜𝑡𝑡
+•
+𝑜𝑜𝑡𝑡
+(a) Go
+(b) Breakout
+Fig. 4. The PCA projections of true and different decoded observations in Go and
+Breakout. Labels “Start” and “End” mark the initial and the terminal of the trajectories.
+exceeds five steps, the decoder performance significantly degrades, as shown by
+ˆo(t)
+t . In summary, the error between decoded and true observations gradually ac-
+cumulates as the unrolling step increases across all games, with errors in board
+games generally increasing less than in Atari games.
+Furthermore, we examine the quality of the unrolled hidden states explicitly
+using unrolling errors, providing in-depth analyses from more perspectives: ob-
+servations, hidden states, policies, values, and rewards. Specifically, we calculate
+
+8
+H. Guei et al.
+the average unrolling errors for each time step t in 500 in-distribution games
+using the following metrics:
+– ℓ(k)
+ˆot , the mean squared error between ˆo(k)
+t
+= d(s(k)
+t
+) and ot.
+– ℓ(k)
+st , the cosine similarity between s(k)
+t
+= g(s(k−1)
+t−1
+, at−1) and st = h(ot).
+– ℓ(k)
+pt , the cross-entropy loss between p(k)
+t
+= f(s(k)
+t
+) and pt = f(st).
+– ℓ(k)
+vt , the mean squared error between v(k)
+t
+= f(s(k)
+t
+) and vt = f(st).
+– ℓ(k)
+rt , the mean squared error between r(k)
+t
+= g(s(k−1)
+t−1
+, at−1) and ut.
+The calculated unrolling errors in Go and Breakout are plotted in Fig. 5, where
+k = t, 5, 0 correspond to the errors of unrolling from the initial state, unrolling
+from five steps earlier, and no unrolling (only for observations), respectively. Our
+findings suggest the errors generally increase, as in previous research [9]; further-
+more, we discover more error trends that hint at what the models learned. First,
+the errors may decrease during unrolling, e.g., ℓ(k)
+st
+in Go and ℓ(k)
+pt in Breakout,
+implying that the model predicts less accurate in the beginning phase than in
+the later phases of the game. Second, the errors may present zigzag trends, e.g.,
+ℓ(k)
+st , ℓ(k)
+pt , and ℓ(k)
+vt in Go, showing that the model predicts the first player’s moves
+better than the second player’s. Third, the errors may converge as t increases,
+e.g., t ⪆100 in Breakout, implying that the model may prevent the errors from
+increasing indefinitely. From the analyses, we note that although the errors may
+decrease at times, they still show relatively high trends with the long unrolling.
+0
+20
+40
+60
+0
+2
+4
+6
+8
+·10−3
+Observation: ℓ(k)
+ˆot
+0
+20
+40
+60
+−0.58
+−0.57
+−0.56
+Hidden state: ℓ(k)
+st
+0
+20
+40
+60
+0.5
+1
+1.5
+Policy: ℓ(k)
+pt
+0
+20
+40
+60
+0
+0.05
+0.1
+Value: ℓ(k)
+vt
+(a) Go
+0
+500
+1,000
+0
+1
+2
+3
+·10−2
+Observation: ℓ(k)
+ˆot
+0
+500
+1,000
+−0.4
+−0.3
+−0.2
+Hidden state: ℓ(k)
+st
+0
+500
+1,000
+1.5
+2
+2.5
+Policy: ℓ(k)
+pt
+0
+500
+1,000
+10−2
+100
+102
+Value: ℓ(k)
+vt
+0
+500
+1,000
+10−8
+10−4
+100
+Reward: ℓ(k)
+rt
+(b) Breakout
+k = t
+k = 5
+k = 0
+Fig. 5. The average unrolling errors for observations, hidden states, policies, values,
+and rewards in Go and Breakout. The x-axis represents the time step (t), and the y-axis
+represents the error.
+
+Interpreting the Learned Model in MuZero Planning
+9
+4
+Exploring the Impact of Hidden States During
+Planning
+The previous section demonstrates that hidden states are not always accurate.
+However, MuZero still achieves superhuman performance despite these inaccu-
+racies. This section aims to interpret the search behavior in MuZero and explore
+the impact of hidden states during planning.
+4.1
+Visualizing the Search Tree
+We visualize an MCTS tree by decoding hidden states of internal nodes in
+Gomoku, a game with easily understandable rules, as shown in Fig. 6. The
+Node R
+p = n/a, v = 0.8491
+Node A
+p = 0.1141, v = 0.9621
+Node B
+p = 0.6989, v = 0.9921
+Node C
+p = 0.0005, v = 0.9130
+Node D
+p = 0.9722, v = 0.9531
+Node F
+p = 0.0068, v = 0.9952
+Node E
+p = 0.8179, v = 0.9708
+Node G
+p = 0.0100, v = 0.9921
+Node H
+p = 0.0069, v = 0.9945
+Node I
+p = 0.0048, v = 0.9950
+Fig. 6. A visualized MuZero search tree in Gomoku. The left and right boards in each
+node represent true and decoded observations, respectively. Nodes enclosed by solid
+ellipses represent valid states during the game, while nodes enclosed by dashed ellipses
+represent invalid states.
+
+10
+H. Guei et al.
+search tree is rooted at node R, and each node contains two boards (cropped
+for clarity), the left shows the Gomoku board with the action marked, and the
+right shows the decoded observation from the hidden state. Each node also in-
+cludes its corresponding policy p and value v, where the values are from Black’s
+perspective. The search tree contains both valid and invalid states. For valid
+states (nodes R, A, B, D, and E), the decoder produces accurate visualizations.
+Invalid states (nodes C, F, G, H, and I) include actions such as placing a stone
+on an occupied position, as in node C, or actions taken after terminal states,
+as in node F. The decoded observations for these invalid states become blurry,
+reflecting that MuZero is unfamiliar with them.
+4.2
+Analyzing Unrolled Values in Search Tree
+Fig. 6 shows some interesting results for the node values. First, at node F, White
+achieves five-in-a-row after Black has already won; nevertheless, this move does
+not affect the value v. Second, the value maintains confidence about the result as
+the states go deeper beyond the terminal state, such as in nodes F, G, H, and I.
+To investigate this phenomenon, we further analyze the hidden states searched
+beyond the terminal in the search tree. We notice that the proportion of them,
+shown in Fig. 7, grows not only when approaching the environment terminal but
+also when the search tree size is increased, reflecting that the search tree has
+no choice but to expand them when there are fewer valid moves. Since a small
+proportion of such hidden states is inevitable, the accuracy of their values is
+non-negligible during planning. Next, we calculate the average errors between v
+and z, where v is the values of hidden states unrolled beyond terminal states for
+up to 50 steps, and z is the game outcomes. As shown in Fig. 8, the values in
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+0%
+20%
+40%
+60%
+80%
+Environment steps to the terminal
+Proportion in the tree
+16
+50
+100
+400
+800
+1600
+Fig. 7. Percentages of hidden states unrolled beyond the terminal in the search tree of
+different sizes in Gomoku.
+
+Interpreting the Learned Model in MuZero Planning
+11
+Gomoku remain accurate within 10 unrolling steps beyond terminal states and
+become significantly inaccurate with more unrolling.
+In MCTS, the search relies on mean values averaged from subtree nodes
+rather than a single value from the current hidden state. In this subsection, we
+investigate how the mean values impact the search tree. Specifically, we compare
+the N-step mean value error for every time step t between the averaged mean
+values from the representation network
+1
+N
+PN
+n=1 vt+n−1 and the dynamics net-
+works
+1
+N
+PN
+n=1 v(n)
+t+n−1 to approximate the error accumulated during unrolling.
+A larger N indicates that the mean values are averaged with deeper unrolled
+states, simulating scenarios of planning in a large search tree. Fig. 9 illustrates
+the N-step mean value error in Gomoku for N = 1, 15, 30, corresponding to aver-
+age tree depths when using 1, 400, and over 10000 simulations. When N = 1, the
+errors increase with more unrolling steps and converge around 0.2, suggesting
+that, despite hidden states becoming more inaccurate as the number of unrolling
+steps increases, the errors in the dynamics network do not grow indefinitely. Sur-
+0
+10
+20
+30
+40
+50
+0.1
+1
+2
+Unrolling steps beyond terminal
+MSE
+Fig. 8. The average value errors for hidden states beyond the terminal state in Gomoku.
+0
+10
+20
+30
+40
+50
+0
+0.2
+0.4
+Time step (t)
+MSE
+N = 1
+N = 15
+N = 30
+Fig. 9. The average N-step mean value errors in Gomoku.
+
+12
+H. Guei et al.
+prisingly, the errors become significantly lower when N > 1 compared to when
+N = 1. This is likely because the unrolled values fluctuate, both overestimating
+and underestimating, resulting in a more stable mean value that mitigates the
+overall error. Therefore, MuZero can still achieve superhuman performance even
+if unrolled values are inaccurate.
+4.3
+Evaluating Playing Performance with Different Simulations
+The previous subsection shows that using mean value during planning mitigates
+the value error of unrolled hidden states. Following this finding, we are interested
+in whether playing performance can still be maintained as the search tree grows
+deeper. We conduct experiments to evaluate the playing performance of five
+games using different numbers of simulations in MCTS, as shown in Fig. 10. We
+anchor the performance of 400 simulations to 100% for each game. For Go and
+Gomoku, higher numbers of simulations lead to better performance, indicating
+that the dynamics network learns well and the value errors have been effectively
+mitigated even when planning with a large tree. For Pong, since the game is
+easy to master and the agent can consistently achieve an optimal score, perfor-
+mance remains the same regardless of the number of simulations. In contrast, for
+Breakout and Ms. Pacman, the performance decreases after reaching thousands
+of simulations, indicating that accumulated unrolling value errors eventually
+harm the search and lead to worse performance. This experiment demonstrates
+that performance is generally maintained with a small number of simulations
+across all games, but an excessively large search tree can decrease performance,
+especially when the dynamics network is not sufficiently robust.
+102
+103
+104
+60%
+80%
+100%
+120%
+140%
+# Simulation
+Playing performance
+Go
+Gomoku
+Breakout
+Ms. Pacman
+Pong
+Fig. 10. Playing performance with different numbers of simulations in five games.
+
+Interpreting the Learned Model in MuZero Planning
+13
+5
+Discussion
+This paper presents an in-depth analysis to demystify the learned latent states in
+MuZero planning across two board games and three Atari games. Our empirical
+experiments demonstrate even if the dynamics network becomes inaccurate over
+longer unrolling, MuZero still performs effectively by correcting errors during
+planning. Our findings also offer several future research directions. For example,
+using observation reconstruction, researchers can further investigate the types of
+hidden states MuZero is unfamiliar with and design adversarial attack methods
+[14, 23] to identify weaknesses. Developing methods to improve state alignment
+can also be a promising direction, such as leveraging other world model architec-
+tures [6, 7]. In conclusion, we hope our contributions can assist future research
+in further improving the interpretability and performance of MuZero.
+Acknowledgments. This research is partially supported by the National Science and
+Technology Council (NSTC) of the Republic of China (Taiwan) under Grant Numbers
+111-2222-E-001-001-MY2 and 113-2221-E-001-009-MY3.
+References
+1. Antonoglou, I., Schrittwieser, J., Ozair, S., Hubert, T.K., Silver, D.: Plan-
+ning in Stochastic Environments with a Learned Model. In: International
+Conference on Learning Representations (Oct 2021)
+2. Browne, C.B., Powley, E., Whitehouse, D., Lucas, S.M., Cowling, P.I., Rohlf-
+shagen, P., Tavener, S., Perez, D., Samothrakis, S., Colton, S.: A Survey of
+Monte Carlo Tree Search Methods. IEEE Transactions on Computational
+Intelligence and AI in Games 4(1), 1–43 (Mar 2012)
+3. Chen, X., He, K.: Exploring Simple Siamese Representation Learning. In:
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+Recognition. pp. 15750–15758 (2021)
+4. Coulom, R.: Efficient Selectivity and Backup Operators in Monte-Carlo Tree
+Search. In: Computers and Games. pp. 72–83. Lecture Notes in Computer
+Science, Springer, Berlin, Heidelberg (2007)
+5. Danihelka, I., Guez, A., Schrittwieser, J., Silver, D.: Policy improvement by
+planning with Gumbel. In: International Conference on Learning Represen-
+tations (Apr 2022)
+6. Ha, D., Schmidhuber, J.: World Models (Mar 2018)
+7. Hafner, D., Pasukonis, J., Ba, J., Lillicrap, T.: Mastering Diverse Domains
+through World Models (Jan 2023)
+8. Hamrick, J.B., Friesen, A.L., Behbahani, F., Guez, A., Viola, F., Wither-
+spoon, S., Anthony, T., Buesing, L.H., Veličković, P., Weber, T.: On the role
+of planning in model-based deep reinforcement learning. In: International
+Conference on Learning Representations (Oct 2020)
+9. He, J., Moerland, T.M., Oliehoek, F.A.: What model does MuZero learn?
+(Oct 2023)
+
+14
+H. Guei et al.
+10. He, K., Zhang, X., Ren, S., Sun, J.: Deep Residual Learning for Image Recog-
+nition. In: Proceedings of the IEEE Conference on Computer Vision and
+Pattern Recognition. pp. 770–778 (2016)
+11. Hessel, M., Danihelka, I., Viola, F., Guez, A., Schmitt, S., Sifre, L., Weber,
+T., Silver, D., Hasselt, H.V.: Muesli: Combining Improvements in Policy Op-
+timization. In: Proceedings of the 38th International Conference on Machine
+Learning. pp. 4214–4226. PMLR (Jul 2021)
+12. Hubert, T., Schrittwieser, J., Antonoglou, I., Barekatain, M., Schmitt, S.,
+Silver, D.: Learning and Planning in Complex Action Spaces. In: Proceedings
+of the 38th International Conference on Machine Learning. pp. 4476–4486.
+PMLR (Jul 2021)
+13. Kocsis, L., Szepesvári, C.: Bandit Based Monte-Carlo Planning. In: Euro-
+pean Conference on Machine Learning and Principles and Practice of Knowl-
+edge Discovery in Databases. vol. 2006, pp. 282–293 (Sep 2006)
+14. Lan, L.C., Zhang, H., Wu, T.R., Tsai, M.Y., Wu, I.C., Hsieh, C.J.: Are
+AlphaZero-like Agents Robust to Adversarial Perturbations? Advances in
+Neural Information Processing Systems 35, 11229–11240 (Dec 2022)
+15. Mandhane, A., Zhernov, A., Rauh, M., Gu, C., Wang, M., Xue, F., Shang,
+W., Pang, D., Claus, R., Chiang, C.H., Chen, C., Han, J., Chen, A.,
+Mankowitz, D.J., Broshear, J., Schrittwieser, J., Hubert, T., Vinyals, O.,
+Mann, T.: MuZero with Self-competition for Rate Control in VP9 Video
+Compression (Feb 2022)
+16. OpenAI, Berner, C., Brockman, G., Chan, B., Cheung, V., Dębiak, P., Den-
+nison, C., Farhi, D., Fischer, Q., Hashme, S., Hesse, C., Józefowicz, R.,
+Gray, S., Olsson, C., Pachocki, J., Petrov, M., Pinto, H.P.d.O., Raiman, J.,
+Salimans, T., Schlatter, J., Schneider, J., Sidor, S., Sutskever, I., Tang, J.,
+Wolski, F., Zhang, S.: Dota 2 with Large Scale Deep Reinforcement Learning
+(Dec 2019)
+17. Schrittwieser, J., Antonoglou, I., Hubert, T., Simonyan, K., Sifre, L.,
+Schmitt, S., Guez, A., Lockhart, E., Hassabis, D., Graepel, T., Lillicrap,
+T., Silver, D.: Mastering Atari, Go, chess and shogi by planning with a
+learned model. Nature 588(7839), 604–609 (Dec 2020)
+18. Silver, D., Huang, A., Maddison, C.J., Guez, A., Sifre, L., van den Driess-
+che, G., Schrittwieser, J., Antonoglou, I., Panneershelvam, V., Lanctot, M.,
+Dieleman, S., Grewe, D., Nham, J., Kalchbrenner, N., Sutskever, I., Lillicrap,
+T., Leach, M., Kavukcuoglu, K., Graepel, T., Hassabis, D.: Mastering the
+game of Go with deep neural networks and tree search. Nature 529(7587),
+484–489 (Jan 2016)
+19. Silver, D., Hubert, T., Schrittwieser, J., Antonoglou, I., Lai, M., Guez, A.,
+Lanctot, M., Sifre, L., Kumaran, D., Graepel, T., Lillicrap, T., Simonyan,
+K., Hassabis, D.: A general reinforcement learning algorithm that masters
+chess, shogi, and Go through self-play. Science 362(6419), 1140–1144 (Dec
+2018)
+20. Vinyals, O., Babuschkin, I., Czarnecki, W.M., Mathieu, M., Dudzik, A.,
+Chung, J., Choi, D.H., Powell, R., Ewalds, T., Georgiev, P., Oh, J., Horgan,
+D., Kroiss, M., Danihelka, I., Huang, A., Sifre, L., Cai, T., Agapiou, J.P.,
+
+Interpreting the Learned Model in MuZero Planning
+15
+Jaderberg, M., Vezhnevets, A.S., Leblond, R., Pohlen, T., Dalibard, V., Bud-
+den, D., Sulsky, Y., Molloy, J., Paine, T.L., Gulcehre, C., Wang, Z., Pfaff,
+T., Wu, Y., Ring, R., Yogatama, D., Wünsch, D., McKinney, K., Smith, O.,
+Schaul, T., Lillicrap, T., Kavukcuoglu, K., Hassabis, D., Apps, C., Silver, D.:
+Grandmaster level in StarCraft II using multi-agent reinforcement learning.
+Nature 575(7782), 350–354 (Nov 2019)
+21. Vries, J.D., Voskuil, K., Moerland, T.M., Plaat, A.: Visualizing MuZero
+Models. In: ICML 2021 Workshop on Unsupervised Reinforcement Learning
+(Jul 2021)
+22. Wang, P., Sazanovich, M., Ilbeyi, B., Phothilimthana, P.M., Purohit, M.,
+Tay, H.Y., V˜u, N., Wang, M., Paduraru, C., Leurent, E., Zhernov, A.,
+Huang, P.S., Schrittwieser, J., Hubert, T., Tung, R., Kurylowicz, P., Mi-
+lan, K., Vinyals, O., Mankowitz, D.J.: Optimizing Memory Mapping Using
+Deep Reinforcement Learning (Oct 2023)
+23. Wang, T.T., Gleave, A., Tseng, T., Pelrine, K., Belrose, N., Miller, J., Den-
+nis, M.D., Duan, Y., Pogrebniak, V., Levine, S., Russell, S.: Adversarial
+Policies Beat Superhuman Go AIs. In: Proceedings of the 40th International
+Conference on Machine Learning. pp. 35655–35739. PMLR (Jul 2023)
+24. Wu, T.R., Guei, H., Peng, P.C., Huang, P.W., Wei, T.H., Shih, C.C., Tsai,
+Y.J.: MiniZero: Comparative Analysis of AlphaZero and MuZero on Go,
+Othello, and Atari Games. IEEE Transactions on Games pp. 1–13 (2024)
+25. Ye, W., Liu, S., Kurutach, T., Abbeel, P., Gao, Y.: Mastering Atari Games
+with Limited Data. In: Advances in Neural Information Processing Systems.
+vol. 34, pp. 25476–25488. Curran Associates, Inc. (2021)
+

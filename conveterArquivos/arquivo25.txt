@@ -1,0 +1,876 @@
+arXiv:2410.19120v1  [astro-ph.SR]  24 Oct 2024
+BRITE Nascent Binaries
+Andrzej PIGULSKI
+Instytut Astronomiczny, Uniwersytet Wrocławski, Kopernika 11, 51-622 Wrocław, Poland
+Correspondance to: andrzej.pigulski@uwr.edu.pl
+Abstract
+Nascent binaries (NBs) are binary systems with very low mass ratios, less than ∼0.2, in which
+the more massive component is an O- or B-type main-sequence star, while the secondary is a
+star contracting onto the main sequence. NBs are of interest because they can help to under-
+stand the formation of small-mass ratio systems and shed light on the origin of low-mass X-ray
+binaries, millisecond pulsars and type Ia supernovae. In photometry, short-period NBs show
+a strong irradiation effect due to the large difference between the effective temperatures of the
+components and the strong irradiation of a cool secondary by a hot primary. In spectroscopy,
+they usually appear as single-lined spectroscopic binaries. In the present paper, we summarize
+the status of our knowledge of Galactic nascent binaries and characterize two new members
+of this group, c2 Sco and V390 Pup, for which photometric data were obtained by the BRIght
+Target Explorer (BRITE) nano-satellite mission.
+Keywords: stars: binary, stars: variability, stars: pulsations, stars: pre-main sequence
+1.
+Introduction
+As a result of their search for small-mass ratio systems among massive eclipsing stars
+in the Large Magellanic Cloud (LMC), Moe and Di Stefano (2015) found a group of 22 stars
+characterized by narrow eclipse widths and low eclipse depths ratios. Such systems were also
+characterized by a strong irradiation (reﬂection) effect and their orbital periods ranged between
+3 and 8.5 days. An estimation of the parameters of the components of such systems led these
+authors to the conclusion that they consist of a massive binary of O or early B spectral type
+and a cool pre-main sequence (PMS) secondary, strongly irradiated by the hot companion.
+Because of their young age, the systems were dubbed nascent binaries (NBs). In fact, NBs
+are strongly related to so-called Lindroos systems (Lindroos, 1986, and earlier papers of the
+series), Galactic visual binary systems comprised of an early-type main-sequence (MS) star
+and a late-type secondary. Lindroos (1986) found that in 37 systems the ages of secondaries
+are shorter than the time of contraction onto the zero-age MS (ZAMS) and described them as
+post-T Tauri stars contracting onto the MS. These stars can be therefore regarded as NBs in
+systems with wide orbits.
+1
+
+If we adopt that nascent binaries are systems consisting of a massive MS star and a low-
+mass pre-MS star, we can conclude that such systems can be discovered by several complemen-
+tary methods. Close systems of this type can be discovered following Moe and Di Stefano
+(2015), that is, by searching for eclipsing binaries with a hot primary component, narrow
+eclipses and a strong irradiation effect. In general, however, such systems need not be eclipsing,
+as we will comment in Sect. 2. Spectroscopically, NBs, both eclipsing and non-eclipsing, will
+be mostly single-lined spectroscopic binaries (SB1). Thus, it seems that a natural method to
+search for NBs, both eclipsing and non-eclipsing, is to analyse the photometry of SB1 systems,
+a method we applied in Sect. 3 to observations from BRITE satellites. Finally, such systems can
+be found among relatively nearby visual systems for which the secondary components can be
+characterized observationally, i.e. in the way Lindroos (1986) did. One of the key observations
+that can in such systems indicate the PMS status of the secondary component is a detection
+of an X-ray emission of the secondary, like in the β Cru system (Cohen et al., 2008), a triple
+system containing a PMS star.
+2.
+Galactic nascent binaries
+Given the relatively small number of nearby B-type MS stars Moe and Di Stefano (2015)
+concluded that “It is therefore not surprising that we have not yet observed in the Milky Way the
+precise counterparts to our reﬂecting eclipsing binaries with B-type MS primaries and low-mass
+pre-MS companions.” Galactic NBs are known, however, including Lindroos stars mentioned
+above. One of the ﬁrst discovered Galactic NB systems was 16 (EN) Lac, an SB1 system
+composed of the B2 IV primary component, which pulsates as a β Cephei-type star and a low-
+mass component. It is an eclipsing binary with the orbital period of 12.097 d. Modelling of the
+primary eclipse and other considerations led Pigulski and Jerzykiewicz (1988) to conclude that
+the secondary is a likely PMS star, which was later conﬁrmed by Jerzykiewicz et al. (2015). The
+system is too wide to show signiﬁcant irradiation effect, however. A very shallow secondary
+eclipse was found recently in this system with the precise Transiting Exoplanet Survey Satellite
+(TESS) data (Southworth and Bowman, 2022). The next Galactic NB is the bright eclipsing
+binary λ Sco, in which the primary pulsates as a β Cep-type star. The secondary component of
+this triple star was found to be a PMS star by Uytterhoeven et al. (2004) and Tango et al. (2006).
+The increasing precision of space-based data allowed the discovery of further Galactic
+NBs. Another eclipsing NB was µ Eri, consisting of a B5 IV primary pulsating in g-modes
+(an SPB-type variability) and a low-mass secondary (Jerzykiewicz et al., 2013). Using the Mi-
+crovariability and Oscillations of STars (MOST) satellite data, these authors concluded that the
+secondary can be a PMS star. Two bright non-eclipsing NBs, ν Centauri and γ Lupi, were dis-
+covered using space-based BRIght Target Explorer (BRITE) data (Jerzykiewicz et al., 2021).
+In both stars, two-colour BRITE data revealed photometric variability with the same period as
+the variability of their radial velocities. This variability was attributed to the irradiation effect
+as the period of variability was consistent with the orbital period and the red-ﬁlter amplitude
+was higher than the blue-ﬁlter amplitude, as expected for such systems. This showed that non-
+eclipsing NBs can be discovered provided that radial-velocity data are available. This type of
+2
+
+variability is designated ‘R’ in the Variability Star Index (VSX, Watson et al., 2006).
+The TESS data have proven to be an excellent source of precision photometry for discov-
+ering Galactic NBs, in particular those similar to Moe and Di Stefano (2015) stars, i.e. with
+strong irradiation effect. Such stars have been found by Stassun et al. (2021) and more recently
+by Nazé et al. (2023). It is also easy to identify such candidates among the stars presented
+by Eze and Handler (2024), although in each of these cases modelling and, in particular, an
+estimate of the age of these systems is needed to be able to verify whether the secondary com-
+ponents are indeed PMS stars. Radial velocities are also a crucial element: indeed, only the
+combined analysis of photometry and velocities can conﬁrm that the O- or B-type star is the
+hottest component of the system and exclude post-interaction cases with a hot stripped star
+paired to the O- or B-type star.
+3.
+New nascent binaries with BRITE observations
+In this study, we have chosen to use BRITE Constellation data (Weiss et al., 2014; Pablo et al.,
+2016; Popowicz et al., 2017) as the main data source. Currently, such data are available for 716
+bright stars (Zwintz et al., 2024). Bright stars tend to have observations of many kinds, in-
+cluding spectroscopic ones, which allows us to more easily determine the parameters of the
+components and, in particular, to verify whether the secondary components are PMS stars. Us-
+ing the 9th Catalogue of Spectroscopic Binary Orbits (Pourbaix et al., 2004) we checked which
+of the stars observed by BRITEs are known to be SB1 systems. The search resulted in the
+selection of 39 SB1 systems with primaries of spectral type B5 or earlier. Of these stars, 16
+had orbital periods shorter than 15 d, giving a chance of detecting an irradiation effect. The
+sample included ﬁve known Galactic NBs mentioned in Sect. 2, 16 (EN) Lac, µ Eri, ν Cen,
+γ Lup A and λ Sco. We carefully checked the BRITE and TESS photometry of the remaining
+11 stars and found two candidates for Galactic nascent binaries. These are c2 Sco (Sect. 3.1)
+and V390 Pup (Sect. 3.2).
+3.1.
+HD 145482 (13 c2 Sco)
+HD 145482 (13 c2 Sco, V = 4.6 mag, B2.5 Vn) was found spectroscopically variable by
+Campbell and Moore (1928), which was later conﬁrmed by Buscombe and Morris (1960), van Hoof et al.
+(1963) and van Albada and Sher (1969). The ﬁrst spectroscopic orbit was derived by Levato et al.
+(1987), who concluded that radial velocities of this star vary with a period of 5.780531(58) d.
+HD 145482 was one of the targets of BRITE-Heweliusz red-ﬁlter BRITE satellite in Field
+Sco I. The observations spanned 63 days in 2015. The data show clearly the variability with
+a period of about 5.77 d (Zwintz et al., 2024), similar to the spectroscopic period. The star
+was also observed by three other space missions: The Solar Mass Ejection Imager (SMEI,
+Eyles et al., 2003) with observations spanning almost 8 years between 2003 and 2010, Kepler
+K2 mission with observations taken during Campaign 2 in 2014 and spanning 75 days, and
+TESS mission, which observed the star in Sector 12. The TESS observations spanned 24 days
+in 2019. First, we have analyzed the data sets separately. All they reveal clear variability with
+3
+
+the same period of about 5.77 d. We then normalized all four data sets by their amplitudes and
+combined. The ﬁnal ﬁt to the combined SMEI, K2, BRITE and TESS photometric data, which
+included also the ﬁrst harmonic of the main frequency, resulted in the period of 5.77101(30) d.
+This is in perfect agreement with the period of 5.77102 d derived by Sebastian A. Otero and
+reported in the VSX web page and slightly off the period of 5.814(5) d found by Balona (2016)
+from the K2 data (the star is EPIC 202909059) and 5.804 d derived by Shultz et al. (2022). The
+photometric data, phased with the derived period, are shown in Fig. 1.
+Phase
+Magnitude [mmag]
+TESS
+K2
+SMEI
+BRITE
+0.0
+0.2
+0.4
+0.6
+0.8
+0.0
+0.2
+5
+0
+-5
+-10
+Figure 1: BRITE (red dots), Kepler K2 (orange dots) and TESS (violet
+dots) and SMEI (green dots) data of HD 145482 freed from the strongest
+pulsation terms and phased with the period of 5.77101 d. Phase 0.0
+corresponds to HJD 2456458.26, the time of the maximum light of the
+main term in the combined photometric data.
+The semi-amplitudes of the variability of the main term are equal to 4.38(5), 4.64(11),
+5.54(15) and 7.463(7) mmag for the K2, BRITE, SMEI and TESS observations, respectively.
+This sequence of increasing amplitudes corresponds to the increasing median wavelengths of
+the corresponding passbands. The amplitude is the largest for the TESS data, as the TESS pass-
+band has the longest median wavelength of about 800 nm. This behaviour (larger amplitudes at
+longer wavelengths) is the same as for ν Cen and γ Lup A (Jerzykiewicz et al., 2021), which is
+a good argument in favour of the explanation of the variability seen in Fig. 1 by the irradiation
+effect.
+In addition to this nearly sinusoidal variability with the period of about 5.77 d, the residual
+frequency spectra show additional variability, mainly in the low-frequency region (Fig. 2). In
+particular, the strongest term that can be seen in all three data sets shown in Fig. 2 (the SMEI
+data are too scattered to reveal this variability) has the frequency of 1.8855(6) in the Kepler data
+and 1.8845(2) in the TESS data. A peak at this frequency can be also seen in the BRITE data,
+although the BRITE data are more scattered than the TESS and K2 data. These frequencies
+correspond to the period of about 0.5305 d, which is in agreement with the period of 0.53042 d
+reported in VSX. It can be seen from Fig. 2, however, that there are more frequencies that can
+be extracted from these data. Given the values of these frequencies and the spectral type of
+4
+
+TESS
+Kepler K2
+BRITE red
+Frequency [d   ]
+-1
+A m p l i t u d e    [ m m a g ]
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+0.0
+0.2
+0.4
+0.6
+0.0
+0.2
+0.4
+0.6
+0.0
+0.2
+0.4
+0.6
+Figure 2: Fourier frequency spectra of the residuals after removing
+the variability with the period of 5.77 d for BRITE (top), Kepler K2
+(middle) and TESS (bottom) data.
+the primary, it is very likely that these frequencies represent g-modes excited in the primary.
+It is also possible that some high-frequency peaks, seen around 6 and 8 d−1 in the TESS data
+in Fig. 2 represent p-modes. It is therefore quite likely that the primary in this system is an
+SPB-type variable, maybe even a hybrid SPB/β Cep-type variable.
+The spectroscopic data of HD 145482 are scattered and most of them was obtained more
+than 45 years ago. They consist of three spectra made in 1915 and 1916 at Lick Observatory,
+USA (Campbell and Moore, 1928), seven spectra made in 1955 at McDonald Observatory, USA
+(van Hoof et al., 1963), three spectra made in 1956 and 1957 at Mount Stromlo Observatory,
+Australia (Buscombe and Morris, 1960), 13 spectra obtained by van Albada and Sher (1969) in
+1966 at Radcliffe Observatory, South Africa, and eight spectra taken in the years 1974 – 1977
+at Cerro Tololo Interamerican Observatory (CTIO), Chile, and Kitt Peak National Observatory,
+USA (Levato et al., 1987) and a single spectrum obtained with UVES at VLT in Paranal Ob-
+servatory, Chile (Borisov et al., 2023). Three spectra were also obtained with the CHIRON
+spectrograph at CTIO (Gullikson et al., 2016b), but radial velocities of the primary were not
+given. We transformed all times of observations to Heliocentric Julian Day (HJD) and phased
+the reported radial velocities with the same period and initial epoch as the photometric data
+shown in Fig. 1. The resulting radial-velocity curve is shown in Fig. 3. It can be seen from
+this ﬁgure that, despite that some radial-velocity data are discrepant, the maximum of the radial
+velocity curve is around phase 0.25. Since phase 0.0 corresponds to the light maximum (Fig. 1),
+this is exactly the relationship between the phases of the light variability and the variation in
+radial velocities that can be expected when the source of photometric variation is the irradiation
+effect.
+5
+
+Orbital phase
+Radial velocity [km/s]
+Campbell & Moore (1929)
+Buscombe & Morris (1960)
+van Hoof (1963)
+van Albada & Sher (1969)
+Levato et al. (1987)
+Borisov et al. (2023)
+0.0
+0.2
+0.4
+0.6
+0.8
+0.0
+0.2
+0.4
+20
+40
+60
+80
+0
+-60
+-40
+-20
+Figure 3: Radial-velocities of the primary component of c2 Sco phased
+with the orbital period of 5.77101 d. Phase 0.0 corresponds to the same
+time as in Fig. 1.
+An additional conﬁrmation of c2 Sco as a new NB comes from the location of the secondary
+in the mass – age diagram, shown in Fig. 8. The parameters, secondary’s mass of 1.1+0.07
+−0.08 M⊙
+and age of 8+6
+−3 Myr, were taken from Gullikson et al. (2016a). It is clear from this plot that
+the secondary is a PMS star. Therefore, we conclude that, in addition to ν Cen and γ Lup A,
+c2 Sco is the third known non-eclipsing Galactic nascent binary with its photometric variability
+dominated the the irradiation effect.
+3.2.
+HD 62747 (V390 Pup)
+HD 62747 (V = 5.6 mag, B1.5 III) was ﬁrst searched for variability by Jerzykiewicz and Sterken
+(1977), but the result was inconclusive due to the variability of one of the comparison stars. It
+was found an eclipsing variable from the Hipparcos data with a period of 3.9279 d (ESA, 1997).
+The star was observed with red-ﬁlter BRITE-Toronto satellite in the Field CMa I. The obser-
+vations spanned 105 days between December 10, 2015 and March 24, 2016. The BRITE data
+conﬁrmed the eclipsing nature of the variability (Zwintz et al., 2024). Figure 4 shows the Hip-
+parcos and BRITE data phased with the orbital period of 3.9276888 d, derived below. The
+BRITE data revealed shallow secondary eclipse which was not covered by the Hipparcos data.
+The most abundant precise photometric observations of V390 Pup were, however, obtained
+by the TESS satellite, which observed this star in three sectors, Sector 7 (late 2018 – early
+2019), 34 (in 2021) and 61 (in 2023). The orbital period of the star was derived by several
+investigators: 3.89(3) d (Burssens et al., 2020), 3.92720311 d (Justesen and Albrecht, 2021),
+3.92609 d (IJspeert et al., 2021), 3.9279 d (Shi et al., 2022) and 3.92733(35) (Prša et al., 2022).
+We carried out our own analysis of the TESS photometry of V390 Pup and derived the
+orbital period of 3.9276888(6) d, which is based on the observations from all three sectors men-
+tioned above, spanning slightly more than four years. We also modelled the light curve using
+the JKTEBOP modelling code (Southworth, 2012). The most important parameters derived
+from this modelling were the following (we assumed that the orbit is circular): inclination of
+6
+
+Phase
+Magnitude [mag]
+BRITE
+Hipparcos
+0.0
+0.2
+0.4
+0.6
+0.8
+0.0
+0.2
+0.4
+5.55
+5.60
+5.50
+Figure 4: Photometry of V390 Pup from Hipparcos (blue dots) and
+BRITE (red dots) phased with the period of 3.9276888 d. The BRITE
+data were averaged in 0.01 phase intervals and shifted in magnitude.
+Phase 0.0 corresponds to HJD 2448501.04.
+the orbit, i = 73.8(7)o, the primary’s radius, R1, in terms of the relative distance between the
+stars, a, r1 = R1/a = 0.331(7) and the ratio of the radii, k = R2/R1 = 0.245(16). The compari-
+son of the TESS light curve with the ﬁtted model is shown in Fig. 5. It is clear that in addition
+to the signiﬁcant irradiation effect, the ellipsoidal effect also contributes to the out-of-eclipse
+variability, which makes the light curve relatively ﬂat in the vicinity of the secondary eclipse.
+Orbital phase
+Magnitude [mmag]
+0.0
+0.2
+0.4
+0.6
+0.8
+0.0
+0.2
+0.4
+-10
+0
+60
+50
+40
+30
+20
+10
+Figure 5: TESS light curve of V390 Pup freed from the strongest pul-
+sations and phased with the period of 3.9276888 d. The black curve is
+the model ﬁtted with the JKTEBOP code.
+Burssens et al. (2020) already noted that some low-frequency variability is present out of
+eclipse in the light curve of V390 Pup. We therefore subtracted the orbital frequency and its
+harmonics and calculated Fourier frequency spectrum, which is shown in Fig. 6. It can be seen
+in this ﬁgure that the star shows variability which, given the spectral type of the primary, can be
+attributed to both g-modes (lower frequencies) and p-modes (higher frequencies). In addition,
+there is a clear increase of power towards the lowest frequencies, an indication of stochastic
+7
+
+variability observed in many early B-type stars (e.g. Bowman et al., 2019).
+TESS
+Frequency [d   ]
+-1
+Amplitude [mmag]
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+0.0
+0.5
+1.0
+1.5
+Figure 6: Fourier frequency spectrum of the TESS light curve of
+V390 Pup after removing the orbital frequency and its harmonics.
+Spectroscopy of V390 Pup is scarce and was obtained mainly to derive its spectral type, ro-
+tational velocity or other atmospheric parameters (Hiltner et al., 1969; Lyubimkov et al., 2004;
+Telting et al., 2006; Simón-Díaz and Herrero, 2014). There is, however, no time-series spec-
+troscopy of this star aimed at detection of the variability of its radial velocities. Neverthe-
+less, the star is an SB1 system since no information on the detection of secondary’s lines
+was announced. In cooperation with Dr. L.Vanzi and P. Torres from Pontiﬁcia Universidad
+Católica (PUC) de Chile, a series of spectroscopic observations of the system was obtained us-
+ing FIDEOS spectrograph (Vanzi et al., 2018). Full analysis of the combined spectroscopy and
+photometry of V390 Pup will be published elsewhere. Here, we use only the preliminary value
+of the half-range of the radial-velocity variations derived from these observations and equal to
+K1 = 34.7 ± 1.9 km s−1, which is needed to get a rough estimate of the secondary’s mass. This
+value of K1 results in the mass function equal to f(M) = 0.0170(28)M⊙. In the low-mass ratio
+eclipsing systems, secondary’s mass and radius can be derived quite precisely because of the
+weak dependence of these parameters on the (assumed) primary’s mass. An example of this
+kind of estimation is shown in Fig. 7.
+Figure 7 shows the secondary’s mass in the V390 Pup system, M2, and the radii of both
+components, R1 and R2, as a function of the primary’s mass. Assuming primary’s mass speciﬁc
+for its spectral type and luminosity class, M1 = 9 ± 2 M⊙, and using relations shown in Fig. 7,
+we get M2 = 1.27+0.17
+−0.19 M⊙, R2 = 1.85+0.12
+−0.14 R⊙, and R1 = 7.55+0.50
+−0.58 R⊙. An estimated age of
+the primary, 16.2 ±1.0 Myr (Grosbøl, 1978), places the secondary in the area of PMS stars, as
+shown in Fig. 8. The secondary’s radius is signiﬁcantly larger than expected for the zero-age
+main sequence star with secondary’s mass, which can also be an indication of its PMS nature.
+4.
+Conclusions
+The presently known sample of 11 Galactic nascent binaries, of which eight are eclipsing
+and three are non-eclipsing, is summarized in Table 1. In the present paper, we added two
+8
+
+Primary’s mass, M   [M ]
+R
+R
+M
+1
+1
+2
+2
+M   [M ],  R ,R   [R ]
+2
+1
+2
+5
+6
+7
+8
+9
+10
+11
+12
+13
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Figure 7: Values of the secondary’s mass (M2, red line), the secondary’s
+radius (R2, green line) and the primary’s radius (R1, blue line) as a func-
+tion of the primary’s mass in the V390 Pup system. The shaded area
+marks the assumed range of the primary’s mass.
+0
+1
+2
+3
+4
+5
+0.5
+1
+2
+5
+10
+20
+50
+Mass [M   ]
+pre-MS
+stars
+MS
+stars
+V390 Pup
+c   Sco
+HD 165246
+2
+Age [Myr]
+Figure 8: Mass – age diagram for the PMS secondaries in NBs. The
+grey dots mark the LMC NBs of Moe and Di Stefano (2015). The light-
+red dots are Galactic NBs from Table 1. Three stars discussed in the
+text, the two new NBs (red dots) and HD 165246 (black dot), are la-
+belled. The blue line deﬁnes the border between the pre-MS and MS
+regions. The values of the pre-MS phase duration were derived from
+the models of Tognelli et al. (2011) for solar metallicity.
+members to this group, c2 Sco, a non-eclipsing NB, and V390 Pup, an eclipsing NB, both
+observed with BRITE satellites. Table 1 provides for all these stars orbital periods, spectral
+types of primaries, (SpT)1, the masses of secondaries, M2, mass ratios, q = M2/M1 and ages.
+All known Galactic NBs are also shown in the mass – age diagram (Fig. 8). In addition to the
+NBs we also show an example of a star, which, similarly to the short-period NBs, shows a
+9
+
+signiﬁcant irradiation effect. This is HD 165246 (Johnston et al., 2021). With the secondary’s
+mass M2 = 3.8+0.4
+−0.5 M⊙and age estimation between 2 and 4.5 Myr, derived by these authors,
+the star locates close to the zero-age main sequence and therefore cannot be regarded as a
+nascent binary. This shows that, although the irradiation effect can be used to ﬁnd candidates
+for NBs, the ﬁnal veriﬁcation of the evolutionary status of the secondary component should
+involve modelling of the light curve and measurements of radial velocities.
+Table 1: Presently known Galactic nascent binaries
+with orbital periods shorter than 15 days.
+Name
+Porb
+(SpT)1
+M2
+q
+Age
+References, notes
+[d]
+[M⊙]
+[Myr]
+ν Cen
+2.6253
+B2 IV
+0.91+0.44
+−0.23
+0.13+0.04
+−0.06
+11.1+5.2
+−7.6
+Jerzykiewicz et al. (2021)
+γ Lup A
+2.8498
+B2 IV
+1.18+0.75
+−0.46
+0.15+0.09
+−0.05
+16.7+5.0
+−6.6
+Jerzykiewicz et al. (2021)
+HD 191495
+3.6446
+B0 V
+1.5+0.3
+−0.3
+0.10+0.03
+−0.03
+7.6+1.8
+−1.8
+Rotational variability?,
+Nazé et al. (2023)
+V390 Pup
+3.9277
+B1.5 III
+1.27+0.17
+−0.19
+0.14+0.07
+−0.04
+16.2+1.0
+−1.0
+SPB/β Cep + stochastic
+variability?, this work,
+Grosbøl (1978)
+HD 149834
+4.5957
+B2 V
+0.86+0.13
+−0.10
+0.087+0.010
+−0.008
+5.9+3.9
+−1.8
+SPB/β Cep + rotational
++ stochastic, Stassun et al. (2021),
+Cavallo et al. (2024)
+HD 25631
+5.2404
+B3 V
+1.0+0.2
+−0.2
+0.15+0.04
+−0.04
+9.6+9.4
+−9.4
+SPB/β Cep variability + TEOs?,
+Nazé et al. (2023)
+c2 Sco
+5.7710
+B2.5 Vn
+1.1+0.07
+−0.08
+0.15+0.05
+−0.04
+8+6
+−3
+SPB/β Cep? variability, this
+work, Gullikson et al. (2016a)
+λ Sco
+5.9525
+B2 IV
+1.8+0.2
+−0.2
+0.16+0.04
+−0.03
+11.5+1.5
+−1.5
+β Cep variability,
+Uytterhoeven et al. (2004),
+Tango et al. (2006), triple star
+HD 46485
+6.9431
+O7 V
+0.95+0.15
+−0.15
+0.041+0.007
+−0.010
+2.5+1.1
+−1.1
+Rotational + stochastic
+variability?, Nazé et al. (2023)
+µ Eri
+7.3806
+B5 IV
+0.77+0.02
+−0.02
+0.124+0.008
+−0.007
+62+7
+−7
+SPB variability,
+Gagné et al. (2020),
+Jerzykiewicz et al. (2013)
+16 (EN) Lac
+12.0968
+B2 IV
+1.29+0.07
+−0.07
+0.13+0.03
+−0.02
+16.3+1.5
+−1.5
+β Cep variability,
+Jerzykiewicz et al. (2015)
+Pigulski and Jerzykiewicz (1988)
+Following on from the Introduction, it seems that the most effective method of searching
+for new Galactic NBs is to survey the light curves of eclipsing binaries with a massive primary
+component, that is, with an O or early B-type primary. Systems with strong irradiation effect
+will be good candidates for NBs. In this context, it seems that TESS observations should be a
+particularly good source of data. With reference to Fig. 8, in order to verify the evolutionary
+status of the secondary components, it is also important to determine the age of the system. For
+such determinations, comparison of the primary component’s parameters with models is most
+commonly used. An alternative is the determination of the age of the parent open cluster or the
+OB association, provided that the system is a member.
+10
+
+Acknowledgments
+This work was supported by the National Science Centre, Poland, grant no. 2022/45/B/ST9/
+03862. We thank Pascal Torres from PUC for providing us with the preliminary radial veloc-
+ities of V390 Pup derived from the FIDEOS spectra. Based on data collected by the BRITE
+Constellation satellite mission, designed, built, launched, operated and supported by the Aus-
+trian Research Promotion Agency (FFG), the University of Vienna, the Technical University
+of Graz, the University of Innsbruck, the Canadian Space Agency (CSA), the University of
+Toronto Institute for Aerospace Studies (UTIAS), the Foundation for Polish Science & Tech-
+nology (FNiTP MNiSW), and National Science Centre (NCN). This work used the SIMBAD
+and Vizier services operated by Centre des Données astronomiques de Strasbourg (France), and
+bibliographic references from the Astrophysics Data System maintained by SAO/NASA. This
+paper includes data collected by the TESS mission. Funding for the TESS mission is provided
+by the NASA’s Science Mission Directorate.
+Further Information
+ORCID identiﬁers of the authors
+0000-0003-2488-6726 (Andrzej PIGULSKI)
+Conﬂicts of interest
+The author declares no conﬂict of interest.
+References
+Balona, L. A. (2016) Rotational modulation in B stars observed by the Kepler K2 mission.
+MNRAS, 457(4), 3724–3731. https://doi.org/10.1093/mnras/stw244.
+Borisov, S. B., Chilingarian, I. V., Rubtsov, E. V., Ledoux, C., Melo, C., Grishin, K. A.,
+Katkov, I. Y., Goradzhanov, V. S., Afanasiev, A. V., Kasparova, A. V. and Saburova,
+A. S. (2023) New Generation Stellar Spectral Libraries in the Optical and Near-infrared.
+I. The Recalibrated UVES-POP Library for Stellar Population Synthesis. ApJS, 266(1), 11.
+https://doi.org/10.3847/1538-4365/acc321.
+Bowman, D. M., Aerts, C., Johnston, C., Pedersen, M. G., Rogers, T. M., Edelmann,
+P. V. F., Simón-Díaz, S., Van Reeth, T., Buysschaert, B., Tkachenko, A. and Tri-
+ana, S. A. (2019) Photometric detection of internal gravity waves in upper main-
+sequence stars. I. Methodology and application to CoRoT targets.
+A&A, 621, A135.
+https://doi.org/10.1051/0004-6361/201833662.
+11
+
+Burssens, S., Simón-Díaz, S., Bowman, D. M., Holgado, G., Michielsen, M., de Burgos, A.,
+Castro, N., Barbá, R. H. and Aerts, C. (2020) Variability of OB stars from TESS south-
+ern Sectors 1-13 and high-resolution IACOB and OWN spectroscopy.
+A&A, 639, A81.
+https://doi.org/10.1051/0004-6361/202037700.
+Buscombe, W. and Morris, P. M. (1960) The Scorpio-Centaurus association: I. Radial velocities
+of 120 bright stars. MNRAS, 121, 263. https://doi.org/10.1093/mnras/121.3.263.
+Campbell, W. W. and Moore, J. H. (1928) Catalogue of observed velocities. Publications of
+Lick Observatory, 16, 1–346.
+Cavallo, L., Spina, L., Carraro, G., Magrini, L., Poggio, E., Cantat-Gaudin, T., Pasquato, M.,
+Lucatello, S., Ortolani, S. and Schiappacasse-Ulloa, J. (2024) Parameter Estimation for Open
+Clusters using an Artiﬁcial Neural Network with a QuadTree-based Feature Extractor. AJ,
+167(1), 12. https://doi.org/10.3847/1538-3881/ad07e5.
+Cohen, D. H., Kuhn, M. A., Gagné, M., Jensen, E. L. N. and Miller, N. A. (2008) Chandra
+spectroscopy of the hot star β Crucis and the discovery of a pre-main-sequence companion.
+MNRAS, 386(4), 1855–1871. https://doi.org/10.1111/j.1365-2966.2008.13176.x.
+ESA (ed.) (1997) The HIPPARCOS and TYCHO catalogues. Astrometric and photometric star
+catalogues derived from the ESA HIPPARCOS Space Astrometry Mission, vol. 1200 of ESA
+Special Publication.
+Eyles,
+C.
+J.,
+Simnett,
+G.
+M.,
+Cooke,
+M.
+P.,
+Jackson,
+B.
+V.,
+Bufﬁngton,
+A.,
+Hick, P. P., Waltham, N. R., King, J. M., Anderson, P. A. and Holladay, P. E.
+(2003) The Solar Mass Ejection Imager (Smei).
+Solar Physics, 217(2), 319–347.
+https://doi.org/10.1023/B:SOLA.0000006903.75671.49.
+Eze, C. I. and Handler, G. (2024) β Cephei Pulsators in Eclipsing Binaries Observed with
+TESS. ApJS, 272(2), 25. https://doi.org/10.3847/1538-4365/ad39c5.
+Gagné, J., David, T. J., Mamajek, E. E., Mann, A. W., Faherty, J. K. and Bédard, A. (2020) The
+µ Tau Association: A 60 Myr Old Coeval Group at 150 pc from the Sun. ApJ, 903(2), 96.
+https://doi.org/10.3847/1538-4357/abb77e.
+Grosbøl, P. J. (1978) Space velocities and ages of nearby early-type stars. A&AS, 32, 409–421.
+Gullikson,
+K.,
+Kraus,
+A.
+and
+Dodson-Robinson,
+S.
+(2016a)
+The
+Close
+Com-
+panion
+Mass-ratio
+Distribution
+of
+Intermediate-mass
+Stars.
+AJ,
+152(2),
+40.
+https://doi.org/10.3847/0004-6256/152/2/40.
+Gullikson, K., Kraus, A., Dodson-Robinson, S., Jaffe, D., Lee, J.-E., Mace, G. N., MacQueen,
+P., Park, S. and Riddle, A. (2016b) Direct Spectral Detection: An Efﬁcient Method to Detect
+and Characterize Binary Systems. AJ, 151(1), 3. https://doi.org/10.3847/0004-6256/151/1/3.
+Hiltner, W. A., Garrison, R. F. and Schild, R. E. (1969) MK Spectral Types for Bright Southern
+OB Stars. ApJ, 157, 313. https://doi.org/10.1086/150069.
+12
+
+IJspeert, L. W., Tkachenko, A., Johnston, C., Garcia, S., De Ridder, J., Van Reeth, T. and Aerts,
+C. (2021) An all-sky sample of intermediate- to high-mass OBA-type eclipsing binaries ob-
+served by TESS. A&A, 652, A120. https://doi.org/10.1051/0004-6361/202141489.
+Jerzykiewicz, M., Handler, G., Daszy´nska-Daszkiewicz, J., Pigulski, A., Poretti, E., Rodríguez,
+E., Amado, P. J., Kołaczkowski, Z., Uytterhoeven, K., Dorokhova, T. N., Dorokhov, N. I.,
+Lorenz, D., Zsuffa, D., Kim, S. L., Bourge, P. O., Acke, B., De Ridder, J., Verhoelst, T.,
+Drummond, R., Movchan, A. I., Lee, J. A., Ste¸´slicki, M., Molenda-˙Zakowicz, J., Garrido,
+R., Kim, S. H., Michalska, G., Paparó, M., Antoci, V. and Aerts, C. (2015) The 2003-2004
+multisite photometric campaign for the β Cephei and eclipsing star 16 (EN) Lacertae with
+an appendix on 2 Andromedae, the variable comparison star. MNRAS, 454(1), 724–740.
+https://doi.org/10.1093/mnras/stv1958.
+Jerzykiewicz, M., Lehmann, H., Niemczura, E., Molenda-˙Zakowicz, J., Dymitrov, W., Fa-
+gas, M., Guenther, D. B., Hartmann, M., Hrudková, M., Kami´nski, K., Moffat, A. F. J.,
+Kuschnig, R., Leto, G., Matthews, J. M., Rowe, J. F., Ruci´nski, S. M., Sasselov, D. and
+Weiss, W. W. (2013) µ Eridani from MOST and from the ground: an orbit, the SPB com-
+ponent’s fundamental parameters and the SPB frequencies. MNRAS, 432(2), 1032–1045.
+https://doi.org/10.1093/mnras/stt522.
+Jerzykiewicz, M., Pigulski, A., Michalska, G., Mo´zdzierski, D., Ratajczak, M., Handler, G.,
+Moffat, A. F. J., Pablo, H., Popowicz, A., Wade, G. A. and Zwintz, K. (2021) BRITE obser-
+vations of ν Centauri and γ Lupi, the ﬁrst non-eclipsing members of the new class of nascent
+binaries. MNRAS, 503(4), 5554–5568. https://doi.org/10.1093/mnras/stab846.
+Jerzykiewicz, M. and Sterken, C. (1977) Search for beta Cephei stars south of declination -20 .
+I. Incidence of light variability among early B giants and subgiants - summer objects. Acta
+Astronomica, 27, 365–387.
+Johnston, C., Aimar, N., Abdul-Masih, M., Bowman, D. M., White, T. R., Hawcroft, C.,
+Sana, H., Sekaran, S., Dsilva, K., Tkachenko, A. and Aerts, C. (2021) Characterization
+of the variability in the O+B eclipsing binary HD 165246. MNRAS, 503(1), 1124–1137.
+https://doi.org/10.1093/mnras/stab488.
+Justesen, A. B. and Albrecht, S. (2021) Temperature and Distance Dependence of Tidal Circu-
+larization in Close Binaries: A Catalog of Eclipsing Binaries in the Southern Hemisphere Ob-
+served by the TESS Satellite. ApJ, 912(2), 123. https://doi.org/10.3847/1538-4357/abefcd.
+Levato, H., Malaroda, S., Morrell, N. and Solivella, G. (1987) Stellar Multiplicity in the
+Scorpius-Centaurus Association. ApJS, 64, 487. https://doi.org/10.1086/191204.
+Lindroos, K. P. (1986) A study of visual double stars with early-type primaries. V. Post-T Tauri
+secondaries. A&A, 156, 223–233.
+Lyubimkov, L. S., Rostopchin, S. I. and Lambert, D. L. (2004) Surface abundances of light
+elements for a large sample of early B-type stars - III. An analysis of helium lines in spectra
+of 102 stars. MNRAS, 351(2), 745–767. https://doi.org/10.1111/j.1365-2966.2004.07825.x.
+13
+
+Moe, M. and Di Stefano, R. (2015) A New Class of Nascent Eclipsing Binaries with Extreme
+Mass Ratios. ApJ, 801(2), 113. https://doi.org/10.1088/0004-637X/801/2/113.
+Nazé, Y., Britavskiy, N., Rauw, G., Labadie-Bartz, J. and Simón-Díaz, S. (2023) Extreme
+mass ratios and fast rotation in three massive binaries.
+MNRAS, 525(2), 1641–1656.
+https://doi.org/10.1093/mnras/stad2280.
+Pablo, H., Whittaker, G. N., Popowicz, A., Mochnacki, S. M., Kuschnig, R., Grant, C. C.,
+Moffat, A. F. J., Rucinski, S. M., Matthews, J. M., Schwarzenberg-Czerny, A., Handler, G.,
+Weiss, W. W., Baade, D., Wade, G. A., Zocło´nska, E., Ramiaramanantsoa, T., Unterberger,
+M., Zwintz, K., Pigulski, A., Rowe, J., Koudelka, O., Orlea´nski, P., Pamyatnykh, A., Neiner,
+C., Wawrzaszek, R., Marciniszyn, G., Romano, P., Wo´zniak, G., Zawistowski, T. and Zee,
+R. E. (2016) The BRITE Constellation Nanosatellite Mission: Testing, Commissioning, and
+Operations. PASP, 128(970), 125001. https://doi.org/10.1088/1538-3873/128/970/125001.
+Pigulski, A. and Jerzykiewicz, M. (1988) The eclipse of 16 Lacertae revisited. Acta Astronom-
+ica, 38, 401–413.
+Popowicz, A., Pigulski, A., Bernacki, K., Kuschnig, R., Pablo, H., Ramiaramanantsoa, T.,
+Zocło´nska, E., Baade, D., Handler, G., Moffat, A. F. J., Wade, G. A., Neiner, C., Rucin-
+ski, S. M., Weiss, W. W., Koudelka, O., Orlea´nski, P., Schwarzenberg-Czerny, A. and
+Zwintz, K. (2017) BRITE Constellation: data processing and photometry. A&A, 605, A26.
+https://doi.org/10.1051/0004-6361/201730806.
+Pourbaix, D., Tokovinin, A. A., Batten, A. H., Fekel, F. C., Hartkopf, W. I., Levato, H., Morrell,
+N. I., Torres, G. and Udry, S. (2004) SB9: The ninth catalogue of spectroscopic binary orbits.
+A&A, 424, 727–732. https://doi.org/10.1051/0004-6361:20041213.
+Prša, A., Kochoska, A., Conroy, K. E., Eisner, N., Hey, D. R., IJspeert, L., Kruse, E.,
+Fleming, S. W., Johnston, C., Kristiansen, M. H., LaCourse, D., Mortensen, D., Pep-
+per, J., Stassun, K. G., Torres, G., Abdul-Masih, M., Chakraborty, J., Gagliano, R., Guo,
+Z., Hambleton, K., Hong, K., Jacobs, T., Jones, D., Kostov, V., Lee, J. W., Omohun-
+dro, M., Orosz, J. A., Page, E. J., Powell, B. P., Rappaport, S., Reed, P., Schnittman, J.,
+Schwengeler, H. M., Shporer, A., Terentev, I. A., Vanderburg, A., Welsh, W. F., Caldwell,
+D. A., Doty, J. P., Jenkins, J. M., Latham, D. W., Ricker, G. R., Seager, S., Schlieder,
+J. E., Shiao, B., Vanderspek, R. and Winn, J. N. (2022) TESS Eclipsing Binary Stars. I.
+Short-cadence Observations of 4584 Eclipsing Binaries in Sectors 1-26. ApJS, 258(1), 16.
+https://doi.org/10.3847/1538-4365/ac324a.
+Shi,
+X.-d.,
+Qian,
+S.-b.
+and
+Li,
+L.-J.
+(2022)
+New
+Pulsating
+Stars
+Detected
+in
+EA-type
+Eclipsing-binary
+Systems
+Based
+on
+TESS
+Data.
+ApJS,
+259(2),
+50.
+https://doi.org/10.3847/1538-4365/ac59b9.
+Shultz, M. E., Owocki, S. P., ud-Doula, A., Biswas, A., Bohlender, D., Chandra, P., Das,
+B., David-Uraz, A., Khalack, V., Kochukhov, O., Landstreet, J. D., Leto, P., Monin, D.,
+14
+
+Neiner, C., Rivinius, T. and Wade, G. A. (2022) MOBSTER - VI. The crucial inﬂu-
+ence of rotation on the radio magnetospheres of hot stars. MNRAS, 513(1), 1429–1448.
+https://doi.org/10.1093/mnras/stac136.
+Simón-Díaz, S. and Herrero, A. (2014) The IACOB project. I. Rotational velocities in northern
+Galactic O- and early B-type stars revisited. The impact of other sources of line-broadening.
+A&A, 562, A135. https://doi.org/10.1051/0004-6361/201322758.
+Southworth, J. (2012) JKTEBOP: Analyzing light curves of detached eclipsing binaries. Astro-
+physics Source Code Library, record ascl:1207.013.
+Southworth, J. and Bowman, D. M. (2022) High-mass pulsators in eclipsing binaries observed
+using TESS. MNRAS, 513(3), 3191–3209. https://doi.org/10.1093/mnras/stac875.
+Stassun, K. G., Torres, G., Johnston, C., Stevens, D. J., Feliz, D. L., Kounkel, M. and Bouma,
+L. G. (2021) Discovery and Characterization of a Rare Magnetic Hybrid β Cephei Slowly
+Pulsating B-type Star in an Eclipsing Binary in the Young Open Cluster NGC 6193. ApJ,
+910(2), 133. https://doi.org/10.3847/1538-4357/abe5a8.
+Tango, W. J., Davis, J., Ireland, M. J., Aerts, C., Uytterhoeven, K., Jacob, A. P.,
+Mendez, A., North, J. R., Seneta, E. B. and Tuthill, P. G. (2006) Orbital elements,
+masses and distance of λ Scorpii A and B determined with the Sydney University
+Stellar Interferometer and high-resolution spectroscopy.
+MNRAS, 370(2), 884–890.
+https://doi.org/10.1111/j.1365-2966.2006.10526.x.
+Telting, J. H., Schrijvers, C., Ilyin, I. V., Uytterhoeven, K., De Ridder, J., Aerts, C. and Henrichs,
+H. F. (2006) A high-resolution spectroscopy survey of β Cephei pulsations in bright stars.
+A&A, 452(3), 945–953. https://doi.org/10.1051/0004-6361:20054730.
+Tognelli, E., Prada Moroni, P. G. and Degl’Innocenti, S. (2011) The Pisa pre-main sequence
+tracks and isochrones. A database covering a wide range of Z, Y, mass, and age values.
+A&A, 533, A109. https://doi.org/10.1051/0004-6361/200913913.
+Uytterhoeven, K., Willems, B., Lefever, K., Aerts, C., Telting, J. H. and Kolb, U. (2004) Inter-
+pretation of the variability of the β Cephei star λ Scorpii. I. The multiple character. A&A,
+427, 581–592. https://doi.org/10.1051/0004-6361:20041223.
+van Albada, T. S. and Sher, D. (1969) Radial velocities of B stars in the Sco-Cen association.
+Bull. Astr. Inst. Netherlands, 20, 204.
+van Hoof, A., Bertiau, F. C. and Deurinck, R. (1963) Radial Velocities of Twenty-Nine Stars in
+the Scorpio-Centaurus Region. ApJ, 137, 824. https://doi.org/10.1086/147558.
+Vanzi, L., Zapata, A., Flores, M., Brahm, R., Tala Pinto, M., Rukdee, S., Jones, M., Ropert,
+S., Shen, T., Ramirez, S., Suc, V., Jordán, A. and Espinoza, N. (2018) Precision stellar radial
+velocity measurements with FIDEOS at the ESO 1-m telescope of La Silla. MNRAS, 477(4),
+5041–5051. https://doi.org/10.1093/mnras/sty936.
+15
+
+Watson, C. L., Henden, A. A. and Price, A. (2006) The International Variable Star Index (VSX).
+Society for Astronomical Sciences Annual Symposium, 25, 47.
+Weiss, W. W., Rucinski, S. M., Moffat, A. F. J., Schwarzenberg-Czerny, A., Koudelka, O. F.,
+Grant, C. C., Zee, R. E., Kuschnig, R., Mochnacki, S., Matthews, J. M., Orleanski, P., Pamy-
+atnykh, A., Pigulski, A., Alves, J., Guedel, M., Handler, G., Wade, G. A. and Zwintz, K.
+(2014) BRITE-Constellation: Nanosatellites for Precision Photometry of Bright Stars. PASP,
+126(940), 573. https://doi.org/10.1086/677236.
+Zwintz, K., Pigulski, A., Kuschnig, R., Wade, G. A., Doherty, G., Earl, M., Lovekin, C., Müll-
+ner, M., Piché-Perrier, S., Steindl, T., Beck, P. G., Bicz, K., Bowman, D. M., Handler, G.,
+Pablo, B., Popowicz, A., Ró˙za´nski, T., Mikołajczyk, P., Baade, D., Koudelka, O., Moffat,
+A. F. J., Neiner, C., Orlea´nski, P., Smolec, R., Louis, N. S., Weiss, W. W., Wenger, M. and
+Zocło´nska, E. (2024) Catalogue of BRITE-Constellation targets. I. Fields 1 to 14 (November
+2013-April 2016). A&A, 683, A49. https://doi.org/10.1051/0004-6361/202348236.
+16
+

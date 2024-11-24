@@ -1,0 +1,1036 @@
+Prepared for submission to JCAP
+Cosmic Dynamics in Einstein-Cartan
+Theory: Analysing Hubble Tension
+through Curvature and Torsion field
+Yun-Dong Wu,1,2 Wei Hong1,2 and Tong-Jie Zhang1,2
+1Institute for Frontiers in Astronomy and Astrophysics, Beijing Normal University,
+Beijing 102206, China
+2School of Physics and Astronomy, Beijing Normal University,
+Beijing 100875, China
+E-mail: tjzhang@bnu.edu.cn
+Abstract. The Hubble tension refers to the significant discrepancy in the Hubble constant H0
+obtained from two different measurement methods in cosmology. One method derives data
+from the Cosmic Microwave Background (CMB) observations by the Planck satellite, yielding
+a value of 67.4 ± 0.5 km s−1Mpc−1, while the other method relies on direct measurements of
+Type Ia supernovae, producing a value 73.04±1.04 km s−1Mpc−1. This issue has persisted for
+several years. To theoretically explore potential solutions to this problem, this paper examines
+a model within the framework of Einstein-Cartan (EC) theory, where torsion is introduced
+with spin as the corresponding entity, allowing for the assumption H = −αϕ. By employing
+the Markov Chain Monte Carlo (MCMC) algorithm and utilizing Cosmic Chronometers (CC)
+data, we impose parameter constraints on various parameters in the Friedmann equations,
+particularly focusing on the curvature density parameter Ωk, to assess whether the model
+remains stable under this assumption and whether the estimated parameters align more
+closely with either of the observational results. In conclusion, we find that the parameter
+constraints in the model incorporating torsion (H0 = 67.6+2.1
+−2.7 km s−1 Mpc−1, obtained under
+the Big Bang Nucleosynthesis (BBN) constraint with Ωk = 0; H0 = 66.2+4.4
+−2.9 km s−1 Mpc−1,
+obtained under same constraint but set Ωk as a free variable; H0 = 68.8+2.9
+−4.2 km s−1 Mpc−1,
+obtained under the Planck constraint) are more consistent with the value derived from CMB
+data, favoring the lower H0 value.
+Keywords: modified gravity
+arXiv:2410.19399v1  [astro-ph.CO]  25 Oct 2024
+
+Contents
+1
+Introduction
+1
+2
+Theoretical foundation
+2
+2.1
+Spacetime with torsion
+2
+2.2
+Field equations with torsion
+3
+2.3
+Friedmann equation with torsion in FLRW metric
+3
+2.4
+Hubble parameter’s behavior under linear dependence to torsion field
+4
+3
+Numerical methods
+5
+4
+Results Analysis
+6
+4.1
+Information from figures
+6
+4.2
+Results comparison and discussion
+9
+5
+Conclusions
+12
+6
+Acknowledgement
+13
+A Christoffel Symbols
+13
+1
+Introduction
+Since Einstein proposed General Relativity in 1915, the theory has successfully explained
+a range of astronomical phenomena, such as the precession of Mercury’s perihelion and
+the phenomenon of gravitational lensing, becoming the cornerstone of modern gravitational
+theory [1]. However, this framework is not complete in some aspects. One of its limitations
+is the inability to account for the spacetime structure in the presence of fermions with spin
+angular momentum. To address this, ´Elie Cartan introduced torsion in 1922 as the spin
+counterpart in the [2], partially filling the gap in General Relativity’s description of the
+impact of spinning particles on spacetime.
+By the 1950s, scholars had widely integrated General Relativity with spin theory, gradu-
+ally forming the Einstein-Cartan (EC) theory [3], which successfully described certain obser-
+vational phenomena (albeit not uniquely). Examples include [4] using EC theory to describe
+massive, dense objects and [5] interpreting dark energy as torsion to explain the dynami-
+cal evolution of the universe. To this day, the theory continues to evolve and serves as the
+foundation for the discussions in this paper [6].
+In EC theory, the Riemann curvature tensor can be written as: Rρ
+σµν = ∂µΓρ
+νσ −∂νΓρ
+µσ +
+Γρ
+µλΓλ
+νσ −Γρ
+νλΓλ
+µσ. In the case where the Christoffel symbols is symmetric (under the torsion-
+free condition), it is evident that the curvature tensor also exhibits a symmetric form, indicat-
+ing that the curvature primarily reflects the symmetric and global structure of the spacetime.
+However, the torsion tensor is different. It is defined as Sρ
+µν = Γρ
+[µν], and is an anti-symmetric
+tensor. Moreover, it is not difficult to see that its definition does not specify a zero point,
+which implies that torsion is always a relative value, reflecting the degree of deviation from
+the symmetric structure.
+However, when we contract the Riemann tensor to obtain the
+– 1 –
+
+Ricci scalar, ˜R = R + KµνρKµνρ, we find that compared to the tensor contraction result R
+of torsion-free case, an additional summation term involving the contorsion tensor appears.
+This term stands alongside the spatial curvature term,
+k
+a2 , in the original Ricci scalar. This
+indicates that although curvature and torsion influence the geometry of spacetime in different
+ways, their ultimate impact on the dynamical factors is similar.
+There is currently no direct observational evidence for torsion, as its associated physi-
+cal quantities require observations in extreme environments, such as high matter or energy
+densities. Nevertheless, this does not diminish the potential of EC theory as a promising
+framework for explaining the universe. Over the past decade, EC theory has achieved sig-
+nificant advancements in a variety of research directions. It has been applied, for instance,
+to solve the strong CP problem [7] and explain the intrinsic mechanisms behind the ac-
+celerated expansion of the universe [8]. It also plays a role in large-scale structural issues,
+where, combined with numerical simulation methods, it has been used to explore the impact
+of torsion-induced density perturbations on the evolution of cosmic structures, including
+large-scale formations [9] and cosmic strings [10] in the universe.
+In other areas, EC theory has also seen progress. Efforts have been made to maintain
+Weyl invariance in both global and local formulations [11], while the homogeneous spin fluid
+model has been utilized to address the theoretical issue of singularity formation [12]. The
+theory has also been expanded into the Einstein-Cartan-Kibble-Sciama (ECKS) theory, which
+introduces torsion to generate a strong repulsive force at small scales, thus preventing the
+formation of singularities [13]. This approach offers an alternative to the classical inflation
+model in explaining the early universe’s expansion. Among the various research directions,
+gravitational waves have become a particularly active field. In [14], the authors recalculated
+the Weyssenhoff-fluid model under torsion conditions, deriving the power of gravitational
+waves emitted by binary neutron stars in the post-Newtonian approximation. Similar studies
+[15], [16] have further explored gravitational waves in the context of EC theory. These series
+of attempts to integrate popular research topics with EC theory directly reflects the necessity
+of exploring its combination with EC theory in addressing the Hubble tension problem.
+The analysis in this paper employs parameter constraints to explore the dynamic evolu-
+tion of torsion and curvature in the universe, representing a further study of EC theory under
+the FLRW metric. The main research object, torsion tensor, is a (1,2)-type tensor field on
+an n-dimensional affine connection space (M, D), while the curvature tensor is a (1,3)-type
+tensor field. Both of them are important invariants that characterize the differences between
+an affine connection space and an affine space. Therefore, the fundamental objective of our
+research is to provide an explanation for the asymmetrical phenomena observed in the uni-
+verse, with the aspiration that its ultimate findings may offer a framework for addressing the
+Hubble tension.
+The rest of this paper is as follows: In the Sec. II, we introduce the theoretical foundation
+of how torsion influences the dynamical evolution of the universe. Then, Sec. III will focus
+on the methods for numerical simulation and parameter constraints. At last, Sec. IV and
+Sec. V will provide a brief analysis of the simulation results.
+2
+Theoretical foundation
+2.1
+Spacetime with torsion
+In Einstein Cartan theory, torsion tensor is defined by anti-symmetric part of the affine
+connection, as presented in Sa
+bc = Γa
+[bc]. As we always do, demanding metric tensor satisfy
+– 2 –
+
+the covariant condition as ∇cgab = 0. This result is oriented towards the following equation
+of connection:
+Γa
+bc = ˜Γa
+bc + Ka
+bc.
+(2.1)
+First part gives Christoffel symbols, and the second part is contortion tensor which defined
+as below:
+Ka
+bc = Sabc + Sbca + Scba = Sabc + 2S(bc)a,
+(2.2)
+where Sabc is torsion tensor. The equation Kabc = Ka[bc] leads to an interesting phenomenon:
+the transformation of infinitesimal parallelograms is non-closing. From a physical perspective,
+this implies that the decomposition can effectively characterize torsion, which is typically con-
+sidered a manifestation of the endowed angular momentum of particle. The anti-symmetry of
+Sabc guarantees it has only one independent tensor contraction, so we can make an intuitive
+definition of anti-symmetric part of contortion tensor with its’ contraction:
+Sa = Sb
+ab = −Sb
+ba ≡ϕ.
+(2.3)
+2.2
+Field equations with torsion
+In non-torsion spacetime, according to GR theory we can directly write the formula:
+Rab −1
+2Rgab = κTab −Λgab,
+(2.4)
+where Rab represents the Ricci tensor and R = Ra
+a. This field equation follows the standard
+form. Similarly, in Einstein-Cartan theory, the field equations may retain this form, but
+the presence of torsion alters the expression of the Ricci tensor. In this theory, Rab and
+Tab become anti-symmetric tensors. In Cartan field equations, the torsion tensor is typically
+defined as:
+Sabc = −1
+4κ(2sbca + gcasb −gabsc),
+(2.5)
+where κ = 8πG and sabc represents the spin tensor of matter with sabc = s[ab]c , sa = sb
+ab.
+To satisfy the Bianchi identities, we can derive the following relationship between the Ricci
+tensor and the torsion tensor under this condition through a series of calculations:
+∇[eRab
+cd] = 2Rab
+f[eSf
+cd],
+(2.6)
+and
+Ra
+[bcd] = −2∇[bSa
+cd] + 4Sa
+e[bSe
+cd].
+(2.7)
+Next, by formulating a similar definition to the former Gab = Rab −1
+2gabR, we can derive the
+final corrected covariant derivative (This result has been proved in [6]) and we will find that
+it does not satisfy the general relativistic conservation law ∇bGab = 0.
+∇bGab = ∇bGba −2(∇2Sa −∇b∇aSb + ∇b∇cScba) −4∇b(ScScab).
+(2.8)
+2.3
+Friedmann equation with torsion in FLRW metric
+We first consider the metric associated with torsion. Using the expression Γa
+bc = ˜Γa
+(bc)+2S
+a
+bc
+(which derived from Eqs. (2.1), (2.2)) and its transformation, we can compute the Christoffel
+symbols with torsion from the torsion-free case. Due to the complexity of the specific metric
+calculations, the results are provided in detail in the appendix at the end of the paper.
+– 3 –
+
+Similarly, we can still calculate the Ricci tensor using the following definition:
+Rab = −∂bΓc
+ac + ∂cΓc
+ab −Γe
+acΓc
+eb + Γe
+abΓc
+ec.
+(2.9)
+Then, we assume that the energy-momentum tensor can be described by an perfect fluid
+model,
+Tab = ρuaub + pηab,
+(2.10)
+where uaua = −1 is time-like 4-velocity and ηab is Minkowski metric. Given the aforemen-
+tioned conditions, we ultimately achieve the Friedmann equation:
+( ˙a
+a)2 = 1
+3κρ −K
+a2 + Λ
+3 −4ϕ2 −4( ˙a
+a)ϕ,
+(2.11)
+and acceleration equation with torsion:
+¨a
+a = −1
+6κ(ρ + 3p) + Λ
+3 −2 ˙ϕ −2( ˙a
+a)ϕ.
+(2.12)
+Further, equation of state can be written as ρ = ωp, where ρ is energy density, p is pressure
+and ω is state parameter. Then we can give the continuity equation by ∇aT ab = 0 as below:
+˙ρ + 3(1 + ω)Hρ + 2(1 + 3ω)ϕρ = 4ϕ Λ
+8πG.
+(2.13)
+2.4
+Hubble parameter’s behavior under linear dependence to torsion field
+In Eq. (2.3), we defined that anti-symmetric part of torsion tensor only have one independent
+contraction. Therefore, we can give a further hypothesize its specific form of association with
+other parameters from [17]. Here, we focus on a special form: ϕ(t) = −αH(t) where H = ˙a
+a
+is Hubble parameter, a is scale factor of universe and α is a constant which represents the
+strength of torsion field.
+Now, we can analyze the Friedmann equations under above conditions. The first step
+is to dimensionless the continuity equation. Let ρ = xρ0, where x is dimensionless energy
+density and ρ0 is the energy density ρ in the situation of a = 1. Then we can turn Eq. (2.13)
+into:
+˙x + 3(1 + ω)Hx + 2(1 + 3ω)ϕx = 4ϕ
+Λ
+8πGρ0
+.
+(2.14)
+To simplify the calculation, we now define the present density parameters Ωm0 = 8πGρm0
+3H2
+0
+and
+ΩΛ0 =
+Λ
+3H2
+0 , then the above equation change to:
+dx
+da + [3(1 + ω) −2α(1 + 3ω)]x
+a + 4α ΩΛ0
+Ωm0
+= 0.
+(2.15)
+Integrating after separating the parameters gives:
+x = a−C1(1 + C2
+C1
+) −C2
+C1
+,
+(2.16)
+where C1 = (3 −2α) + 3ω(1 −2α) and C2 = 4α ΩΛ0
+Ωm0 .
+Second, bringing the above assumption into acceleration equation, Eq. (2.12), it turns
+to following form:
+(1 −2α) ˙a
+a
+d˙a
+da = H2
+0[ΩΛ0 −(1 + 3ω)
+2
+Ωm0x].
+(2.17)
+– 4 –
+
+Substitute the Eq. (2.16) into Eq. (2.17) and integrate by separating parameters. Sub-
+sequently, we can give the expression of the Hubble parameter in terms of the parameters
+which we aim to constrain:
+H1(z) = (C3 −C4(1 + z)C1 + C5(1 + z)2)
+1
+2 ,
+(2.18)
+where C3 =
+H2
+0
+1−2α(ΩΛ0 + 1+3ω
+2
+C2
+C1 Ωm0), C4 =
+H2
+0
+1−2α(1 + 3ω)(1 + C2
+C1 ) Ωm0
+2−C1 , C5 = C4 −C3 +
+H2
+0 containing variable parameter H0, ΩΛ0, Ωm0, ω and α. However, the curvature density
+parameter is of primary interest in this study and is not included among these parameters.
+Therefore, we need to incorporate the simplified form of the first Friedman Eq. (2.14) into
+the final expression as well:
+H2(z) =
+H0
+|1 −2α|[((1 + z)C1(1 + C2
+C1
+) −C2
+C1
+)Ωm0 + Ωk(1 + z)2 + ΩΛ]
+1
+2 .
+(2.19)
+In the final numerical simulations, both formulas are components of the likelihood function.
+3
+Numerical methods
+Now, we use the previously computed formulas Eqs. (2.18) and (2.19) to constrain these
+parameters. The parameter constraint method used here is a common approach in cosmology
+for performing analysis on data, which continues to be updated and developed to this day [18].
+The reason for utilizing both formulas simultaneously in the simulation is that, in essence,
+the two formulas are equivalent. And theoretically, starting from either should yield to the
+same result. However, the former does not explicitly include the Ωk, which we require as a
+variable in this context. Additionally, to maintain the stability of the MCMC process, we
+incorporate both formulas in the simulation. In our simulations, the variables are the Hubble
+parameter H and red-shift z, data sourced from [19], referred to as CC. At the end of this
+section, Table. 1 is presented, compiling the specific CC reference data sources cited earlier
+in the paper. This study employs the MCMC method for data handling, which combining
+Monte Carlo methods with Markov chains.
+The aforementioned method is employed here because the sample size of CC is very
+small. We must increase the sample size, and the MCMC method is particularly well-suited
+for this purpose as it can generate samples from the target distribution to meet our simulation
+requirements. For convenience, a non-informative prior distribution is used here. This also
+indicates that we do not overly rely on any specific assumptions or expectations during
+the model construction process. The next step involves specifying the likelihood function.
+Assuming the likelihood function to be normally distributed without loss of generality, then
+by combining the two formulas provided above, we can derive the specific expression of the
+likelihood function with the CC data:
+ln(LH) =
+Eqs.(2.18),(2.19)
+X
+j=1,2
+(
+n
+X
+i=1
+−[Hobs,i −Hj(z)]2
+2σ2
+Hobs,i
+),
+(3.1)
+where ln(LH) is log-likelihood function, Hobs, σHobs represent the actual observed values and
+the standard deviation of the observed values of the Hubble parameter in CC and H(z)
+represents the theoretical predicted value of the Hubble parameter at the current red-shift.
+The parameters constraint in this study are performed using Python, utilizing the
+MCMC computational capabilities of the Emcee package in [20].
+Additionally, it should
+– 5 –
+
+be noted that the priors in this study include direct constraints on the curvature density pa-
+rameter. The specific constraint range has been fine-tuned through a series of adjustments,
+but is initially based on observational data from [21].
+Now presenting the approximate
+prior range used in the program: 1. Planck condition: A. 0 < H < 100 km s−1Mpc−1; B.
+−0.1 < α < 0.1; C. −0.0012 < Ωk < 0.0026. 2. BBN condition: H and α limitation are
+the same as Planck condition, except C. 0.02202 < Ωm(H/100)2 < 0.02268. There are two
+reasons for applying different priors in this context. First, these various priors effectively
+integrate constraints from a range of observational data and theoretical models, and testing
+the stability of the model under these constraints is, in itself, a way to evaluate the validity
+of the theory. Second, the use of direct constraints ensures that the parameter estimates
+remain close to the stable value, rather than near the metastable state.
+Table 1. Measurements of the Hubble parameter were derived with the Cosmic Chronometers method
+in units of km s−1Mpc−1.
+In this table, “M” represents the method used to derive the Hubble
+parameter. F (Full-Spectrum Fitting) fits the entire galaxy spectrum to estimate stellar ages [22], L
+(Lick Indices) analyzes specific absorption lines to determine age [23], D (D4000) measures the 4000
+˚A break to estimate stellar age [24], and ML (Machine Learning) applies algorithms to large datasets
+for estimating stellar ages and cosmological parameters [25].
+z
+H(z)
+σH(z)
+M
+Reference
+z
+H(z)
+σH(z)
+M
+Reference
+0.07
+69.0
+19.6
+F
+[26]
+0.593
+104
+13
+D
+[27]
+0.09
+69
+12
+F
+[28]
+0.68
+92
+8
+D
+[27]
+0.12
+68.6
+26.2
+F
+[26]
+0.75
+98.8
+33.6
+L
+[29]
+0.17
+83
+8
+F
+[28]
+0.75
+105
+10.76
+ML
+[30]
+0.179
+75
+4
+D
+[27]
+0.781
+105
+12
+D
+[27]
+0.199
+75
+5
+D
+[27]
+0.8
+113.1
+25.22
+F
+[31]
+0.20
+72.9
+29.6
+F
+[26]
+0.875
+125
+17
+D
+[27]
+0.27
+77
+14
+F
+[28]
+0.88
+90
+40
+F
+[32]
+0.28
+88.8
+36.6
+F
+[26]
+0.9
+117
+23
+F
+[28]
+0.352
+83
+14
+D
+[27]
+1.037
+154
+20
+D
+[27]
+0.38
+83
+13.5
+D
+[33]
+1.26
+135
+65
+F
+[34]
+0.4
+95
+17
+F
+[28]
+1.3
+168
+17
+F
+[28]
+0.4004
+77
+10.2
+D
+[33]
+1.363
+160
+33.6
+D
+[35]
+0.425
+87.1
+11.2
+D
+[33]
+1.43
+177
+18
+F
+[28]
+0.445
+92.8
+12.9
+D
+[33]
+1.53
+140
+14
+F
+[28]
+0.47
+89.0
+49.6
+F
+[36]
+1.75
+202
+40
+F
+[28]
+0.4783
+80.9
+9
+D
+[33]
+1.965
+186.5
+50.4
+D
+[35]
+0.48
+97
+62
+F
+[32]
+4
+Results Analysis
+4.1
+Information from figures
+In the initial case, we consider the case where ω = 0 and Ωk = 0 (which means curvature k =
+0). We then examine the constraints imposed on the set of free parameters p = [H, α, ΩΛ, Ωm],
+with particular emphasis on α and Ωm, as the stability of this model is determined by the
+relationship between these two parameters. The stability is corroborated by the findings in
+[37] as previous research.
+– 6 –
+
+Figure 1.
+The 68% and 95% confidence regions of the joint and marginal posterior probability
+distributions of H, ΩΛ and Ωm that are estimated from parameter constraints with the data from
+Table. 1. This figure reflects the results of parameter constraints under the α = 0 and Ωk = 0
+conditions. The unit of H is km s−1Mpc−1 and the same applies to the pictures that follow.
+Next, we will discuss the details of each figure. In the following figures, the mean values
+and their 1σ confidence intervals for the parameter constraints are indicated above the corner
+plot, with the 1σ intervals shaded in light blue on the single-function plots. In the composite
+plots, the dark blue regions represent the 1σ confidence intervals, while the light blue regions
+represent the 2σ confidence intervals (95%c.l.).
+Fig.
+1 represents the simplest model, which does not include the curvature density
+parameter Ωk or torsion α. Fig. 2, compared to Fig. 1, only adds the Ωk. In the comparative
+analysis in the later section, these two figures will serve as the zero-control, but for now, we
+– 7 –
+
+Figure 2.
+The 68% and 95% confidence regions of the joint and marginal posterior probability
+distributions of H, ΩΛ, Ωm and Ωk that are estimated from parameter constraints with the data from
+Table. 1. This figure reflects the results of parameter constraints under the α = 0 and Ωk can be
+varied conditions.
+will refrain from further analysis or discussion of them.
+The results shown in Fig. 3 indicate that the constraints on all parameters approx-
+imately follow a normal distribution, with the exception of parameters α and Ωm, which
+exhibit a notable linear relationship. This linearity is attributed to the constraints on baryon
+density parameter Ωbh2 imposed by BBN. These findings suggest that the universe is stable
+under this torsion field model.
+Furthermore, when comparing our constrained results for the Hubble constant, H =
+67.36+2.1
+−2.7 km s−1Mpc−1, with the Planck 2018 observations H = 67.36 ± 0.54 km s−1Mpc−1
+, we observe a close agreement between the two. This indicates that the model effectively
+simulates the role of various components in the evolution of the universe.
+For Fig. 4, we introduced the curvature density parameter Ωk as an additional variable,
+and used BBN constraints on baryon density as a limiting condition. It is easy to find that
+– 8 –
+
+Figure 3.
+The 68% and 95% confidence regions of the joint and marginal posterior probability
+distributions of H, α, ΩΛ and Ωm that are estimated from parameter constraints with the data from
+Table. 1. This figure reflects the results of parameter constraints under the Ωk = 0 and α can be
+varied conditions with BBN limitation (Ωbh2 = 0.022353 ± 0.00033).
+the linear relationship between α and Ωm nearly influences the constraint outcomes of all
+parameters, particularly the composite images related to Ωk. This suggests that under this
+model, the curvature density parameter is highly sensitive to variations in the torsion field.
+Next, we turn to Fig. 5, where we utilize the Planck 2018 observations of parameter Ωk =
+0.0007±0.0019 as a constraint. It is evident that, apart from the composite images associated
+with Ωk, all results align consistently with Fig. 1. Upon examining the images related to
+the curvature density parameter, it becomes apparent that variations in the strength of the
+torsion field have minimal impact on the other parameters.
+This observation does not contradict the findings from Fig. 4. Upon integrating the
+results of Fig.
+4 and Fig.
+5, it appears that the strength of the torsion field and the
+curvature density parameter may have a deeper underlying connection. The uncertainties
+in the measurements of these two parameters may exhibit a product relationship akin to
+Heisenberg uncertainty, warranting further investigation.
+4.2
+Results comparison and discussion
+After a series of intuitive insights into the aforementioned figures, we now return to the
+analysis of the physical framework.
+It is well known that torsion and curvature are two
+independent geometric parameters. In classical theory, curvature alone is sufficient to describe
+– 9 –
+
+Figure 4.
+The 68% and 95% confidence regions of the joint and marginal posterior probability
+distributions of H, α, ΩΛ, Ωm and Ωk that are estimated from parameter constraints with the data
+from Table. 1. This figure reflects the results of parameter constraints under the Ωk and α can be
+varied conditions with BBN limitation.
+the distortion of spacetime, whereas in EC theory, both torsion and curvature are required
+for a complete description. Notably, due to the profound connection between torsion and
+spin in EC theory, there has been a growing interest in identifying physical phenomena or
+matter corresponding to torsion in actual observations, with dark matter being one of the
+prominent candidates.
+In this paper, we propose a hypothesis that the Hubble parameter is proportional to
+the torsion, H = −αϕ, thereby linking the rate of cosmic expansion to geometric properties.
+While this is not the first theoretical attempt to establish such a connection (as curvature
+k has long been incorporated in the FLRW metric), torsion’s inherent asymmetry indirectly
+influences the dynamical evolution of matter. This affects the large-scale structure of the
+universe in a manner distinct from curvature, and directly influences the rate of cosmic
+expansion. Therefore, the aforementioned proportionality assumption carries a certain degree
+of theoretical justification.
+To explore the relationship between various physical parameters in the figures, we ex-
+amine several comparisons to identify their internal connections.
+Let us first focus on the control group: Fig. 1 and Fig. 2, to determine the effect of the
+presence or absence of the curvature parameter on the constraint results, without introducing
+torsion. It is readily apparent that the two show almost no difference, and in Fig. 2, the joint
+normal distribution of Ωk with respect to ΩΛ and Ωm is largely uncorrelated, indicating that
+under general conditions, the curvature density parameter decouples from the other two.
+To better assess the sensitivity of the original model to the curvature parameter and to
+establish a more advanced control group for subsequent analysis, we add Ωk to the parameters
+of the control group based on the previous setup. In Fig. 1 and Fig. 3, these figures illustrate
+the differences between models with and without torsion, under the BBN constraint, in the
+– 10 –
+
+Figure 5.
+The 68% and 95% confidence regions of the joint and marginal posterior probability
+distributions of H, α, ΩΛ, Ωm and Ωk that are estimated from parameter constraints with the data
+from Table. 1. This figure reflects the results of parameter constraints under the Ωk and α can be
+varied conditions with Planck satellite observation Ωk = 0.0007 ± 0.0019 limit.
+absence of curvature.
+When excluding the images related to α, slight perturbations are
+present, but the overall consistency remains. However, focusing on α, it shows a noticeable
+correlation with other parameters, particularly exhibiting a positive linear relationship with
+Ωm. This connection likely arises because α, as a potential physical representation of dark
+matter, is part of the matter density parameter, thereby sharing the same increase-decrease
+relationship.
+Following the aforementioned approach, naturally, we allow Ωk to vary in order to as-
+sess the simulation results for models with and without torsion under BBN constraints. This
+comparison can be observed in Figures 2 and 4. It becomes evident that even when disre-
+garding α-related images, the results are noticeably different from the comparison between
+Fig. 1 and Fig. 3. The relationship between Ωk and ΩΛ and Ωm shifts to a negative linear
+correlation, while the relationship between Ωm, H, and ΩΛ becomes positively correlated.
+This anomaly likely arises because, in previous cases, the sum of the density parameters
+equaled one, whereas the introduction of α causes the sum to deviate from one, and this
+deviation is positively correlated with α. As a result, all density parameter relationships are
+altered.
+Moreover, it is not only the addition of Ωk that affects the parameter constraint results,
+variations in the constraint conditions also lead to different outcomes. We compared Fig.
+4 and Fig. 5 above to explore the differences in parameter trends under BBN and Planck
+constraint conditions. Aside from the α-related images, the two are nearly identical. However,
+in the case of α, the behavior of Ωm and ΩΛ shows opposite trends, and H exhibits almost
+– 11 –
+
+no response to changes in α. This inverse relationship is likely due to the limitations of
+the constraint conditions themselves. For example, the BBN condition directly constrains
+Ωm and H, making them dependent variables. According to the previous conclusions, α
+shares the same increase-decrease relationship with the former, causing the sum of density
+parameters to increase, with ΩΛ also positively correlated, consistent with the graphical
+conclusions. However, under the Planck condition, such a relationship is not emphasized,
+and since the value of Ωk is already small, the sum of density parameters remains close to
+one, which narrows the reasonable range of α, ultimately leading the model to degenerate
+into a result similar to that of Fig. 1.
+5
+Conclusions
+In this paper, our primary work is to evaluate the plausibility of introducing torsion into the
+ΛCDM model. By solving the ECKS equations, torsion is incorporated into the cosmological
+dynamical evolution equations, specifically the Friedmann equations, in a manner corre-
+sponding to spin. We apply Bayesian perspective supplemented with the MCMC method to
+constrain the parameters of this model. The following conclusions can be drawn:
+(1). Under the condition Ωk = 0 and with BBN constraints (Ωbh2 = 0.022353±0.00033),
+we obtain H = 67.6+2.1
+−2.7 km s−1Mpc−1 and α = 0.052+0.009
+−0.007;
+(2). Allowing Ωk to vary freely, with the same constraint in 1, we obtain H = 66.2+4.4
+−2.9
+km s−1Mpc−1, α = 0.061+0.024
+−0.036 and Ωk = −0.13+0.54
+−0.36;
+(3). When changing the constraint condition to the Planck 2018 observational results
+(Ωk = 0.0007 ± 0.0019), we get H = 68.8+2.9
+−4.2 km s−1Mpc−1, α = −0.001+0.065
+−0.101, and Ωk =
+−0.07+0.49
+−0.46.
+It can be observed that the estimated values of the Hubble parameter and the associated
+standard deviations under the three conditions show very little difference.
+This is to be
+expected, as current observational results suggest that both torsion and curvature density
+parameters can only fluctuate around very small values. If the constraints in this study had
+not constrained on these two parameters, the differences in the Hubble parameter estimates
+would not be so small. However, the results for the parameter α, which represents torsion,
+are distinct, showing correlations with the constraints themselves. Then, focusing on the
+curvature density parameter Ωk, aside from case 1 where it is directly set to 0, all other
+predictions for Ωk yield negative values.
+This suggests that under this model, an open
+universe with a hyperbolic spatial structure is more likely to appear.
+Finally, let us return to the focus on the Hubble tension issue. It is evident that all the
+obtained constraints on the Hubble parameter lie within the 1σ deviation range of the results
+derived from CMB data (67.4 ± 0.5 km s−1 Mpc−1), while they do not include the results
+obtained from direct measurements of Type Ia supernovae (73.04 ± 1.04 km s−1 Mpc−1).
+This suggests that the theoretical framework of EC theory is more consistent with the former
+observational results. Furthermore, the influence of Ωk on the Hubble tension introduces a
+destabilizing factor to the model, which may be attributed to the physical connection between
+spatial curvature and the torsion field. Taken together, these results emphasize the need for
+further investigation into the interplay between torsion field and curvature in addressing the
+Hubble tension.
+In addition, the sensitivity of Ωk to the torsion field demonstrated in this paper indicates
+that further precise measurements of the Ωk are crucial for studying the Hubble Tension.
+– 12 –
+
+Moreover, to improve the estimation accuracy of α and Ωk in this approach, more high-
+precision observational data of the Hubble parameter are needed for parameter constraints.
+6
+Acknowledgement
+I would like to express my gratitude to my colleagues for their valuable insights and discus-
+sions throughout the process of writing this paper. This work was supported by the National
+SKA Program of China (2022SKA0110202), China Manned Space Program through its Space
+Application System and National Science Foundation of China (Grants No. 11929301).
+A
+Christoffel Symbols
+In FLRW metric, we can write it in matrix form:
+gab =
+
+
+
+
+−1
+0
+0
+0
+0
+a2
+1−Kr2
+0
+0
+0
+0
+a2r2
+0
+0
+0
+0
+a2r2sin2θ
+
+
+
+
+(A.1)
+where a = a(t) is the scale factor, and K is the 3D-curvature. Then further calculates
+the Christoffel symbols:
+˜Γ0
+11 =
+a˙a
+1 −Kr2 ,
+˜Γ0
+22 = a˙ar2,
+˜Γ0
+33 = a˙ar2 sin2 θ,
+˜Γ1
+01 = ˜Γ1
+10 = ˙a
+a,
+˜Γ1
+11 =
+Kr
+1 −Kr2 ,
+˜Γ1
+22 = −r(1 −Kr2),
+˜Γ1
+33 = −r(1 −Kr2) sin2 θ,
+˜Γ2
+02 = ˜Γ2
+20 = ˙a
+a,
+˜Γ2
+12 = ˜Γ2
+21 = 1
+r,
+˜Γ2
+33 = −cos θ sin θ,
+˜Γ3
+03 = ˜Γ3
+30 = ˙a
+a,
+˜Γ3
+13 = ˜Γ3
+31 = 1
+r,
+˜Γ3
+23 = ˜Γ3
+32 = cot θ.
+(A.2)
+Combined with Eq. (2.3), then we could derive the Christoffel symbols to this form
+which containing torsion part: (To be cautious that this result is calculate by Γa
+(bc) =
+˜Γa
+bc + 2S
+a
+(bc) and Γa
+bc = ˜Γa
+(bc) + 2S
+a
+bc
+working together. )
+Γ0
+11 = a˙a + 2ϕa2
+1 −Kr2 ,
+Γ0
+22 = (a˙a + 2ϕa2)r2,
+Γ0
+33 = (a˙a + 2ϕa2) sin2 θ,
+Γ1
+33 = −r(1 −Kr2) sin2 θ,
+Γ1
+01 = ˙a
+a + 2ϕ,
+Γ1
+10 = ˙a
+a,
+Γ1
+11 =
+Kr
+1 −Kr2 ,
+Γ1
+22 = −r(1 −Kr2),
+Γ2
+02 = ˙a
+a + 2ϕ,
+Γ2
+20 = ˙a
+a,
+Γ2
+12 = Γ2
+21 = 1
+r,
+Γ2
+33 = −cos θ sin θ,
+Γ3
+03 = ˙a
+a + 2ϕ,
+Γ3
+30 = ˙a
+a,
+Γ3
+13 = Γ3
+31 = 1
+r,
+Γ3
+23 = Γ3
+32 = cot θ.
+(A.3)
+– 13 –
+
+References
+[1] A. Einstein, Die Feldgleichungen der Gravitation, Sitzungsberichte der K&ouml;niglich
+Preussischen Akademie der Wissenschaften (1915) 844.
+[2] E. Cartan, Sur les vari´et´es `a connexion affine et la th´eorie de la relativit´e g´en´eralis´ee.
+(premi`ere partie), Annales Sci. Ecole Norm. Sup. 40 (1923) 325.
+[3] F.W. Hehl, P. von der Heyde, G.D. Kerlick and J.M. Nester, General relativity with spin and
+torsion: Foundations and prospects, Reviews of Modern Physics 48 (1976) 393.
+[4] F.W. Hehl, P. von der Heyde and G.D. Kerlick, General relativity with spin and torsion and its
+deviations from Einstein’s theory, Phys. Rev. D 10 (1974) 1066.
+[5] X. chen Ao, X. zhou Li and P. Xi, Analytical approach of late-time evolution in a torsion
+cosmology, Physics Letters B 694 (2010) 186.
+[6] D. Kranas, C.G. Tsagas, J.D. Barrow and D. Iosifidis, Friedmann-like universes with torsion,
+The European Physical Journal C 79 (2019) 341.
+[7] G.K. Karananas, M. Shaposhnikov and S. Zell, Weyl-invariant Einstein-Cartan gravity:
+unifying the strong CP and hierarchy puzzles, arXiv e-prints (2024) arXiv:2406.11956
+[2406.11956].
+[8] H. Hadi, Y. Heydarzade, M. Hashemi and F. Darabi, Emergent cosmos in Einstein–Cartan
+theory, European Physical Journal C 78 (2018) 38.
+[9] M. Usman and A. Jawad, Matter growth perturbations and cosmography in modified torsion
+cosmology, European Physical Journal C 83 (2023) 958.
+[10] F. Rahaman, B.C. Bhui, A. Ghosh and R. Mondal, Vacuumless Cosmic Strings in
+Einstein-Cartan Theory, Fizika B 15 (2006) 1 [gr-qc/0610086].
+[11] G.K. Karananas, M. Shaposhnikov, A. Shkerin and S. Zell, Scale and Weyl invariance in
+Einstein-Cartan gravity, Phys. Rev. D 104 (2021) 124014 [2108.05897].
+[12] M. Hashemi, S. Jalalzadeh and A.H. Ziaie, Collapse and dispersal of a homogeneous spin fluid
+in Einstein–Cartan theory, European Physical Journal C 75 (2015) 53 [1407.4103].
+[13] N.J. Pop lawski, Cosmology with torsion: An alternative to cosmic inflation, Physics Letters B
+694 (2010) 181 [1007.0587].
+[14] E. Battista and V. De Falco, Gravitational waves at the first post-Newtonian order with the
+Weyssenhoff fluid in Einstein–Cartan theory, European Physical Journal C 82 (2022) 628
+[2206.12907].
+[15] E. Elizalde, F. Izaurieta, C. Riveros, G. Salgado and O. Valdivia, Gravitational waves in
+Einstein-Cartan theory: On the effects of dark matter spin tensor, Physics of the Dark
+Universe 40 (2023) 101197 [2204.00090].
+[16] M. Ranjbar, S. Akhshabi and M. Shadmehri, Gravitational slip parameter and gravitational
+waves in Einstein–Cartan theory, European Physical Journal C 84 (2024) 316 [2401.02129].
+[17] S.H. Pereira, A.M. Vicente, J.F. Jesus and R.F.L. Holanda, Dark matter from torsion in
+Friedmann cosmology, The European Physical Journal C 82 (2022) 356.
+[18] W. Hong, K. Jiao, Y.-C. Wang, T. Zhang and T.-J. Zhang, Novel Cosmological Joint
+Constraints in Multidimensional Observable Space with Redshift-free Inferences, Astrophysical
+Journal Supplement Series 268 (2023) 67 [2305.08047].
+[19] M. Moresco, Addressing the Hubble tension with cosmic chronometers, arXiv e-prints (2023)
+arXiv:2307.09501 [2307.09501].
+[20] D. Foreman-Mackey, D.W. Hogg, D. Lang and J. Goodman, emcee: The mcmc hammer,
+Publications of the Astronomical Society of the Pacific 125 (2013) 306.
+– 14 –
+
+[21] Planck Collaboration, Aghanim, N., Akrami, Y., Ashdown, M., Aumont, J., Baccigalupi, C.
+et al., Planck 2018 results - vi. cosmological parameters, A&A 641 (2020) A6.
+[22] G. Bruzual and S. Charlot, Stellar population synthesis at the resolution of 2003, Monthly
+Notices of the Royal Astronomical Society 344 (2003) 1000.
+[23] G. Worthey, S.M. Faber, J.J. Gonzalez and D. Burstein, Old Stellar Populations. V.
+Absorption Feature Indices for the Complete Lick/IDS Sample of Stars, Astrophysical Journal
+Supplement Series 94 (1994) 687.
+[24] M.L. Balogh, S.L. Morris, H.K.C. Yee, R.G. Carlberg and E. Ellingson, Differential Galaxy
+Evolution in Cluster and Field Galaxies at z˜0.3, The Astrophysical Journal 527 (1999) 54
+[astro-ph/9906470].
+[25] F. Villaescusa-Navarro, D. Angl´es-Alc´azar, S. Genel, D.N. Spergel, R.S. Somerville, R. Dave
+et al., The CAMELS Project: Cosmology and Astrophysics with Machine-learning Simulations,
+The Astrophysical Journal 915 (2021) 71 [2010.00619].
+[26] C. Zhang, H. Zhang, S. Yuan, S. Liu, T.-J. Zhang and Y.-C. Sun, Four new observational H(z)
+data from luminous red galaxies in the Sloan Digital Sky Survey data release seven, Research in
+Astronomy and Astrophysics 14 (2014) 1221 [1207.4541].
+[27] M. Moresco, A. Cimatti, R. Jimenez, L. Pozzetti, G. Zamorani, M. Bolzonella et al., Improved
+constraints on the expansion rate of the Universe up to z ˜1.1 from the spectroscopic evolution
+of cosmic chronometers, Journal of Cosmology and Astroparticle Physics 2012 (2012) 006
+[1201.3609].
+[28] J. Simon, L. Verde and R. Jimenez, Constraints on the redshift dependence of the dark energy
+potential, Phys. Rev. D 71 (2005) 123001 [astro-ph/0412269].
+[29] N. Borghi, M. Moresco and A. Cimatti, Toward a Better Understanding of Cosmic
+Chronometers: A New Measurement of H(z) at z 0.7, The Astrophysical Journal Letters 928
+(2022) L4 [2110.04304].
+[30] R. Jimenez, M. Moresco, L. Verde and B.D. Wandelt, Cosmic chronometers with photometry: a
+new path to H(z), Journal of Cosmology and Astroparticle Physics 2023 (2023) 047
+[2306.11425].
+[31] K. Jiao, N. Borghi, M. Moresco and T.-J. Zhang, New Observational H(z) Data from
+Full-spectrum Fitting of Cosmic Chronometers in the LEGA-C Survey, Astrophysical Journal
+Supplement Series 265 (2023) 48 [2205.05701].
+[32] D. Stern, R. Jimenez, L. Verde, M. Kamionkowski and S.A. Stanford, Cosmic chronometers:
+constraining the equation of state of dark energy. I: H(z) measurements, Journal of Cosmology
+and Astroparticle Physics 2010 (2010) 008 [0907.3149].
+[33] M. Moresco, L. Pozzetti, A. Cimatti, R. Jimenez, C. Maraston, L. Verde et al., A 6%
+measurement of the Hubble parameter at z˜0.45: direct evidence of the epoch of cosmic
+re-acceleration, Journal of Cosmology and Astroparticle Physics 2016 (2016) 014 [1601.01701].
+[34] E. Tomasetti, M. Moresco, N. Borghi, K. Jiao, A. Cimatti, L. Pozzetti et al., A new
+measurement of the expansion history of the Universe at z = 1.26 with cosmic chronometers in
+VANDELS, A&A 679 (2023) A96 [2305.16387].
+[35] M. Moresco, Raising the bar: new constraints on the Hubble parameter with cosmic
+chronometers at z ˜2., Monthly Notices of the Royal Astronomical Society 450 (2015) L16
+[1503.01116].
+[36] A.L. Ratsimbazafy, S.I. Loubser, S.M. Crawford, C.M. Cress, B.A. Bassett, R.C. Nichol et al.,
+Age-dating luminous red galaxies observed with the Southern African Large Telescope, Monthly
+Notices of the Royal Astronomical Society 467 (2017) 3239 [1702.00418].
+– 15 –
+
+[37] C. Marques and C. Martins, Low-redshift constraints on homogeneous and isotropic universes
+with torsion, Physics of the Dark Universe 27 (2020) 100416.
+– 16 –
+

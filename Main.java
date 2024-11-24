@@ -5,37 +5,37 @@ import java.util.List;
 import java.util.Scanner;
 import java.io.*;
 
+
 public class Main {
     public static void main(String[] args) {
+        /* ============================ DECLARANDO VARIAVEIS ============================ */
         HuffmanTrie huffman;
-
-        HashTable tabelaHash = new HashTable(7);
-
+        HashTable tabelaHash = new HashTable(31);
         Trie trie = new Trie();
-
         Scanner input = new Scanner(System.in);
         String documentos, descomprimida = "", opc, textoInserido;
-        String[] nomeArquivos = new String[7];
-        String[] comprimida = new String[7];
-        String[] arquivoIndividual = new String[30];
-
-        StringBuilder conteudoArquivos = new StringBuilder();  // variavel que ira conter o conteudo de todos os arquivos lidos
-        StringBuilder aux = new StringBuilder();   // variavel auxiliar para ajudar na individualizacao do conteudo do arquivos 
-
+        String[] nomeArquivos = new String[30], comprimida = new String[30], arquivoIndividual = new String[30];
+        StringBuilder conteudoArquivos = new StringBuilder(),  aux = new StringBuilder(); 
         File pasta;
-        File[] arquivosTxt; // lista que ira conter todos os caminhos de todos os arquivos .txt da pasta
+        File[] arquivosTxt;
+        Runtime runtime;
+        long huffmanInicio, huffmanTermino, leituraInicio, leituraTermino, hashInicio, hashTermino, trieInicio, trieTermino;
+        long memoriaAntesHuffman, memoriaHuffmanDepois, memoriaAntesTrie, memoriaTrieDepois, memoriaHahsAntes, memoriaHahsDepois;
+        int i = 0;
 
         // leitura dos documentos para serem comprimidos
-        // o usuario informa o caminho onde se encontra os arquivos
-        System.out.println("Inserir documentos: ");
+        System.out.println("Inserir documentos: "); // o usuario informa o caminho onde se encontra os arquivos
         // documentos = input.nextLine();
         documentos = "C:/Users/jhona/OneDrive/Faculdade/TrabalhoED/conveterArquivos";
         pasta = new File(documentos);
+        
+        leituraInicio = System.currentTimeMillis(); // pegando o tempo de inicio de leitura
+        runtime = Runtime.getRuntime(); // pegando memoria inicial da Trie
+        runtime.gc(); // limpa memoria antes de medir para tentar obter uma execução melhor e com estimativa melhor
+        memoriaAntesTrie = runtime.totalMemory() - runtime.freeMemory(); // calcula a memoria usada antes da indexacao
 
-        int i = 0;
-
+        /* ============================ LEITURA DO ARQUIVOS ============================ */
         if (pasta.exists() && pasta.isDirectory()) {
-
             System.out.println("Pasta encontrada! Lendo arquivos .txt");
 
             // lendo apenas os arquivos .txt
@@ -43,12 +43,9 @@ public class Main {
 
             // se o arquivo .txt atual NAO for nulo
             if (arquivosTxt != null) {
-
                 // iterando sobre todos os arquivos .txt encontrados
                 for (File arquivo : arquivosTxt) {
-
                     // limpando o conteudo antes de ler o novo arquivo
-                    // conteudoArquivos.setLength(0);
                     aux.setLength(0);
 
                     // lendo cada arquivo .txt palavra por palavra
@@ -58,17 +55,13 @@ public class Main {
                             String palavra = scanner.next();
                             conteudoArquivos.append(palavra).append(" "); // adicionando a palavra lida no conteudoArquivos
                             aux.append(palavra).append(" ");
-                            
-                            // adicionando palavra por palavra do arquivo em questao na trie
-                            trie.insert(palavra, arquivo.getName());
+                            trie.insert(palavra, arquivo.getName()); // adicionando palavra por palavra do arquivo em questao na trie
                         }
 
-                        // salvando o conteudo de cada arquivo em uma posicao diferente
-                        arquivoIndividual[i] = aux.toString();
+                        arquivoIndividual[i] = aux.toString(); // salvando o conteudo de cada arquivo em uma posicao diferente
                         conteudoArquivos.append("\n"); // separador entre arquivos
                     
-                        // salvando o nome do documento atual
-                        nomeArquivos[i] = arquivo.getName();
+                        nomeArquivos[i] = arquivo.getName(); // salvando o nome do documento atual
                         i++;
 
                         System.out.println("Arquivo " + arquivo.getName() + " lido com sucesso!");
@@ -77,49 +70,69 @@ public class Main {
                         e.printStackTrace();
                     }
                 }
-
             } else {
                 System.out.println("Nao foram encontrados arquivos .txt na pasta.");
             }
         } else {
             System.out.println("Erro ao inserir o caminho para leitura dos arquivos.");
         }
+        // pegando o tempo de termino da leitura
+        leituraTermino = System.currentTimeMillis(); 
+        runtime.gc();  
+        memoriaTrieDepois = (runtime.totalMemory() - runtime.freeMemory());
 
-        // criando a arvore de huffman
-        huffman = new HuffmanTrie(conteudoArquivos.toString());
-        //System.out.println("ALFABETO EM QUESTAO:\n");
-        //System.out.println(huffman.getHuffmanTable());
+        huffmanInicio = System.currentTimeMillis();
+        runtime = Runtime.getRuntime(); // pegando memoria inicial
+        runtime.gc(); // limpa memoria antes de medir para tentar obter uma execução melhor e com // estimativa melhor
+        memoriaAntesHuffman = runtime.totalMemory() - runtime.freeMemory(); // calcula a memoria usada antes da indexacao
+
+        huffman = new HuffmanTrie(conteudoArquivos.toString()); // criando a arvore de huffman
+
+        runtime.gc();
+        memoriaHuffmanDepois = (runtime.totalMemory() - runtime.freeMemory());
+        huffmanTermino = System.currentTimeMillis();
+
 
         if (documentos != null) {
             System.out.println("Documentos inseridos com sucesso!");
         }
+        
+        /* ============================ REALIZANDO A INDEXAÇÃO NA HASH ============================ */
 
-        // usuario escolhe qual funcao de hash ele deseja usar
-        System.out.println("Qual funçao de hashing (divisao/djb2): ");
+        System.out.println("Qual funçao de hashing (divisao/djb2): "); // usuario escolhe qual funcao de hash ele deseja usar
         opc = input.nextLine();
 
-        if (opc.equals("divisao")) {
 
-            // pegando o tempo de inicio
-            long inicioFunc1 = System.nanoTime();
+        /* ============================ HASH DIVISAO ============================ */
+        if (opc.equalsIgnoreCase("divisao")) {
+            hashInicio = System.currentTimeMillis(); // pegando o tempo de inicio da hash
 
-            // realizando a indexacao dos aquivos com a hash divisao
+            runtime = Runtime.getRuntime(); // pegando memoria inicial
+            runtime.gc(); 
+            memoriaHahsAntes = runtime.totalMemory() - runtime.freeMemory();
+
             for (int j = 0; j < i; j++) {
-                System.out.println("\nVARIAVEL DO ARQUIVO INDIVIDUAL: " + arquivoIndividual[j]);
+                System.out.println("Arquivo: " + nomeArquivos[j] + " - Indexado com sucesso!");
                 comprimida[j] = huffman.comprime(arquivoIndividual[j]);
                 tabelaHash.insercao(nomeArquivos[j], comprimida[j], "divisao");
             } 
 
+            runtime = Runtime.getRuntime(); // pegando memoria inicial
+            runtime.gc(); 
+            memoriaHahsDepois = runtime.totalMemory() - runtime.freeMemory(); // calcula a memoria usada antes da indexacao
+
             System.out.println("Documentos indexados com sucesso!\n");
 
-            System.out.println("TABELA HASH GERADA A PARTIR DA FUNCAO DE DIVISAO:\n");
-            tabelaHash.print();
+            hashTermino = System.currentTimeMillis();
 
-            System.out.println("Buscar palavra: ");
+            System.out.println("Buscar palavra: "); // usuario escolhe uma palavra para ser buscada na Trie
             textoInserido = input.nextLine();
 
-            // buscando a palavra na trie
-            List<String> arquivosEncontrados = trie.search(textoInserido);
+            trieInicio = System.nanoTime();  // calculando o tempo gasto para buscar uma palavra na trie
+           
+            List<String> arquivosEncontrados = trie.search(textoInserido);  // buscando a palavra na trie
+
+            trieTermino = System.nanoTime();
 
             if (arquivosEncontrados != null) {
                 String entradas = tabelaHash.get(textoInserido, "divisao");
@@ -132,8 +145,7 @@ public class Main {
 
                 System.out.println();
                 
-                // usuario escolhe um dos arquivos em que a palavra se encontra
-                System.out.println("Qual arquivo deseja abrir: ");
+                System.out.println("Qual arquivo deseja abrir: "); // usuario escolhe um dos arquivos em que a palavra se encontra
                 textoInserido = input.nextLine();
 
                 for (String arquivo : arquivosEncontrados) {
@@ -141,56 +153,69 @@ public class Main {
                     // se o arquivo for o buscado pelo usuario
                     if (arquivo.equals(textoInserido)) {
                         entradas = tabelaHash.get(textoInserido, "divisao");
-                        //System.out.println("COMPRIMIDO " + "   " + entradas);
-
                         if (entradas != null) {
                             descomprimida = huffman.descomprime(entradas);
-                            System.out.println("Descomprido: " + descomprimida);
+                            System.out.println("\n ======================================================== \n");
+                            System.out.println("Arquivo escolhido descomprimido:\n " + descomprimida);
+                            System.out.println("\n");
                             break;
 
                         } else {
                             System.out.println("Erro: Entrada não encontrada para descompressão!");
                         }
                     }
-                    
                 }
-
-                // pegando o tempo de finalizacao
-                long fimFunc1 = System.nanoTime();
-
-                // calculando o tempo
-                long tempoExecucaoFunc1 = fimFunc1 - inicioFunc1;
-
-                System.out.println("Tempo de execução da função hash DIVISAO: " + tempoExecucaoFunc1 + " nanosegundos");
-
             } else {
                 System.out.println("Palavra nao encontrada em nenhum arquivo!");
             }
 
+                /* ============================ APRESENTANDO O TEMPO MEMEORIA GASTOS ============================ */
+                System.out.println("Tempo gastos para ler todos os arquivos: "  + (leituraTermino-leituraInicio) + " ms");
+                System.out.println("Tempo gasto para criar a arvore de Huffman com todos os arquivos lidos: " + (huffmanTermino-huffmanInicio) + " ms");
+                System.out.println("Tempo gasto para buscar uma palavra na Trie: " + (trieTermino-trieInicio) + " ns");
+                System.out.println("Tempo gasto para indexar todos os ducumentos na HASH: " + (hashTermino-hashInicio) + " ms");
 
+                System.out.println("Memoria utilizada pela Huffman: " + Math.abs(memoriaHuffmanDepois-memoriaAntesHuffman) + " bytes");
+                System.out.println("Memoria utilizada pela Trie: " + (memoriaTrieDepois-memoriaAntesTrie) + " bytes");
+                System.out.println("Memoria utilizada pela Hash: " + (memoriaHahsDepois-memoriaHahsAntes) + " bytes");
 
-        } else if (opc.equals("djb2")) {
+        /* ============================ HASH DJB2 ============================ */
+
+        } else if (opc.equalsIgnoreCase("djb2")) {
             
             // pegando o tempo de inicio
-            long inicioFunc1 = System.nanoTime();
+            hashInicio = System.currentTimeMillis();
+
+            runtime = Runtime.getRuntime(); // pegando memoria inicial
+            runtime.gc(); 
+            memoriaHahsAntes = runtime.totalMemory() - runtime.freeMemory();
 
             // realizando a indexaçao dos arquivos com a hash DJB2
             for (int j = 0; j < i; j++) {
-
+                System.out.println("Arquivo: " + nomeArquivos[j] + " - Indexado com sucesso!");
                 comprimida[j] = huffman.comprime(arquivoIndividual[j]);
                 tabelaHash.insercao(nomeArquivos[j], comprimida[j], "djb2");
             }
 
+            runtime = Runtime.getRuntime(); // pegando memoria inicial
+            runtime.gc(); 
+            memoriaHahsDepois = runtime.totalMemory() - runtime.freeMemory(); // calcula a memoria usada antes da indexacao
+
             System.out.println("Documentos indexados com sucesso!\n");
             
-            System.out.println("TABELA HASH GERADA A PARTIR DA FUNCAO DE DJB2:\n");
-            tabelaHash.print();
+            hashTermino = System.currentTimeMillis();
+
 
             System.out.println("Buscar palavra: ");
             textoInserido = input.nextLine();
 
+            
+            trieInicio = System.nanoTime(); // calculando o tempo gasto para buscar uma palavra na trie
+
             // buscando a palavra na trie
             List<String> arquivosEncontrados = trie.search(textoInserido);
+
+            trieTermino = System.nanoTime();
 
             if (arquivosEncontrados != null) {
                 String entradas = tabelaHash.get(textoInserido, "djb2");
@@ -203,39 +228,43 @@ public class Main {
 
                 System.out.println();
 
-                // usuario escolhe um dos arquivos em que a palavra se encontra
-                System.out.println("Qual arquivo deseja abrir: ");
+                System.out.println("Qual arquivo deseja abrir: "); // usuario escolhe um dos arquivos em que a palavra se encontra
                 textoInserido = input.nextLine();
+
+                runtime = Runtime.getRuntime(); // pegando memoria inicial
+                runtime.gc();
+                memoriaHahsAntes = runtime.totalMemory() - runtime.freeMemory();
 
                 for (String arquivo : arquivosEncontrados) {
 
                     // se o arquivo atual é o que o usuário escolheu
                     if (arquivo.equals(textoInserido)) {
                         entradas = tabelaHash.get(textoInserido, "djb2");
-                        // System.out.println("COMPRIMIDO " + "  " + entradas);
-
                         if (entradas != null) {
                             descomprimida = huffman.descomprime(entradas);
-                            System.out.println("Descomprido: " + descomprimida);
+                            System.out.println("\n ======================================================== \n");
+                            System.out.println("Arquivo escolhido descomprimido: \n"+ descomprimida);
+                            System.out.println("\n");
                             break;
                         } else {
                             System.out.println("Erro: Entrada não encontrada para descompressão!");
                         }
                     }
-                    
                 }
-
-                // pegando o tempo de finalizacao
-                long fimFunc1 = System.nanoTime();
-
-                // calculando o tempo
-                long tempoExecucaoFunc1 = fimFunc1 - inicioFunc1;
-
-                System.out.println("Tempo de execução da função hash DJB2: " + tempoExecucaoFunc1 + " nanosegundos");
 
             } else {
                 System.out.println("Palavra nao encontrada!");
             }
+
+             /* ============================ APRESENTANDO O TEMPO MEMEORIA GASTOS ============================ */
+             System.out.println("Tempo gastos para ler todos os arquivos: "  + (leituraTermino-leituraInicio) + " ms");
+             System.out.println("Tempo gasto para criar a arvore de Huffman com todos os arquivos lidos: " + (huffmanTermino-huffmanInicio) + " ms");
+             System.out.println("Tempo gasto para buscar uma palavra na Trie: " + (trieTermino-trieInicio) + " ns");
+             System.out.println("Tempo gasto para indexar todos os ducumentos na HASH: " + (hashTermino-hashInicio) + " ms");
+
+             System.out.println("Memoria utilizada pela Huffman: " + Math.abs(memoriaHuffmanDepois-memoriaAntesHuffman) + " bytes");
+             System.out.println("Memoria utilizada pela Trie: " + (memoriaTrieDepois-memoriaAntesTrie) + " bytes");
+             System.out.println("Memoria utilizada pela Hash: " + (memoriaHahsDepois-memoriaHahsAntes) + " bytes");
 
             input.close();
         }

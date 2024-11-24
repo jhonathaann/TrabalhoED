@@ -1,0 +1,190 @@
+Highlights of Spanish Astrophysics XII, Proceedings of the XVI Scientific Meeting of the Spanish 
+Astronomical Society held on July 15 - 19, 2024, in Granada, Spain. M. Manteiga, F. González 
+Galindo, A. Labiano Ortega, M. Martínez González, N. Rea, M. Romero Gómez, A. Ulla Miguel, G. 
+Yepes, C. Rodríguez López, A. Gómez García and C. Dafonte (eds.), 2025 
+On the chlorine abundance in H ii regions
+Orte-Garc´ıa, M.1,2, Esteban, C.1,2, M´endez-Delgado, J.E.3, and Garc´ıa-Rojas,
+J.1,2
+1 Instituto de Astrof´ısica de Canarias, E-38205 La Laguna, Tenerife, Spain
+2 Departamento de Astrof´ısica, Universidad de La Laguna, E-38206 La Laguna, Tenerife,
+Spain
+3 Astronomisches Rechen-Institut, Zentrum f¨ur Astronomie der Universit¨at Heidelberg,
+M¨onchhofstraße 12-14, D-69120 Heidelberg, Germany
+Abstract
+Chlorine (Cl) is a chemical element of the group of the halogens and is between the 17th and
+the 20th most abundant elements in the Solar System. It is thought to be produced from the
+capture of a proton or neutron by specific alpha-element isotopes during both hydrostatic
+and explosive oxygen burning, though some contribution may come from Type Ia super-
+novae. Cl lines are quite rare in stellar spectra, so most of the information available about
+its abundance comes from analyzing the emission lines of ionized nebulae, especially the
+collisionally excited lines of Cl2+ ([Cl iii] λλ5518,5538). Our goal is to accurately determine
+the Cl abundance in H ii regions, and gather more information about its nucleosynthetic
+origin. For this work we used a sample of observations that encompasses the deepest spectra
+of H ii regions available in the literature, from both the Milky Way and other galaxies in the
+local Universe, covering a range of oxygen (O) abundances, 12+log(O/H), from 7.18 to 8.70.
+As a first step, we determine the most representative electron temperature of the zone of the
+nebulae where the Cl2+ ion lies. To this aim we used a grid of photoionization models and
+diagnostics valid for other ions, as that parameter cannot be determined directly through
+[Cl iii] lines. We then computed the total Cl abundance using different sets of ionization
+correction factors to account for the contribution from unseen ionization stages.
+1
+Introduction
+H ii regions are nebulae photoionized by the ultraviolet radiation from young, massive O-
+and B-type stars, with effective temperatures ranging between 28,000 and 50,000 K. These
+nebulae are key to understanding the present-day chemical composition of the interstellar
+medium, shaped by stellar nucleosynthesis and Galactic chemical evolution. By studying
+arXiv:2410.18673v1  [astro-ph.GA]  24 Oct 2024
+
+2
+On the chlorine abundance in H ii regions
+their emission line spectra, we can derive both the physical conditions of the gas —such as
+electron density and temperature (ne, Te)— and the elemental abundances.
+This study focuses on chlorine (Cl), a halogen group element, which is approximately the
+17th most abundant element in the Solar System [1]. Cl is mainly analyzed in H ii regions,
+because its spectral lines are extremely rare in stellar spectra, making nebular emission lines
+the main source of abundance data. The [Cl iii] lines at 5517 and 5537 ˚A, the brightest Cl
+lines in the optical range, are typically used to determine the Cl abundance.
+Under typical nebular conditions, Cl2+ is the main contributor to the total Cl abundance,
+with smaller contributions of Cl+ and Cl3+. The lines of these last two ions, such as [Cl ii]
+λ9123 and [Cl iv] λ8046, are only detectable in the deepest spectra. In most cases, only
+[Cl iii] lines are available, so ionization correction factors (ICFs) are needed to account for
+the unseen ions. Additionally, the Te of the Cl2+ zone cannot be easily determined, so we
+rely on temperature relations and diagnostics for other ions to estimate it. This is the main
+aim of our study.
+2
+Photoionization models and observational sample
+To achieve the objectives of this project, we used photoionization models to simulate the
+spectra of H ii regions and compute their physical properties.
+Specifically, we employed
+the BOND photoionization model grid [9], available in the Mexican Million Models database
+(3MdB) [8], and applied a series of constraints to select the most appropriate models for our
+observational sample. The analysis of the model outputs was conducted using the PyNeb
+package [6], which calculates ne, Te, and ionic abundances from the modeled spectra.
+In addition to our primary goal, we aim to verify the applicability of certain temperature
+relationships to observational data.
+For this, a sample of 148 H ii regions and 120 star-
+forming galaxies with detected [Cl iii] lines has been used.
+This sample constitutes the
+largest sample of ionized nebulae with reliable determinations of Cl abundances. We include
+our own observations (see compilation in [7]) and additional high-quality spectra from the
+literature. For each region, we reported line intensities and recomputed ne, Te and ionic and
+elemental abundances.
+To determine the Cl2+ abundance, we initially used Te(S2+), due to their similar ionization
+potentials. However, when no [S iii] diagnostic lines are available, we used a temperature
+relationship [3]. This brought us back to the models and our main goal: identifying a reliable
+temperature relationship for Cl2+.
+Instead of relying on S2+, we explored a relationship
+between Te(Cl2+) and Te(O2+) and Te(N+) obtained from the models, chosen because the
+ionization potential of Cl2+ is intermediate between to those of O2+ and N+, and Te(O2+)
+is typically measured with high accuracy through the classical [O iii] λλ4959,5007λ4363 line
+ratio in most H ii regions.
+
+Orte-Garc´ıa, M. et al.
+3
+3
+Temperature relationships
+To derive the temperature relationship we are looking for, we used the photoionization model
+grid to plot Te(Cl2+) against Te(O2+) and Te(N+), as shown in Figs. 1a and 1b, respectively.
+The observed behavior is: N+, which represents regions with lower ionization, fits better at
+lower temperatures, while O2+ provides a better fit in higher ionized regions.
+(a) Te(O2+)
+(b) Te(N+)
+Figure 1: Te(Cl2+) vs. (a) Te(O2+) and (b) Te(N+) obtained from photoionization models.
+The points are color-coded by its ionization degree. The red line is a linear fit to the points.
+In the bottom panel, we show the values of the standard deviation, σ, to the fit in bins of
+1 000 K. The mean value of σ is shown inside the red box.
+The key conclusion from this analysis is that neither temperature seems to be appropriate
+for the whole range of ionization degrees, leading us to propose a representative temperature
+(Trep), defined as:
+Trep = Te(N+) ·
+
+1 −O2+
+O
+
++ Te(O2+) · O2+
+O
+(1)
+This captures the trend observed in Fig. 1: for lower ionization degrees, Te(N+) has more
+weight, while Te(O2+) dominates at higher ionization. Re-plotting with this new temper-
+ature yields Figure 2, which shows an improved behavior across ionization extremes and
+a significantly reduced standard deviation. Henceforth, we will compare results from our
+observational sample using this representative temperature.
+4
+Cl abundances
+Once we have calculated the appropriate physical conditions, the next step is to complete the
+chemical abundance analysis of our observational sample using PyNeb [6]. We started with
+the determination of the Cl2+ ionic abundance. We then calculated the total Cl abundance
+using two different ICF schemes [2, 4], one of which directly calculates the Cl/O ratio. This
+
+4
+On the chlorine abundance in H ii regions
+Figure 2: Te(Cl2+) vs. Trep(O2+), from photoionization models. Color-code, lines and panels
+are equivalent to those shown in Fig. 1.
+ratio is of interest because, Cl and O are both thought to be formed in hydrostatic and
+explosive oxygen burning in massive stars. Moreover, previous studies suggest that this ratio
+should remain constant and close to the solar value [5].
+We first plotted the Cl2+/O2+ ratio as a function of the ionization degree for our sample,
+alongside the functions of the different ICFs, for both Te(S2+) and Trep (see Figs. 3a and 3b,
+respectively). The results show that the ICF from [2] is valid across the full ionization range,
+while the ICF proposed by [4] becomes applicable only when the ionization degree exceeds
+0.2. However, at higher ionization degrees, the ICF of [4] fits the observational trend better,
+while the ICF from [2] does not.
+Finally, using the ICF equations, we calculated and plotted the Cl/O ratio as a function
+of the ionization degree, resulting in the plots shown in Fig. 4. We observe that Trep tends to
+reduce the data dispersion, and that the ICF from [4] gives smaller amplitudes in the Cl/O
+variations as a function of ionization degree, except at the highest ionization degrees. The
+peak on the right-hand side, more pronounced with Trep, could be due to the relationship
+between the temperature and ionization degree. Using Te(S2+) introduces this dependence
+when calculating the total Cl abundance, while Trep introduces it at the Cl2+ abundance
+calculation stage, which might increase the dispersion in these points and, thus, the overall
+dispersion of the mean value.
+The key takeaway is that none of the combinations fully
+eliminates the dependence on either temperature or ionization degree.
+
+Orte-Garc´ıa, M. et al.
+5
+(a) Te(S2+)
+(b) Trep
+Figure 3: Cl2+/O2+ as a function of the ionization degree, calculated using: (a) Te(S2+),
+and (b) Trep for the observational sample. In both figures, the blue points correspond to star
+forming galaxies, while the black ones are H ii regions. The dashed horizontal line marks the
+Solar Cl/O used as a reference, and the dotted lines display the curves of the different ICFs
+tested.
+5
+Preliminary conclusions and future work
+The preliminary conclusions of this study are, first, that the proposed representative tem-
+perature (Trep) is valid for representing the region where Cl2+ is located. Second, despite
+our expectations, none of the combinations of ICF and temperature used in this analysis
+completely eliminates the dependence on either temperature or ionization degree. Lastly,
+and most importantly, as we will describe in detail in future publications, the results seem to
+rule out significant contributions apart from the hydrostatic and explosive oxygen burning in
+massive stars in the nucleosynthesis of chlorine.
+As for next steps, we plan to further investigate the ionization degree dependence intro-
+duced by the chosen temperature. Additionally, we are exploring alternative temperature
+relationships applicable to other ions, which is a key focus of our ongoing work.
+Acknowledgments
+We acknowledge financial support from the Agencia Estatal de Investigaci´on of the Ministerio de Cien-
+cia e Innovaci´on (AEI- MCINN) under grant “Espectroscop´ıa de campo integral de regiones H II lo-
+cales. Modelos para el estudio de regiones H II extragal´acticas” with reference DOI:10.13039/501100011033.
+References
+[1] Asplund, M., Grevesse, N., Sauval, A. J. & Scott, P. 2009, ARA&A, 47, 481
+[2] Amayo, A., Delgado-Inglada, G. & Stasi´nska, G. 2021, MNRAS, 505, 2361
+
+6
+On the chlorine abundance in H ii regions
+Figure 4:
+Cl/O as a function of the ionization degree for the sample objects. The left and
+right columns correspond to the ICF by [2] and [4], respectively. The top and bottom rows
+show the results for Te(S2+) and Trep, respectively. Blue points correspond to star forming
+galaxies and black ones to H ii regions. The dashed horizontal line marks the mean Cl/O of
+the points, the red diamonds show the mean values for 0.2 wide bins, and the golden triangle
+indicates the Solar Cl/O used as a reference.
+[3] Garnett, Donald R. 1992, The Astronomical Journal, 103, 1330
+[4] Izotov, Y. I., Stasi´nska, G., Meynet, G., Guseva, N. G. & Thuan, T. X. 2006, A&A, 448, 955
+[5] Lodders, K. & Fegley, B. 2023, Geochemistry, 83, 125957
+[6] Luridiana, V., Morisset, C. & Shaw, R.A. 2015, A&A, 573, A42
+[7] M´endez-Delgado, J.E., Esteban, C., Garc´ıa-Rojas, J., Arellano-C´ordova, K.Z., Kreckel, K., G´omez-
+Llanos, V., Egorov, O.V., Peimbert, M. & Orte-Garc´ıa, M. 2023, MNRAS, 523, 2952
+[8] Morisset, C., Delgado-Inglada, G., & Flores-Fajardo, N. 2015, RMxAA, 51, 103
+[9] Vale Asari, N., Stasi´nska, G., Morisset, C. & Cid Fernandes, R. 2016, MNRAS, 460, 1739
+

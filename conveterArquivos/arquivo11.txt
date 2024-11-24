@@ -1,0 +1,437 @@
+Contrib. Astron. Obs. Skalnat´e Pleso -/-, 1 – 10, (2024)
+DOI: to be assigned later
+Post-common-envelope planetary nebulae
+D. Jones1,2,3
+1 Instituto de Astrof´ısica de Canarias, 38205 La Laguna, Tenerife, Spain,
+(E-mail: djones@iac.es)
+2 Departamento de Astrof´ısica, Universidad de La Laguna, E-38206 La
+Laguna, Tenerife, Spain,
+3 Nordic Optical Telescope, Rambla Jos´e Ana Fern´andez P´erez 7, 38711,
+Bre˜na Baja, Spain,
+Received: October 2024; Accepted: ?
+Abstract. Close-binary central stars of planetary nebulae offer a unique tool
+with which to study the critical and yet poorly understood common-envelope
+phase of binary stellar evolution. Furthermore, as the nebula itself is thought to
+comprise the ionised remnant of the ejected common envelope, such planetary
+nebulae can be used to directly probe the mass, morphology and dynamics
+of the ejecta. In this review, I summarise our current understanding of the
+importance of binarity in the formation of planetary nebulae as well as what
+they may be able to tell us about the common-envelope phase – including the
+possible relationships with other post-common-envelope phenomena like stellar
+mergers, novae and type Ia supernovae.
+Key words: binaries: close – planetary nebulae: general – stars: jets
+1. Introduction
+It is now almost half a century since Paczynski (1976) first proposed the common-
+envelope (CE) scenario as the most viable pathway towards the formation of
+close binaries with an evolved component. Since then, the evidence for the im-
+portance of the CE has only grown, however key aspects of the processes at work
+remain enigmatic (Ivanova et al., 2013). At the time, Paczynski (1976) already
+recognised the importance of planetary nebulae (PNe) in understanding the CE
+phase, stating “Observational discovery of a short period binary being a nucleus
+of a planetary nebula would provide very important support for the evolutionary
+scenario”, and the first example was discovered that same year by Bond (1976).
+Subsequent studies of post-CE planetary nebulae (PNe) have already taught us
+much about the CE and they continue to represent a key tool with which to
+shed light on this critical phase of binary evolution (Jones, 2020).
+From the perspective of the PN community, the principal interest in CE
+evolution is the ease with which it can explain the wide range of aspherical
+morphologies observed in PNe (Balick & Frank, 2002; Garc´ıa-Segura et al., 2018;
+arXiv:2411.06831v1  [astro-ph.SR]  11 Nov 2024
+
+2
+D. Jones
+De Marco et al., 2022). However, until recently, there was a reluctance to accept
+that binarity was the primary shaping mechanism in PNe due to the lack of
+known binary central stars. In the early 2000s, only 16 post-CE PNe were known
+(a couple of which have since been shown to be wide binaries, false associations
+or non-PNe) leading to the estimate that roughly 10% of PNe hosted close binary
+stars (Bond, 2000). Exploitation of wide-field surveys, like OGLE, Kepler and
+TESS, has since led to an explosion of new discoveries (Miszalski et al., 2009;
+Jacoby et al., 2021; Aller et al., 2024), taking the total now to over 100 known
+post-CE central stars1. These studies have placed a hard lower limit on the
+binary fraction of 20%, while other probes (such as radial velocities, composite
+spectra and infrared excesses) have provided much higher estimates (perhaps as
+high as 80%; De Marco et al., 2004; Douchin et al., 2015).
+The minimum 20% post-CE fraction already has one critical implication for
+our understanding of PNe – it is likely that some stars which our textbooks
+would say should produce an observable PN, in fact, do not. Simply put, based
+on the main sequence binary fraction and period distribution, one would not
+expect as many as 20% of all low- and intermediate-mass stars to experience
+a CE phase, let alone survive one without merging. Clearly, with such a large
+uncertainty on the true post-CE binary fraction in PNe (20–80%), it is similarly
+uncertain just how large the discrepancy between the main sequence and PN
+phase really is. However, there are indications that it may indeed be significant.
+Population synthesis studies have found that perhaps around one fifth of ex-
+pected PN progenitors due not lead to observable PNe (potentially consistent
+with only binaries leading to PNe; Moe & De Marco, 2006), while as many
+as 50% of central stars exhibit properties that are inconsistent with single-star
+evolutionary tracks (Weidmann et al., 2020).
+As a result of conservation of angular momentum during the ejection, the
+CE is always expected to be preferentially deposited in the orbital plane of the
+binary thus leading to nebular symmetry axes which lay perpendicular to this
+plane. While only nine PNe have been the subject of sufficiently detailed study to
+constrain both their nebular inclinations and central binary orbital inclinations,
+the correlation is striking and entirely consistent with the CE shaping each and
+every one. Indeed, the probability of finding such an alignment in these PNe
+by chance has been shown to be less than one in a million (Munday et al.,
+2020). Nonetheless, there is significant morphological diversity, even among this
+sample, meaning that, while the CE has clearly played a role in their shaping,
+the exact processes at work may vary appreciably between (Hillwig et al., 2016).
+Thus, it now seems beyond doubt that CE evolution is a critical aspect of
+PN formation and evolution, even though the precise details of this are still the
+subject of active research (Jones & Boffin, 2017; Boffin & Jones, 2019). But,
+perhaps of greater interest for the wider astronomical community, we are now
+in a position to use post-CE PNe to try and understand the CE phase itself. The
+1A regularly updated list is maintained by the author at http://drdjones.net/bCSPN.
+
+Post-common-envelope planetary nebulae
+3
+nebular material in these PNe is thought to comprise the ejected CE, offering a
+unique opportunity to study the ejecta directly (CE ejecta can also be observed
+in luminous red novae, but these represent “failed” CE events, where the stars
+merged before fully ejecting the donor’s envelope). Furthermore, the short-lived
+nature of PNe (τ ∼30 kyr) means that post-CE central stars of PNe have not
+yet had time to adjust following the CE ejection. As such, post-CE PNe are
+an invaluable tool with which to study the CE phase leading to potentially
+interesting conclusions for a wide-range of other post-CE phenomena.
+2. Pre-CE mass transfer
+The first step towards using the population of post-CE central stars of PNe to
+try and understand the CE phase is to constrain the properties of individual
+post-CE central stars. Most have been discovered through their photometric
+variability meaning that only their orbital periods are known. In order to de-
+termine the properties of the stars themselves (masses, temperature, radii), one
+must obtain follow-up observations that allow for simultaneous modelling of
+light and radial velocity curves (e.g., Jones et al., 2022), and/or spectral analy-
+sis using model atmospheres (Hillwig et al., 2017).
+While the number of central stars with well-constrained properties remains
+relatively small, principally due to the painstaking nature of the required follow-
+up observations and the complications of the modelling, one can already draw
+remarkable conclusions. Where the companion to the nebula progenitor is a
+main-sequence (MS) star, they are always2 found to be inflated (often by a
+factor of ×2–3) with respect to isolated MS stars of the same mass (Jones
+et al., 2015). This inflation is almost certainly due to accretion, with further
+signposts of this accretion coming from the chemical contamination observed
+in the companion of the central star of The Necklace nebula (Miszalski et al.,
+2013).
+Accretion during the CE phase is expected to be minimal (Sandquist et al.,
+1998), so it is probable that the accretion onto the companion happens before
+CE. Further evidence for accretion prior to the CE comes from the kinematical
+ages of the polar outflows observed in some post-CE PNe. These polar outflows,
+thought to be tracers of the mass transfer/accretion, are generally found to
+predate the ejection of the central nebula (and thus the ejection of the CE) by
+a few hundred to a few thousand years (Corradi et al., 2011; Miszalski et al.,
+2011). It seems likely that this pre-CE mass transfer might be associated with
+a period of wind Roche-lobe overflow which could last for several thousands of
+years as indicated by the jets observed in Fleming 1 (Boffin et al., 2012).
+2Except the companion to the central star of PN M 3-1, which was found by Jones et al.
+(2019) to be of a normal size but extremely close to filling its Roche lobe (this system will be
+discussed more in section 5).
+
+4
+D. Jones
+It is important to note that no inflation is observed in the MS companions of
+more evolved post-CE binaries (indeed these systems are excellent probes of the
+mass-radius relationship of late-type MS stars; Parsons et al., 2018). This might,
+at first, appear puzzling when one takes into account that the thermal timescales
+for these stars are too long for them to have relaxed back to a normal state.
+However, models predict that for intermediate values of accretion efficiency and
+rate, the response of fully convective stars is to become partially convective
+(Prialnik & Livio, 1985), and it is thus the convective layer formed in the outer
+envelope which expands rather than the star as a whole. The relaxation of this
+convective layer can then occur on a much shorter timescale (Jones et al., 2022).
+3. Conditions to experience (and survive) a CE
+The characterization of post-CE central stars has revealed a dearth of early
+type-companions (Brown et al., 2019). This is consistent with the idea that
+large mass ratios are required to initiate unstable Roche lobe overflow and thus
+a CE event (Pavlovskii & Ivanova, 2015). The same characterization efforts
+have also revealed a number of candidates to have experienced the CE while on
+the red giant branch (RGB). These stars are analogous to subdwarf B binaries
+(e.g., Schaffenroth et al., 2015) and serve as a clear demonstration that RGB
+CE events can both be survived (without merging) and produce an observable
+PN (Jones et al., 2022).
+A handful of central stars have been shown to have white dwarf companions,
+being detected either by radial velocity variability (Boffin et al., 2012) or pho-
+tometric variability due to tidal deformations (Santander-Garc´ıa et al., 2015) –
+as opposed to the sinusoidal photometric variability due to irradiation which
+is typical for MS companions. If one extrapolates from this to assume that all
+central stars showing photometric variability due to tidal deformations are dou-
+ble degenerates (DD; Hillwig et al., 2010), then a very significant fraction of all
+post-CE central stars are DD (particularly when one takes into account that
+these systems should be harder to detect due to the low amplitudes of variabil-
+ity for most configurations). These DD post-CE central stars may have formed
+through two consecutive CE phases (Nelemans & Tout, 2005), but their prop-
+erties are more consistent with having avoided a CE when the first component
+evolved off the asymptotic giant branch (AGB), with the mass transfer at this
+stage being stable due to the initial mass ratio being close to unity (Woods et al.,
+2012). Understanding the frequency and properties (namely masses and orbital
+periods) of DD central stars of PNe will likely have important implications for
+the constraining the pathways towards type ia supernovae (Santander-Garc´ıa
+et al., 2015).
+
+Post-common-envelope planetary nebulae
+5
+4. The missing mass problem
+In the single-star scenario, the bright central shells of PNe contain only a small
+fraction of the mass that originally comprised the progenitor’s envelope, with
+the vast majority residing in a very low surface brightness halo (Villaver et al.,
+2002). In the case of a CE event, the entirety of the donor’s envelope is expected
+to be ejected on a very short timescale, subsequently forming the PN. Thus one
+would expect post-CE PNe to be significantly more massive than their single star
+counterparts, however Santander-Garc´ıa et al. (2022) showed that, in fact, there
+is very little difference between the masses of the two populations. Furthermore,
+studying the observed masses of four PNe for which data of the central stars
+permits the reconstruction of the CE phase and an estimation of the envelope
+mass, they found that the masses of the PNe represent only a fraction of the
+envelope masses of the donors (roughly 60% for the two DD systems analysed,
+but as low as 1% for Abell 63 which has a MS companion). This brings into
+question whether the nebulae surrounding post-CE central stars are indeed the
+ejected CE or rather the product of some much later phase of mass-loss when
+the CE has already dissipated (Corradi et al., 2015).
+5. Nebular abundances and the link to novae
+There are obvious links between post-CE PNe and novae, in particular the dis-
+covery of an ancient PN surrounding nova V458 Vul (Wesson et al., 2008a). How-
+ever, there are also other less obvious connections. The central star of PN M 3-1
+was found by Jones et al. (2019) to have a MS companion which is very close to
+Roche-lobe filling. This means that as the system evolves there is potential for
+mass transfer from the companion onto the central star in the relatively near
+future, possibly leading to a nova eruption inside the expanding PN similar to
+that of Nova V458 Vul.
+Further connections between post-CE PNe and novae are found in their
+abundance patterns, with some of the shortest period central stars being as-
+sociated with extreme abundance discrepancy PNe (Wesson et al., 2018). The
+abundances in these PNe are discrepant by a factor of five or more depending
+on whether they are derived using recombination lines or collisionally-excited
+emission lines. These discrepancies indicate the presence of a second (often
+centrally-concentrated) high-metallicty gas phase in these PNe (Garc´ıa-Rojas
+et al., 2016), where the abundances of this second gas phase are similar to those
+observed in neon novae (Wesson et al., 2008b).
+6. Pre-PNe and the link to luminous red novae
+Pre-PNe are thought to represent the intermediate phase between the central
+star having left the AGB but not yet being hot enough to fully ionise the sur-
+
+6
+D. Jones
+rounding nebula. As such, one might expect to find a similar post-CE fraction
+inside pre-PNe to that found in PNe. However, despite years of dedicated study,
+no post-CE central star has been found inside a pre-PN (see Hrivnak et al., 2011,
+2017, 2022, 2024, and many, many more). This is perhaps indicative that the
+CE leads to a shortened pre-PN phase (reducing the likelihood of discovery) or
+even that pre-PNe and post-CE PNe represent distinct evolutionary pathways.
+Intriguingly, the ejecta properties of luminous red novae – a class of tran-
+sients associated with CE mergers – are strikingly similar to those of pre-PNe
+(Kami´nski et al., 2018), offering a potential explanation for the dearth of sur-
+viving post-CE binaries in pre-PNe. Although, it must be highlighted that much
+progress has been made linking the morphologies of pre-PNe with wide stellar
+companions (Decin et al., 2020), several of which are known in both pre-PNe
+(e.g., S´anchez Contreras et al., 2004) and PNe (e.g., Jones et al., 2017).
+7. Conclusions
+Binary evolution (both CE and wider) plays a key role in the formation of a sig-
+nificant fraction, perhaps the majority, of PNe (some might even argue all!). This
+makes PNe an important test bed with which to study binary stellar evolution
+– in particular the poorly understood CE phase, which has been demonstrated
+to be responsible for at least one fifth of all PNe. The fact that post-CE PNe
+should be among the youngest observable post-CE systems, potentially allowing
+for direct observations of both the ejected envelope and the surviving post-CE
+binary, furthermore makes them a unique probe of the CE.
+The observed population of post-CE PNe confirms the theoretical expecta-
+tions that the CE is preferentially ejected in the orbital plane of the binary and
+that a relatively large initial mass ratio is required in order for unstable mass
+transfer to occurr. There are also strong indications of pre-CE mass transfer
+which can chemically contaminate the companion (now the favoured hypothesis
+for the formation of carbon dwarfs; Whitehouse et al., 2021) as well as (tem-
+porarily) causing their radii to grow. However, not all properties of post-CE PNe
+are so easily understood – the so-called missing mass problem, and the origins
+of a second chemically-enriched gas phase in high abundance discrepancy neb-
+ulae are particularly puzzling. The resolution of these puzzles will undoubtedly
+further our understanding of the CE phase as well as of other CE progeny.
+Acknowledgements. DJ would like to thank the organisers of Kopal 2024 for their
+kind invitation, which was particularly meaningful given that Zden˘ek Kopal is his
+academic great-great grandfather (i.e. the PhD supervisor of his PhD supervisor’s
+PhD supervisor’s PhD supervisor).
+DJ acknowledges support from the Agencia Estatal de Investigaci´on del Ministerio
+de Ciencia, Innovaci´on y Universidades (MCIU/AEI) and the European Regional De-
+velopment Fund (ERDF) with reference PID-2022-136653NA-I00 (DOI:10.13039/501100011033).
+DJ also acknowledges support from the Agencia Estatal de Investigaci´on del Ministe-
+
+Post-common-envelope planetary nebulae
+7
+rio de Ciencia, Innovaci´on y Universidades (MCIU/AEI) and the the European Union
+NextGenerationEU/PRTR with reference CNS2023-143910 (DOI:10.13039/501100011033).
+References
+Aller, A., Lillo-Box, J., & Jones, D., Planetary nebulae seen with TESS: New and revis-
+ited short-period binary central star candidates from Cycles 1 to 4. 2024, Astronomy
+and Astrophysics, 690, A190, DOI: 10.1051/0004-6361/202450942
+Balick, B. & Frank, A., Shapes and Shaping of Planetary Nebulae. 2002, Annual Review
+of Astron and Astrophys, 40, 439, DOI: 10.1146/annurev.astro.40.060401.093849
+Boffin, H. M. J. & Jones, D. 2019, The Importance of Binaries in the Formation and
+Evolution of Planetary Nebulae (Springer Cham)
+Boffin, H. M. J., Miszalski, B., Rauch, T., et al., An Interacting Binary System Powers
+Precessing Outflows of an Evolved Star. 2012, Science, 338, 773, DOI: 10.1126/sci-
+ence.1225386
+Bond, H. E., Objects common to the Catalogue of Galactic Planetary Nebulae and
+the General Catalogue of Variable Stars. 1976, Publications of the ASP, 88, 192,
+DOI: 10.1086/129923
+Bond, H. E., Binarity of Central Stars of Planetary Nebulae. 2000, in Astronomical
+Society of the Pacific Conference Series, Vol. 199, Asymmetrical Planetary Nebulae
+II: From Origins to Microstructures, ed. J. H. Kastner, N. Soker, & S. Rappaport,
+115
+Brown, A. J., Jones, D., Boffin, H. M. J., & Van Winckel, H., On the post-common-
+envelope central star of the planetary nebula NGC 2346. 2019, Monthly Notices of
+the RAS, 482, 4951, DOI: 10.1093/mnras/sty2986
+Corradi, R. L. M., Garc´ıa-Rojas, J., Jones, D., & Rodr´ıguez-Gil, P., Binarity and
+the Abundance Discrepancy Problem in Planetary Nebulae. 2015, Astrophysical
+Journal, 803, 99, DOI: 10.1088/0004-637X/803/2/99
+Corradi, R. L. M., Sabin, L., Miszalski, B., et al., The Necklace: equatorial and
+polar outflows from
+the binary central
+star of the new planetary nebula
+IPHASX J194359.5+170901. 2011, Monthly Notices of the RAS, 410, 1349, DOI:
+10.1111/j.1365-2966.2010.17523.x
+De Marco, O., Akashi, M., Akras, S., et al., The messy death of a multiple star system
+and the resulting planetary nebula as observed by JWST. 2022, Nature Astronomy,
+6, 1421, DOI: 10.1038/s41550-022-01845-2
+De Marco, O., Bond, H. E., Harmer, D., & Fleming, A. J., Indications of a Large
+Fraction of Spectroscopic Binaries among Nuclei of Planetary Nebulae. 2004, As-
+trophysical Journal, Letters, 602, L93, DOI: 10.1086/382156
+Decin, L., Montarg`es, M., Richards, A. M. S., et al., (Sub)stellar companions shape
+the winds of evolved stars. 2020, Science, 369, 1497, DOI: 10.1126/science.abb1229
+Douchin, D., De Marco, O., Frew, D. J., et al., The binary fraction of planetary nebula
+central stars - II. A larger sample and improved technique for the infrared excess
+search. 2015, Monthly Notices of the RAS, 448, 3132, DOI: 10.1093/mnras/stu2700
+
+8
+D. Jones
+Garc´ıa-Rojas, J., Corradi, R. L. M., Monteiro, H., et al., Imaging the Elusive H-poor
+Gas in the High adf Planetary Nebula NGC 6778. 2016, Astrophysical Journal,
+Letters, 824, L27, DOI: 10.3847/2041-8205/824/2/L27
+Garc´ıa-Segura, G., Ricker, P. M., & Taam, R. E., Common Envelope Shaping of Plane-
+tary Nebulae. 2018, Astrophysical Journal, 860, 19, DOI: 10.3847/1538-4357/aac08c
+Hillwig, T. C., Bond, H. E., Af¸sar, M., & De Marco, O., Binary Central Stars of
+Planetary Nebulae Discovered Through Photometric Variability. II. Modeling the
+Central Stars of NGC 6026 and NGC 6337. 2010, Astronomical Journal, 140, 319,
+DOI: 10.1088/0004-6256/140/2/319
+Hillwig, T. C., Frew, D. J., Reindl, N., et al., Binary Central Stars of Planetary Nebu-
+lae Discovered Through Photometric Variability. V. The Central Stars of HaTr 7 and
+ESO 330-9. 2017, Astronomical Journal, 153, 24, DOI: 10.3847/1538-3881/153/1/24
+Hillwig, T. C., Jones, D., De Marco, O., et al., Observational Confirmation of a Link
+Between Common Envelope Binary Interaction and Planetary Nebula Shaping.
+2016, Astrophysical Journal, 832, 125, DOI: 10.3847/0004-637X/832/2/125
+Hrivnak, B. J., Lu, W., Bakke, W. C., & Grimm, P. J., Variability in Protoplanetary
+Nebulae. IX. Evidence for Evolution in a Decade. 2022, Astrophysical Journal, 939,
+32, DOI: 10.3847/1538-4357/ac938a
+Hrivnak, B. J., Lu, W., Bohlender, D., et al., Are Proto-planetary Nebulae Shaped
+by a Binary? Results of a Long-term Radial Velocity Study. 2011, Astrophysical
+Journal, 734, 25, DOI: 10.1088/0004-637X/734/1/25
+Hrivnak, B. J., Lu, W., Henson, G., & Hillwig, T. C., Variability in Protoplanetary
+Nebulae. X. Multiyear Periods as an Indicator of Potential Binaries. 2024, Astro-
+nomical Journal, 167, 30, DOI: 10.3847/1538-3881/ad0cc4
+Hrivnak, B. J., Van de Steene, G., Van Winckel, H., et al., Where are the Binaries? Re-
+sults of a Long-term Search for Radial Velocity Binaries in Proto-planetary Nebulae.
+2017, Astrophysical Journal, 846, 96, DOI: 10.3847/1538-4357/aa84ae
+Ivanova, N., Justham, S., Chen, X., et al., Common envelope evolution: where we stand
+and how we can move forward. 2013, Astronomy and Astrophysics Reviews, 21, 59,
+DOI: 10.1007/s00159-013-0059-2
+Jacoby, G. H., Hillwig, T. C., Jones, D., et al., Binary central stars of planetary neb-
+ulae identified with Kepler/K2. 2021, Monthly Notices of the RAS, 506, 5223, DOI:
+10.1093/mnras/stab2045
+Jones, D., Observational Constraints on the Common Envelope Phase. 2020, in Re-
+views in Frontiers of Modern Astrophysics; From Space Debris to Cosmology, ed.
+P. Kab´ath, D. Jones, & M. Skarka (Springer), 123–153
+Jones, D. & Boffin, H. M. J., Binary stars as the key to understanding planetary
+nebulae. 2017, Nature Astronomy, 1, 0117, DOI: 10.1038/s41550-017-0117
+Jones, D., Boffin, H. M. J., Rodr´ıguez-Gil, P., et al., The post-common envelope cen-
+tral stars of the planetary nebulae Henize 2-155 and Henize 2-161. 2015, Astronomy
+and Astrophysics, 580, A19, DOI: 10.1051/0004-6361/201425454
+
+Post-common-envelope planetary nebulae
+9
+Jones, D., Boffin, H. M. J., Sowicka, P., et al., The short orbital period binary star at
+the heart of the planetary nebula M 3-1. 2019, Monthly Notices of the RAS, 482,
+L75, DOI: 10.1093/mnrasl/sly142
+Jones, D., Munday, J., Corradi, R. L. M., et al., The post-common-envelope bi-
+nary central star of the planetary nebula Ou 5: a doubly eclipsing post-red-giant-
+branch system. 2022, Monthly Notices of the RAS, 510, 3102, DOI: 10.1093/mn-
+ras/stab3736
+Jones, D., Van Winckel, H., Aller, A., Exter, K., & De Marco, O., The long-period bi-
+nary central stars of the planetary nebulae NGC 1514 and LoTr 5. 2017, Astronomy
+and Astrophysics, 600, L9, DOI: 10.1051/0004-6361/201730700
+Kami´nski, T., Steffen, W., Tylenda, R., et al., Submillimeter-wave emission of three
+Galactic red novae: cool molecular outflows produced by stellar mergers. 2018, As-
+tronomy and Astrophysics, 617, A129, DOI: 10.1051/0004-6361/201833165
+Miszalski, B., Acker, A., Moffat, A. F. J., Parker, Q. A., & Udalski, A., Binary plan-
+etary nebulae nuclei towards the Galactic bulge. I. Sample discovery, period dis-
+tribution, and binary fraction. 2009, Astronomy and Astrophysics, 496, 813, DOI:
+10.1051/0004-6361/200811380
+Miszalski, B., Boffin, H. M. J., & Corradi, R. L. M., A carbon dwarf wearing a Neck-
+lace: first proof of accretion in a post-common-envelope binary central star of a
+planetary nebula with jets. 2013, Monthly Notices of the RAS, 428, L39, DOI:
+10.1093/mnrasl/sls011
+Miszalski, B., Corradi, R. L. M., Boffin, H. M. J., et al., ETHOS 1: a high-latitude
+planetary nebula with jets forged by a post-common-envelope binary cen-
+tral star. 2011, Monthly Notices of the RAS, 413, 1264, DOI: 10.1111/j.1365-
+2966.2011.18212.x
+Moe, M. & De Marco, O., Do Most Planetary Nebulae Derive from Binaries? I. Popula-
+tion Synthesis Model of the Galactic Planetary Nebula Population Produced by Sin-
+gle Stars and Binaries. 2006, Astrophysical Journal, 650, 916, DOI: 10.1086/506900
+Munday, J., Jones, D., Garc´ıa-Rojas, J., et al., The post-common-envelope binary
+central star of the planetary nebula ETHOS 1. 2020, Monthly Notices of the RAS,
+498, 6005, DOI: 10.1093/mnras/staa2753
+Nelemans, G. & Tout, C. A., Reconstructing the evolution of white dwarf binaries:
+further evidence for an alternative algorithm for the outcome of the common-
+envelope phase in close binaries. 2005, Monthly Notices of the RAS, 356, 753, DOI:
+10.1111/j.1365-2966.2004.08496.x
+Paczynski, B., Common Envelope Binaries. 1976, in IAU Symposium, Vol.
+73,
+Structure and Evolution of Close Binary Systems, ed. P. Eggleton, S. Mitton, &
+J. Whelan, 75
+Parsons, S. G., G¨ansicke, B. T., Marsh, T. R., et al., The scatter of the M dwarf mass-
+radius relationship. 2018, Monthly Notices of the RAS, 481, 1083, DOI: 10.1093/mn-
+ras/sty2345
+Pavlovskii, K. & Ivanova, N., Mass transfer from giant donors. 2015, Monthly Notices
+of the RAS, 449, 4415, DOI: 10.1093/mnras/stv619
+
+10
+D. Jones
+Prialnik, D. & Livio, M., The outcome of accretion on to a fully convective star Expan-
+sion or contraction? 1985, Monthly Notices of the RAS, 216, 37, DOI: 10.1093/mn-
+ras/216.1.37
+S´anchez Contreras, C., Gil de Paz, A., & Sahai, R., The Companion to the Central
+Mira Star of the Protoplanetary Nebula OH 231.8+4.2. 2004, Astrophysical Journal,
+616, 519, DOI: 10.1086/424827
+Sandquist, E. L., Taam, R. E., Chen, X., Bodenheimer, P., & Burkert, A., Double Core
+Evolution. X. Through the Envelope Ejection Phase. 1998, Astrophysical Journal,
+500, 909, DOI: 10.1086/305778
+Santander-Garc´ıa, M., Jones, D., Alcolea, J., Bujarrabal, V., & Wesson, R., The ionised
+and molecular mass of post-common-envelope planetary nebulae. The missing
+mass problem. 2022, Astronomy and Astrophysics, 658, A17, DOI: 10.1051/0004-
+6361/202142233
+Santander-Garc´ıa, M., Rodr´ıguez-Gil, P., Corradi, R. L. M., et al., The double-
+degenerate, super-Chandrasekhar nucleus of the planetary nebula Henize 2-428.
+2015, Nature, 519, 63, DOI: 10.1038/nature14124
+Schaffenroth, V., Barlow, B. N., Drechsel, H., & Dunlap, B. H., An eclipsing post
+common-envelope system consisting of a pulsating hot subdwarf B star and a
+brown dwarf companion. 2015, Astronomy and Astrophysics, 576, A123, DOI:
+10.1051/0004-6361/201525701
+Villaver, E., Manchado, A., & Garc´ıa-Segura, G., The Dynamical Evolution of the
+Circumstellar Gas around Low- and Intermediate-Mass Stars. II. The Planetary
+Nebula Formation. 2002, Astrophysical Journal, 581, 1204, DOI: 10.1086/344250
+Weidmann, W. A., Mari, M. B., Schmidt, E. O., et al., Catalogue of the central stars
+of planetary nebulae. Expanded edition. 2020, Astronomy and Astrophysics, 640,
+A10, DOI: 10.1051/0004-6361/202037998
+Wesson, R., Barlow, M. J., Corradi, R. L. M., et al., A Planetary Nebula around Nova
+V458 Vulpeculae Undergoing Flash Ionization. 2008a, Astrophysical Journal, Let-
+ters, 688, L21, DOI: 10.1086/594366
+Wesson, R., Barlow, M. J., Liu, X. W., et al., The hydrogen-deficient knot of the ‘born-
+again’ planetary nebula Abell 58 (V605 Aql). 2008b, Monthly Notices of the RAS,
+383, 1639, DOI: 10.1111/j.1365-2966.2007.12683.x
+Wesson, R., Jones, D., Garc´ıa-Rojas, J., Boffin, H. M. J., & Corradi, R. L. M., Confir-
+mation of the link between central star binarity and extreme abundance discrepancy
+factors in planetary nebulae. 2018, Monthly Notices of the RAS, 480, 4589, DOI:
+10.1093/mnras/sty1871
+Whitehouse, L. J., Farihi, J., Howarth, I. D., et al., Carbon-enhanced stars with short
+orbital and spin periods. 2021, Monthly Notices of the RAS, 506, 4877, DOI:
+10.1093/mnras/stab1913
+Woods, T. E., Ivanova, N., van der Sluys, M. V., & Chaichenets, S., On the Formation
+of Double White Dwarfs through Stable Mass Transfer and a Common Envelope.
+2012, Astrophysical Journal, 744, 12, DOI: 10.1088/0004-637X/744/1/12
+
